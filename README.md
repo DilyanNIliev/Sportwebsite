@@ -13,7 +13,8 @@
 
 ## Технически решения
 
-- [Технологичен избор — WordPress, статичен сайт или React](docs/tehnologichen-izbor.md) → **Astro (статичен)**, качван по FTP на споделен cPanel хостинг
+- [Технологичен избор — WordPress, статичен сайт или React](docs/tehnologichen-izbor.md) → **Astro (статичен)**
+- [Публикуване — Astro + Sveltia CMS върху cPanel](docs/deploy-i-cms.md) → админ панел в браузъра, GitHub Actions билдва и качва по FTPS
 
 ## Принципи
 

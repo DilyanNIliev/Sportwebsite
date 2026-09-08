@@ -13,7 +13,7 @@
 
 ## Технически решения
 
-- [Технологичен избор — WordPress, статичен сайт или React](docs/tehnologichen-izbor.md)
+- [Технологичен избор — WordPress, статичен сайт или React](docs/tehnologichen-izbor.md) → **Astro (статичен)**, качван по FTP на споделен cPanel хостинг
 
 ## Принципи
 

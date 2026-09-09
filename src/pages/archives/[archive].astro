@@ -24,7 +24,7 @@ const jsonLd = {
 };
 ---
 <Base title={data.title} description={data.intro} breadcrumb={crumb}>
-  <section class="hero" style={`border-top: 3px solid ${sport?.accent}`}>
+  <section class="hero accented" style={`--accent:${sport?.accent};--accent-dark:${sport?.accentDark}`}>
     <div class="wrap">
       <p class="eyebrow">{sport?.name} · Archive</p>
       <h1>{data.title}</h1>

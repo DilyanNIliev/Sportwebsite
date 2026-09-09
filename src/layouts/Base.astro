@@ -83,7 +83,6 @@ const themeBootstrap = autoThemeSrc.replace(/^export /gm, '') + `
           b.classList.toggle('is-on', on);
         });
         if (hint) {
-          hint = hint;
           if (T.mode === 'auto') {
             var d = new Date();
             hint.textContent = 'Follows your clock — light from ' +
@@ -100,6 +99,19 @@ const themeBootstrap = autoThemeSrc.replace(/^export /gm, '') + `
 
       // Ако страницата стои отворена през прага, темата се сменя сама.
       setInterval(function () { if (T.mode === 'auto') { T.apply(); paint(); } }, 60000);
+
+      // Настройките за бисквитки отварят CMP-то, щом бъде включено.
+      document.querySelectorAll('[data-cookie-settings]').forEach(function (b) {
+        b.addEventListener('click', function () {
+          if (window.googlefc && window.googlefc.showRevocationMessage) {
+            window.googlefc.showRevocationMessage();
+          } else if (window.__tcfapi) {
+            window.__tcfapi('displayConsentUi', 2, function () {});
+          } else {
+            alert('Consent management is not enabled on this preview build.');
+          }
+        });
+      });
 
       // Бургерът и падащите менюта се затварят при клик навън и с Esc.
       var opens = document.querySelectorAll('details.dd, details.burger');

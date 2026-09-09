@@ -2,11 +2,13 @@
 import Base from '../../layouts/Base.astro';
 import worldCup from '../../data/archives/world-cup.json';
 import f1 from '../../data/archives/f1-champions.json';
+import sports from '../../data/sports.json';
 
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const colour = (slug) => sports.find((s) => s.slug === slug) ?? {};
 const items = [
-  { slug: 'world-cup', data: worldCup, accent: '#16a34a' },
-  { slug: 'f1-champions', data: f1, accent: '#dc2626' },
+  { slug: 'world-cup', data: worldCup, ...colour(worldCup.sport) },
+  { slug: 'f1-champions', data: f1, ...colour(f1.sport) },
 ];
 const crumb = `<a href="${base}/">Home</a> › Archives`;
 ---
@@ -27,7 +29,7 @@ const crumb = `<a href="${base}/">Home</a> › Archives`;
         {items.map((i) => (
           <a class="card" href={`${base}/archives/${i.slug}/`}>
             <div class="meta">
-              <span style={`color:${i.accent}`}>{i.data.sport}</span>
+              <span class="accent" style={`--accent:${i.accent};--accent-dark:${i.accentDark}`}>{i.data.sport}</span>
               <span>{i.data.rows.length} entries</span>
             </div>
             <h3>{i.data.title}</h3>

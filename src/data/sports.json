@@ -1,22 +1,202 @@
 [
-  { "slug": "football", "name": "Football", "tagline": "The world game, from the first World Cup to today.", "tier": 1, "accent": "#16a34a", "icon": "⚽" },
-  { "slug": "formula-1", "name": "Formula 1", "tagline": "Every champion, every season since 1950.", "tier": 1, "accent": "#dc2626", "icon": "🏎️" },
-  { "slug": "basketball", "name": "Basketball", "tagline": "NBA, EuroLeague and the international game.", "tier": 1, "accent": "#ea580c", "icon": "🏀" },
-  { "slug": "american-football", "name": "American Football", "tagline": "Every Super Bowl, every dynasty.", "tier": 1, "accent": "#7c3aed", "icon": "🏈" },
-  { "slug": "tennis", "name": "Tennis", "tagline": "Four majors, a century of champions.", "tier": 1, "accent": "#65a30d", "icon": "🎾" },
-  { "slug": "golf", "name": "Golf", "tagline": "The majors, the records, the green jackets.", "tier": 1, "accent": "#0d9488", "icon": "⛳" },
-  { "slug": "boxing-mma", "name": "Boxing & MMA", "tagline": "Title lineages across every division.", "tier": 1, "accent": "#b91c1c", "icon": "🥊" },
-  { "slug": "ice-hockey", "name": "Ice Hockey", "tagline": "The Stanley Cup and the world championships.", "tier": 1, "accent": "#0284c7", "icon": "🏒" },
-  { "slug": "cricket", "name": "Cricket", "tagline": "Tests, World Cups and the great rivalries.", "tier": 1, "accent": "#0891b2", "icon": "🏏" },
-  { "slug": "athletics", "name": "Athletics", "tagline": "Olympic gold and world records, year by year.", "tier": 1, "accent": "#ca8a04", "icon": "🏃" },
-  { "slug": "cycling", "name": "Cycling", "tagline": "The Grand Tours and the monuments.", "tier": 1, "accent": "#eab308", "icon": "🚴" },
-  { "slug": "baseball", "name": "Baseball", "tagline": "Every World Series since 1903.", "tier": 1, "accent": "#1d4ed8", "icon": "⚾" },
-  { "slug": "rugby", "name": "Rugby", "tagline": "World Cups and the Six Nations.", "tier": 2, "accent": "#475569", "icon": "🏉" },
-  { "slug": "handball", "name": "Handball", "tagline": "A European powerhouse sport.", "tier": 2, "accent": "#475569", "icon": "🤾" },
-  { "slug": "volleyball", "name": "Volleyball", "tagline": "Indoor and beach, world and Olympic.", "tier": 2, "accent": "#475569", "icon": "🏐" },
-  { "slug": "darts", "name": "Darts", "tagline": "The world championship lineage.", "tier": 2, "accent": "#475569", "icon": "🎯" },
-  { "slug": "motogp", "name": "MotoGP", "tagline": "Premier class champions.", "tier": 2, "accent": "#475569", "icon": "🏍️" },
-  { "slug": "snooker", "name": "Snooker", "tagline": "The Crucible and its champions.", "tier": 2, "accent": "#475569", "icon": "🎱" },
-  { "slug": "chess", "name": "Chess", "tagline": "World champions since 1886.", "tier": 2, "accent": "#475569", "icon": "♟️" },
-  { "slug": "winter-sports", "name": "Winter Sports", "tagline": "Biathlon, skiing and speed skating.", "tier": 2, "accent": "#475569", "icon": "⛷️" }
+  {
+    "slug": "football",
+    "name": "Football",
+    "tagline": "The world game, from the first World Cup to today.",
+    "tier": 1,
+    "accent": "#12863d",
+    "icon": "⚽",
+    "accentDark": "#16a34a",
+    "accentNote": "зеленото на терена"
+  },
+  {
+    "slug": "formula-1",
+    "name": "Formula 1",
+    "tagline": "Every champion, every season since 1950.",
+    "tier": 1,
+    "accent": "#e10600",
+    "icon": "🏎️",
+    "accentDark": "#e94c47",
+    "accentNote": "официалното червено на Формула 1"
+  },
+  {
+    "slug": "basketball",
+    "name": "Basketball",
+    "tagline": "NBA, EuroLeague and the international game.",
+    "tier": 1,
+    "accent": "#bd5711",
+    "icon": "🏀",
+    "accentDark": "#f97316",
+    "accentNote": "оранжевото на топката"
+  },
+  {
+    "slug": "american-football",
+    "name": "American Football",
+    "tagline": "Every Super Bowl, every dynasty.",
+    "tier": 1,
+    "accent": "#1e3a8a",
+    "icon": "🏈",
+    "accentDark": "#7485b6",
+    "accentNote": "тъмносиньото на емблемата на NFL"
+  },
+  {
+    "slug": "tennis",
+    "name": "Tennis",
+    "tagline": "Four majors, a century of champions.",
+    "tier": 1,
+    "accent": "#7c3aed",
+    "icon": "🎾",
+    "accentDark": "#9b69f1",
+    "accentNote": "лилавото на Уимбълдън"
+  },
+  {
+    "slug": "golf",
+    "name": "Golf",
+    "tagline": "The majors, the records, the green jackets.",
+    "tier": 1,
+    "accent": "#0c857a",
+    "icon": "⛳",
+    "accentDark": "#0d9488",
+    "accentNote": "тревата и водните препятствия"
+  },
+  {
+    "slug": "boxing-mma",
+    "name": "Boxing & MMA",
+    "tagline": "Title lineages across every division.",
+    "tier": 1,
+    "accent": "#be123c",
+    "icon": "🥊",
+    "accentDark": "#d35e7a",
+    "accentNote": "червеното на ръкавиците"
+  },
+  {
+    "slug": "ice-hockey",
+    "name": "Ice Hockey",
+    "tagline": "The Stanley Cup and the world championships.",
+    "tier": 1,
+    "accent": "#027cbb",
+    "icon": "🏒",
+    "accentDark": "#118bca",
+    "accentNote": "синьото на леда"
+  },
+  {
+    "slug": "cricket",
+    "name": "Cricket",
+    "tagline": "Tests, World Cups and the great rivalries.",
+    "tier": 1,
+    "accent": "#51820a",
+    "icon": "🏏",
+    "accentDark": "#65a30d",
+    "accentNote": "тревистото игрище и белите екипи"
+  },
+  {
+    "slug": "athletics",
+    "name": "Athletics",
+    "tagline": "Olympic gold and world records, year by year.",
+    "tier": 1,
+    "accent": "#c2410c",
+    "icon": "🏃",
+    "accentDark": "#ce673d",
+    "accentNote": "теракотата на пистата"
+  },
+  {
+    "slug": "cycling",
+    "name": "Cycling",
+    "tagline": "The Grand Tours and the monuments.",
+    "tier": 1,
+    "accent": "#916f05",
+    "icon": "🚴",
+    "accentDark": "#eab308",
+    "accentNote": "жълтата фланелка"
+  },
+  {
+    "slug": "baseball",
+    "name": "Baseball",
+    "tagline": "Every World Series since 1903.",
+    "tier": 1,
+    "accent": "#6164ec",
+    "icon": "⚾",
+    "accentDark": "#7678f3",
+    "accentNote": "синьото от емблемата на MLB"
+  },
+  {
+    "slug": "rugby",
+    "name": "Rugby",
+    "tagline": "World Cups and the Six Nations.",
+    "tier": 2,
+    "accent": "#4d7c0f",
+    "icon": "🏉",
+    "accentDark": "#699135",
+    "accentNote": "калното игрище"
+  },
+  {
+    "slug": "handball",
+    "name": "Handball",
+    "tagline": "A European powerhouse sport.",
+    "tier": 2,
+    "accent": "#0e7490",
+    "icon": "🤾",
+    "accentDark": "#3e90a6",
+    "accentNote": "синия паркет"
+  },
+  {
+    "slug": "volleyball",
+    "name": "Volleyball",
+    "tagline": "Indoor and beach, world and Olympic.",
+    "tier": 2,
+    "accent": "#a16207",
+    "icon": "🏐",
+    "accentDark": "#b07b2f",
+    "accentNote": "жълто-синята топка"
+  },
+  {
+    "slug": "darts",
+    "name": "Darts",
+    "tagline": "The world championship lineage.",
+    "tier": 2,
+    "accent": "#a21caf",
+    "icon": "🎯",
+    "accentDark": "#be60c7",
+    "accentNote": "сцената и светлините"
+  },
+  {
+    "slug": "motogp",
+    "name": "MotoGP",
+    "tagline": "Premier class champions.",
+    "tier": 2,
+    "accent": "#b45309",
+    "icon": "🏍️",
+    "accentDark": "#c27235",
+    "accentNote": "кожените екипи"
+  },
+  {
+    "slug": "snooker",
+    "name": "Snooker",
+    "tagline": "The Crucible and its champions.",
+    "tier": 2,
+    "accent": "#047857",
+    "icon": "🎱",
+    "accentDark": "#369379",
+    "accentNote": "зеленото сукно"
+  },
+  {
+    "slug": "chess",
+    "name": "Chess",
+    "tagline": "World champions since 1886.",
+    "tier": 2,
+    "accent": "#475569",
+    "icon": "♟️",
+    "accentDark": "#7b8593",
+    "accentNote": "черно-белите фигури"
+  },
+  {
+    "slug": "winter-sports",
+    "name": "Winter Sports",
+    "tagline": "Biathlon, skiing and speed skating.",
+    "tier": 2,
+    "accent": "#0369a1",
+    "icon": "⛷️",
+    "accentDark": "#3f8db8",
+    "accentNote": "синьото на леда и снега"
+  }
 ]

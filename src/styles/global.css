@@ -196,6 +196,8 @@ h3 { font-size: 1.05rem; font-weight: 650; }
 }
 
 /* ---------- hero ---------- */
+.hero.accented { border-top: 3px solid var(--accent, var(--brand)); }
+:root[data-theme="dark"] .hero.accented { border-top-color: var(--accent-dark, var(--brand)); }
 .hero { padding: clamp(40px, 8vw, 84px) 0 clamp(30px, 5vw, 54px); border-bottom: 1px solid var(--border); }
 .hero p.lede {
   font-size: clamp(1rem, 2.4vw, 1.17rem); color: var(--text-soft);
@@ -225,10 +227,23 @@ section.block { padding: clamp(36px, 6vw, 64px) 0; }
   transition: border-color .15s, transform .15s;
 }
 .sport-card::before {
-  content: ""; position: absolute; inset: 0 auto 0 0; width: 3px; background: var(--accent, var(--brand));
+  content: ""; position: absolute; inset: 0 auto 0 0; width: 3px;
+  background: var(--accent, var(--brand));
+}
+:root[data-theme="dark"] .sport-card::before { background: var(--accent-dark, var(--accent, var(--brand))); }
+
+/* Акцентът се вижда и в иконата, и в заглавието при посочване */
+.sport-card:hover { border-color: var(--accent, var(--border-strong)); }
+:root[data-theme="dark"] .sport-card:hover { border-color: var(--accent-dark, var(--border-strong)); }
+.sport-card .ico {
+  width: 34px; height: 34px; border-radius: 9px; display: grid; place-items: center;
+  background: color-mix(in srgb, var(--accent, var(--brand)) 13%, transparent);
+}
+:root[data-theme="dark"] .sport-card .ico {
+  background: color-mix(in srgb, var(--accent-dark, var(--brand)) 18%, transparent);
 }
 .sport-card:hover { border-color: var(--border-strong); transform: translateY(-2px); }
-.sport-card .ico { font-size: 1.4rem; line-height: 1; }
+.sport-card .ico { font-size: 1.25rem; line-height: 1; }
 .sport-card h3 { margin: 9px 0 4px; }
 .sport-card p { margin: 0; font-size: .845rem; color: var(--text-soft); line-height: 1.5; }
 .sport-card .tag {
@@ -252,6 +267,8 @@ section.block { padding: clamp(36px, 6vw, 64px) 0; }
 }
 .card:hover { border-color: var(--border-strong); }
 .card .meta { display: flex; align-items: center; gap: 9px; }
+.card .meta .accent { color: var(--accent, var(--brand)); }
+:root[data-theme="dark"] .card .meta .accent { color: var(--accent-dark, var(--brand)); }
 .card .meta span { font-size: .74rem; font-weight: 650; color: var(--text-faint); text-transform: uppercase; letter-spacing: .07em; }
 .card h3 { font-size: 1.02rem; }
 .card p { margin: 0; font-size: .875rem; color: var(--text-soft); }
@@ -308,3 +325,17 @@ tbody td:nth-child(2) { font-weight: 650; }
   background: #b45309; color: #fff; font-size: .8rem; text-align: center;
   padding: 7px 16px; font-weight: 550;
 }
+
+/* Компактният превключвател вътре в бургер менюто */
+.theme-switch--compact {
+  margin-top: 18px; padding-top: 16px; gap: 10px;
+}
+.theme-switch--compact .theme-switch-btns { flex: 1; }
+.theme-switch--compact .theme-switch-btns button { flex: 1; padding: 10px 8px; }
+
+/* Бутон, който изглежда като връзка — за отварянето на настройките за бисквитки */
+.footer-grid .linklike {
+  display: block; appearance: none; border: 0; background: none; padding: 3px 0;
+  font: inherit; font-size: .875rem; color: var(--text-soft); cursor: pointer; text-align: left;
+}
+.footer-grid .linklike:hover { color: var(--text); }

@@ -1,5 +1,6 @@
 ---
 import sports from '../data/sports.json';
+import ThemeToggle from './ThemeToggle.astro';
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const tier1 = sports.filter((s) => s.tier === 1);
 const tier2 = sports.filter((s) => s.tier === 2);
@@ -63,6 +64,7 @@ const tier2 = sports.filter((s) => s.tier === 2);
             <a href={`${base}/about/`}>About</a>
             <a href={`${base}/contact/`}>Contact</a>
           </div>
+          <ThemeToggle compact />
         </div>
       </div>
     </details>

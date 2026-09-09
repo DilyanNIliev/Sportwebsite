@@ -1,0 +1,59 @@
+---
+import Base from '../layouts/Base.astro';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const crumb = `<a href="${base}/">Home</a> › Disclaimer`;
+---
+<Base title="Disclaimer" description="Accuracy, advertising and affiliate disclosures for Global Sports Archive." breadcrumb={crumb}>
+  <section class="hero">
+    <div class="wrap">
+      <p class="eyebrow">Legal</p>
+      <h1>Disclaimer</h1>
+    </div>
+  </section>
+  <section class="block">
+    <div class="wrap prose">
+      <h2>Accuracy</h2>
+      <p>
+        We check every figure we publish and state on each archive how far its data has
+        been verified. Even so, records are compiled by people and errors are possible.
+        Nothing here should be treated as an official record; where a result matters,
+        confirm it with the governing body. Tell us about any mistake and we will correct
+        it and note the change on the page.
+      </p>
+
+      <h2>Advertising</h2>
+      <p>
+        This site carries advertising, which pays for the work. Advertisements are served
+        by third parties, including Google, which may use cookies to select and measure
+        the ads you see. What appears in an advertisement is not chosen or endorsed by us,
+        and advertising never influences what we cover or how we cover it. See the
+        <a href={`${base}/privacy/`}>privacy policy</a> and
+        <a href={`${base}/cookies/`}>cookie policy</a> for the detail.
+      </p>
+
+      <h2>Affiliate links</h2>
+      <p>
+        Some links may earn us a commission if you buy something after following them.
+        Such links never cost you more, and they are never the reason a subject is
+        covered. Where a page contains one, it is marked on that page.
+      </p>
+      <p class="note">
+        ЗАМЕСТИТЕЛ — щом се включи конкретна партньорска програма (напр. Amazon Associates),
+        тук влиза изискваното от нея изявление дословно. Всяка програма има свой текст.
+      </p>
+
+      <h2>No professional advice</h2>
+      <p>
+        The content here is published for reference and general interest. It is not
+        advice, and nothing on this site should be relied on for betting, financial or
+        any other decision.
+      </p>
+
+      <h2>External links</h2>
+      <p>
+        We link to other sites where they are useful. We do not control them and are not
+        responsible for their content or their privacy practices.
+      </p>
+    </div>
+  </section>
+</Base>

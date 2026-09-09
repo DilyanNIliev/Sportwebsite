@@ -14,7 +14,7 @@ const archives = [worldCup, f1].filter((a) => a.sport === sport.slug);
 const crumb = `<a href="${base}/">Home</a> › ${sport.name}`;
 ---
 <Base title={sport.name} description={sport.tagline} breadcrumb={crumb}>
-  <section class="hero" style={`border-top: 3px solid ${sport.accent}`}>
+  <section class="hero accented" style={`--accent:${sport.accent};--accent-dark:${sport.accentDark}`}>
     <div class="wrap">
       <p class="eyebrow">{sport.tier === 1 ? 'Covered in depth' : 'Also covered'}</p>
       <h1>{sport.icon} {sport.name}</h1>
@@ -29,7 +29,7 @@ const crumb = `<a href="${base}/">Home</a> › ${sport.name}`;
         <div class="cards">
           {archives.map((a) => (
             <a class="card" href={`${base}/archives/${a.sport === 'football' ? 'world-cup' : 'f1-champions'}/`}>
-              <div class="meta"><span style={`color:${sport.accent}`}>Archive</span></div>
+              <div class="meta"><span class="accent" style={`--accent:${sport.accent};--accent-dark:${sport.accentDark}`}>Archive</span></div>
               <h3>{a.title}</h3>
               <p>{a.intro}</p>
             </a>

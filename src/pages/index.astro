@@ -8,10 +8,13 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const tier1 = sports.filter((s) => s.tier === 1);
 const tier2 = sports.filter((s) => s.tier === 2);
 
+// Цветовете идват от данните за спорта, за да не се разминават с останалия сайт
+// и да запазят проверения контраст в двете теми.
+const by = (slug) => sports.find((s) => s.slug === slug);
 const featured = [
-  { sport: 'Football', title: 'Every FIFA World Cup winner, 1930 to today', desc: 'The complete list of finals, scores and hosts across 22 tournaments.', href: `${base}/archives/world-cup/`, accent: '#16a34a' },
-  { sport: 'Formula 1', title: 'Every F1 world champion by season', desc: 'Drivers, nationalities and constructors, drawn from open data.', href: `${base}/archives/f1-champions/`, accent: '#dc2626' },
-  { sport: 'Tennis', title: 'The four majors and their champions', desc: 'A century of Grand Slam winners, organised by tournament.', href: `${base}/tennis/`, accent: '#65a30d' },
+  { ...by('football'), title: 'Every FIFA World Cup winner, 1930 to today', desc: 'The complete list of finals, scores and hosts across 22 tournaments.', href: `${base}/archives/world-cup/` },
+  { ...by('formula-1'), title: 'Every F1 world champion by season', desc: 'Drivers, nationalities and constructors, drawn from open data.', href: `${base}/archives/f1-champions/` },
+  { ...by('tennis'), title: 'The four majors and their champions', desc: 'A century of Grand Slam winners, organised by tournament.', href: `${base}/tennis/` },
 ];
 
 const badges = [
@@ -55,7 +58,7 @@ const badges = [
         {featured.map((f) => (
           <a class="card" href={f.href}>
             <div class="meta">
-              <span style={`color:${f.accent}`}>{f.sport}</span>
+              <span class="accent" style={`--accent:${f.accent};--accent-dark:${f.accentDark}`}>{f.name}</span>
               <span>Archive</span>
             </div>
             <h3>{f.title}</h3>
@@ -74,7 +77,7 @@ const badges = [
       </div>
       <div class="sport-grid">
         {tier1.map((s) => (
-          <a class="sport-card" href={`${base}/${s.slug}/`} style={`--accent:${s.accent}`}>
+          <a class="sport-card" href={`${base}/${s.slug}/`} style={`--accent:${s.accent};--accent-dark:${s.accentDark}`}>
             <span class="tag">In depth</span>
             <div class="ico">{s.icon}</div>
             <h3>{s.name}</h3>
@@ -93,7 +96,7 @@ const badges = [
       </div>
       <div class="sport-grid">
         {tier2.map((s) => (
-          <a class="sport-card" href={`${base}/${s.slug}/`} style={`--accent:${s.accent}`}>
+          <a class="sport-card" href={`${base}/${s.slug}/`} style={`--accent:${s.accent};--accent-dark:${s.accentDark}`}>
             <div class="ico">{s.icon}</div>
             <h3>{s.name}</h3>
             <p>{s.tagline}</p>

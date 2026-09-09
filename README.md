@@ -15,6 +15,7 @@
 
 - [Технологичен избор — WordPress, статичен сайт или React](docs/tehnologichen-izbor.md) → **Astro (статичен)**
 - [Публикуване — Astro + Sveltia CMS върху cPanel](docs/deploy-i-cms.md) → админ панел в браузъра, GitHub Actions билдва и качва по FTPS
+- [Какво може да се обърка — подробен разбор](docs/deploy-problemi.md) → петте слоя, симптомите и диагностичният ред
 
 ## Принципи
 

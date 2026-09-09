@@ -1,6 +1,5 @@
 ---
 import sports from '../data/sports.json';
-import ThemeToggle from './ThemeToggle.astro';
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const t1 = sports.filter((s) => s.tier === 1);
 const t2 = sports.filter((s) => s.tier === 2);
@@ -38,8 +37,6 @@ const year = new Date().getFullYear();
         <button type="button" class="linklike" data-cookie-settings>Cookie settings</button>
       </div>
     </div>
-
-    <ThemeToggle />
 
     <div class="footer-bottom">
       <span>© {year} Global Sports Archive</span>

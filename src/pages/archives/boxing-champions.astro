@@ -1,0 +1,67 @@
+---
+import Base from '../../layouts/Base.astro';
+import data from '../../data/archives/boxing-lineal.json';
+import sports from '../../data/sports.json';
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const sport = sports.find((s) => s.slug === data.sport);
+const crumb = `<a href="${base}/">Home</a> › <a href="${base}/archives/">Archives</a> › ${data.title}`;
+---
+<Base title={data.title} description={data.intro} breadcrumb={crumb}>
+  <section class="hero accented" style={`--accent:${sport?.accent};--accent-dark:${sport?.accentDark}`}>
+    <div class="wrap">
+      <p class="eyebrow">{sport?.name} · Archive</p>
+      <h1>{data.title}</h1>
+      <p class="lede">{data.intro}</p>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap">
+      <div class="tabs">
+        {data.divisions.map((d, i) => (
+          <input
+            type="radio"
+            name="division"
+            id={`tab-${d.slug}`}
+            checked={i === 0}
+          />
+        ))}
+
+        <div class="tablist" role="tablist">
+          {data.divisions.map((d) => (
+            <label for={`tab-${d.slug}`}>{d.name}</label>
+          ))}
+        </div>
+
+        {data.divisions.map((d) => (
+          <section class="tabpanel" data-tab={d.slug}>
+            <div class="table-scroll">
+              <table>
+                <thead>
+                  <tr><th>Years</th><th>Champion</th><th>Notes</th></tr>
+                </thead>
+                <tbody>
+                  {d.rows.map((r) => (
+                    <tr>
+                      <td>{r[0]}</td>
+                      <td>{r[1]}</td>
+                      <td class="td-note">{r[2]}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <p class="note">{d.note}</p>
+          </section>
+        ))}
+      </div>
+
+      <div class="prose" style="margin-top:34px">
+        <h2>Why lineal, and not "world champion"</h2>
+        <p>{data.why}</p>
+        <p class="note">{data.dataNote}</p>
+      </div>
+    </div>
+  </section>
+</Base>

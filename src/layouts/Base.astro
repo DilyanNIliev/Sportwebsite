@@ -69,28 +69,12 @@ const themeBootstrap = autoThemeSrc.replace(/^export /gm, '') + `
       var T = window.__theme;
       if (!T) return;
       var btns = document.querySelectorAll('.theme-switch [data-mode]');
-      var hint = document.querySelector('[data-theme-hint]');
-
-      function pad(n) { return String(n).padStart(2, '0'); }
-      function hhmm(h) {
-        var m = Math.round(h * 60);
-        return pad(Math.floor(m / 60) % 24) + ':' + pad(m % 60);
-      }
       function paint() {
         btns.forEach(function (b) {
           var on = b.dataset.mode === T.mode;
           b.setAttribute('aria-pressed', on ? 'true' : 'false');
           b.classList.toggle('is-on', on);
         });
-        if (hint) {
-          if (T.mode === 'auto') {
-            var d = new Date();
-            hint.textContent = 'Follows your clock — light from ' +
-              hhmm(T.dawnHour(d)) + ', dark from ' + hhmm(T.duskHour(d)) + ' today.';
-          } else {
-            hint.textContent = 'Fixed to your choice. Pick Auto to follow the time of day again.';
-          }
-        }
       }
       btns.forEach(function (b) {
         b.addEventListener('click', function () { T.set(b.dataset.mode); paint(); });

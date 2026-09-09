@@ -1,34 +1,224 @@
 {
   "title": "Formula 1 World Champions",
   "sport": "formula-1",
-  "intro": "The drivers' world championship, season by season. The full list back to 1950 is available from the free Jolpica-F1 API.",
-  "dataNote": "Verified through the 2024 season. Later seasons are pulled from the Jolpica-F1 API before publication.",
-  "columns": ["Season", "Champion", "Nationality", "Constructor"],
+  "intro": "The drivers' world championship, season by season, with the runner-up and third place alongside the champion. Most recent first.",
+  "dataNote": "Verified through the 2025 season, won by Lando Norris by two points from Max Verstappen. The 2026 season is still running. Teams are listed for the champion only.",
+  "columns": [
+    "Season",
+    "Champion",
+    "Nationality",
+    "Constructor",
+    "Runner-up",
+    "Third"
+  ],
   "rows": [
-    [2024, "Max Verstappen", "Netherlands", "Red Bull"],
-    [2023, "Max Verstappen", "Netherlands", "Red Bull"],
-    [2022, "Max Verstappen", "Netherlands", "Red Bull"],
-    [2021, "Max Verstappen", "Netherlands", "Red Bull"],
-    [2020, "Lewis Hamilton", "United Kingdom", "Mercedes"],
-    [2019, "Lewis Hamilton", "United Kingdom", "Mercedes"],
-    [2018, "Lewis Hamilton", "United Kingdom", "Mercedes"],
-    [2017, "Lewis Hamilton", "United Kingdom", "Mercedes"],
-    [2016, "Nico Rosberg", "Germany", "Mercedes"],
-    [2015, "Lewis Hamilton", "United Kingdom", "Mercedes"],
-    [2014, "Lewis Hamilton", "United Kingdom", "Mercedes"],
-    [2013, "Sebastian Vettel", "Germany", "Red Bull"],
-    [2012, "Sebastian Vettel", "Germany", "Red Bull"],
-    [2011, "Sebastian Vettel", "Germany", "Red Bull"],
-    [2010, "Sebastian Vettel", "Germany", "Red Bull"],
-    [2009, "Jenson Button", "United Kingdom", "Brawn GP"],
-    [2008, "Lewis Hamilton", "United Kingdom", "McLaren"],
-    [2007, "Kimi Räikkönen", "Finland", "Ferrari"],
-    [2006, "Fernando Alonso", "Spain", "Renault"],
-    [2005, "Fernando Alonso", "Spain", "Renault"],
-    [2004, "Michael Schumacher", "Germany", "Ferrari"],
-    [2003, "Michael Schumacher", "Germany", "Ferrari"],
-    [2002, "Michael Schumacher", "Germany", "Ferrari"],
-    [2001, "Michael Schumacher", "Germany", "Ferrari"],
-    [2000, "Michael Schumacher", "Germany", "Ferrari"]
+    [
+      2025,
+      "Lando Norris",
+      "United Kingdom",
+      "McLaren",
+      "Max Verstappen",
+      "Oscar Piastri"
+    ],
+    [
+      2024,
+      "Max Verstappen",
+      "Netherlands",
+      "Red Bull",
+      "Lando Norris",
+      "Charles Leclerc"
+    ],
+    [
+      2023,
+      "Max Verstappen",
+      "Netherlands",
+      "Red Bull",
+      "Sergio Pérez",
+      "Lewis Hamilton"
+    ],
+    [
+      2022,
+      "Max Verstappen",
+      "Netherlands",
+      "Red Bull",
+      "Charles Leclerc",
+      "Sergio Pérez"
+    ],
+    [
+      2021,
+      "Max Verstappen",
+      "Netherlands",
+      "Red Bull",
+      "Lewis Hamilton",
+      "Valtteri Bottas"
+    ],
+    [
+      2020,
+      "Lewis Hamilton",
+      "United Kingdom",
+      "Mercedes",
+      "Valtteri Bottas",
+      "Max Verstappen"
+    ],
+    [
+      2019,
+      "Lewis Hamilton",
+      "United Kingdom",
+      "Mercedes",
+      "Valtteri Bottas",
+      "Max Verstappen"
+    ],
+    [
+      2018,
+      "Lewis Hamilton",
+      "United Kingdom",
+      "Mercedes",
+      "Sebastian Vettel",
+      "Kimi Räikkönen"
+    ],
+    [
+      2017,
+      "Lewis Hamilton",
+      "United Kingdom",
+      "Mercedes",
+      "Sebastian Vettel",
+      "Valtteri Bottas"
+    ],
+    [
+      2016,
+      "Nico Rosberg",
+      "Germany",
+      "Mercedes",
+      "Lewis Hamilton",
+      "Daniel Ricciardo"
+    ],
+    [
+      2015,
+      "Lewis Hamilton",
+      "United Kingdom",
+      "Mercedes",
+      "Nico Rosberg",
+      "Sebastian Vettel"
+    ],
+    [
+      2014,
+      "Lewis Hamilton",
+      "United Kingdom",
+      "Mercedes",
+      "Nico Rosberg",
+      "Daniel Ricciardo"
+    ],
+    [
+      2013,
+      "Sebastian Vettel",
+      "Germany",
+      "Red Bull",
+      "Fernando Alonso",
+      "Mark Webber"
+    ],
+    [
+      2012,
+      "Sebastian Vettel",
+      "Germany",
+      "Red Bull",
+      "Fernando Alonso",
+      "Kimi Räikkönen"
+    ],
+    [
+      2011,
+      "Sebastian Vettel",
+      "Germany",
+      "Red Bull",
+      "Jenson Button",
+      "Mark Webber"
+    ],
+    [
+      2010,
+      "Sebastian Vettel",
+      "Germany",
+      "Red Bull",
+      "Fernando Alonso",
+      "Mark Webber"
+    ],
+    [
+      2009,
+      "Jenson Button",
+      "United Kingdom",
+      "Brawn GP",
+      "Sebastian Vettel",
+      "Rubens Barrichello"
+    ],
+    [
+      2008,
+      "Lewis Hamilton",
+      "United Kingdom",
+      "McLaren",
+      "Felipe Massa",
+      "Kimi Räikkönen"
+    ],
+    [
+      2007,
+      "Kimi Räikkönen",
+      "Finland",
+      "Ferrari",
+      "Lewis Hamilton",
+      "Fernando Alonso"
+    ],
+    [
+      2006,
+      "Fernando Alonso",
+      "Spain",
+      "Renault",
+      "Michael Schumacher",
+      "Felipe Massa"
+    ],
+    [
+      2005,
+      "Fernando Alonso",
+      "Spain",
+      "Renault",
+      "Kimi Räikkönen",
+      "Michael Schumacher"
+    ],
+    [
+      2004,
+      "Michael Schumacher",
+      "Germany",
+      "Ferrari",
+      "Rubens Barrichello",
+      "Jenson Button"
+    ],
+    [
+      2003,
+      "Michael Schumacher",
+      "Germany",
+      "Ferrari",
+      "Kimi Räikkönen",
+      "Juan Pablo Montoya"
+    ],
+    [
+      2002,
+      "Michael Schumacher",
+      "Germany",
+      "Ferrari",
+      "Rubens Barrichello",
+      "Juan Pablo Montoya"
+    ],
+    [
+      2001,
+      "Michael Schumacher",
+      "Germany",
+      "Ferrari",
+      "David Coulthard",
+      "Rubens Barrichello"
+    ],
+    [
+      2000,
+      "Michael Schumacher",
+      "Germany",
+      "Ferrari",
+      "Mika Häkkinen",
+      "David Coulthard"
+    ]
   ]
 }

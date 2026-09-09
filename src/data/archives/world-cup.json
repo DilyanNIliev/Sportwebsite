@@ -1,31 +1,176 @@
 {
   "title": "FIFA World Cup Winners",
   "sport": "football",
-  "intro": "Every FIFA World Cup final since the first tournament in Uruguay in 1930.",
-  "dataNote": "Verified through the 2022 edition. The 2026 tournament is pending confirmation against official sources before it is added.",
-  "columns": ["Year", "Winner", "Score", "Runner-up", "Host"],
+  "intro": "Every FIFA World Cup final since the first tournament in Uruguay in 1930, most recent first.",
+  "dataNote": "Verified through the 2026 edition, won by Spain at MetLife Stadium on 19 July 2026. Listed newest first.",
+  "columns": [
+    "Year",
+    "Winner",
+    "Score",
+    "Runner-up",
+    "Host"
+  ],
   "rows": [
-    [1930, "Uruguay", "4–2", "Argentina", "Uruguay"],
-    [1934, "Italy", "2–1 (aet)", "Czechoslovakia", "Italy"],
-    [1938, "Italy", "4–2", "Hungary", "France"],
-    [1950, "Uruguay", "final pool", "Brazil", "Brazil"],
-    [1954, "West Germany", "3–2", "Hungary", "Switzerland"],
-    [1958, "Brazil", "5–2", "Sweden", "Sweden"],
-    [1962, "Brazil", "3–1", "Czechoslovakia", "Chile"],
-    [1966, "England", "4–2 (aet)", "West Germany", "England"],
-    [1970, "Brazil", "4–1", "Italy", "Mexico"],
-    [1974, "West Germany", "2–1", "Netherlands", "West Germany"],
-    [1978, "Argentina", "3–1 (aet)", "Netherlands", "Argentina"],
-    [1982, "Italy", "3–1", "West Germany", "Spain"],
-    [1986, "Argentina", "3–2", "West Germany", "Mexico"],
-    [1990, "West Germany", "1–0", "Argentina", "Italy"],
-    [1994, "Brazil", "0–0 (3–2 pens)", "Italy", "United States"],
-    [1998, "France", "3–0", "Brazil", "France"],
-    [2002, "Brazil", "2–0", "Germany", "South Korea / Japan"],
-    [2006, "Italy", "1–1 (5–3 pens)", "France", "Germany"],
-    [2010, "Spain", "1–0 (aet)", "Netherlands", "South Africa"],
-    [2014, "Germany", "1–0 (aet)", "Argentina", "Brazil"],
-    [2018, "France", "4–2", "Croatia", "Russia"],
-    [2022, "Argentina", "3–3 (4–2 pens)", "France", "Qatar"]
+    [
+      2026,
+      "Spain",
+      "1–0 (aet)",
+      "Argentina",
+      "Canada / Mexico / USA"
+    ],
+    [
+      2022,
+      "Argentina",
+      "3–3 (4–2 pens)",
+      "France",
+      "Qatar"
+    ],
+    [
+      2018,
+      "France",
+      "4–2",
+      "Croatia",
+      "Russia"
+    ],
+    [
+      2014,
+      "Germany",
+      "1–0 (aet)",
+      "Argentina",
+      "Brazil"
+    ],
+    [
+      2010,
+      "Spain",
+      "1–0 (aet)",
+      "Netherlands",
+      "South Africa"
+    ],
+    [
+      2006,
+      "Italy",
+      "1–1 (5–3 pens)",
+      "France",
+      "Germany"
+    ],
+    [
+      2002,
+      "Brazil",
+      "2–0",
+      "Germany",
+      "South Korea / Japan"
+    ],
+    [
+      1998,
+      "France",
+      "3–0",
+      "Brazil",
+      "France"
+    ],
+    [
+      1994,
+      "Brazil",
+      "0–0 (3–2 pens)",
+      "Italy",
+      "United States"
+    ],
+    [
+      1990,
+      "West Germany",
+      "1–0",
+      "Argentina",
+      "Italy"
+    ],
+    [
+      1986,
+      "Argentina",
+      "3–2",
+      "West Germany",
+      "Mexico"
+    ],
+    [
+      1982,
+      "Italy",
+      "3–1",
+      "West Germany",
+      "Spain"
+    ],
+    [
+      1978,
+      "Argentina",
+      "3–1 (aet)",
+      "Netherlands",
+      "Argentina"
+    ],
+    [
+      1974,
+      "West Germany",
+      "2–1",
+      "Netherlands",
+      "West Germany"
+    ],
+    [
+      1970,
+      "Brazil",
+      "4–1",
+      "Italy",
+      "Mexico"
+    ],
+    [
+      1966,
+      "England",
+      "4–2 (aet)",
+      "West Germany",
+      "England"
+    ],
+    [
+      1962,
+      "Brazil",
+      "3–1",
+      "Czechoslovakia",
+      "Chile"
+    ],
+    [
+      1958,
+      "Brazil",
+      "5–2",
+      "Sweden",
+      "Sweden"
+    ],
+    [
+      1954,
+      "West Germany",
+      "3–2",
+      "Hungary",
+      "Switzerland"
+    ],
+    [
+      1950,
+      "Uruguay",
+      "final pool",
+      "Brazil",
+      "Brazil"
+    ],
+    [
+      1938,
+      "Italy",
+      "4–2",
+      "Hungary",
+      "France"
+    ],
+    [
+      1934,
+      "Italy",
+      "2–1 (aet)",
+      "Czechoslovakia",
+      "Italy"
+    ],
+    [
+      1930,
+      "Uruguay",
+      "4–2",
+      "Argentina",
+      "Uruguay"
+    ]
   ]
 }

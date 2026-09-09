@@ -1,8 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import sports from '../../data/sports.json';
-import worldCup from '../../data/archives/world-cup.json';
-import f1 from '../../data/archives/f1-champions.json';
+import { archivesFor, rowCount } from '../../data/archives.js';
 
 export function getStaticPaths() {
   return sports.map((s) => ({ params: { sport: s.slug }, props: { sport: s } }));
@@ -10,10 +9,7 @@ export function getStaticPaths() {
 
 const { sport } = Astro.props;
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
-const archives = [
-  { slug: 'world-cup', data: worldCup },
-  { slug: 'f1-champions', data: f1 },
-].filter((a) => a.data.sport === sport.slug);
+const archives = archivesFor(sport.slug);
 
 // Страница без собствени данни още не е готова да се индексира.
 // Тънкото съдържание е риск по политиката за scaled content abuse (Стъпка 2).
@@ -40,10 +36,10 @@ const crumb = `<a href="${base}/">Home</a> › <a href="${base}/statistics/">Sta
         <div class="block-head"><h2>Available now</h2></div>
         <div class="cards">
           {archives.map((a) => (
-            <a class="card" href={`${base}/archives/${a.slug}/`}>
+            <a class="card" href={`${base}/archives/${a.href}/`}>
               <div class="meta">
                 <span class="accent" style={`--accent:${sport.accent};--accent-dark:${sport.accentDark}`}>Archive</span>
-                <span>{a.data.rows.length} entries</span>
+                <span>{rowCount(a)} entries</span>
               </div>
               <h3>{a.data.title}</h3>
               <p>{a.data.intro}</p>

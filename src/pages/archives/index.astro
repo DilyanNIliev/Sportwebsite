@@ -1,15 +1,11 @@
 ---
 import Base from '../../layouts/Base.astro';
-import worldCup from '../../data/archives/world-cup.json';
-import f1 from '../../data/archives/f1-champions.json';
+import { archives, rowCount } from '../../data/archives.js';
 import sports from '../../data/sports.json';
 
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const colour = (slug) => sports.find((s) => s.slug === slug) ?? {};
-const items = [
-  { slug: 'world-cup', data: worldCup, ...colour(worldCup.sport) },
-  { slug: 'f1-champions', data: f1, ...colour(f1.sport) },
-];
+const items = archives.map((a) => ({ ...a, ...colour(a.data.sport), count: rowCount(a) }));
 const crumb = `<a href="${base}/">Home</a> › Archives`;
 ---
 <Base title="Archives" description="Complete champion archives across every sport we cover." breadcrumb={crumb}>
@@ -27,10 +23,10 @@ const crumb = `<a href="${base}/">Home</a> › Archives`;
     <div class="wrap">
       <div class="cards">
         {items.map((i) => (
-          <a class="card" href={`${base}/archives/${i.slug}/`}>
+          <a class="card" href={`${base}/archives/${i.href}/`}>
             <div class="meta">
               <span class="accent" style={`--accent:${i.accent};--accent-dark:${i.accentDark}`}>{i.data.sport}</span>
-              <span>{i.data.rows.length} entries</span>
+              <span>{i.count} entries</span>
             </div>
             <h3>{i.data.title}</h3>
             <p>{i.data.intro}</p>

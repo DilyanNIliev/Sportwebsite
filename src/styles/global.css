@@ -49,6 +49,7 @@
 * { box-sizing: border-box; }
 
 html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+html, body { overflow-x: clip; max-width: 100%; }
 
 body {
   margin: 0;
@@ -81,8 +82,9 @@ h3 { font-size: 1.05rem; font-weight: 650; }
   backdrop-filter: saturate(1.6) blur(12px);
   border-bottom: 1px solid var(--border);
 }
-.header-row { display: flex; align-items: center; gap: 16px; height: 60px; }
+.header-row { display: flex; align-items: center; gap: 16px; height: 60px; min-width: 0; }
 .logo {
+  flex: none;
   display: inline-flex; align-items: center; gap: 9px;
   font-weight: 800; font-size: 1.06rem; letter-spacing: -.03em; text-decoration: none;
 }
@@ -91,13 +93,17 @@ h3 { font-size: 1.05rem; font-weight: 650; }
   background: linear-gradient(140deg, #0b6bcb, #16a34a); color: #fff;
   font-size: .82rem; font-weight: 800;
 }
-.nav { margin-left: auto; display: flex; gap: 4px; align-items: center; }
+.nav { margin-left: auto; display: flex; gap: 8px; align-items: center; min-width: 0; }
 .nav a {
   text-decoration: none; color: var(--text-soft); font-size: .875rem; font-weight: 550;
   padding: 7px 11px; border-radius: 8px;
 }
 .nav a:hover { color: var(--text); background: var(--bg-soft); }
-.nav-scroll { display: flex; gap: 4px; overflow-x: auto; scrollbar-width: none; }
+.nav-scroll {
+  display: flex; gap: 4px; overflow-x: auto; scrollbar-width: none;
+  min-width: 0; -webkit-overflow-scrolling: touch;
+}
+.nav-scroll a { white-space: nowrap; flex: none; }
 .nav-scroll::-webkit-scrollbar { display: none; }
 @media (max-width: 720px) { .nav a { padding: 7px 9px; font-size: .82rem; } }
 
@@ -171,7 +177,7 @@ section.block { padding: clamp(36px, 6vw, 64px) 0; }
 
 /* ---------- tables ---------- */
 .table-scroll {
-  overflow-x: auto; border: 1px solid var(--border); border-radius: var(--radius);
+  overflow-x: auto; max-width: 100%; min-width: 0; border: 1px solid var(--border); border-radius: var(--radius);
   background: var(--bg-raised);
 }
 table { border-collapse: collapse; width: 100%; font-size: .9rem; min-width: 520px; }

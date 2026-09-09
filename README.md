@@ -10,6 +10,7 @@
 | 2 | Източници на съдържание — как се сдобиваме с новини и постове | ✅ [docs/02-sudurzhanie.md](docs/02-sudurzhanie.md) |
 | 3 | Обхват, езици и домейн стратегия | ✅ [docs/03-domeyn-i-obhvat.md](docs/03-domeyn-i-obhvat.md) |
 | 4 | Спортове, минимум 3 поста на спорт + исторически архив на шампионите | ⏳ следваща |
+| 5 | Пускане и монетизация | ✅ [docs/05-puskane-i-monetizatsiya.md](docs/05-puskane-i-monetizatsiya.md) |
 
 ## Технически решения
 

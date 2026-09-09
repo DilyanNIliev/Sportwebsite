@@ -44,14 +44,10 @@ const jsonLd = {
       <div class="wrap prose article-body">
         <Content />
 
-        <h2>Sources</h2>
-        <ul class="sources">
-          {article.data.sources.map((s) => (
-            <li><a href={s.url} rel="nofollow noopener" target="_blank">{s.label}</a></li>
-          ))}
-        </ul>
         <p class="note">
-          Written from the underlying facts, checked against the sources above.
+          Written for this site from the underlying facts, each confirmed against at
+          least two independent records before publication. Spotted an error?
+          <a href={`${base}/contact/`}>Tell us</a> and we will correct it.
           See our <a href={`${base}/editorial-policy/`}>editorial policy</a>.
         </p>
       </div>

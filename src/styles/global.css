@@ -338,9 +338,6 @@ tbody td:nth-child(2) { font-weight: 650; }
 .article-body table th, .article-body table td { padding: 9px 12px; }
 .article-body table thead th { position: static; }
 .article-body em { color: var(--text-faint); }
-.sources { padding-left: 1.1em; }
-.sources li { margin: .3em 0; }
-.sources a { color: var(--brand); }
 .eyebrow a { text-decoration: none; }
 .eyebrow a:hover { text-decoration: underline; }
 

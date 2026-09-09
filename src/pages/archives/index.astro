@@ -1,0 +1,40 @@
+---
+import Base from '../../layouts/Base.astro';
+import worldCup from '../../data/archives/world-cup.json';
+import f1 from '../../data/archives/f1-champions.json';
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const items = [
+  { slug: 'world-cup', data: worldCup, accent: '#16a34a' },
+  { slug: 'f1-champions', data: f1, accent: '#dc2626' },
+];
+const crumb = `<a href="${base}/">Home</a> › Archives`;
+---
+<Base title="Archives" description="Complete champion archives across every sport we cover." breadcrumb={crumb}>
+  <section class="hero">
+    <div class="wrap">
+      <p class="eyebrow">Reference</p>
+      <h1>Archives</h1>
+      <p class="lede">
+        Пълни, проверени списъци на шампионите. Това е гръбнакът на сайта — пише се
+        веднъж и носи трафик години напред.
+      </p>
+    </div>
+  </section>
+  <section class="block">
+    <div class="wrap">
+      <div class="cards">
+        {items.map((i) => (
+          <a class="card" href={`${base}/archives/${i.slug}/`}>
+            <div class="meta">
+              <span style={`color:${i.accent}`}>{i.data.sport}</span>
+              <span>{i.data.rows.length} entries</span>
+            </div>
+            <h3>{i.data.title}</h3>
+            <p>{i.data.intro}</p>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+</Base>

@@ -1,0 +1,58 @@
+---
+import Base from '../layouts/Base.astro';
+import sports from '../data/sports.json';
+import worldCup from '../data/archives/world-cup.json';
+import f1 from '../data/archives/f1-champions.json';
+
+export function getStaticPaths() {
+  return sports.map((s) => ({ params: { sport: s.slug }, props: { sport: s } }));
+}
+
+const { sport } = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const archives = [worldCup, f1].filter((a) => a.sport === sport.slug);
+const crumb = `<a href="${base}/">Home</a> › ${sport.name}`;
+---
+<Base title={sport.name} description={sport.tagline} breadcrumb={crumb}>
+  <section class="hero" style={`border-top: 3px solid ${sport.accent}`}>
+    <div class="wrap">
+      <p class="eyebrow">{sport.tier === 1 ? 'Covered in depth' : 'Also covered'}</p>
+      <h1>{sport.icon} {sport.name}</h1>
+      <p class="lede">{sport.tagline}</p>
+    </div>
+  </section>
+
+  {archives.length > 0 && (
+    <section class="block">
+      <div class="wrap">
+        <div class="block-head"><h2>Archives</h2></div>
+        <div class="cards">
+          {archives.map((a) => (
+            <a class="card" href={`${base}/archives/${a.sport === 'football' ? 'world-cup' : 'f1-champions'}/`}>
+              <div class="meta"><span style={`color:${sport.accent}`}>Archive</span></div>
+              <h3>{a.title}</h3>
+              <p>{a.intro}</p>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <section class="block">
+    <div class="wrap prose">
+      <h2>Планирано за този раздел</h2>
+      <p>
+        Всеки раздел получава три слоя съдържание, описани в Стъпка 2: вечнозелени
+        архиви като гръбнак, страници с данни, които се обновяват сами, и редакционни
+        материали отгоре.
+      </p>
+      <ul>
+        <li>Пълни архиви на шампионите по години</li>
+        <li>Рекорди и статистически хъбове</li>
+        <li>Профили на състезатели и отбори</li>
+        <li>Материали, обясняващи правилата и историята</li>
+      </ul>
+    </div>
+  </section>
+</Base>

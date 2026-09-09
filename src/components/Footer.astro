@@ -1,0 +1,36 @@
+---
+import sports from '../data/sports.json';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const t1 = sports.filter((s) => s.tier === 1);
+const t2 = sports.filter((s) => s.tier === 2);
+const year = new Date().getFullYear();
+---
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h4>Core sports</h4>
+        {t1.slice(0, 6).map((s) => <a href={`${base}/${s.slug}/`}>{s.name}</a>)}
+      </div>
+      <div>
+        <h4>More sports</h4>
+        {t1.slice(6).map((s) => <a href={`${base}/${s.slug}/`}>{s.name}</a>)}
+      </div>
+      <div>
+        <h4>Also covered</h4>
+        {t2.slice(0, 6).map((s) => <a href={`${base}/${s.slug}/`}>{s.name}</a>)}
+      </div>
+      <div>
+        <h4>Languages</h4>
+        <a href={`${base}/`}>English</a>
+        <a href={`${base}/`}>Deutsch — планирано</a>
+        <a href={`${base}/`}>Nederlands — планирано</a>
+        <a href={`${base}/`}>Български — планирано</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© {year} Global Sports Archive</span>
+      <span>Визуализация на GitHub Pages</span>
+    </div>
+  </div>
+</footer>

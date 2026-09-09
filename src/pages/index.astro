@@ -1,0 +1,119 @@
+---
+import Base from '../layouts/Base.astro';
+import sports from '../data/sports.json';
+import worldCup from '../data/archives/world-cup.json';
+import f1 from '../data/archives/f1-champions.json';
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const tier1 = sports.filter((s) => s.tier === 1);
+const tier2 = sports.filter((s) => s.tier === 2);
+
+const featured = [
+  { sport: 'Football', title: 'Every FIFA World Cup winner, 1930 to today', desc: 'The complete list of finals, scores and hosts across 22 tournaments.', href: `${base}/archives/world-cup/`, accent: '#16a34a' },
+  { sport: 'Formula 1', title: 'Every F1 world champion by season', desc: 'Drivers, nationalities and constructors, drawn from open data.', href: `${base}/archives/f1-champions/`, accent: '#dc2626' },
+  { sport: 'Tennis', title: 'The four majors and their champions', desc: 'A century of Grand Slam winners, organised by tournament.', href: `${base}/tennis/`, accent: '#65a30d' },
+];
+
+const badges = [
+  { code: 'BRA', from: '#f7d117', to: '#009c3b' },
+  { code: 'ARG', from: '#74acdf', to: '#2a5f9e' },
+  { code: 'GER', from: '#1a1a1a', to: '#c8102e' },
+  { code: 'ITA', from: '#008c45', to: '#cd212a' },
+  { code: 'FRA', from: '#0055a4', to: '#ef4135' },
+  { code: 'ESP', from: '#c60b1e', to: '#ffc400' },
+];
+---
+<Base
+  title="Sports history, records and champions"
+  description="Complete archives of champions, finals and records across football, Formula 1, tennis, golf and more."
+>
+  <section class="hero">
+    <div class="wrap">
+      <p class="eyebrow">Sports archive · English</p>
+      <h1>Every champion.<br />Every season. One place.</h1>
+      <p class="lede">
+        Sports media chases today's result and lets the record books rot. We do the
+        opposite: complete, checked archives of who won what, and when — across
+        twenty sports.
+      </p>
+      <div class="hero-stats">
+        <span class="stat"><b>{tier1.length}</b> sports in depth</span>
+        <span class="stat"><b>{tier2.length}</b> more covered</span>
+        <span class="stat"><b>{worldCup.rows.length}</b> World Cup finals</span>
+        <span class="stat"><b>{f1.rows.length}</b> F1 seasons listed</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap">
+      <div class="block-head">
+        <h2>Start here</h2>
+        <p>The archives people search for most.</p>
+      </div>
+      <div class="cards">
+        {featured.map((f) => (
+          <a class="card" href={f.href}>
+            <div class="meta">
+              <span style={`color:${f.accent}`}>{f.sport}</span>
+              <span>Archive</span>
+            </div>
+            <h3>{f.title}</h3>
+            <p>{f.desc}</p>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="block" style="background: var(--bg-soft); border-block: 1px solid var(--border);">
+    <div class="wrap">
+      <div class="block-head">
+        <h2>Covered in depth</h2>
+        <p>Twelve sports with full archives behind them.</p>
+      </div>
+      <div class="sport-grid">
+        {tier1.map((s) => (
+          <a class="sport-card" href={`${base}/${s.slug}/`} style={`--accent:${s.accent}`}>
+            <span class="tag">In depth</span>
+            <div class="ico">{s.icon}</div>
+            <h3>{s.name}</h3>
+            <p>{s.tagline}</p>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap">
+      <div class="block-head">
+        <h2>Also covered</h2>
+        <p>Lighter coverage that grows with demand.</p>
+      </div>
+      <div class="sport-grid">
+        {tier2.map((s) => (
+          <a class="sport-card" href={`${base}/${s.slug}/`} style={`--accent:${s.accent}`}>
+            <div class="ico">{s.icon}</div>
+            <h3>{s.name}</h3>
+            <p>{s.tagline}</p>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="block" style="border-top: 1px solid var(--border);">
+    <div class="wrap">
+      <div class="block-head">
+        <h2>Собствени бейджове вместо клубни лога</h2>
+        <p>Решението от Стъпка 1 — разпознаваеми, единен стил, нулев правен риск.</p>
+      </div>
+      <div style="display:flex; gap:12px; flex-wrap:wrap;">
+        {badges.map((b) => (
+          <div class="badge" style={`background: linear-gradient(140deg, ${b.from}, ${b.to})`}>{b.code}</div>
+        ))}
+      </div>
+    </div>
+  </section>
+</Base>

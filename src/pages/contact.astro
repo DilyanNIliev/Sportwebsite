@@ -1,0 +1,37 @@
+---
+import Base from '../layouts/Base.astro';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const crumb = `<a href="${base}/">Home</a> › Contact`;
+---
+<Base title="Contact" description="How to reach the editors of Global Sports Archive." breadcrumb={crumb}>
+  <section class="hero">
+    <div class="wrap">
+      <p class="eyebrow">Get in touch</p>
+      <h1>Contact</h1>
+    </div>
+  </section>
+  <section class="block">
+    <div class="wrap prose">
+      <p>
+        We read everything, and we particularly want to hear about errors in the
+        archives. If a date, score or name is wrong, tell us and we will check it
+        against the sources and correct the page.
+      </p>
+
+      <h2>Email</h2>
+      <p class="note">ЗАМЕСТИТЕЛ — работещ адрес за кореспонденция, напр. editor@домейн.com</p>
+
+      <h2>Corrections</h2>
+      <p>
+        When reporting a correction, the page address and the source you are relying on
+        help us resolve it quickly.
+      </p>
+
+      <h2>Publisher</h2>
+      <p class="note">
+        ЗАМЕСТИТЕЛ — име на издателя и данни за идентификация. Изискване на чл. 4 от
+        Закона за електронната търговия, ако издателят е установен в България.
+      </p>
+    </div>
+  </section>
+</Base>

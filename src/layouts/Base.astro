@@ -2,11 +2,39 @@
 import '../styles/global.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import autoThemeSrc from '../scripts/auto-theme.js?raw';
 
-const { title, description, breadcrumb } = Astro.props;
+const { title, description, breadcrumb, noindex } = Astro.props;
 const canonical = new URL(Astro.url.pathname, Astro.site).href;
 const siteName = 'Global Sports Archive';
 const full = title ? `${title} — ${siteName}` : siteName;
+
+// Един източник на истината: същият файл се ползва и в тестовете.
+// `export` се маха, за да върви като обикновен скрипт преди първото рисуване.
+const themeBootstrap = autoThemeSrc.replace(/^export /gm, '') + `
+(function () {
+  var mode = 'auto';
+  try { mode = localStorage.getItem('theme-mode') || 'auto'; } catch (e) {}
+  var root = document.documentElement;
+  function apply() {
+    var t = mode === 'auto' ? themeForDate() : mode;
+    root.setAttribute('data-theme', t);
+    root.setAttribute('data-theme-mode', mode);
+  }
+  apply();
+  window.__theme = {
+    get mode() { return mode; },
+    set: function (m) {
+      mode = m;
+      try { localStorage.setItem('theme-mode', m); } catch (e) {}
+      apply();
+    },
+    apply: apply,
+    duskHour: duskHour,
+    dawnHour: dawnHour,
+    themeForDate: themeForDate
+  };
+})();`;
 ---
 <!doctype html>
 <html lang="en">
@@ -16,6 +44,7 @@ const full = title ? `${title} — ${siteName}` : siteName;
   <title>{full}</title>
   <meta name="description" content={description} />
   <link rel="canonical" href={canonical} />
+  {noindex && <meta name="robots" content="noindex, follow" />}
   <meta property="og:type" content="website" />
   <meta property="og:title" content={full} />
   <meta property="og:description" content={description} />
@@ -23,14 +52,7 @@ const full = title ? `${title} — ${siteName}` : siteName;
   <meta property="og:site_name" content={siteName} />
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏆</text></svg>" />
-  <script is:inline>
-    (function () {
-      try {
-        var t = localStorage.getItem('theme');
-        if (t) document.documentElement.setAttribute('data-theme', t);
-      } catch (e) {}
-    })();
-  </script>
+  <script is:inline set:html={themeBootstrap}></script>
 </head>
 <body>
   <div class="preview-banner">Визуализация за преглед — съдържанието е примерно</div>
@@ -43,14 +65,51 @@ const full = title ? `${title} — ${siteName}` : siteName;
   </main>
   <Footer />
   <script is:inline>
-    document.getElementById('theme-toggle')?.addEventListener('click', function () {
-      var root = document.documentElement;
-      var isDark = root.getAttribute('data-theme') === 'dark' ||
-        (!root.getAttribute('data-theme') && matchMedia('(prefers-color-scheme: dark)').matches);
-      var next = isDark ? 'light' : 'dark';
-      root.setAttribute('data-theme', next);
-      try { localStorage.setItem('theme', next); } catch (e) {}
-    });
+    (function () {
+      var T = window.__theme;
+      if (!T) return;
+      var btns = document.querySelectorAll('.theme-switch [data-mode]');
+      var hint = document.querySelector('[data-theme-hint]');
+
+      function pad(n) { return String(n).padStart(2, '0'); }
+      function hhmm(h) {
+        var m = Math.round(h * 60);
+        return pad(Math.floor(m / 60) % 24) + ':' + pad(m % 60);
+      }
+      function paint() {
+        btns.forEach(function (b) {
+          var on = b.dataset.mode === T.mode;
+          b.setAttribute('aria-pressed', on ? 'true' : 'false');
+          b.classList.toggle('is-on', on);
+        });
+        if (hint) {
+          hint = hint;
+          if (T.mode === 'auto') {
+            var d = new Date();
+            hint.textContent = 'Follows your clock — light from ' +
+              hhmm(T.dawnHour(d)) + ', dark from ' + hhmm(T.duskHour(d)) + ' today.';
+          } else {
+            hint.textContent = 'Fixed to your choice. Pick Auto to follow the time of day again.';
+          }
+        }
+      }
+      btns.forEach(function (b) {
+        b.addEventListener('click', function () { T.set(b.dataset.mode); paint(); });
+      });
+      paint();
+
+      // Ако страницата стои отворена през прага, темата се сменя сама.
+      setInterval(function () { if (T.mode === 'auto') { T.apply(); paint(); } }, 60000);
+
+      // Бургерът и падащите менюта се затварят при клик навън и с Esc.
+      var opens = document.querySelectorAll('details.dd, details.burger');
+      document.addEventListener('click', function (e) {
+        opens.forEach(function (d) { if (!d.contains(e.target)) d.removeAttribute('open'); });
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') opens.forEach(function (d) { d.removeAttribute('open'); });
+      });
+    })();
   </script>
 </body>
 </html>

@@ -1,0 +1,66 @@
+---
+import Base from '../../layouts/Base.astro';
+import sports from '../../data/sports.json';
+import worldCup from '../../data/archives/world-cup.json';
+import f1 from '../../data/archives/f1-champions.json';
+
+export function getStaticPaths() {
+  return sports.map((s) => ({ params: { sport: s.slug }, props: { sport: s } }));
+}
+
+const { sport } = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const archives = [
+  { slug: 'world-cup', data: worldCup },
+  { slug: 'f1-champions', data: f1 },
+].filter((a) => a.data.sport === sport.slug);
+
+// Страница без собствени данни още не е готова да се индексира.
+// Тънкото съдържание е риск по политиката за scaled content abuse (Стъпка 2).
+const thin = archives.length === 0;
+const crumb = `<a href="${base}/">Home</a> › <a href="${base}/statistics/">Statistics</a> › ${sport.name}`;
+---
+<Base
+  title={`${sport.name} statistics`}
+  description={`Champions, records and season-by-season data for ${sport.name.toLowerCase()}.`}
+  breadcrumb={crumb}
+  noindex={thin}
+>
+  <section class="hero" style={`border-top: 3px solid ${sport.accent}`}>
+    <div class="wrap">
+      <p class="eyebrow">{sport.name} · Statistics</p>
+      <h1>{sport.icon} {sport.name} records</h1>
+      <p class="lede">Champions, records and season-by-season data.</p>
+    </div>
+  </section>
+
+  {archives.length > 0 ? (
+    <section class="block">
+      <div class="wrap">
+        <div class="block-head"><h2>Available now</h2></div>
+        <div class="cards">
+          {archives.map((a) => (
+            <a class="card" href={`${base}/archives/${a.slug}/`}>
+              <div class="meta">
+                <span style={`color:${sport.accent}`}>Archive</span>
+                <span>{a.data.rows.length} entries</span>
+              </div>
+              <h3>{a.data.title}</h3>
+              <p>{a.data.intro}</p>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  ) : (
+    <section class="block">
+      <div class="wrap prose">
+        <p class="note">
+          Тази страница още няма собствени данни, затова е маркирана с
+          <code>noindex</code> — празните страници вредят на класирането на целия
+          сайт. Индексирането се включва автоматично, щом се добавят архивите ѝ.
+        </p>
+      </div>
+    </section>
+  )}
+</Base>

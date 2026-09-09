@@ -1,0 +1,35 @@
+---
+import Base from '../layouts/Base.astro';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const crumb = `<a href="${base}/">Home</a> › Cookie policy`;
+---
+<Base title="Cookie policy" description="The cookies this site uses and how to control them." breadcrumb={crumb}>
+  <section class="hero">
+    <div class="wrap">
+      <p class="eyebrow">Legal</p>
+      <h1>Cookie policy</h1>
+    </div>
+  </section>
+  <section class="block">
+    <div class="wrap prose">
+      <p class="note">ЗАМЕСТИТЕЛ — допълва се с реалния списък бисквитки след включването на CMP и рекламите.</p>
+
+      <h2>What we use</h2>
+      <table>
+        <thead><tr><th>Purpose</th><th>Set by</th><th>Consent needed</th></tr></thead>
+        <tbody>
+          <tr><td>Theme preference</td><td>This site</td><td>No — strictly necessary, stored locally</td></tr>
+          <tr><td>Audience measurement</td><td>Google Analytics 4</td><td>Yes</td></tr>
+          <tr><td>Advertising</td><td>Advertising partners</td><td>Yes</td></tr>
+        </tbody>
+      </table>
+
+      <h2>Controlling cookies</h2>
+      <p>
+        The consent banner appears on your first visit and your choice can be changed at
+        any time from the footer. Browsers can also block or delete cookies, though doing
+        so does not affect the theme preference, which is not a cookie.
+      </p>
+    </div>
+  </section>
+</Base>

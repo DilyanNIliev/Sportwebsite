@@ -1,0 +1,54 @@
+---
+import Base from '../layouts/Base.astro';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const crumb = `<a href="${base}/">Home</a> › Privacy policy`;
+---
+<Base title="Privacy policy" description="What data this site collects and how it is used." breadcrumb={crumb}>
+  <section class="hero">
+    <div class="wrap">
+      <p class="eyebrow">Legal</p>
+      <h1>Privacy policy</h1>
+    </div>
+  </section>
+  <section class="block">
+    <div class="wrap prose">
+      <p class="note">
+        ЗАМЕСТИТЕЛ — текстът по-долу е работна рамка, не юридически документ. Преди
+        пускане се допълва с реалните данни на издателя и се преглежда от юрист.
+      </p>
+
+      <h2>Who is responsible</h2>
+      <p>ЗАМЕСТИТЕЛ — име и данни на администратора на лични данни.</p>
+
+      <h2>What we collect</h2>
+      <ul>
+        <li><strong>Analytics.</strong> Aggregate data about visits, through Google Analytics 4.</li>
+        <li><strong>Advertising.</strong> Our advertising partners may set cookies to serve and measure ads.</li>
+        <li><strong>Theme preference.</strong> Stored in your browser only. It never reaches our servers.</li>
+      </ul>
+      <p>
+        We do not run accounts, newsletters or comments, so we hold no names, passwords
+        or email addresses.
+      </p>
+
+      <h2>Consent</h2>
+      <p>
+        Visitors in the European Economic Area and the United Kingdom are asked for
+        consent before any advertising or analytics cookie is set, through a consent
+        platform certified under the IAB Transparency and Consent Framework. Consent can
+        be changed at any time from the link in the footer.
+      </p>
+
+      <h2>Your rights</h2>
+      <p>
+        Under the GDPR you may request access to your data, its correction or erasure,
+        and object to its processing. Requests go to the address on our
+        <a href={`${base}/contact/`}>contact page</a>. You also have the right to
+        complain to a supervisory authority.
+      </p>
+
+      <h2>Changes</h2>
+      <p>Material changes to this policy will be noted on this page with the date of the change.</p>
+    </div>
+  </section>
+</Base>

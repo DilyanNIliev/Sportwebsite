@@ -1,0 +1,56 @@
+---
+import Base from '../layouts/Base.astro';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const crumb = `<a href="${base}/">Home</a> › Editorial policy`;
+---
+<Base title="Editorial policy" description="How we source, check and correct what we publish." breadcrumb={crumb}>
+  <section class="hero">
+    <div class="wrap">
+      <p class="eyebrow">How we work</p>
+      <h1>Editorial policy</h1>
+    </div>
+  </section>
+  <section class="block">
+    <div class="wrap prose">
+      <h2>Original writing</h2>
+      <p>
+        Every article here is written for this site, from the underlying facts. We do not
+        rewrite, summarise or translate other outlets' articles. Facts are not owned by
+        anyone; the words used to report them are.
+      </p>
+
+      <h2>Two sources</h2>
+      <p>
+        A fact is published once it appears in at least two independent sources, or once
+        it comes from the governing body itself. Where a result is recent enough that we
+        cannot yet confirm it, the page says so rather than carrying a guess.
+      </p>
+
+      <h2>Data</h2>
+      <p>
+        Historical records are held as structured data and rendered directly onto the
+        page, so the same figure cannot drift between two places. Each archive carries a
+        note stating the last verified season.
+      </p>
+
+      <h2>Illustrations</h2>
+      <p>
+        We do not use club crests or press photography. Visuals are our own, including
+        the colour badges that stand in for team identities.
+      </p>
+
+      <h2>Corrections</h2>
+      <p>
+        Errors are corrected as soon as they are confirmed, and the correction is noted
+        on the page. We would rather be visibly corrected than quietly wrong.
+      </p>
+
+      <h2>Advertising</h2>
+      <p>
+        Advertising never influences what we cover or how. Any commercial relationship
+        that could reasonably be seen to affect our coverage would be disclosed on the
+        page it touches.
+      </p>
+    </div>
+  </section>
+</Base>

@@ -1,0 +1,45 @@
+---
+import Base from '../layouts/Base.astro';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const crumb = `<a href="${base}/">Home</a> › Terms of use`;
+---
+<Base title="Terms of use" description="The terms on which this site is made available." breadcrumb={crumb}>
+  <section class="hero">
+    <div class="wrap">
+      <p class="eyebrow">Legal</p>
+      <h1>Terms of use</h1>
+    </div>
+  </section>
+  <section class="block">
+    <div class="wrap prose">
+      <p class="note">ЗАМЕСТИТЕЛ — рамка. Преглежда се от юрист преди пускане.</p>
+
+      <h2>Use of the site</h2>
+      <p>
+        The site is provided for personal, non-commercial reference. You may link to any
+        page freely.
+      </p>
+
+      <h2>Our content</h2>
+      <p>
+        The text, tables and illustrations on this site are our own work and are
+        protected by copyright. Short quotations with a link back are welcome;
+        wholesale copying or republication is not permitted.
+      </p>
+
+      <h2>Names and marks</h2>
+      <p>
+        Names of clubs, competitions and organisations appear here only to identify the
+        subjects we report on. Their trade marks belong to their respective owners, and
+        no affiliation, sponsorship or endorsement is claimed or implied.
+      </p>
+
+      <h2>Accuracy</h2>
+      <p>
+        We check our data carefully and state on each archive how far it has been
+        verified, but we give no warranty that it is free of error. Tell us about any
+        mistake and we will correct it.
+      </p>
+    </div>
+  </section>
+</Base>

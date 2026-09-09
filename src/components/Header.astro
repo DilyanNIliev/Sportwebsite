@@ -1,7 +1,8 @@
 ---
 import sports from '../data/sports.json';
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
-const top = sports.filter((s) => s.tier === 1).slice(0, 6);
+const tier1 = sports.filter((s) => s.tier === 1);
+const tier2 = sports.filter((s) => s.tier === 2);
 ---
 <header class="site-header">
   <div class="wrap header-row">
@@ -9,12 +10,61 @@ const top = sports.filter((s) => s.tier === 1).slice(0, 6);
       <span class="logo-mark">GS</span>
       <span>Global Sports</span>
     </a>
-    <nav class="nav">
-      <div class="nav-scroll">
-        {top.map((s) => <a href={`${base}/${s.slug}/`}>{s.name}</a>)}
-        <a href={`${base}/archives/`}>Archives</a>
-      </div>
-      <button id="theme-toggle" class="theme-btn" type="button" aria-label="Toggle theme">◐</button>
+
+    <nav class="nav-desktop" aria-label="Main">
+      <details class="dd">
+        <summary>Sports</summary>
+        <div class="dd-panel">
+          <div class="dd-col">
+            <h4>Covered in depth</h4>
+            {tier1.map((s) => <a href={`${base}/${s.slug}/`}><span>{s.icon}</span>{s.name}</a>)}
+          </div>
+          <div class="dd-col">
+            <h4>Also covered</h4>
+            {tier2.map((s) => <a href={`${base}/${s.slug}/`}><span>{s.icon}</span>{s.name}</a>)}
+          </div>
+        </div>
+      </details>
+
+      <details class="dd">
+        <summary>Statistics</summary>
+        <div class="dd-panel">
+          <div class="dd-col">
+            <h4>Records &amp; champions</h4>
+            {tier1.map((s) => <a href={`${base}/statistics/${s.slug}/`}><span>{s.icon}</span>{s.name}</a>)}
+          </div>
+          <div class="dd-col">
+            <h4>More</h4>
+            {tier2.map((s) => <a href={`${base}/statistics/${s.slug}/`}><span>{s.icon}</span>{s.name}</a>)}
+          </div>
+        </div>
+      </details>
+
+      <a href={`${base}/archives/`}>Archives</a>
+      <a href={`${base}/about/`}>About</a>
     </nav>
+
+    <details class="burger">
+      <summary aria-label="Open menu"><span class="burger-ico"></span></summary>
+      <div class="burger-panel">
+        <div class="wrap">
+          <h4>Covered in depth</h4>
+          <div class="burger-grid">
+            {tier1.map((s) => <a href={`${base}/${s.slug}/`}><span>{s.icon}</span>{s.name}</a>)}
+          </div>
+          <h4>Also covered</h4>
+          <div class="burger-grid">
+            {tier2.map((s) => <a href={`${base}/${s.slug}/`}><span>{s.icon}</span>{s.name}</a>)}
+          </div>
+          <h4>Sections</h4>
+          <div class="burger-grid">
+            <a href={`${base}/archives/`}>Archives</a>
+            <a href={`${base}/statistics/`}>Statistics</a>
+            <a href={`${base}/about/`}>About</a>
+            <a href={`${base}/contact/`}>Contact</a>
+          </div>
+        </div>
+      </div>
+    </details>
   </div>
 </header>

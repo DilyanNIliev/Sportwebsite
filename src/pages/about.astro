@@ -1,0 +1,49 @@
+---
+import Base from '../layouts/Base.astro';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const crumb = `<a href="${base}/">Home</a> › About us`;
+---
+<Base title="About us" description="Who publishes Global Sports Archive and why." breadcrumb={crumb}>
+  <section class="hero">
+    <div class="wrap">
+      <p class="eyebrow">The publisher</p>
+      <h1>About us</h1>
+    </div>
+  </section>
+  <section class="block">
+    <div class="wrap prose">
+      <p>
+        Global Sports Archive is a reference site about the history of sport. Where most
+        sports media chases today's result and lets the record books rot, we do the
+        opposite: we keep complete, checked archives of who won what, and when.
+      </p>
+
+      <h2>What we publish</h2>
+      <p>
+        Twelve sports are covered in depth, with a further eight covered more lightly.
+        Every archive page states how far its data has been verified, and against which
+        sources. Where a season or tournament has not yet been confirmed, we say so on
+        the page rather than guess.
+      </p>
+
+      <h2>How we work</h2>
+      <ul>
+        <li>Every article is written for this site. We do not republish or translate other outlets' work.</li>
+        <li>Facts are confirmed against at least two independent sources before publication.</li>
+        <li>Team crests and press photography are not used. Illustrations are our own.</li>
+        <li>Corrections are made openly, with the change noted on the page.</li>
+      </ul>
+      <p>The full method is set out in our <a href={`${base}/editorial-policy/`}>editorial policy</a>.</p>
+
+      <h2>Who we are</h2>
+      <p class="note">
+        ЗАМЕСТИТЕЛ — тук влизат реалното име на издателя, кратка биография на автора и
+        адрес за кореспонденция. AdSense и E-E-A-T изискват разпознаваем издател;
+        липсата му е честа причина за отказ.
+      </p>
+
+      <h2>Contact</h2>
+      <p>Corrections, questions and press enquiries: <a href={`${base}/contact/`}>contact us</a>.</p>
+    </div>
+  </section>
+</Base>

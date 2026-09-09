@@ -1,0 +1,41 @@
+---
+import Base from '../../layouts/Base.astro';
+import sports from '../../data/sports.json';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const t1 = sports.filter((s) => s.tier === 1);
+const t2 = sports.filter((s) => s.tier === 2);
+const crumb = `<a href="${base}/">Home</a> › Statistics`;
+---
+<Base title="Statistics" description="Records, champions and season-by-season data for every sport we cover." breadcrumb={crumb}>
+  <section class="hero">
+    <div class="wrap">
+      <p class="eyebrow">Reference</p>
+      <h1>Statistics</h1>
+      <p class="lede">Records, champions and season-by-season data, sport by sport.</p>
+    </div>
+  </section>
+  <section class="block">
+    <div class="wrap">
+      <div class="block-head"><h2>Covered in depth</h2></div>
+      <div class="sport-grid">
+        {t1.map((s) => (
+          <a class="sport-card" href={`${base}/statistics/${s.slug}/`} style={`--accent:${s.accent}`}>
+            <div class="ico">{s.icon}</div>
+            <h3>{s.name}</h3>
+            <p>Champions, records and season data.</p>
+          </a>
+        ))}
+      </div>
+      <div class="block-head" style="margin-top:38px"><h2>Also covered</h2></div>
+      <div class="sport-grid">
+        {t2.map((s) => (
+          <a class="sport-card" href={`${base}/statistics/${s.slug}/`} style={`--accent:${s.accent}`}>
+            <div class="ico">{s.icon}</div>
+            <h3>{s.name}</h3>
+            <p>Champions, records and season data.</p>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+</Base>

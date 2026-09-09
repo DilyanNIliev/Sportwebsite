@@ -1,5 +1,7 @@
 ---
+import { getCollection } from 'astro:content';
 import Base from '../layouts/Base.astro';
+import ArticleList from '../components/ArticleList.astro';
 import sports from '../data/sports.json';
 import worldCup from '../data/archives/world-cup.json';
 import f1 from '../data/archives/f1-champions.json';
@@ -10,6 +12,9 @@ export function getStaticPaths() {
 
 const { sport } = Astro.props;
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const news = (await getCollection('articles', (a) => a.data.sport === sport.slug)).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
+);
 const archives = [worldCup, f1].filter((a) => a.sport === sport.slug);
 const crumb = `<a href="${base}/">Home</a> › ${sport.name}`;
 ---
@@ -21,6 +26,8 @@ const crumb = `<a href="${base}/">Home</a> › ${sport.name}`;
       <p class="lede">{sport.tagline}</p>
     </div>
   </section>
+
+  <ArticleList articles={news} heading="Latest" />
 
   {archives.length > 0 && (
     <section class="block">

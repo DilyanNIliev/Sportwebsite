@@ -20,6 +20,16 @@
     "accentNote": "официалното червено на Формула 1"
   },
   {
+    "slug": "formula-2",
+    "name": "Formula 2",
+    "tagline": "The last step before Formula 1, and the drivers taking it.",
+    "tier": 1,
+    "accent": "#2563eb",
+    "accentDark": "#4c7fef",
+    "icon": "🏁",
+    "accentNote": "синьото от идентичността на сериите"
+  },
+  {
     "slug": "basketball",
     "name": "Basketball",
     "tagline": "NBA, EuroLeague and the international game.",

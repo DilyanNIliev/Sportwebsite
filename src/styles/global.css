@@ -339,3 +339,15 @@ tbody td:nth-child(2) { font-weight: 650; }
   font: inherit; font-size: .875rem; color: var(--text-soft); cursor: pointer; text-align: left;
 }
 .footer-grid .linklike:hover { color: var(--text); }
+
+/* ---------- тяло на статия ---------- */
+.article-body h2 { font-size: 1.3rem; }
+.article-body table { min-width: 0; width: 100%; margin: 22px 0; font-size: .88rem; }
+.article-body table th, .article-body table td { padding: 9px 12px; }
+.article-body table thead th { position: static; }
+.article-body em { color: var(--text-faint); }
+.sources { padding-left: 1.1em; }
+.sources li { margin: .3em 0; }
+.sources a { color: var(--brand); }
+.eyebrow a { text-decoration: none; }
+.eyebrow a:hover { text-decoration: underline; }

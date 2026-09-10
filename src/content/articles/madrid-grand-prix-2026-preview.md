@@ -66,7 +66,7 @@ Tsolov still has more wins than anyone in the field this season. What he no long
 | 2 | Ugo Ugochukwu | Campos Racing | 126 |
 | 3 | Ernesto Rivera | Campos Racing | 76 |
 
-Madrid is the Formula 3 finale. Slater leads Ugochukwu by fifteen points with a sprint and a feature race left, which is not enough of a cushion to control — a bad Saturday and a strong Sunday from Ugochukwu would settle it the other way.
+Madrid is the Formula 3 finale, and an unusual one: a sprint race and **two** feature races, worth more than sixty points to a driver who sweeps them. Slater's fifteen-point lead is less than a single feature-race win, so it is not a margin he can control by finishing second.
 
 Rivera, 65 back, is out of it barring an extraordinary weekend.
 

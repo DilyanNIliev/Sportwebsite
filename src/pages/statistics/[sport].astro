@@ -2,6 +2,7 @@
 import Base from '../../layouts/Base.astro';
 import sports from '../../data/sports.json';
 import { archivesFor, rowCount } from '../../data/archives.js';
+import { standingsFor } from '../../data/standings.js';
 
 export function getStaticPaths() {
   return sports.map((s) => ({ params: { sport: s.slug }, props: { sport: s } }));
@@ -10,10 +11,12 @@ export function getStaticPaths() {
 const { sport } = Astro.props;
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const archives = archivesFor(sport.slug);
+const tables = standingsFor(sport.slug);
 
 // Страница без собствени данни още не е готова да се индексира.
 // Тънкото съдържание е риск по политиката за scaled content abuse (Стъпка 2).
-const thin = archives.length === 0;
+// Класиранията се броят за съдържание — тенисът има ATP и WTA, но още няма архив.
+const thin = archives.length === 0 && tables.length === 0;
 const crumbs = [{ label: 'Home', href: `${base}/` }, { label: 'Statistics', href: `${base}/statistics/` }, { label: sport.name }];
 ---
 <Base
@@ -29,6 +32,26 @@ const crumbs = [{ label: 'Home', href: `${base}/` }, { label: 'Statistics', href
       <p class="lede">Champions, records and season-by-season data.</p>
     </div>
   </section>
+
+  {tables.length > 0 && (
+    <section class="block">
+      <div class="wrap">
+        <div class="block-head"><h2>Current standings</h2></div>
+        <div class="cards">
+          {tables.map((t) => (
+            <a class="card" href={`${base}/standings/${t.slug}/`}>
+              <div class="meta">
+                <span class="accent" style={`--accent:${sport.accent};--accent-dark:${sport.accentDark}`}>{t.data.series}</span>
+                <span>{t.data.season}</span>
+              </div>
+              <h3>{t.data.drivers[0].name} leads on {t.data.drivers[0].points.toLocaleString('en-GB')}</h3>
+              <p>{t.data.asOf}</p>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
 
   {archives.length > 0 ? (
     <section class="block">

@@ -24,20 +24,20 @@
     "name": "Formula 2",
     "tagline": "The last step before Formula 1, and the drivers taking it.",
     "tier": 1,
-    "accent": "#2563eb",
-    "accentDark": "#4c7fef",
+    "accent": "#1a71ec",
+    "accentDark": "#2a80fb",
     "icon": "🏁",
-    "accentNote": "синьото от идентичността на сериите"
+    "accentNote": "официалното синьо на Формула 2 (#1C78FB)"
   },
   {
     "slug": "formula-3",
     "name": "Formula 3",
     "tagline": "Where the next generation of Formula 1 drivers is found.",
     "tier": 1,
-    "accent": "#07809d",
-    "accentDark": "#0891b2",
-    "icon": "🏁",
-    "accentNote": "циан, за да се различава от червеното на Ф1 и синьото на Ф2"
+    "accent": "#c25128",
+    "accentDark": "#ff6b35",
+    "icon": "🛞",
+    "accentNote": "официалното оранжево на Формула 3, въведено с новото лого"
   },
   {
     "slug": "basketball",

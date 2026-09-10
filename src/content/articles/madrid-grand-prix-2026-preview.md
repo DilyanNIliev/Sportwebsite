@@ -2,9 +2,6 @@
 title: "Madrid Grand Prix 2026: the date, the contenders and the points they carry"
 description: "Formula 1 races in Madrid for the first time on 11-13 September, with Formula 2 and a Formula 3 title decider on the same bill. Who can win, and what each of them has on the board."
 sport: formula-1
-alsoSports:
-  - formula-2
-  - formula-3
 date: 2026-09-10
 author: Global Sports Archive
 sources:

@@ -1,5 +1,6 @@
 ---
 title: "Mbappé and a goalkeeping error give Mourinho's Madrid the better of Inter"
+seoTitle: "Real Madrid 2-1 Inter: Mbappé, Valverde"
 description: "Real Madrid opened the 2026/27 Champions League league phase with a 2-1 win over Inter at the Bernabéu, built on an early Mbappé goal and a mistake Inter could not afford."
 sport: football
 date: 2026-09-08

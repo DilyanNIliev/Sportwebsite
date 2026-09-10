@@ -4,9 +4,9 @@ import { standings } from '../../data/standings.js';
 import sports from '../../data/sports.json';
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const colour = (slug) => sports.find((s) => s.slug === slug) ?? {};
-const crumb = `<a href="${base}/">Home</a> › Standings`;
+const crumbs = [{ label: 'Home', href: `${base}/` }, { label: 'Standings' }];
 ---
-<Base title="Standings" description="Current championship points for the single-seater series we cover." breadcrumb={crumb}>
+<Base title="Standings" description="Current championship points for Formula 1, Formula 2 and Formula 3 — who leads, by how much, and which round the tables were taken after." crumbs={crumbs}>
   <section class="hero">
     <div class="wrap">
       <p class="eyebrow">Live tables</p>

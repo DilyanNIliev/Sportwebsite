@@ -15,7 +15,7 @@ const sport = sports.find((s) => s.slug === article.data.sport);
 const d = article.data.date;
 const iso = d.toISOString().slice(0, 10);
 const nice = d.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
-const crumb = `<a href="${base}/">Home</a> › <a href="${base}/${sport?.slug}/">${sport?.name}</a> › News`;
+const crumbs = [{ label: 'Home', href: `${base}/` }, { label: sport?.name, href: `${base}/${sport?.slug}/` }, { label: 'News' }];
 
 const jsonLd = {
   '@context': 'https://schema.org',
@@ -27,7 +27,7 @@ const jsonLd = {
   publisher: { '@type': 'Organization', name: 'Global Sports Archive' },
 };
 ---
-<Base title={article.data.title} description={article.data.description} breadcrumb={crumb}>
+<Base title={article.data.title} seoTitle={article.data.seoTitle} description={article.data.description} crumbs={crumbs}>
   <article>
     <section class="hero accented" style={`--accent:${sport?.accent};--accent-dark:${sport?.accentDark}`}>
       <div class="wrap">

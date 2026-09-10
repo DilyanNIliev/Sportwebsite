@@ -5,6 +5,9 @@ const articles = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/articles' }),
   schema: z.object({
     title: z.string(),
+    // По-кратко заглавие за раздела на браузъра и резултатите в Google;
+    // видимото заглавие може да остане дълго и описателно.
+    seoTitle: z.string().max(60).optional(),
     description: z.string(),
     sport: z.string(),
     // Уикенд, в който карат няколко серии, се появява във всеки от разделите им.

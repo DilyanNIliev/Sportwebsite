@@ -1,5 +1,6 @@
 ---
 title: "Formula 3 decides its title in Madrid, with three races and fifteen points in it"
+seoTitle: "F3 title decider in Madrid 2026"
 description: "The 2026 Formula 3 season ends at the Madring on 11-13 September. Freddie Slater leads Ugo Ugochukwu by fifteen points, and an unusual finale format puts far more than that on the table."
 sport: formula-3
 date: 2026-09-10

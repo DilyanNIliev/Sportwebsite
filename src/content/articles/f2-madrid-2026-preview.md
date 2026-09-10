@@ -1,5 +1,6 @@
 ---
 title: "Tsolov takes an eleven-point lead into Madrid with three rounds still to come"
+seoTitle: "F2 Madrid 2026: Tsolov leads by 11"
 description: "Formula 2 races at the new Madring on 11-13 September. Nikola Tsolov leads Rafael Câmara by eleven points, and this is round eleven of fourteen — not the finale it is being mistaken for."
 sport: formula-2
 date: 2026-09-10

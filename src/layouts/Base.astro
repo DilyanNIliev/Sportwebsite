@@ -4,10 +4,54 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import autoThemeSrc from '../scripts/auto-theme.js?raw';
 
-const { title, description, breadcrumb, noindex } = Astro.props;
+const { title, seoTitle, description, crumbs, noindex } = Astro.props;
 const canonical = new URL(Astro.url.pathname, Astro.site).href;
+const origin = new URL(Astro.site).origin + import.meta.env.BASE_URL.replace(/\/$/, '');
 const siteName = 'Global Sports Archive';
-const full = title ? `${title} — ${siteName}` : siteName;
+
+// Видимото заглавие може да е дълго и описателно; заглавието в раздела на
+// браузъра се реже около 60 знака, затова името на сайта се долепя само
+// когато има място за него.
+const head = seoTitle ?? title;
+const full = !head ? siteName
+  : head.length + siteName.length + 3 <= 62 ? `${head} — ${siteName}`
+  : head;
+
+// Google реже описанието около 160 знака. Пълният текст остава за картите в
+// списъците; тук се съкращава по граница на думата.
+const metaDescription = !description ? undefined
+  : description.length <= 165 ? description
+  : description.slice(0, 158).replace(/[\s,;:—-]+\S*$/, '') + '…';
+
+// Структурирани данни на всяка страница: сайтът, издателят и трохите.
+const graph = [
+  {
+    '@type': 'WebSite',
+    '@id': origin + '/#website',
+    name: siteName,
+    url: origin + '/',
+    inLanguage: 'en',
+    publisher: { '@id': origin + '/#publisher' },
+  },
+  {
+    '@type': 'Organization',
+    '@id': origin + '/#publisher',
+    name: siteName,
+    url: origin + '/',
+  },
+];
+if (crumbs?.length) {
+  graph.push({
+    '@type': 'BreadcrumbList',
+    itemListElement: crumbs.map((c, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      name: c.label,
+      ...(c.href ? { item: new URL(c.href, Astro.site).href } : {}),
+    })),
+  });
+}
+const siteJsonLd = { '@context': 'https://schema.org', '@graph': graph };
 
 // Един източник на истината: същият файл се ползва и в тестовете.
 // `export` се маха, за да върви като обикновен скрипт преди първото рисуване.
@@ -42,23 +86,33 @@ const themeBootstrap = autoThemeSrc.replace(/^export /gm, '') + `
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>{full}</title>
-  <meta name="description" content={description} />
+  <meta name="description" content={metaDescription} />
   <link rel="canonical" href={canonical} />
   {noindex && <meta name="robots" content="noindex, follow" />}
   <meta property="og:type" content="website" />
   <meta property="og:title" content={full} />
-  <meta property="og:description" content={description} />
+  <meta property="og:description" content={metaDescription} />
   <meta property="og:url" content={canonical} />
   <meta property="og:site_name" content={siteName} />
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏆</text></svg>" />
   <script is:inline set:html={themeBootstrap}></script>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(siteJsonLd)} />
 </head>
 <body>
   <div class="preview-banner">Визуализация за преглед — съдържанието е примерно</div>
   <Header />
-  {breadcrumb && (
-    <div class="wrap"><nav class="breadcrumb" set:html={breadcrumb} /></div>
+  {crumbs?.length > 0 && (
+    <div class="wrap">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        {crumbs.map((c, i) => (
+          <>
+            {i > 0 && <span aria-hidden="true"> › </span>}
+            {c.href ? <a href={c.href}>{c.label}</a> : <span>{c.label}</span>}
+          </>
+        ))}
+      </nav>
+    </div>
   )}
   <main>
     <slot />

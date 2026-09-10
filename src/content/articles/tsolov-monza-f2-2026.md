@@ -1,5 +1,6 @@
 ---
 title: "Tsolov holds the Formula 2 lead at Monza as Duerksen sweeps the weekend"
+seoTitle: "Tsolov keeps F2 lead at Monza"
 description: "Nikola Tsolov left Monza still top of the Formula 2 standings, but a fifth and a sixth place let Rafael Câmara cut the gap to eleven points with the season entering its final stretch."
 sport: formula-2
 date: 2026-09-06

@@ -19,9 +19,14 @@ const news = (await getCollection('articles', (a) =>
 );
 const archives = archivesFor(sport.slug);
 const table = standingsFor(sport.slug);
-const crumb = `<a href="${base}/">Home</a> › ${sport.name}`;
+const crumbs = [{ label: 'Home', href: `${base}/` }, { label: sport.name }];
+const hasArchives = archives.length > 0;
+const metaDesc =
+  `${sport.name} records and history: ` +
+  (hasArchives ? 'champions year by year, ' : '') +
+  `reports and season data. ${sport.tagline}`;
 ---
-<Base title={sport.name} description={sport.tagline} breadcrumb={crumb}>
+<Base title={sport.name} description={metaDesc} crumbs={crumbs}>
   <section class="hero accented" style={`--accent:${sport.accent};--accent-dark:${sport.accentDark}`}>
     <div class="wrap">
       <p class="eyebrow">{sport.tier === 1 ? 'Covered in depth' : 'Also covered'}</p>

@@ -4,9 +4,9 @@ import sports from '../../data/sports.json';
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const t1 = sports.filter((s) => s.tier === 1);
 const t2 = sports.filter((s) => s.tier === 2);
-const crumb = `<a href="${base}/">Home</a> › Statistics`;
+const crumbs = [{ label: 'Home', href: `${base}/` }, { label: 'Statistics' }];
 ---
-<Base title="Statistics" description="Records, champions and season-by-season data for every sport we cover." breadcrumb={crumb}>
+<Base title="Statistics" description="Records, champions and season-by-season data for twenty-two sports, from football and Formula 1 to handball, darts and winter sports." crumbs={crumbs}>
   <section class="hero">
     <div class="wrap">
       <p class="eyebrow">Reference</p>

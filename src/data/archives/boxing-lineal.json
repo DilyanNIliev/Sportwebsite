@@ -1,7 +1,7 @@
 {
   "title": "Lineal World Boxing Champions",
   "sport": "boxing-mma",
-  "intro": "The lineal champion is the fighter who beat the fighter — a single line of succession, rather than four sanctioning bodies each recognising a different man. Most recent first.",
+  "intro": "The lineal champion is the fighter who beat the fighter: one line of succession, instead of four sanctioning bodies each crowning a different man.",
   "why": "Boxing has four world titles per division (WBA, WBC, IBF, WBO), so \"world champion\" alone can mean four different people at once. The lineal championship follows one line: it changes hands only in the ring, and when a champion retires or moves up, it falls vacant until two leading contenders settle it.",
   "divisions": [
     {

@@ -10,13 +10,13 @@ export function getStaticPaths() {
 const { d } = Astro.props;
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const sport = sports.find((s) => s.slug === d.sport);
-const crumb = `<a href="${base}/">Home</a> › <a href="${base}/standings/">Standings</a> › ${d.series}`;
+const crumbs = [{ label: 'Home', href: `${base}/` }, { label: 'Standings', href: `${base}/standings/` }, { label: d.series }];
 const pending = d.drivers.length <= d.confirmedThrough;
 ---
 <Base
   title={`${d.series} ${d.season} standings`}
-  description={`Drivers' championship points for the ${d.season} ${d.series} season. ${d.asOf}`}
-  breadcrumb={crumb}
+  description={`${d.series} ${d.season} drivers' championship points, leader first: ${d.drivers[0].name} leads on ${d.drivers[0].points}. ${d.asOf}`}
+  crumbs={crumbs}
 >
   <section class="hero accented" style={`--accent:${sport?.accent};--accent-dark:${sport?.accentDark}`}>
     <div class="wrap">

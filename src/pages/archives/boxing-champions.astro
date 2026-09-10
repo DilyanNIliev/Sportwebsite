@@ -5,9 +5,9 @@ import sports from '../../data/sports.json';
 
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const sport = sports.find((s) => s.slug === data.sport);
-const crumb = `<a href="${base}/">Home</a> › <a href="${base}/archives/">Archives</a> › ${data.title}`;
+const crumbs = [{ label: 'Home', href: `${base}/` }, { label: 'Archives', href: `${base}/archives/` }, { label: data.title }];
 ---
-<Base title={data.title} description={data.intro} breadcrumb={crumb}>
+<Base title={data.title} description={data.intro} crumbs={crumbs}>
   <section class="hero accented" style={`--accent:${sport?.accent};--accent-dark:${sport?.accentDark}`}>
     <div class="wrap">
       <p class="eyebrow">{sport?.name} · Archive</p>

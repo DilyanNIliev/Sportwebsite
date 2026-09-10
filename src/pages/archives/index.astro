@@ -6,9 +6,9 @@ import sports from '../../data/sports.json';
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const colour = (slug) => sports.find((s) => s.slug === slug) ?? {};
 const items = archives.map((a) => ({ ...a, ...colour(a.data.sport), count: rowCount(a) }));
-const crumb = `<a href="${base}/">Home</a> › Archives`;
+const crumbs = [{ label: 'Home', href: `${base}/` }, { label: 'Archives' }];
 ---
-<Base title="Archives" description="Complete champion archives across every sport we cover." breadcrumb={crumb}>
+<Base title="Archives" description="Complete, checked lists of champions across every sport we cover — World Cups, Formula 1 seasons, boxing title lineages and more, most recent first." crumbs={crumbs}>
   <section class="hero">
     <div class="wrap">
       <p class="eyebrow">Reference</p>

@@ -1,9 +1,9 @@
 ---
 import Base from '../layouts/Base.astro';
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
-const crumb = `<a href="${base}/">Home</a> › Privacy policy`;
+const crumbs = [{ label: 'Home', href: `${base}/` }, { label: 'Privacy policy' }];
 ---
-<Base title="Privacy policy" description="What data this site collects and how it is used." breadcrumb={crumb}>
+<Base title="Privacy policy" description="What data Global Sports Archive collects, how advertising and analytics cookies are used, and the rights you have over your data under the GDPR." crumbs={crumbs}>
   <section class="hero">
     <div class="wrap">
       <p class="eyebrow">Legal</p>

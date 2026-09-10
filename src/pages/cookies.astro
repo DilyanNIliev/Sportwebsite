@@ -1,9 +1,9 @@
 ---
 import Base from '../layouts/Base.astro';
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
-const crumb = `<a href="${base}/">Home</a> › Cookie policy`;
+const crumbs = [{ label: 'Home', href: `${base}/` }, { label: 'Cookie policy' }];
 ---
-<Base title="Cookie policy" description="The cookies this site uses and how to control them." breadcrumb={crumb}>
+<Base title="Cookie policy" description="The cookies Global Sports Archive uses for analytics and advertising, which of them need your consent, and how to change your choice at any time." crumbs={crumbs}>
   <section class="hero">
     <div class="wrap">
       <p class="eyebrow">Legal</p>

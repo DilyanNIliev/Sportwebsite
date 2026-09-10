@@ -1,9 +1,9 @@
 ---
 import Base from '../layouts/Base.astro';
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
-const crumb = `<a href="${base}/">Home</a> › Contact`;
+const crumbs = [{ label: 'Home', href: `${base}/` }, { label: 'Contact' }];
 ---
-<Base title="Contact" description="How to reach the editors of Global Sports Archive." breadcrumb={crumb}>
+<Base title="Contact" description="How to reach the editors of Global Sports Archive, and how to report an error in one of our archives so we can correct it." crumbs={crumbs}>
   <section class="hero">
     <div class="wrap">
       <p class="eyebrow">Get in touch</p>

@@ -14,12 +14,12 @@ const archives = archivesFor(sport.slug);
 // Страница без собствени данни още не е готова да се индексира.
 // Тънкото съдържание е риск по политиката за scaled content abuse (Стъпка 2).
 const thin = archives.length === 0;
-const crumb = `<a href="${base}/">Home</a> › <a href="${base}/statistics/">Statistics</a> › ${sport.name}`;
+const crumbs = [{ label: 'Home', href: `${base}/` }, { label: 'Statistics', href: `${base}/statistics/` }, { label: sport.name }];
 ---
 <Base
   title={`${sport.name} statistics`}
-  description={`Champions, records and season-by-season data for ${sport.name.toLowerCase()}.`}
-  breadcrumb={crumb}
+  description={`Champions, records and season-by-season data for ${sport.name.toLowerCase()} — every title listed by year, most recent first, checked before publication.`}
+  crumbs={crumbs}
   noindex={thin}
 >
   <section class="hero accented" style={`--accent:${sport.accent};--accent-dark:${sport.accentDark}`}>

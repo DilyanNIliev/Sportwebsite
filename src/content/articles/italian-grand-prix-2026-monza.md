@@ -1,5 +1,6 @@
 ---
 title: "Antonelli wins the Italian Grand Prix from 19th and all but settles the title"
+seoTitle: "Antonelli wins Italian GP from 19th"
 description: "Kimi Antonelli took a 30-place grid penalty, started 19th at Monza, and won — becoming the first Italian to win the race since 1966 and extending his championship lead to 66 points."
 sport: formula-1
 date: 2026-09-06

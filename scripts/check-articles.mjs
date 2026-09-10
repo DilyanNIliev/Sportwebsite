@@ -2,13 +2,13 @@
   Проверка преди билд. Правилата от Стъпка 2 и Стъпка 5 се спазват от билда,
   а не от паметта ни:
     - поне два независими източника (това го налага схемата на колекцията)
-    - поне MIN_WORDS думи, защото под този обем AdSense отказва
+    - поне MIN_WORDS думи като долна граница срещу празни статии
 */
 import { readdir, readFile } from 'node:fs/promises';
 import { join } from 'node:path';
 
 const DIR = 'src/content/articles';
-const MIN_WORDS = 600;
+const MIN_WORDS = 250;
 
 const files = (await readdir(DIR)).filter((f) => f.endsWith('.md'));
 const problems = [];

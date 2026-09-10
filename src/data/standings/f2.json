@@ -1,0 +1,21 @@
+{
+  "series": "Formula 2",
+  "sport": "formula-2",
+  "season": 2026,
+  "asOf": "After round 10 — Monza, 6 September 2026",
+  "confirmedThrough": 5,
+  "drivers": [
+    { "pos": 1, "name": "Nikola Tsolov", "team": "Campos Racing", "points": 177 },
+    { "pos": 2, "name": "Rafael Câmara", "team": "Invicta Racing", "points": 166 },
+    { "pos": 3, "name": "Gabriele Minì", "team": "", "points": 147 },
+    { "pos": 4, "name": "Alexander Dunne", "team": "", "points": 118 },
+    { "pos": 5, "name": "Noel León", "team": "", "points": 114 }
+  ],
+  "teams": [
+    { "pos": 1, "name": "Campos Racing", "points": 291 },
+    { "pos": 2, "name": "Invicta Racing", "points": 244 },
+    { "pos": 3, "name": "MP Motorsport", "points": 184 },
+    { "pos": 4, "name": "Rodin Motorsport", "points": 180 },
+    { "pos": 5, "name": "ART Grand Prix", "points": 151 }
+  ]
+}

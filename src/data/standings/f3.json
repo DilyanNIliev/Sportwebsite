@@ -1,0 +1,13 @@
+{
+  "series": "Formula 3",
+  "sport": "formula-3",
+  "season": 2026,
+  "asOf": "After round 9 — Monza, 6 September 2026. The title is decided in Madrid, 11-13 September.",
+  "confirmedThrough": 3,
+  "drivers": [
+    { "pos": 1, "name": "Freddie Slater", "team": "Trident", "points": 141 },
+    { "pos": 2, "name": "Ugo Ugochukwu", "team": "Campos Racing", "points": 126 },
+    { "pos": 3, "name": "Ernesto Rivera", "team": "Campos Racing", "points": 76 }
+  ],
+  "teams": []
+}

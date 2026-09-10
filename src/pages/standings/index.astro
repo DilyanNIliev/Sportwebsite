@@ -1,0 +1,36 @@
+---
+import Base from '../../layouts/Base.astro';
+import { standings } from '../../data/standings.js';
+import sports from '../../data/sports.json';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const colour = (slug) => sports.find((s) => s.slug === slug) ?? {};
+const crumb = `<a href="${base}/">Home</a> › Standings`;
+---
+<Base title="Standings" description="Current championship points for the single-seater series we cover." breadcrumb={crumb}>
+  <section class="hero">
+    <div class="wrap">
+      <p class="eyebrow">Live tables</p>
+      <h1>Standings</h1>
+      <p class="lede">Where each championship stands right now, from the leader down.</p>
+    </div>
+  </section>
+  <section class="block">
+    <div class="wrap">
+      <div class="cards">
+        {standings.map((s) => {
+          const c = colour(s.data.sport);
+          return (
+            <a class="card" href={`${base}/standings/${s.slug}/`}>
+              <div class="meta">
+                <span class="accent" style={`--accent:${c.accent};--accent-dark:${c.accentDark}`}>{s.data.series}</span>
+                <span>{s.data.season}</span>
+              </div>
+              <h3>{s.data.drivers[0].name} leads on {s.data.drivers[0].points}</h3>
+              <p>{s.data.asOf}</p>
+            </a>
+          );
+        })}
+      </div>
+    </div>
+  </section>
+</Base>

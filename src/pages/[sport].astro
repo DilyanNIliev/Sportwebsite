@@ -4,6 +4,7 @@ import Base from '../layouts/Base.astro';
 import ArticleList from '../components/ArticleList.astro';
 import sports from '../data/sports.json';
 import { archivesFor } from '../data/archives.js';
+import { standingsFor } from '../data/standings.js';
 
 export function getStaticPaths() {
   return sports.map((s) => ({ params: { sport: s.slug }, props: { sport: s } }));
@@ -15,6 +16,7 @@ const news = (await getCollection('articles', (a) => a.data.sport === sport.slug
   (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
 );
 const archives = archivesFor(sport.slug);
+const table = standingsFor(sport.slug);
 const crumb = `<a href="${base}/">Home</a> › ${sport.name}`;
 ---
 <Base title={sport.name} description={sport.tagline} breadcrumb={crumb}>
@@ -27,6 +29,23 @@ const crumb = `<a href="${base}/">Home</a> › ${sport.name}`;
   </section>
 
   <ArticleList articles={news} heading="Latest" />
+
+  {table && (
+    <section class="block">
+      <div class="wrap">
+        <div class="block-head"><h2>Championship standings</h2></div>
+        <div class="cards">
+          <a class="card" href={`${base}/standings/${table.slug}/`}>
+            <div class="meta">
+              <span class="accent" style={`--accent:${sport.accent};--accent-dark:${sport.accentDark}`}>{table.data.season}</span>
+            </div>
+            <h3>{table.data.drivers[0].name} leads on {table.data.drivers[0].points}</h3>
+            <p>{table.data.asOf}</p>
+          </a>
+        </div>
+      </div>
+    </section>
+  )}
 
   {archives.length > 0 && (
     <section class="block">

@@ -1,0 +1,77 @@
+---
+import Base from '../../layouts/Base.astro';
+import { standings } from '../../data/standings.js';
+import sports from '../../data/sports.json';
+
+export function getStaticPaths() {
+  return standings.map((s) => ({ params: { series: s.slug }, props: { d: s.data } }));
+}
+
+const { d } = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const sport = sports.find((s) => s.slug === d.sport);
+const crumb = `<a href="${base}/">Home</a> › <a href="${base}/standings/">Standings</a> › ${d.series}`;
+const pending = d.drivers.length <= d.confirmedThrough;
+---
+<Base
+  title={`${d.series} ${d.season} standings`}
+  description={`Drivers' championship points for the ${d.season} ${d.series} season. ${d.asOf}`}
+  breadcrumb={crumb}
+>
+  <section class="hero accented" style={`--accent:${sport?.accent};--accent-dark:${sport?.accentDark}`}>
+    <div class="wrap">
+      <p class="eyebrow">{sport?.name} · Standings</p>
+      <h1>{d.series} {d.season}</h1>
+      <p class="lede">{d.asOf}</p>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap">
+      <div class="block-head"><h2>Drivers</h2></div>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th>#</th><th>Driver</th><th>Team</th><th>Points</th></tr></thead>
+          <tbody>
+            {d.drivers.map((r) => (
+              <tr>
+                <td>{r.pos}</td>
+                <td>{r.name}</td>
+                <td class="td-note">{r.team}</td>
+                <td><strong>{r.points}</strong></td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      {pending && (
+        <p class="note">
+          Positions 1–{d.confirmedThrough} are confirmed against published classifications.
+          The rest of the field is being checked before it is added — an unverified points
+          total is worse than a short table.
+        </p>
+      )}
+
+      {d.teams.length > 0 && (
+        <>
+          <div class="block-head" style="margin-top:38px"><h2>Teams</h2></div>
+          <div class="table-scroll">
+            <table>
+              <thead><tr><th>#</th><th>Team</th><th>Points</th></tr></thead>
+              <tbody>
+                {d.teams.map((r) => (
+                  <tr><td>{r.pos}</td><td>{r.name}</td><td><strong>{r.points}</strong></td></tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </>
+      )}
+
+      <p class="note" style="margin-top:26px">
+        Standings are a snapshot taken after the round named above, not a live feed.
+        They are updated with each race report.
+      </p>
+    </div>
+  </section>
+</Base>

@@ -1,0 +1,16 @@
+{
+  "title": "Formula 3 Champions",
+  "sport": "formula-3",
+  "intro": "Every FIA Formula 3 champion since the championship was created in 2019, most recent first.",
+  "dataNote": "Verified through the 2025 season, won by Rafael Câmara. The 2026 title is decided at the final round in Madrid on 11-13 September.",
+  "columns": ["Season", "Champion", "Team", "Where they went"],
+  "rows": [
+    [2025, "Rafael Câmara", "Trident", "Formula 2"],
+    [2024, "Leonardo Fornaroli", "Trident", "Formula 2"],
+    [2023, "Gabriel Bortoleto", "Trident", "Formula 2"],
+    [2022, "Victor Martins", "ART Grand Prix", "Formula 2"],
+    [2021, "Dennis Hauger", "Prema Racing", "Formula 2"],
+    [2020, "Oscar Piastri", "Prema Racing", "Formula 2"],
+    [2019, "Robert Shwartzman", "Prema Racing", "Formula 2"]
+  ]
+}

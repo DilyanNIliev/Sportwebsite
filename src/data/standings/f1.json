@@ -1,0 +1,14 @@
+{
+  "series": "Formula 1",
+  "sport": "formula-1",
+  "season": 2026,
+  "asOf": "After round 13 of 23 — Italian Grand Prix, Monza, 6 September 2026",
+  "confirmedThrough": 4,
+  "drivers": [
+    { "pos": 1, "name": "Kimi Antonelli", "team": "Mercedes", "points": 267 },
+    { "pos": 2, "name": "George Russell", "team": "Mercedes", "points": 201 },
+    { "pos": 3, "name": "Lewis Hamilton", "team": "Ferrari", "points": 191 },
+    { "pos": 4, "name": "Lando Norris", "team": "McLaren", "points": 171 }
+  ],
+  "teams": []
+}

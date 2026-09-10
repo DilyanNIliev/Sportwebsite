@@ -1,0 +1,30 @@
+{
+  "title": "Volleyball World Championship Winners",
+  "sport": "volleyball",
+  "intro": "Every men's world championship since the first tournament in Czechoslovakia in 1949, most recent first.",
+  "dataNote": "Verified through the 2025 edition, won by Italy against Bulgaria. Runner-up is listed where confirmed; blank cells mean the placing has not yet been checked against an official record rather than that none exists.",
+  "columns": ["Year", "Champion", "Score", "Runner-up"],
+  "rows": [
+    [2025, "Italy", "3–1", "Bulgaria"],
+    [2022, "Italy", "", ""],
+    [2018, "Poland", "", ""],
+    [2014, "Poland", "", ""],
+    [2010, "Brazil", "", ""],
+    [2006, "Brazil", "", ""],
+    [2002, "Brazil", "", ""],
+    [1998, "Italy", "", ""],
+    [1994, "Italy", "", ""],
+    [1990, "Italy", "", ""],
+    [1986, "United States", "", ""],
+    [1982, "Soviet Union", "", ""],
+    [1978, "Soviet Union", "", ""],
+    [1974, "Poland", "", ""],
+    [1970, "East Germany", "", ""],
+    [1966, "Czechoslovakia", "", ""],
+    [1962, "Soviet Union", "", ""],
+    [1960, "Soviet Union", "", ""],
+    [1956, "Czechoslovakia", "", ""],
+    [1952, "Soviet Union", "", ""],
+    [1949, "Soviet Union", "", ""]
+  ]
+}

@@ -1,14 +1,13 @@
 ---
 import Base from '../../layouts/Base.astro';
-import worldCup from '../../data/archives/world-cup.json';
-import f1 from '../../data/archives/f1-champions.json';
+import { archives } from '../../data/archives.js';
 import sports from '../../data/sports.json';
 
 export function getStaticPaths() {
-  return [
-    { params: { archive: 'world-cup' }, props: { data: worldCup } },
-    { params: { archive: 'f1-champions' }, props: { data: f1 } },
-  ];
+  // Архивите с няколко таблици имат свои страници (напр. боксът с табовете).
+  return archives
+    .filter((a) => a.data.rows)
+    .map((a) => ({ params: { archive: a.href }, props: { data: a.data } }));
 }
 
 const { data } = Astro.props;

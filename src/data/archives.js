@@ -3,11 +3,15 @@
 import worldCup from './archives/world-cup.json';
 import f1 from './archives/f1-champions.json';
 import boxing from './archives/boxing-lineal.json';
+import basketball from './archives/basketball-world-cup.json';
+import volleyball from './archives/volleyball-world-championship.json';
 
 export const archives = [
   { slug: 'world-cup', data: worldCup, href: 'world-cup' },
   { slug: 'f1-champions', data: f1, href: 'f1-champions' },
   { slug: 'boxing-champions', data: boxing, href: 'boxing-champions' },
+  { slug: 'basketball-world-cup', data: basketball, href: 'basketball-world-cup' },
+  { slug: 'volleyball-world-championship', data: volleyball, href: 'volleyball-world-championship' },
 ];
 
 /** Броят редове, независимо дали архивът е с една таблица или с няколко. */

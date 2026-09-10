@@ -6,7 +6,7 @@ import sports from '../../data/sports.json';
 export function getStaticPaths() {
   // Архивите с няколко таблици имат свои страници (напр. боксът с табовете).
   return archives
-    .filter((a) => a.data.rows)
+    .filter((a) => a.data.rows || a.data.tables)
     .map((a) => ({ params: { archive: a.href }, props: { data: a.data } }));
 }
 
@@ -15,6 +15,9 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const sport = sports.find((s) => s.slug === data.sport);
 const crumbs = [{ label: 'Home', href: `${base}/` }, { label: 'Archives', href: `${base}/archives/` }, { label: data.title }];
 
+// Архивът може да е една таблица или няколко.
+const tables = data.tables ?? [{ title: null, columns: data.columns, rows: data.rows }];
+
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Dataset',
@@ -22,7 +25,7 @@ const jsonLd = {
   description: data.intro,
 };
 ---
-<Base title={data.title} description={`${data.intro} ${data.rows.length} entries, checked before publication.`} crumbs={crumbs}>
+<Base title={data.title} description={`${data.intro} Checked before publication.`} crumbs={crumbs}>
   <section class="hero accented" style={`--accent:${sport?.accent};--accent-dark:${sport?.accentDark}`}>
     <div class="wrap">
       <p class="eyebrow">{sport?.name} · Archive</p>
@@ -33,18 +36,23 @@ const jsonLd = {
 
   <section class="block">
     <div class="wrap">
-      <div class="table-scroll">
-        <table>
-          <thead>
-            <tr>{data.columns.map((c) => <th>{c}</th>)}</tr>
-          </thead>
-          <tbody>
-            {data.rows.map((r) => (
-              <tr>{r.map((cell) => <td>{cell}</td>)}</tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
+      {tables.map((t, i) => (
+        <>
+          {t.title && (
+            <div class="block-head" style={i > 0 ? 'margin-top:38px' : ''}><h2>{t.title}</h2></div>
+          )}
+          <div class="table-scroll">
+            <table>
+              <thead><tr>{t.columns.map((c) => <th>{c}</th>)}</tr></thead>
+              <tbody>
+                {t.rows.map((r) => (
+                  <tr>{r.map((cell) => <td>{cell}</td>)}</tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </>
+      ))}
       <p class="note">{data.dataNote}</p>
     </div>
   </section>

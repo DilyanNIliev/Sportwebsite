@@ -3,26 +3,147 @@
   "sport": "basketball",
   "intro": "Every men's world championship since the first tournament in Argentina in 1950, most recent first.",
   "dataNote": "Verified through the 2023 edition, won by Germany. Between 1950 and 1974 the title was decided by a final round-robin rather than a single final, so the runner-up column lists the second-placed team in the final standings; where no runner-up is shown, the placing could not be confirmed. The next edition is due in 2027.",
-  "columns": ["Year", "Champion", "Score", "Runner-up", "Host"],
+  "columns": [
+    "Year",
+    "Champion",
+    "Score",
+    "Runner-up",
+    "Host"
+  ],
   "rows": [
-    [2023, "Germany", "83–77", "Serbia", "Philippines / Japan / Indonesia"],
-    [2019, "Spain", "95–75", "Argentina", "China"],
-    [2014, "United States", "129–92", "Serbia", "Spain"],
-    [2010, "United States", "81–64", "Turkey", "Turkey"],
-    [2006, "Spain", "70–47", "Greece", "Japan"],
-    [2002, "FR Yugoslavia", "84–77 (OT)", "Argentina", "United States"],
-    [1998, "FR Yugoslavia", "64–62", "Russia", "Greece"],
-    [1994, "United States", "137–91", "Russia", "Canada"],
-    [1990, "Yugoslavia", "92–75", "Soviet Union", "Argentina"],
-    [1986, "United States", "87–85", "Soviet Union", "Spain"],
-    [1982, "Soviet Union", "95–94", "United States", "Colombia"],
-    [1978, "Yugoslavia", "82–81 (OT)", "Soviet Union", "Philippines"],
-    [1974, "Soviet Union", "round-robin", "Yugoslavia", "Puerto Rico"],
-    [1970, "Yugoslavia", "round-robin", "Brazil", "Yugoslavia"],
-    [1967, "Soviet Union", "round-robin", "", "Uruguay"],
-    [1963, "Brazil", "round-robin", "", "Brazil"],
-    [1959, "Brazil", "round-robin", "", "Chile"],
-    [1954, "United States", "round-robin", "", "Brazil"],
-    [1950, "Argentina", "round-robin", "", "Argentina"]
-  ]
+    [
+      2023,
+      "Germany",
+      "83–77",
+      "Serbia",
+      "Philippines / Japan / Indonesia"
+    ],
+    [
+      2019,
+      "Spain",
+      "95–75",
+      "Argentina",
+      "China"
+    ],
+    [
+      2014,
+      "United States",
+      "129–92",
+      "Serbia",
+      "Spain"
+    ],
+    [
+      2010,
+      "United States",
+      "81–64",
+      "Turkey",
+      "Turkey"
+    ],
+    [
+      2006,
+      "Spain",
+      "70–47",
+      "Greece",
+      "Japan"
+    ],
+    [
+      2002,
+      "FR Yugoslavia",
+      "84–77 (OT)",
+      "Argentina",
+      "United States"
+    ],
+    [
+      1998,
+      "FR Yugoslavia",
+      "64–62",
+      "Russia",
+      "Greece"
+    ],
+    [
+      1994,
+      "United States",
+      "137–91",
+      "Russia",
+      "Canada"
+    ],
+    [
+      1990,
+      "Yugoslavia",
+      "92–75",
+      "Soviet Union",
+      "Argentina"
+    ],
+    [
+      1986,
+      "United States",
+      "87–85",
+      "Soviet Union",
+      "Spain"
+    ],
+    [
+      1982,
+      "Soviet Union",
+      "95–94",
+      "United States",
+      "Colombia"
+    ],
+    [
+      1978,
+      "Yugoslavia",
+      "82–81 (OT)",
+      "Soviet Union",
+      "Philippines"
+    ],
+    [
+      1974,
+      "Soviet Union",
+      "round-robin",
+      "Yugoslavia",
+      "Puerto Rico"
+    ],
+    [
+      1970,
+      "Yugoslavia",
+      "round-robin",
+      "Brazil",
+      "Yugoslavia"
+    ],
+    [
+      1967,
+      "Soviet Union",
+      "round-robin",
+      "",
+      "Uruguay"
+    ],
+    [
+      1963,
+      "Brazil",
+      "round-robin",
+      "",
+      "Brazil"
+    ],
+    [
+      1959,
+      "Brazil",
+      "round-robin",
+      "",
+      "Chile"
+    ],
+    [
+      1954,
+      "United States",
+      "round-robin",
+      "",
+      "Brazil"
+    ],
+    [
+      1950,
+      "Argentina",
+      "round-robin",
+      "",
+      "Argentina"
+    ]
+  ],
+  "group": "world"
 }

@@ -1,0 +1,34 @@
+{
+  "football": {
+    "event": "FIFA World Cup 2030",
+    "group": "world",
+    "summary": "The centenary tournament, spread across three continents.",
+    "rows": [
+      ["Main hosts", "Morocco, Spain and Portugal"],
+      ["Centenary matches", "Uruguay, Argentina and Paraguay — 8 and 9 June 2030"],
+      ["Opening matches", "Morocco, Portugal and Spain — 13 and 14 June 2030"],
+      ["Final", "Sunday 21 July 2030"],
+      ["Teams", "48, in 12 groups of four"],
+      ["Already qualified", "Morocco, Spain, Portugal, Uruguay, Argentina, Paraguay — all six hosts"],
+      ["When the groups are drawn", "Not yet scheduled. The draw follows qualification, expected late 2028 or 2029"]
+    ],
+    "caution": "Spanish media report an agreement for the final to be played at the Santiago Bernabéu in Madrid, but FIFA is not expected to confirm the venue before the end of 2026. We will name it once it is official.",
+    "checked": "Verified against two independent reports on 10 September 2026."
+  },
+  "basketball": {
+    "event": "FIBA Basketball World Cup 2027",
+    "group": "world",
+    "summary": "Qatar hosts, with qualification already well under way.",
+    "rows": [
+      ["Host", "Qatar"],
+      ["Dates", "27 August – 12 September 2027"],
+      ["Cities", "Doha, Al Rayyan, Lusail and Al Wakrah"],
+      ["Teams", "32 — 12 from Europe, 7 from the Americas, 7 from Asia and Oceania, 5 from Africa"],
+      ["Already qualified", "Qatar, as hosts"],
+      ["Qualifying", "Six windows from November 2025 to March 2027 — 80 nations, 420 games"],
+      ["When the groups are drawn", "After the final qualifying window closes in March 2027"]
+    ],
+    "caution": "",
+    "checked": "Verified against two independent sources on 10 September 2026."
+  }
+}

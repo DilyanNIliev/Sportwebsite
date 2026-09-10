@@ -9,30 +9,126 @@
       "name": "Heavyweight",
       "note": "The most continuous lineage in the sport. The title was vacant between Vitali Klitschko's 2004 retirement and Wladimir Klitschko's 2009 claim.",
       "rows": [
-        ["2024 – present", "Oleksandr Usyk", "Beat Tyson Fury, 18 May 2024"],
-        ["2018 – 2024", "Tyson Fury", ""],
-        ["2015", "Tyson Fury", "Beat Wladimir Klitschko; later stripped"],
-        ["2009 – 2015", "Wladimir Klitschko", ""],
-        ["2004", "Vitali Klitschko", "Retired; title vacant to 2009"],
-        ["2001 – 2004", "Lennox Lewis", "Retired"],
-        ["2001", "Hasim Rahman", ""],
-        ["1998 – 2001", "Lennox Lewis", ""],
-        ["1997 – 1998", "Shannon Briggs", ""],
-        ["1994 – 1997", "George Foreman", ""],
-        ["1994", "Michael Moorer", ""],
-        ["1993 – 1994", "Evander Holyfield", ""],
-        ["1992 – 1993", "Riddick Bowe", ""],
-        ["1990 – 1992", "Evander Holyfield", ""],
-        ["1990", "James \"Buster\" Douglas", ""],
-        ["1988 – 1990", "Mike Tyson", ""],
-        ["1985 – 1988", "Michael Spinks", ""],
-        ["1980 – 1985", "Larry Holmes", ""],
-        ["1978 – 1979", "Muhammad Ali", "Retired"],
-        ["1978", "Leon Spinks", ""],
-        ["1974 – 1978", "Muhammad Ali", ""],
-        ["1973 – 1974", "George Foreman", ""],
-        ["1970 – 1973", "Joe Frazier", ""],
-        ["1964 – 1970", "Muhammad Ali", "Title removed during his suspension"]
+        [
+          "2024 – present",
+          "Oleksandr Usyk",
+          "Beat Tyson Fury, 18 May 2024"
+        ],
+        [
+          "2018 – 2024",
+          "Tyson Fury",
+          ""
+        ],
+        [
+          "2015",
+          "Tyson Fury",
+          "Beat Wladimir Klitschko; later stripped"
+        ],
+        [
+          "2009 – 2015",
+          "Wladimir Klitschko",
+          ""
+        ],
+        [
+          "2004",
+          "Vitali Klitschko",
+          "Retired; title vacant to 2009"
+        ],
+        [
+          "2001 – 2004",
+          "Lennox Lewis",
+          "Retired"
+        ],
+        [
+          "2001",
+          "Hasim Rahman",
+          ""
+        ],
+        [
+          "1998 – 2001",
+          "Lennox Lewis",
+          ""
+        ],
+        [
+          "1997 – 1998",
+          "Shannon Briggs",
+          ""
+        ],
+        [
+          "1994 – 1997",
+          "George Foreman",
+          ""
+        ],
+        [
+          "1994",
+          "Michael Moorer",
+          ""
+        ],
+        [
+          "1993 – 1994",
+          "Evander Holyfield",
+          ""
+        ],
+        [
+          "1992 – 1993",
+          "Riddick Bowe",
+          ""
+        ],
+        [
+          "1990 – 1992",
+          "Evander Holyfield",
+          ""
+        ],
+        [
+          "1990",
+          "James \"Buster\" Douglas",
+          ""
+        ],
+        [
+          "1988 – 1990",
+          "Mike Tyson",
+          ""
+        ],
+        [
+          "1985 – 1988",
+          "Michael Spinks",
+          ""
+        ],
+        [
+          "1980 – 1985",
+          "Larry Holmes",
+          ""
+        ],
+        [
+          "1978 – 1979",
+          "Muhammad Ali",
+          "Retired"
+        ],
+        [
+          "1978",
+          "Leon Spinks",
+          ""
+        ],
+        [
+          "1974 – 1978",
+          "Muhammad Ali",
+          ""
+        ],
+        [
+          "1973 – 1974",
+          "George Foreman",
+          ""
+        ],
+        [
+          "1970 – 1973",
+          "Joe Frazier",
+          ""
+        ],
+        [
+          "1964 – 1970",
+          "Muhammad Ali",
+          "Title removed during his suspension"
+        ]
       ]
     },
     {
@@ -40,10 +136,26 @@
       "name": "Light heavyweight",
       "note": "⚠️ The most contested lineage of the four. The line broke when Michael Spinks moved up to heavyweight in 1985, and sources disagree on how it resumed — Ring Magazine traces it through Roy Jones Jr, the Cyber Boxing Zone through Virgil Hill. This table lists only the reigns we could verify, and is deliberately incomplete rather than filled in with a disputed lineage.",
       "rows": [
-        ["2025 – present", "Dmitry Bivol", "Won the rematch with Beterbiev"],
-        ["2024 – 2025", "Artur Beterbiev", "First undisputed champion of the four-belt era"],
-        ["1996/99 – 2003", "Roy Jones Jr", "Unified WBC, WBA and IBF by 1999; vacated to fight at heavyweight"],
-        ["1985", "vacant", "Michael Spinks moved up to heavyweight"]
+        [
+          "2025 – present",
+          "Dmitry Bivol",
+          "Won the rematch with Beterbiev"
+        ],
+        [
+          "2024 – 2025",
+          "Artur Beterbiev",
+          "First undisputed champion of the four-belt era"
+        ],
+        [
+          "1996/99 – 2003",
+          "Roy Jones Jr",
+          "Unified WBC, WBA and IBF by 1999; vacated to fight at heavyweight"
+        ],
+        [
+          "1985",
+          "vacant",
+          "Michael Spinks moved up to heavyweight"
+        ]
       ]
     },
     {
@@ -51,16 +163,56 @@
       "name": "Middleweight",
       "note": "Vacant for long stretches — after Sugar Ray Leonard's 1987 retirement, after James Toney vacated in 1993, and again after Canelo Álvarez moved up.",
       "rows": [
-        ["2015 – 2019", "Canelo Álvarez", "Beat Gennadiy Golovkin in the 2018 rematch; later moved up"],
-        ["2014 – 2015", "Miguel Cotto", ""],
-        ["2010 – 2014", "Sergio Martínez", ""],
-        ["2007 – 2010", "Kelly Pavlik", ""],
-        ["2005 – 2007", "Jermain Taylor", ""],
-        ["2001 – 2005", "Bernard Hopkins", ""],
-        ["1991 – 1993", "James Toney", "Vacated"],
-        ["1989 – 1991", "Michael Nunn", ""],
-        ["1987", "Sugar Ray Leonard", "Beat Marvin Hagler, then vacated"],
-        ["1980 – 1987", "Marvin Hagler", "Took the title from Alan Minter, 27 September 1980"]
+        [
+          "2015 – 2019",
+          "Canelo Álvarez",
+          "Beat Gennadiy Golovkin in the 2018 rematch; later moved up"
+        ],
+        [
+          "2014 – 2015",
+          "Miguel Cotto",
+          ""
+        ],
+        [
+          "2010 – 2014",
+          "Sergio Martínez",
+          ""
+        ],
+        [
+          "2007 – 2010",
+          "Kelly Pavlik",
+          ""
+        ],
+        [
+          "2005 – 2007",
+          "Jermain Taylor",
+          ""
+        ],
+        [
+          "2001 – 2005",
+          "Bernard Hopkins",
+          ""
+        ],
+        [
+          "1991 – 1993",
+          "James Toney",
+          "Vacated"
+        ],
+        [
+          "1989 – 1991",
+          "Michael Nunn",
+          ""
+        ],
+        [
+          "1987",
+          "Sugar Ray Leonard",
+          "Beat Marvin Hagler, then vacated"
+        ],
+        [
+          "1980 – 1987",
+          "Marvin Hagler",
+          "Took the title from Alan Minter, 27 September 1980"
+        ]
       ]
     },
     {
@@ -68,17 +220,54 @@
       "name": "Lightweight",
       "note": "Gaps at 2012–2014, 2015–2020 and from 2023, when the champion moved up in weight and no successor bout settled the line.",
       "rows": [
-        ["2022 – 2023", "Devin Haney", "Beat George Kambosos Jr; moved up to super lightweight"],
-        ["2021 – 2022", "George Kambosos Jr", ""],
-        ["2020 – 2021", "Teófimo López", "Beat Vasiliy Lomachenko, 17 October 2020"],
-        ["2014 – 2015", "Terence Crawford", ""],
-        ["2008 – 2012", "Juan Manuel Márquez", "Vacated"],
-        ["2006 – 2008", "Joel Casamayor", ""],
-        ["2005 – 2006", "Diego Corrales", ""],
-        ["2004 – 2005", "José Luis Castillo", ""],
-        ["2002 – 2004", "Floyd Mayweather Jr", ""]
+        [
+          "2022 – 2023",
+          "Devin Haney",
+          "Beat George Kambosos Jr; moved up to super lightweight"
+        ],
+        [
+          "2021 – 2022",
+          "George Kambosos Jr",
+          ""
+        ],
+        [
+          "2020 – 2021",
+          "Teófimo López",
+          "Beat Vasiliy Lomachenko, 17 October 2020"
+        ],
+        [
+          "2014 – 2015",
+          "Terence Crawford",
+          ""
+        ],
+        [
+          "2008 – 2012",
+          "Juan Manuel Márquez",
+          "Vacated"
+        ],
+        [
+          "2006 – 2008",
+          "Joel Casamayor",
+          ""
+        ],
+        [
+          "2005 – 2006",
+          "Diego Corrales",
+          ""
+        ],
+        [
+          "2004 – 2005",
+          "José Luis Castillo",
+          ""
+        ],
+        [
+          "2002 – 2004",
+          "Floyd Mayweather Jr",
+          ""
+        ]
       ]
     }
   ],
-  "dataNote": "Compiled from published lineal-championship records. Where a lineage is disputed or a period is vacant, the table says so rather than presenting one source's version as settled fact."
+  "dataNote": "Compiled from published lineal-championship records. Where a lineage is disputed or a period is vacant, the table says so rather than presenting one source's version as settled fact.",
+  "group": "world"
 }

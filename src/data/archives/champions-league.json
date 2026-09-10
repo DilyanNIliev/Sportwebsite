@@ -1,0 +1,48 @@
+{
+  "title": "Champions League: Titles and Recent Finals",
+  "sport": "football",
+  "group": "club",
+  "intro": "Europe's premier club competition, from the 1956 European Cup to the present. Who has won it most, and how the last five finals went.",
+  "dataNote": "Verified through the 2026 final, won by Paris Saint-Germain against Arsenal in Budapest. The full year-by-year list back to 1956 is being compiled; the tables below cover the all-time title counts and the most recent finals.",
+  "tables": [
+    {
+      "title": "Most titles",
+      "columns": ["Club", "Titles"],
+      "rows": [
+        ["Real Madrid", 15],
+        ["AC Milan", 7],
+        ["Bayern Munich", 6],
+        ["Liverpool", 6],
+        ["Barcelona", 5],
+        ["Ajax", 4],
+        ["Inter", 3],
+        ["Manchester United", 3],
+        ["Paris Saint-Germain", 2]
+      ]
+    },
+    {
+      "title": "Titles by country",
+      "columns": ["Country", "Titles"],
+      "rows": [
+        ["Spain", 20],
+        ["England", 15],
+        ["Italy", 12],
+        ["Germany", 8],
+        ["Netherlands", 6],
+        ["Portugal", 4],
+        ["France", 3]
+      ]
+    },
+    {
+      "title": "Recent finals",
+      "columns": ["Year", "Winner", "Score", "Runner-up"],
+      "rows": [
+        [2026, "Paris Saint-Germain", "1–1, 4–3 pens", "Arsenal"],
+        [2025, "Paris Saint-Germain", "", ""],
+        [2024, "Real Madrid", "", ""],
+        [2023, "Manchester City", "", ""],
+        [2022, "Real Madrid", "", ""]
+      ]
+    }
+  ]
+}

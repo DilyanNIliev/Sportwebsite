@@ -7,6 +7,7 @@ import basketball from './archives/basketball-world-cup.json';
 import volleyball from './archives/volleyball-world-championship.json';
 import f2champs from './archives/f2-champions.json';
 import f3champs from './archives/f3-champions.json';
+import ucl from './archives/champions-league.json';
 
 export const archives = [
   { slug: 'world-cup', data: worldCup, href: 'world-cup' },
@@ -16,12 +17,23 @@ export const archives = [
   { slug: 'volleyball-world-championship', data: volleyball, href: 'volleyball-world-championship' },
   { slug: 'f2-champions', data: f2champs, href: 'f2-champions' },
   { slug: 'f3-champions', data: f3champs, href: 'f3-champions' },
+  { slug: 'champions-league', data: ucl, href: 'champions-league' },
 ];
 
 /** Броят редове, независимо дали архивът е с една таблица или с няколко. */
 export function rowCount(a) {
   if (a.data.rows) return a.data.rows.length;
-  return (a.data.divisions ?? []).reduce((n, d) => n + d.rows.length, 0);
+  const groups = a.data.divisions ?? a.data.tables ?? [];
+  return groups.reduce((n, d) => n + d.rows.length, 0);
+}
+
+/** Архивите на един спорт, разделени на световни и клубни. */
+export function archiveGroups(sportSlug) {
+  const mine = archives.filter((a) => a.data.sport === sportSlug);
+  return [
+    { key: 'world', label: 'World & international', items: mine.filter((a) => a.data.group !== 'club') },
+    { key: 'club', label: 'Club', items: mine.filter((a) => a.data.group === 'club') },
+  ].filter((g) => g.items.length > 0);
 }
 
 export const archivesFor = (sportSlug) =>

@@ -3,16 +3,67 @@
   "sport": "formula-2",
   "intro": "Every FIA Formula 2 champion since the championship took its current form in 2017, most recent first.",
   "dataNote": "Verified through the 2025 season. The 2026 title is still being contested — Nikola Tsolov leads it going into the closing rounds.",
-  "columns": ["Season", "Champion", "Team", "Where they went"],
+  "columns": [
+    "Season",
+    "Champion",
+    "Team",
+    "Where they went"
+  ],
   "rows": [
-    [2025, "Leonardo Fornaroli", "Invicta Racing", ""],
-    [2024, "Gabriel Bortoleto", "Invicta Racing", "Formula 1"],
-    [2023, "Théo Pourchaire", "ART Grand Prix", ""],
-    [2022, "Felipe Drugovich", "MP Motorsport", ""],
-    [2021, "Oscar Piastri", "Prema Racing", "Formula 1"],
-    [2020, "Mick Schumacher", "Prema Racing", "Formula 1"],
-    [2019, "Nyck de Vries", "ART Grand Prix", "Formula 1"],
-    [2018, "George Russell", "ART Grand Prix", "Formula 1"],
-    [2017, "Charles Leclerc", "Prema Racing", "Formula 1"]
-  ]
+    [
+      2025,
+      "Leonardo Fornaroli",
+      "Invicta Racing",
+      ""
+    ],
+    [
+      2024,
+      "Gabriel Bortoleto",
+      "Invicta Racing",
+      "Formula 1"
+    ],
+    [
+      2023,
+      "Théo Pourchaire",
+      "ART Grand Prix",
+      ""
+    ],
+    [
+      2022,
+      "Felipe Drugovich",
+      "MP Motorsport",
+      ""
+    ],
+    [
+      2021,
+      "Oscar Piastri",
+      "Prema Racing",
+      "Formula 1"
+    ],
+    [
+      2020,
+      "Mick Schumacher",
+      "Prema Racing",
+      "Formula 1"
+    ],
+    [
+      2019,
+      "Nyck de Vries",
+      "ART Grand Prix",
+      "Formula 1"
+    ],
+    [
+      2018,
+      "George Russell",
+      "ART Grand Prix",
+      "Formula 1"
+    ],
+    [
+      2017,
+      "Charles Leclerc",
+      "Prema Racing",
+      "Formula 1"
+    ]
+  ],
+  "group": "world"
 }

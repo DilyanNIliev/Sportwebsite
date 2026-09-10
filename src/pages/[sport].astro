@@ -12,7 +12,9 @@ export function getStaticPaths() {
 
 const { sport } = Astro.props;
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
-const news = (await getCollection('articles', (a) => a.data.sport === sport.slug)).sort(
+const news = (await getCollection('articles', (a) =>
+  a.data.sport === sport.slug || (a.data.alsoSports ?? []).includes(sport.slug)
+)).sort(
   (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
 );
 const archives = archivesFor(sport.slug);

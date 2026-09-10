@@ -7,6 +7,8 @@ const articles = defineCollection({
     title: z.string(),
     description: z.string(),
     sport: z.string(),
+    // Уикенд, в който карат няколко серии, се появява във всеки от разделите им.
+    alsoSports: z.array(z.string()).optional(),
     date: z.coerce.date(),
     author: z.string(),
     // Вътрешен одитен запис, не се показва на страницата. Редакционното правило

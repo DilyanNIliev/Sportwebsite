@@ -1,0 +1,23 @@
+{
+  "series": "ATP",
+  "seriesLong": "ATP men's singles rankings",
+  "sport": "tennis",
+  "season": 2026,
+  "entityLabel": "Player",
+  "asOf": "As of 10 September 2026. The ATP rankings are recalculated every Monday over a rolling 52 weeks.",
+  "confirmedThrough": 10,
+  "drivers": [
+    { "pos": 1, "name": "Jannik Sinner", "team": "", "points": 12800 },
+    { "pos": 2, "name": "Alexander Zverev", "team": "", "points": 7790 },
+    { "pos": 3, "name": "Carlos Alcaraz", "team": "", "points": 7160 },
+    { "pos": 4, "name": "Ben Shelton", "team": "", "points": 4180 },
+    { "pos": 5, "name": "Félix Auger-Aliassime", "team": "", "points": 3890 },
+    { "pos": 6, "name": "Daniil Medvedev", "team": "", "points": 3770 },
+    { "pos": 7, "name": "Flavio Cobolli", "team": "", "points": 3720 },
+    { "pos": 8, "name": "Frances Tiafoe", "team": "", "points": 3380 },
+    { "pos": 9, "name": "Alex de Minaur", "team": "", "points": 3300 },
+    { "pos": 10, "name": "Taylor Fritz", "team": "", "points": 3175 }
+  ],
+  "teams": [],
+  "footnote": "Novak Djokovic sits just outside the top ten. Points move with every tournament, so a mid-tournament live ranking can differ from the official list published on Monday."
+}

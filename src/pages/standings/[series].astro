@@ -11,34 +11,35 @@ const { d } = Astro.props;
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const sport = sports.find((s) => s.slug === d.sport);
 const crumbs = [{ label: 'Home', href: `${base}/` }, { label: 'Standings', href: `${base}/standings/` }, { label: d.series }];
-const pending = d.drivers.length <= d.confirmedThrough;
+const pending = d.drivers.length <= d.confirmedThrough && d.drivers.length < 10;
+const hasTeams = d.drivers.some((r) => r.team);
 ---
 <Base
-  title={`${d.series} ${d.season} standings`}
+  title={d.seriesLong ?? `${d.series} ${d.season} standings`}
   description={`${d.series} ${d.season} drivers' championship points, leader first: ${d.drivers[0].name} leads on ${d.drivers[0].points}. ${d.asOf}`}
   crumbs={crumbs}
 >
   <section class="hero accented" style={`--accent:${sport?.accent};--accent-dark:${sport?.accentDark}`}>
     <div class="wrap">
-      <p class="eyebrow">{sport?.name} · Standings</p>
-      <h1>{d.series} {d.season}</h1>
+      <p class="eyebrow">{sport?.name} · {d.season} Rankings</p>
+      <h1>{d.seriesLong ?? `${d.series} ${d.season}`}</h1>
       <p class="lede">{d.asOf}</p>
     </div>
   </section>
 
   <section class="block">
     <div class="wrap">
-      <div class="block-head"><h2>Drivers</h2></div>
+      <div class="block-head"><h2>{d.entityLabel ? d.entityLabel + 's' : 'Drivers'}</h2></div>
       <div class="table-scroll">
         <table>
-          <thead><tr><th>#</th><th>Driver</th><th>Team</th><th>Points</th></tr></thead>
+          <thead><tr><th>#</th><th>{d.entityLabel ?? 'Driver'}</th>{hasTeams && <th>Team</th>}<th>Points</th></tr></thead>
           <tbody>
             {d.drivers.map((r) => (
               <tr>
                 <td>{r.pos}</td>
                 <td>{r.name}</td>
-                <td class="td-note">{r.team}</td>
-                <td><strong>{r.points}</strong></td>
+                {hasTeams && <td class="td-note">{r.team}</td>}
+                <td><strong>{r.points.toLocaleString('en-GB')}</strong></td>
               </tr>
             ))}
           </tbody>
@@ -60,7 +61,7 @@ const pending = d.drivers.length <= d.confirmedThrough;
               <thead><tr><th>#</th><th>Team</th><th>Points</th></tr></thead>
               <tbody>
                 {d.teams.map((r) => (
-                  <tr><td>{r.pos}</td><td>{r.name}</td><td><strong>{r.points}</strong></td></tr>
+                  <tr><td>{r.pos}</td><td>{r.name}</td><td><strong>{r.points.toLocaleString('en-GB')}</strong></td></tr>
                 ))}
               </tbody>
             </table>
@@ -68,9 +69,11 @@ const pending = d.drivers.length <= d.confirmedThrough;
         </>
       )}
 
-      <p class="note" style="margin-top:26px">
-        Standings are a snapshot taken after the round named above, not a live feed.
-        They are updated with each race report.
+      {d.footnote && <p class="note" style="margin-top:26px">{d.footnote}</p>}
+
+      <p class="note" style="margin-top:14px">
+        This is a snapshot taken on the date named above, not a live feed.
+        It is updated whenever we publish on the championship.
       </p>
     </div>
   </section>

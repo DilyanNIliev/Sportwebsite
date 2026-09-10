@@ -6,12 +6,12 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const colour = (slug) => sports.find((s) => s.slug === slug) ?? {};
 const crumbs = [{ label: 'Home', href: `${base}/` }, { label: 'Standings' }];
 ---
-<Base title="Standings" description="Current championship points for Formula 1, Formula 2 and Formula 3 — who leads, by how much, and which round the tables were taken after." crumbs={crumbs}>
+<Base title="Standings" description="Current standings for Formula 1, Formula 2 and Formula 3, plus the ATP and WTA singles rankings — who leads, by how much, and when each table was taken." crumbs={crumbs}>
   <section class="hero">
     <div class="wrap">
       <p class="eyebrow">Live tables</p>
       <h1>Standings</h1>
-      <p class="lede">Where each championship stands right now, from the leader down.</p>
+      <p class="lede">Where each championship and ranking stands right now, from the leader down.</p>
     </div>
   </section>
   <section class="block">
@@ -25,7 +25,7 @@ const crumbs = [{ label: 'Home', href: `${base}/` }, { label: 'Standings' }];
                 <span class="accent" style={`--accent:${c.accent};--accent-dark:${c.accentDark}`}>{s.data.series}</span>
                 <span>{s.data.season}</span>
               </div>
-              <h3>{s.data.drivers[0].name} leads on {s.data.drivers[0].points}</h3>
+              <h3>{s.data.drivers[0].name} leads on {s.data.drivers[0].points.toLocaleString('en-GB')}</h3>
               <p>{s.data.asOf}</p>
             </a>
           );

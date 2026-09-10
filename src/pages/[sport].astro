@@ -18,7 +18,7 @@ const news = (await getCollection('articles', (a) =>
   (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
 );
 const archives = archivesFor(sport.slug);
-const table = standingsFor(sport.slug);
+const tables = standingsFor(sport.slug);
 const crumbs = [{ label: 'Home', href: `${base}/` }, { label: sport.name }];
 const hasArchives = archives.length > 0;
 const metaDesc =
@@ -37,18 +37,21 @@ const metaDesc =
 
   <ArticleList articles={news} heading="Latest" />
 
-  {table && (
+  {tables.length > 0 && (
     <section class="block">
       <div class="wrap">
-        <div class="block-head"><h2>Championship standings</h2></div>
+        <div class="block-head"><h2>Current standings</h2></div>
         <div class="cards">
-          <a class="card" href={`${base}/standings/${table.slug}/`}>
-            <div class="meta">
-              <span class="accent" style={`--accent:${sport.accent};--accent-dark:${sport.accentDark}`}>{table.data.season}</span>
-            </div>
-            <h3>{table.data.drivers[0].name} leads on {table.data.drivers[0].points}</h3>
-            <p>{table.data.asOf}</p>
-          </a>
+          {tables.map((t) => (
+            <a class="card" href={`${base}/standings/${t.slug}/`}>
+              <div class="meta">
+                <span class="accent" style={`--accent:${sport.accent};--accent-dark:${sport.accentDark}`}>{t.data.series}</span>
+                <span>{t.data.season}</span>
+              </div>
+              <h3>{t.data.drivers[0].name} leads on {t.data.drivers[0].points.toLocaleString('en-GB')}</h3>
+              <p>{t.data.asOf}</p>
+            </a>
+          ))}
         </div>
       </div>
     </section>

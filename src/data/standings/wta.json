@@ -1,0 +1,23 @@
+{
+  "series": "WTA",
+  "seriesLong": "WTA women's singles rankings",
+  "sport": "tennis",
+  "season": 2026,
+  "entityLabel": "Player",
+  "asOf": "As of 10 September 2026. The WTA rankings are recalculated every Monday over a rolling 52 weeks.",
+  "confirmedThrough": 10,
+  "drivers": [
+    { "pos": 1, "name": "Elena Rybakina", "team": "", "points": 8681 },
+    { "pos": 2, "name": "Aryna Sabalenka", "team": "", "points": 7355 },
+    { "pos": 3, "name": "Jessica Pegula", "team": "", "points": 7265 },
+    { "pos": 4, "name": "Coco Gauff", "team": "", "points": 7244 },
+    { "pos": 5, "name": "Mirra Andreeva", "team": "", "points": 5743 },
+    { "pos": 6, "name": "Linda Nosková", "team": "", "points": 5328 },
+    { "pos": 7, "name": "Elina Svitolina", "team": "", "points": 4809 },
+    { "pos": 8, "name": "Karolína Muchová", "team": "", "points": 4683 },
+    { "pos": 9, "name": "Iga Świątek", "team": "", "points": 4619 },
+    { "pos": 10, "name": "Marta Kostyuk", "team": "", "points": 3980 }
+  ],
+  "teams": [],
+  "footnote": "Rybakina took top spot from Sabalenka, and second to fourth are separated by barely a hundred points — the closest the top of this ranking has been for some time."
+}

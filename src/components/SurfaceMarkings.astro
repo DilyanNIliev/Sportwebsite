@@ -1,0 +1,80 @@
+---
+/**
+ * Очертанията на терена. Рисуват се в координати 0–100 на 0–150 (или 0–110 за
+ * по-квадратните), опънати по размера на кутията.
+ */
+const { surface } = Astro.props;
+---
+<svg class="pitch-lines" viewBox={surface === 'diamond' || surface === 'oval' ? '0 0 100 110' : '0 0 100 150'} preserveAspectRatio="none" aria-hidden="true">
+  {surface === 'pitch' && (
+    <g>
+      <rect x="1" y="1" width="98" height="148" />
+      <line x1="1" y1="75" x2="99" y2="75" />
+      <circle cx="50" cy="75" r="14" />
+      <rect x="22" y="128" width="56" height="21" />
+      <rect x="37" y="141" width="26" height="8" />
+      <rect x="22" y="1" width="56" height="21" />
+      <rect x="37" y="1" width="26" height="8" />
+    </g>
+  )}
+
+  {surface === 'rugby' && (
+    <g>
+      <rect x="1" y="1" width="98" height="148" />
+      {/* Зачетните полета горе и долу, и линиите на 22 метра. */}
+      <line x1="1" y1="14" x2="99" y2="14" />
+      <line x1="1" y1="136" x2="99" y2="136" />
+      <line x1="1" y1="42" x2="99" y2="42" stroke-dasharray="4 4" />
+      <line x1="1" y1="108" x2="99" y2="108" stroke-dasharray="4 4" />
+      <line x1="1" y1="75" x2="99" y2="75" stroke-width="1.4" />
+      {/* Вратите — двата стълба на зачетната линия. */}
+      <path d="M44 14 L44 6 M56 14 L56 6 M44 10 L56 10" />
+      <path d="M44 136 L44 144 M56 136 L56 144 M44 140 L56 140" />
+    </g>
+  )}
+
+  {surface === 'rink' && (
+    <g>
+      <rect x="1" y="1" width="98" height="148" rx="20" />
+      <line x1="1" y1="75" x2="99" y2="75" stroke-width="1.4" />
+      <circle cx="50" cy="75" r="13" />
+      <line x1="1" y1="52" x2="99" y2="52" />
+      <line x1="1" y1="98" x2="99" y2="98" />
+      <line x1="1" y1="20" x2="99" y2="20" />
+      <line x1="1" y1="130" x2="99" y2="130" />
+      <path d="M38 130 A12 10 0 0 0 62 130" />
+      <path d="M38 20 A12 10 0 0 1 62 20" />
+      <circle cx="26" cy="118" r="8" /><circle cx="74" cy="118" r="8" />
+      <circle cx="26" cy="32" r="8" /><circle cx="74" cy="32" r="8" />
+    </g>
+  )}
+
+  {surface === 'court' && (
+    <g>
+      <rect x="4" y="4" width="92" height="142" />
+      <line x1="4" y1="75" x2="96" y2="75" />
+      <circle cx="50" cy="75" r="11" />
+      <rect x="32" y="122" width="36" height="24" />
+      <rect x="32" y="4" width="36" height="24" />
+      <path d="M14 146 A40 44 0 0 0 86 146" />
+      <path d="M14 4 A40 44 0 0 1 86 4" />
+    </g>
+  )}
+
+  {surface === 'diamond' && (
+    <g>
+      <path d="M50 96 L10 56 A56 56 0 0 1 90 56 Z" />
+      <path d="M50 90 L22 62 L50 34 L78 62 Z" />
+      <circle cx="50" cy="62" r="5" />
+      <path d="M42 96 L50 104 L58 96" />
+    </g>
+  )}
+
+  {surface === 'oval' && (
+    <g>
+      <ellipse cx="50" cy="55" rx="48" ry="52" />
+      <ellipse cx="50" cy="55" rx="28" ry="31" stroke-dasharray="3 4" />
+      <rect x="44" y="38" width="12" height="34" />
+    </g>
+  )}
+</svg>

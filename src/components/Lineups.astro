@@ -1,39 +1,54 @@
 ---
 /**
- * Съставите на един мач върху карта на терена: точки с имена, резервите отдолу.
+ * Съставът на един отбор върху игралната му повърхност: точки с имена,
+ * резервите отдолу.
  *
- * Позициите не се пишат на ръка. Идват от схемата („4-2-3-1“): всяко число е
- * една линия, а играчите в `xi` се четат по ред — вратар, после линия по линия
- * отзад напред, всяка отляво надясно както я гледа читателят.
+ * Позициите не се пишат на ръка. Идват от схемата — всяко число е една линия,
+ * а играчите се четат по ред: първо вратарят, ако спортът има такъв, после
+ * линия по линия отзад напред, всяка отляво надясно както я гледа читателят.
+ * Затова „4-2-3-1“ работи за футбол, а „1-3-3“ — за ръгби или хокей.
  */
+import SurfaceMarkings from './SurfaceMarkings.astro';
+import { surfaceFor } from '../data/surfaces.js';
+
 const { data, showHead = true } = Astro.props;
+const surfaceKey = data.surface ?? 'pitch';
+const surface = surfaceFor(surfaceKey);
 
-/** Разпределя единайсетте по схемата и връща процентни координати за всеки. */
-function place(formation, xi) {
+/** Разпределя състава по схемата и връща процентни координати за всеки. */
+function place(team) {
+  const { formation, xi, keeper = true } = team;
   const lines = formation.split('-').map(Number);
-  const outfield = lines.reduce((a, b) => a + b, 0);
-  if (outfield !== 10) {
-    throw new Error(`Схемата „${formation}“ описва ${outfield} играчи в полето, а трябва да са 10.`);
+  if (lines.some((n) => !Number.isInteger(n) || n < 1)) {
+    throw new Error(`Схемата „${formation}“ не е редица от цели числа.`);
   }
-  if (xi.length !== 11) {
-    throw new Error(`Съставът има ${xi.length} играчи вместо 11.`);
+  const outfield = lines.reduce((a, b) => a + b, 0);
+  const expected = outfield + (keeper ? 1 : 0);
+  if (xi.length !== expected) {
+    throw new Error(
+      `${team.team}: схемата „${formation}“${keeper ? ' плюс вратар' : ''} описва ` +
+      `${expected} играчи, а съставът има ${xi.length}.`
+    );
   }
 
-  // Вратарят е долу, атаката горе. Линиите се разпределят между двете.
+  // Своята врата е долу, атаката горе. Линиите се разпределят между двете.
   const top = 16;
-  const bottom = 74;
+  const bottom = keeper ? 74 : 84;
   const step = lines.length > 1 ? (bottom - top) / (lines.length - 1) : 0;
 
-  const out = [{ ...xi[0], x: 50, y: 91, line: 'GK' }];
-  let i = 1;
+  const out = [];
+  let i = 0;
+  if (keeper) {
+    out.push({ ...xi[0], x: 50, y: 91, keeper: true });
+    i = 1;
+  }
   lines.forEach((count, li) => {
     const y = bottom - li * step;
-    // Колкото по-малко са в една линия, толкова по-навътре стоят: двама
-    // нападатели са в центъра, а петима в средата опират до страничните линии.
+    // Колкото по-малко са в една линия, толкова по-навътре стоят.
     const inset = count <= 2 ? 32 : count === 3 ? 19 : count === 4 ? 13 : 8;
     for (let n = 0; n < count; n++) {
       const x = count === 1 ? 50 : inset + n * ((100 - 2 * inset) / (count - 1));
-      out.push({ ...xi[i], x, y, line: li, dense: count >= 5 });
+      out.push({ ...xi[i], x, y, dense: count >= 5 });
       i += 1;
     }
   });
@@ -43,12 +58,13 @@ function place(formation, xi) {
 /** Идентификатор за радио бутона на всеки отбор. */
 const slug = (name) => name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 
-const teams = data.teams.map((t) => ({ ...t, spots: place(t.formation, t.xi), slug: slug(t.team) }));
+const teams = data.teams.map((t) => ({ ...t, spots: place(t), slug: slug(t.team) }));
 // С един отбор табовете са излишни.
 const tabbed = teams.length > 1;
 const footnotes = data.teams.flatMap((t) =>
   t.xi.filter((p) => p.uncertain).map((p) => `${t.short}: ${p.why}.`)
 );
+const benchLabel = data.benchLabel ?? 'Bench';
 ---
 <div class:list={['lineups', !showHead && 'lineups-bare']}>
   {showHead && (
@@ -81,16 +97,11 @@ const footnotes = data.teams.flatMap((t) =>
           <p><span class="formation">{t.formation}</span> · {t.coach}</p>
         </div>
 
-        <div class="pitch">
-          <svg class="pitch-lines" viewBox="0 0 100 150" preserveAspectRatio="none" aria-hidden="true">
-            <rect x="1" y="1" width="98" height="148" />
-            <line x1="1" y1="75" x2="99" y2="75" />
-            <circle cx="50" cy="75" r="14" />
-            <rect x="22" y="128" width="56" height="21" />
-            <rect x="37" y="141" width="26" height="8" />
-            <rect x="22" y="1" width="56" height="21" />
-            <rect x="37" y="1" width="26" height="8" />
-          </svg>
+        <div
+          class:list={['pitch', `surface-${surfaceKey}`]}
+          style={`--turf:${surface.turf};--turf-dark:${surface.turfDark};--aspect:${surface.aspect}`}
+        >
+          <SurfaceMarkings surface={surfaceKey} />
 
           <ol class="pitch-players">
             {t.spots.map((p) => (
@@ -108,7 +119,7 @@ const footnotes = data.teams.flatMap((t) =>
         </div>
 
         <div class="bench">
-          <p class="bench-label">Bench</p>
+          <p class="bench-label">{benchLabel}</p>
           {t.bench.length > 0 ? (
             <ul class="bench-list">
               {t.bench.map((p) => <li title={p.full ?? undefined}>{p.name}</li>)}

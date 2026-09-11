@@ -494,13 +494,13 @@ tbody td:nth-child(2) { font-weight: 650; }
 /* Тревата е плътен цвят, не картинка — нула килобайта и еднакво в двете теми. */
 .pitch {
   position: relative; margin: 14px auto 0;
-  aspect-ratio: 100 / 150; border-radius: 10px; overflow: hidden;
+  aspect-ratio: var(--aspect, 100 / 150); border-radius: 10px; overflow: hidden;
   /* Ширината е изрична: в grid клетка „margin:auto“ без width свива терена
      до нула, защото всички играчи в него са абсолютно позиционирани. */
   width: 100%; max-width: 320px;
-  background: #17693f;
+  background: var(--turf, #17693f);
 }
-:root[data-theme="dark"] .pitch { background: #10432a; }
+:root[data-theme="dark"] .pitch { background: var(--turf-dark, #10432a); }
 .pitch-lines {
   position: absolute; inset: 0; width: 100%; height: 100%;
   fill: none; stroke: rgba(255, 255, 255, .32); stroke-width: .7;
@@ -723,3 +723,11 @@ tbody td:nth-child(2) { font-weight: 650; }
   margin: 9px 0 0; font-size: .82rem; color: var(--text-faint);
   max-width: 64ch;
 }
+
+/* Ледът е светъл, затова линиите и имената по него стават тъмни. */
+.surface-rink .pitch-lines { stroke: rgba(20, 50, 80, .45); }
+.surface-rink .spot-name { color: #10243a; text-shadow: 0 1px 2px rgba(255, 255, 255, .9); }
+.surface-rink .spot-dot { background: #10243a; color: #fff; border-color: rgba(255, 255, 255, .5); }
+:root[data-theme="dark"] .surface-rink .pitch-lines { stroke: rgba(255, 255, 255, .4); }
+:root[data-theme="dark"] .surface-rink .spot-name { color: #fff; text-shadow: 0 1px 3px rgba(0, 0, 0, .9); }
+:root[data-theme="dark"] .surface-rink .spot-dot { background: #fff; color: #10243a; }

@@ -1,0 +1,34 @@
+{
+  "match": "The 2026 World Championship All-Star team",
+  "competition": "IIHF Ice Hockey World Championship 2026",
+  "venue": "Zurich and Fribourg, Switzerland",
+  "date": "15–31 May 2026",
+  "surface": "rink",
+  "benchLabel": "Directorate awards",
+  "note": "This is the media All-Star team, voted by the journalists covering the tournament — the best six of the championship rather than any one team's starting line. Three of the six come from Switzerland, who lost the final at home, and two from Finland, who won it.",
+  "teams": [
+    {
+      "team": "All-Star team",
+      "short": "All-Stars",
+      "coach": "Voted by the accredited media",
+      "formation": "2-3",
+      "keeper": true,
+      "colour": "#026da4",
+      "colourDark": "#5fb4e0",
+      "xi": [
+        { "name": "Genoni", "full": "Leonardo Genoni — Switzerland, goaltender" },
+        { "name": "Josi", "full": "Roman Josi — Switzerland, defence, tournament MVP" },
+        { "name": "Jokiharju", "full": "Henri Jokiharju — Finland, defence" },
+        { "name": "Andrighetto", "full": "Sven Andrighetto — Switzerland, forward" },
+        { "name": "Celebrini", "full": "Macklin Celebrini — Canada, forward, best forward" },
+        { "name": "Barkov", "full": "Aleksander Barkov — Finland, forward" }
+      ],
+      "bench": [
+        { "name": "Haukeland — best goaltender", "full": "Henrik Haukeland, Norway" },
+        { "name": "Josi — best defender", "full": "Roman Josi, Switzerland" },
+        { "name": "Celebrini — best forward", "full": "Macklin Celebrini, Canada" }
+      ],
+      "benchNote": "The directorate awards are chosen separately from the All-Star vote, which is why Henrik Haukeland is the best goaltender while Leonardo Genoni is the All-Star one."
+    }
+  ]
+}

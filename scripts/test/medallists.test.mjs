@@ -43,11 +43,35 @@ const html = `
 <tr><td>Should not appear</td><td>Nobody</td><td>Nobody</td><td>Nobody</td></tr>
 </tbody></table>`;
 
-const { events, skipped } = parseMedallists(html);
+// От истинския пробег: раздел „Medal leaders“ с медални колони, който не
+// изброява дисциплини, и спорт, разделен на h3 по пол.
+const extra = `
+<div class="mw-heading"><h2 id="Medal_leaders">Medal leaders</h2></div>
+<table class="wikitable"><tbody>
+<tr><th>Athlete</th><th>Gold</th><th>Silver</th><th>Bronze</th></tr>
+<tr><td>Marit Bjørgen</td><td>3</td><td>1</td><td>1</td></tr>
+</tbody></table>
+
+<div class="mw-heading"><h2 id="Cycling">Cycling</h2></div>
+<div class="mw-heading"><h3 id="Men's_events">Men's events</h3></div>
+<table class="wikitable"><tbody>
+<tr><th>Event</th><th>Gold</th><th>Silver</th><th>Bronze</th></tr>
+<tr><td>Road race</td><td>Remco Evenepoel</td><td>Valentin Madouas</td><td>Christophe Laporte</td></tr>
+</tbody></table>`;
+
+const { events, skipped } = parseMedallists(html + extra);
 const sports = [...new Set(events.map((e) => e.sport))];
 
-assert.deepEqual(sports, ['Alpine skiing', 'Curling'], 'само истинските спортове');
-assert.equal(events.length, 3, 'три дисциплини');
+assert.deepEqual(sports, ['Alpine skiing', 'Curling', 'Cycling'], 'само истинските спортове');
+assert.equal(events.length, 4, 'четири дисциплини');
+
+// „Medal leaders“ има медални колони, но изброява спортисти, не състезания.
+assert.ok(!events.some((e) => e.sport === 'Medal leaders'), '„Medal leaders“ не е спорт');
+assert.ok(!events.some((e) => e.event === 'Marit Bjørgen'), 'спортист не е станал дисциплина');
+
+// Дисциплината под h3 „Men's events“ носи спорта от h2 отгоре.
+const road = events.find((e) => e.event === 'Road race');
+assert.equal(road.sport, 'Cycling', 'спортът идва от h2, не от h3 за пола');
 
 assert.equal(events[0].event, "Men's downhill");
 assert.ok(events[0].gold.startsWith('Beat Feuz'), 'златото с името');

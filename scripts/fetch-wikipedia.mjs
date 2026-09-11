@@ -42,15 +42,15 @@ const GAMES = [
 
 /** Страниците „всеки медал по дисциплини“ — по една на Игри. */
 const MEDALLIST_PAGES = [
-  { id: 'winter-2010', label: 'Vancouver 2010', page: 'List of 2010 Winter Olympics medal winners', expect: [80, 110] },
-  { id: 'winter-2014', label: 'Sochi 2014', page: 'List of 2014 Winter Olympics medal winners', expect: [85, 115] },
-  { id: 'winter-2018', label: 'Pyeongchang 2018', page: 'List of 2018 Winter Olympics medal winners', expect: [90, 120] },
-  { id: 'winter-2022', label: 'Beijing 2022', page: 'List of 2022 Winter Olympics medal winners', expect: [95, 125] },
-  { id: 'summer-2008', label: 'Beijing 2008', page: 'List of 2008 Summer Olympics medal winners', expect: [280, 340] },
-  { id: 'summer-2012', label: 'London 2012', page: 'List of 2012 Summer Olympics medal winners', expect: [280, 340] },
-  { id: 'summer-2016', label: 'Rio 2016', page: 'List of 2016 Summer Olympics medal winners', expect: [280, 345] },
-  { id: 'summer-2020', label: 'Tokyo 2020', page: 'List of 2020 Summer Olympics medal winners', expect: [300, 360] },
-  { id: 'summer-2024', label: 'Paris 2024', page: 'List of 2024 Summer Olympics medal winners', expect: [300, 360] },
+  { id: 'winter-2010', label: 'Vancouver 2010', page: 'List of 2010 Winter Olympics medal winners', expect: [84, 88] },
+  { id: 'winter-2014', label: 'Sochi 2014', page: 'List of 2014 Winter Olympics medal winners', expect: [96, 100] },
+  { id: 'winter-2018', label: 'Pyeongchang 2018', page: 'List of 2018 Winter Olympics medal winners', expect: [100, 104] },
+  { id: 'winter-2022', label: 'Beijing 2022', page: 'List of 2022 Winter Olympics medal winners', expect: [107, 111] },
+  { id: 'summer-2008', label: 'Beijing 2008', page: 'List of 2008 Summer Olympics medal winners', expect: [300, 304] },
+  { id: 'summer-2012', label: 'London 2012', page: 'List of 2012 Summer Olympics medal winners', expect: [300, 304] },
+  { id: 'summer-2016', label: 'Rio 2016', page: 'List of 2016 Summer Olympics medal winners', expect: [304, 308] },
+  { id: 'summer-2020', label: 'Tokyo 2020', page: 'List of 2020 Summer Olympics medal winners', expect: [337, 341] },
+  { id: 'summer-2024', label: 'Paris 2024', page: 'List of 2024 Summer Olympics medal winners', expect: [327, 331] },
 ];
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
@@ -141,17 +141,27 @@ function parseMedalTable(rows) {
  * Страницата е поредица от заглавие на спорт и таблица под него, затова HTML-ът
  * се обхожда по ред и всяка таблица наследява последното заглавие.
  */
+/**
+ * Раздели, които имат колони Gold/Silver/Bronze, но не изброяват дисциплини.
+ * „Medal leaders“ вкара двайсет реда в таблицата за Ванкувър, преди да влезе
+ * тук — това са най-успешните спортисти, не състезания.
+ */
+const NOT_A_SPORT = /^(see also|references|notes|sources|external links|contents|medal table|medal tables|medal leaders|medalists|medallists|multiple medalists|multiple medallists|statistics|records|podium sweeps|notes and references)$/i;
+
 function parseMedallists(html) {
   const events = [];
   const skipped = [];
   let sport = null;
 
-  const re = /<h[23][^>]*>([\s\S]*?)<\/h[23]>|<table[^>]*class="[^"]*wikitable[^"]*"[\s\S]*?<\/table>/g;
+  // Само h2. Първият истински пробег показа защо: страницата за Париж 2024
+  // разделя всеки спорт на h3 „Men's events“ и „Women's events“, така че
+  // четенето на h3 даваше сто петдесет и четири дисциплини със спорт „Men's
+  // events“. Спортът е h2; h3 е подраздел в него.
+  const re = /<h2[^>]*>([\s\S]*?)<\/h2>|<table[^>]*class="[^"]*wikitable[^"]*"[\s\S]*?<\/table>/g;
   for (const m of html.matchAll(re)) {
     if (m[0].startsWith('<h')) {
       const name = strip(m[1]).replace(/\[edit\]$/i, '').trim();
-      // Заглавия като „See also“ и „References“ не са спортове.
-      sport = /^(see also|references|notes|external links|contents|medal table)$/i.test(name) ? null : name;
+      sport = NOT_A_SPORT.test(name) ? null : name;
       continue;
     }
     if (!sport) continue;
@@ -232,6 +242,12 @@ async function main() {
         throw new Error(`${events.length} дисциплини, а се очакваха между ${lo} и ${hi}`);
       }
       const sports = new Set(events.map((e) => e.sport));
+      // Париж върна 330 дисциплини в едва 17 „спорта“ — броят дисциплини сам
+      // по себе си не хваща сгрешено отнасяне, затова и спортовете се броят.
+      const minSports = g.id.startsWith('summer') ? 28 : 10;
+      if (sports.size < minSports) {
+        throw new Error(`само ${sports.size} спорта, а се очакваха поне ${minSports} — разборът е сгрешил заглавията`);
+      }
       report2.push(`${g.label.padEnd(22)} ${String(events.length).padStart(4)} дисциплини, ` +
         `${String(sports.size).padStart(2)} спорта, ${skipped.length} пропуснати реда`);
       ok2 += 1;

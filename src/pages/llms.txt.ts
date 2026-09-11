@@ -2,6 +2,7 @@ import type { APIRoute } from 'astro';
 import sports from '../data/sports.json';
 import { archives, rowCount } from '../data/archives.js';
 import { standings } from '../data/standings.js';
+import { lineups } from '../data/lineups.js';
 import { getCollection } from 'astro:content';
 
 // llms.txt — обобщение на сайта в машинночетим вид, за системите, които
@@ -25,7 +26,23 @@ ${archives.map((a) => `- [${a.data.title}](${root}/archives/${a.href}/) — ${ro
 
 ## Championship standings
 
-${standings.map((s) => `- [${s.data.series} ${s.data.season}](${root}/standings/${s.slug}/) — ${s.data.drivers[0].name} leads on ${s.data.drivers[0].points}. ${s.data.asOf}`).join('\n')}
+${standings.map((s) => {
+  // Заглавието не повтаря годината, когато тя вече е в името („Milano-Cortina
+  // 2026 2026“), а глаголът идва от данните: медалната таблица не се „води“.
+  const name = String(s.data.series).includes(String(s.data.season))
+    ? s.data.series
+    : `${s.data.series} ${s.data.season}`;
+  const lead = s.data.drivers[0];
+  const verb = s.data.leadVerb ?? 'leads on';
+  const unit = s.data.leadUnit ? ` ${s.data.leadUnit}` : '';
+  return `- [${name}](${root}/standings/${s.slug}/) — ${lead.name} ${verb} ${lead.points}${unit}. ${s.data.asOf}`;
+}).join('\n')}
+
+## Line-ups
+
+Who actually played, laid out on the pitch, with the substitutes.
+
+${Object.entries(lineups).map(([key, l]) => `- [${l.match}](${root}/lineups/${key}/) — ${l.competition}, ${l.venue}, ${l.date}. ${l.teams.map((t) => `${t.team} ${t.formation}`).join('; ')}.`).join('\n')}
 
 ## Recent articles
 

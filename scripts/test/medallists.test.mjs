@@ -59,11 +59,37 @@ const extra = `
 <tr><td>Road race</td><td>Remco Evenepoel</td><td>Valentin Madouas</td><td>Christophe Laporte</td></tr>
 </tbody></table>`;
 
-const { events, skipped } = parseMedallists(html + extra);
+// От истинския лог: структурата на страницата за Париж 2024 — всеки спорт
+// има свой подраздел „Medal table“ с ДЪРЖАВИ, който не са дисциплини.
+const paris = `
+<div class="mw-heading"><h2 id="Archery">Archery</h2></div>
+<div class="mw-heading"><h3 id="Medal_table">Medal table</h3></div>
+<table class="wikitable"><tbody>
+<tr><th>Rank</th><th>NOC</th><th>Gold</th><th>Silver</th><th>Bronze</th></tr>
+<tr><td>1</td><td>South Korea</td><td>5</td><td>1</td><td>1</td></tr>
+</tbody></table>
+<div class="mw-heading"><h3 id="Medalists">Medalists</h3></div>
+<table class="wikitable"><tbody>
+<tr><th>Event</th><th>Gold</th><th>Silver</th><th>Bronze</th></tr>
+<tr><td><a>Men's individual</a><a>details</a>
+</td><td>Kim Woo-jin</td><td>Brady Ellison</td><td>Lee Woo-seok</td></tr>
+</tbody></table>`;
+
+const { events, skipped } = parseMedallists(html + extra + paris);
 const sports = [...new Set(events.map((e) => e.sport))];
 
-assert.deepEqual(sports, ['Alpine skiing', 'Curling', 'Cycling'], 'само истинските спортове');
-assert.equal(events.length, 4, 'четири дисциплини');
+assert.deepEqual(sports, ['Alpine skiing', 'Curling', 'Cycling', 'Archery'], 'само истинските спортове');
+assert.equal(events.length, 5, 'пет дисциплини');
+
+// Подразделът „Medal table“ на един спорт изброява държави, не състезания.
+assert.ok(!events.some((e) => e.event === 'South Korea'), 'държава не е станала дисциплина');
+assert.ok(!events.some((e) => e.category === 'Medal table'), 'няма нищо от „Medal table“');
+
+// „Medalists“ е общо подзаглавие — не бива да става категория.
+const arch = events.find((e) => e.sport === 'Archery');
+assert.equal(arch.category, undefined, '„Medalists“ не е категория');
+// И нов ред след „details“ не бива да оставя наставката.
+assert.equal(arch.event, "Men's individual", 'details е махнато въпреки новия ред');
 
 // „Medal leaders“ има медални колони, но изброява спортисти, не състезания.
 assert.ok(!events.some((e) => e.sport === 'Medal leaders'), '„Medal leaders“ не е спорт');

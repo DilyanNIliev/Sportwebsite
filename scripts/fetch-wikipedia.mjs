@@ -93,11 +93,13 @@ const strip = (html) =>
     .replace(/&amp;/g, '&')
     .replace(/&#160;/g, ' ')
     .replace(/\[\d+\]/g, '')
-    // „United States‡“ — истинският пробег извади това. Бележките в таблиците
-    // на Уикипедия не са винаги в <sup>, някои са обикновен текст.
+    // Подстригването е ПРЕДИ закотвените замени. Иначе нов ред след текста
+    // разваля котвата „$“ и „Downhilldetails“ остава — точно това се случи.
+    .trim()
+    // „United States‡“ — бележките не са винаги в <sup>, някои са текст.
     .replace(/[*†‡§¶]+$/, '')
     // Клетката с дисциплината носи връзка „details“, слепена за името.
-    .replace(/\s*details$/i, '')
+    .replace(/details$/i, '')
     .trim();
 
 /** Първата „wikitable“ на страницата, като масив от масиви. */
@@ -148,38 +150,43 @@ function parseMedalTable(rows) {
  * „Medal leaders“ вкара двайсет реда в таблицата за Ванкувър, преди да влезе
  * тук — това са най-успешните спортисти, не състезания.
  */
-const NOT_A_SPORT = /^(see also|references|notes|sources|external links|contents|medal table|medal tables|medal leaders|medalists|medallists|multiple medalists|multiple medallists|statistics|records|podium sweeps|notes and references)$/i;
+const SKIP_SECTION = /^(see also|references|notes|sources|external links|contents|medal table|medal tables|medal leaders|multiple medalists|multiple medallists|statistics|records|podium sweeps|notes and references)$/i;
+
+/**
+ * Подзаглавия, които не носят смисъл като категория. „Men's events“ носи —
+ * без него мъжките и женските 100 метра стават един ред — но „Medalists“ не.
+ */
+const GENERIC_SUB = /^(medalists|medallists|events|list of medalists)$/i;
 
 function parseMedallists(html) {
   const events = [];
   const skipped = [];
   let sport = null;
-  let container = false;
 
   // Само h2. Първият истински пробег показа защо: страницата за Париж 2024
   // разделя всеки спорт на h3 „Men's events“ и „Women's events“, така че
   // четенето на h3 даваше сто петдесет и четири дисциплини със спорт „Men's
   // events“. Спортът е h2; h3 е подраздел в него.
   let category = null;
+  let skip = false;
   const re = /<h([23])[^>]*>([\s\S]*?)<\/h\1>|<table[^>]*class="[^"]*wikitable[^"]*"[\s\S]*?<\/table>/g;
   for (const m of html.matchAll(re)) {
     if (m[0].startsWith('<h')) {
       const name = strip(m[2]).replace(/\[edit\]$/i, '').trim();
       if (m[1] === '2') {
-        // Общ контейнер като „Medalists“ не е спорт; тогава спортът е h3.
-        sport = NOT_A_SPORT.test(name) ? null : name;
-        container = sport === null && /^medal(l?ists|s)$/i.test(name);
+        skip = SKIP_SECTION.test(name);
+        sport = skip ? null : name;
         category = null;
       } else {
-        // h3 е или спортът (когато h2 е контейнер), или подраздел в спорта —
-        // най-често полът. Полът трябва да се запази: без него „100 metres“
-        // на мъжете и на жените стават един и същи ред.
-        if (container && !NOT_A_SPORT.test(name)) sport = name;
-        else category = name;
+        // Всеки спорт на страницата за Париж има свой подраздел „Medal table“
+        // с ДЪРЖАВИ. Той има медални колони и се четеше като дисциплини — оттам
+        // дойдоха 482 вместо 329. Такъв подраздел се прескача.
+        skip = SKIP_SECTION.test(name);
+        category = skip || GENERIC_SUB.test(name) ? null : name;
       }
       continue;
     }
-    if (!sport) continue;
+    if (!sport || skip) continue;
 
     const rows = [...m[0].matchAll(/<tr[\s\S]*?<\/tr>/g)]
       .map((r) => [...r[0].matchAll(/<t[hd][^>]*>([\s\S]*?)<\/t[hd]>/g)].map((c) => strip(c[1])));

@@ -56,6 +56,9 @@ for (const r of rows) {
 // Бележките и флаговете са изчистени от имената.
 assert.ok(!rows[0].country.includes('['), 'без бележки в името');
 assert.equal(strip('&nbsp;<a href="#">Italy</a><sup>[b]</sup>'), 'Italy', 'чисти nbsp, връзки и sup');
+// От истинския пробег: „United States‡“ — бележка като обикновен текст.
+assert.equal(strip('United States&#8225;'.replace('&#8225;', '\u2021')), 'United States', 'маха кръстчето');
+assert.equal(strip('Germany*'), 'Germany', 'маха звездичката');
 
 // Редът „Totals“ се сумира коректно и иначе минаваше за държава.
 assert.equal(rows.length, 5, 'точно петте държави, без сборния ред');

@@ -25,9 +25,11 @@ jobs:
         with:
           node-version: '22'
 
-      - name: Probe first — покажи какво връща, без да записва
-        run: node scripts/fetch-wikipedia.mjs --probe
+      - name: Parser tests, offline
+        run: node scripts/test/medal-table.test.mjs
 
+      # Едно пускане, не две: първият пробег правеше двайсет заявки за осем
+      # секунди и Уикипедия върна 429 на всичките. Репортът се печата и така.
       - name: Fetch and write
         run: node scripts/fetch-wikipedia.mjs
 

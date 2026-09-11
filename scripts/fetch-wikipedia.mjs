@@ -40,9 +40,25 @@ const GAMES = [
   { id: 'summer-2024', label: 'Paris 2024', page: '2024 Summer Olympics medal table' },
 ];
 
-async function api(params) {
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+
+/**
+ * Заявка към API-то, с изчакване при 429.
+ *
+ * Първият истински пробег падна точно тук: двайсет заявки за осем секунди и
+ * Уикипедия отряза всичките. Затова между заявките има секунда и половина, а
+ * при 429 се чака нарастващо и се пробва пак.
+ */
+async function api(params, attempt = 1) {
   const url = `${API}?${new URLSearchParams({ format: 'json', formatversion: '2', origin: '*', ...params })}`;
   const res = await fetch(url, { headers: { 'User-Agent': UA, Accept: 'application/json' } });
+
+  if (res.status === 429 && attempt <= 4) {
+    const wait = Number(res.headers.get('retry-after')) * 1000 || attempt * 5000;
+    console.log(`  429 — чакам ${wait / 1000}s и пробвам пак (опит ${attempt} от 4)`);
+    await sleep(wait);
+    return api(params, attempt + 1);
+  }
   if (!res.ok) throw new Error(`${res.status} ${res.statusText} за ${params.page ?? params.titles}`);
   const json = await res.json();
   if (json.error) throw new Error(`API: ${json.error.code} — ${json.error.info}`);
@@ -64,6 +80,9 @@ const strip = (html) =>
     .replace(/&amp;/g, '&')
     .replace(/&#160;/g, ' ')
     .replace(/\[\d+\]/g, '')
+    // „United States‡“ — истинският пробег извади това. Бележките в таблиците
+    // на Уикипедия не са винаги в <sup>, някои са обикновен текст.
+    .replace(/[*†‡§¶]+$/, '')
     .trim();
 
 /** Първата „wikitable“ на страницата, като масив от масиви. */
@@ -137,8 +156,8 @@ async function main() {
     } catch (err) {
       report.push(`${g.label.padEnd(22)} ГРЕШКА: ${err.message}`);
     }
-    // Кротко към чужд сървър.
-    await new Promise((r) => setTimeout(r, 400));
+    // Кротко към чужд сървър — 400 ms не беше достатъчно.
+    await sleep(1500);
   }
 
   console.log('\n' + report.join('\n'));

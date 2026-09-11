@@ -1,0 +1,250 @@
+{
+  "games": "Pyeongchang 2018",
+  "source": "https://en.wikipedia.org/wiki/2018_Winter_Olympics_medal_table",
+  "sourceName": "Wikipedia",
+  "licence": "CC BY-SA 4.0",
+  "fetched": "2026-09-11",
+  "rejectedRows": 0,
+  "rows": [
+    {
+      "pos": 1,
+      "country": "Norway",
+      "gold": 14,
+      "silver": 14,
+      "bronze": 11,
+      "total": 39
+    },
+    {
+      "pos": 2,
+      "country": "Germany",
+      "gold": 14,
+      "silver": 10,
+      "bronze": 7,
+      "total": 31
+    },
+    {
+      "pos": 3,
+      "country": "Canada",
+      "gold": 11,
+      "silver": 8,
+      "bronze": 10,
+      "total": 29
+    },
+    {
+      "pos": 4,
+      "country": "United States",
+      "gold": 9,
+      "silver": 8,
+      "bronze": 6,
+      "total": 23
+    },
+    {
+      "pos": 5,
+      "country": "Netherlands",
+      "gold": 8,
+      "silver": 6,
+      "bronze": 6,
+      "total": 20
+    },
+    {
+      "pos": 6,
+      "country": "Sweden",
+      "gold": 7,
+      "silver": 6,
+      "bronze": 1,
+      "total": 14
+    },
+    {
+      "pos": 7,
+      "country": "South Korea",
+      "gold": 5,
+      "silver": 8,
+      "bronze": 4,
+      "total": 17
+    },
+    {
+      "pos": 8,
+      "country": "Switzerland",
+      "gold": 5,
+      "silver": 6,
+      "bronze": 4,
+      "total": 15
+    },
+    {
+      "pos": 9,
+      "country": "France",
+      "gold": 5,
+      "silver": 4,
+      "bronze": 6,
+      "total": 15
+    },
+    {
+      "pos": 10,
+      "country": "Austria",
+      "gold": 5,
+      "silver": 3,
+      "bronze": 6,
+      "total": 14
+    },
+    {
+      "pos": 11,
+      "country": "Japan",
+      "gold": 4,
+      "silver": 5,
+      "bronze": 4,
+      "total": 13
+    },
+    {
+      "pos": 12,
+      "country": "Italy",
+      "gold": 3,
+      "silver": 2,
+      "bronze": 5,
+      "total": 10
+    },
+    {
+      "pos": 13,
+      "country": "Olympic Athletes from Russia",
+      "gold": 2,
+      "silver": 6,
+      "bronze": 9,
+      "total": 17
+    },
+    {
+      "pos": 14,
+      "country": "Czech Republic",
+      "gold": 2,
+      "silver": 2,
+      "bronze": 3,
+      "total": 7
+    },
+    {
+      "pos": 15,
+      "country": "Belarus",
+      "gold": 2,
+      "silver": 1,
+      "bronze": 0,
+      "total": 3
+    },
+    {
+      "pos": 16,
+      "country": "China",
+      "gold": 1,
+      "silver": 6,
+      "bronze": 2,
+      "total": 9
+    },
+    {
+      "pos": 17,
+      "country": "Slovakia",
+      "gold": 1,
+      "silver": 2,
+      "bronze": 0,
+      "total": 3
+    },
+    {
+      "pos": 18,
+      "country": "Finland",
+      "gold": 1,
+      "silver": 1,
+      "bronze": 4,
+      "total": 6
+    },
+    {
+      "pos": 19,
+      "country": "Great Britain",
+      "gold": 1,
+      "silver": 0,
+      "bronze": 4,
+      "total": 5
+    },
+    {
+      "pos": 20,
+      "country": "Poland",
+      "gold": 1,
+      "silver": 0,
+      "bronze": 1,
+      "total": 2
+    },
+    {
+      "pos": 21,
+      "country": "Hungary",
+      "gold": 1,
+      "silver": 0,
+      "bronze": 0,
+      "total": 1
+    },
+    {
+      "pos": null,
+      "country": "Ukraine",
+      "gold": 1,
+      "silver": 0,
+      "bronze": 0,
+      "total": 1
+    },
+    {
+      "pos": 23,
+      "country": "Australia",
+      "gold": 0,
+      "silver": 2,
+      "bronze": 1,
+      "total": 3
+    },
+    {
+      "pos": 24,
+      "country": "Slovenia",
+      "gold": 0,
+      "silver": 1,
+      "bronze": 1,
+      "total": 2
+    },
+    {
+      "pos": 25,
+      "country": "Belgium",
+      "gold": 0,
+      "silver": 1,
+      "bronze": 0,
+      "total": 1
+    },
+    {
+      "pos": 26,
+      "country": "New Zealand",
+      "gold": 0,
+      "silver": 0,
+      "bronze": 2,
+      "total": 2
+    },
+    {
+      "pos": null,
+      "country": "Spain",
+      "gold": 0,
+      "silver": 0,
+      "bronze": 2,
+      "total": 2
+    },
+    {
+      "pos": 28,
+      "country": "Kazakhstan",
+      "gold": 0,
+      "silver": 0,
+      "bronze": 1,
+      "total": 1
+    },
+    {
+      "pos": null,
+      "country": "Latvia",
+      "gold": 0,
+      "silver": 0,
+      "bronze": 1,
+      "total": 1
+    },
+    {
+      "pos": null,
+      "country": "Liechtenstein",
+      "gold": 0,
+      "silver": 0,
+      "bronze": 1,
+      "total": 1
+    }
+  ]
+}

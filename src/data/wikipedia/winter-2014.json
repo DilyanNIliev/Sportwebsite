@@ -1,0 +1,218 @@
+{
+  "games": "Sochi 2014",
+  "source": "https://en.wikipedia.org/wiki/2014_Winter_Olympics_medal_table",
+  "sourceName": "Wikipedia",
+  "licence": "CC BY-SA 4.0",
+  "fetched": "2026-09-11",
+  "rejectedRows": 0,
+  "rows": [
+    {
+      "pos": 1,
+      "country": "Norway",
+      "gold": 11,
+      "silver": 6,
+      "bronze": 10,
+      "total": 27
+    },
+    {
+      "pos": 2,
+      "country": "Russia",
+      "gold": 10,
+      "silver": 10,
+      "bronze": 9,
+      "total": 29
+    },
+    {
+      "pos": 3,
+      "country": "Canada",
+      "gold": 10,
+      "silver": 10,
+      "bronze": 5,
+      "total": 25
+    },
+    {
+      "pos": 4,
+      "country": "United States",
+      "gold": 9,
+      "silver": 9,
+      "bronze": 10,
+      "total": 28
+    },
+    {
+      "pos": 5,
+      "country": "Germany",
+      "gold": 9,
+      "silver": 5,
+      "bronze": 5,
+      "total": 19
+    },
+    {
+      "pos": 6,
+      "country": "Netherlands",
+      "gold": 8,
+      "silver": 7,
+      "bronze": 9,
+      "total": 24
+    },
+    {
+      "pos": 7,
+      "country": "Switzerland",
+      "gold": 7,
+      "silver": 2,
+      "bronze": 2,
+      "total": 11
+    },
+    {
+      "pos": 8,
+      "country": "Belarus",
+      "gold": 5,
+      "silver": 0,
+      "bronze": 1,
+      "total": 6
+    },
+    {
+      "pos": 9,
+      "country": "Austria",
+      "gold": 4,
+      "silver": 9,
+      "bronze": 4,
+      "total": 17
+    },
+    {
+      "pos": 10,
+      "country": "France",
+      "gold": 4,
+      "silver": 4,
+      "bronze": 7,
+      "total": 15
+    },
+    {
+      "pos": 11,
+      "country": "Poland",
+      "gold": 4,
+      "silver": 1,
+      "bronze": 1,
+      "total": 6
+    },
+    {
+      "pos": 12,
+      "country": "China",
+      "gold": 3,
+      "silver": 4,
+      "bronze": 2,
+      "total": 9
+    },
+    {
+      "pos": 13,
+      "country": "South Korea",
+      "gold": 3,
+      "silver": 3,
+      "bronze": 2,
+      "total": 8
+    },
+    {
+      "pos": 14,
+      "country": "Sweden",
+      "gold": 2,
+      "silver": 7,
+      "bronze": 6,
+      "total": 15
+    },
+    {
+      "pos": 15,
+      "country": "Czech Republic",
+      "gold": 2,
+      "silver": 4,
+      "bronze": 3,
+      "total": 9
+    },
+    {
+      "pos": 16,
+      "country": "Slovenia",
+      "gold": 2,
+      "silver": 2,
+      "bronze": 4,
+      "total": 8
+    },
+    {
+      "pos": 17,
+      "country": "Japan",
+      "gold": 1,
+      "silver": 4,
+      "bronze": 3,
+      "total": 8
+    },
+    {
+      "pos": 18,
+      "country": "Finland",
+      "gold": 1,
+      "silver": 3,
+      "bronze": 1,
+      "total": 5
+    },
+    {
+      "pos": 19,
+      "country": "Great Britain",
+      "gold": 1,
+      "silver": 1,
+      "bronze": 3,
+      "total": 5
+    },
+    {
+      "pos": null,
+      "country": "Latvia",
+      "gold": 1,
+      "silver": 1,
+      "bronze": 3,
+      "total": 5
+    },
+    {
+      "pos": 21,
+      "country": "Ukraine",
+      "gold": 1,
+      "silver": 0,
+      "bronze": 1,
+      "total": 2
+    },
+    {
+      "pos": 22,
+      "country": "Slovakia",
+      "gold": 1,
+      "silver": 0,
+      "bronze": 0,
+      "total": 1
+    },
+    {
+      "pos": 23,
+      "country": "Italy",
+      "gold": 0,
+      "silver": 2,
+      "bronze": 6,
+      "total": 8
+    },
+    {
+      "pos": 24,
+      "country": "Australia",
+      "gold": 0,
+      "silver": 2,
+      "bronze": 1,
+      "total": 3
+    },
+    {
+      "pos": 25,
+      "country": "Croatia",
+      "gold": 0,
+      "silver": 1,
+      "bronze": 0,
+      "total": 1
+    },
+    {
+      "pos": 26,
+      "country": "Kazakhstan",
+      "gold": 0,
+      "silver": 0,
+      "bronze": 1,
+      "total": 1
+    }
+  ]
+}

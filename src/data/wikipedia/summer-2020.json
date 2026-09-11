@@ -1,0 +1,754 @@
+{
+  "games": "Tokyo 2020",
+  "source": "https://en.wikipedia.org/wiki/2020_Summer_Olympics_medal_table",
+  "sourceName": "Wikipedia",
+  "licence": "CC BY-SA 4.0",
+  "fetched": "2026-09-11",
+  "rejectedRows": 0,
+  "rows": [
+    {
+      "pos": 1,
+      "country": "United States",
+      "gold": 39,
+      "silver": 41,
+      "bronze": 33,
+      "total": 113
+    },
+    {
+      "pos": 2,
+      "country": "China",
+      "gold": 38,
+      "silver": 32,
+      "bronze": 19,
+      "total": 89
+    },
+    {
+      "pos": 3,
+      "country": "Japan",
+      "gold": 27,
+      "silver": 14,
+      "bronze": 17,
+      "total": 58
+    },
+    {
+      "pos": 4,
+      "country": "Great Britain",
+      "gold": 22,
+      "silver": 20,
+      "bronze": 22,
+      "total": 64
+    },
+    {
+      "pos": 5,
+      "country": "ROC",
+      "gold": 20,
+      "silver": 28,
+      "bronze": 23,
+      "total": 71
+    },
+    {
+      "pos": 6,
+      "country": "Australia",
+      "gold": 17,
+      "silver": 7,
+      "bronze": 22,
+      "total": 46
+    },
+    {
+      "pos": 7,
+      "country": "Netherlands",
+      "gold": 10,
+      "silver": 12,
+      "bronze": 14,
+      "total": 36
+    },
+    {
+      "pos": 8,
+      "country": "France",
+      "gold": 10,
+      "silver": 12,
+      "bronze": 11,
+      "total": 33
+    },
+    {
+      "pos": 9,
+      "country": "Germany",
+      "gold": 10,
+      "silver": 11,
+      "bronze": 16,
+      "total": 37
+    },
+    {
+      "pos": 10,
+      "country": "Italy",
+      "gold": 10,
+      "silver": 10,
+      "bronze": 20,
+      "total": 40
+    },
+    {
+      "pos": 11,
+      "country": "Canada",
+      "gold": 7,
+      "silver": 7,
+      "bronze": 10,
+      "total": 24
+    },
+    {
+      "pos": 12,
+      "country": "Brazil",
+      "gold": 7,
+      "silver": 6,
+      "bronze": 8,
+      "total": 21
+    },
+    {
+      "pos": 13,
+      "country": "New Zealand",
+      "gold": 7,
+      "silver": 6,
+      "bronze": 7,
+      "total": 20
+    },
+    {
+      "pos": 14,
+      "country": "Cuba",
+      "gold": 7,
+      "silver": 3,
+      "bronze": 5,
+      "total": 15
+    },
+    {
+      "pos": 15,
+      "country": "Hungary",
+      "gold": 6,
+      "silver": 7,
+      "bronze": 7,
+      "total": 20
+    },
+    {
+      "pos": 16,
+      "country": "South Korea",
+      "gold": 6,
+      "silver": 4,
+      "bronze": 10,
+      "total": 20
+    },
+    {
+      "pos": 17,
+      "country": "Poland",
+      "gold": 4,
+      "silver": 5,
+      "bronze": 5,
+      "total": 14
+    },
+    {
+      "pos": 18,
+      "country": "Czech Republic",
+      "gold": 4,
+      "silver": 4,
+      "bronze": 3,
+      "total": 11
+    },
+    {
+      "pos": 19,
+      "country": "Kenya",
+      "gold": 4,
+      "silver": 4,
+      "bronze": 2,
+      "total": 10
+    },
+    {
+      "pos": 20,
+      "country": "Norway",
+      "gold": 4,
+      "silver": 2,
+      "bronze": 2,
+      "total": 8
+    },
+    {
+      "pos": 21,
+      "country": "Jamaica",
+      "gold": 4,
+      "silver": 1,
+      "bronze": 4,
+      "total": 9
+    },
+    {
+      "pos": 22,
+      "country": "Spain",
+      "gold": 3,
+      "silver": 8,
+      "bronze": 6,
+      "total": 17
+    },
+    {
+      "pos": 23,
+      "country": "Sweden",
+      "gold": 3,
+      "silver": 6,
+      "bronze": 0,
+      "total": 9
+    },
+    {
+      "pos": 24,
+      "country": "Switzerland",
+      "gold": 3,
+      "silver": 4,
+      "bronze": 6,
+      "total": 13
+    },
+    {
+      "pos": 25,
+      "country": "Denmark",
+      "gold": 3,
+      "silver": 4,
+      "bronze": 4,
+      "total": 11
+    },
+    {
+      "pos": 26,
+      "country": "Croatia",
+      "gold": 3,
+      "silver": 3,
+      "bronze": 3,
+      "total": 9
+    },
+    {
+      "pos": 27,
+      "country": "Iran",
+      "gold": 3,
+      "silver": 2,
+      "bronze": 2,
+      "total": 7
+    },
+    {
+      "pos": 28,
+      "country": "Serbia",
+      "gold": 3,
+      "silver": 1,
+      "bronze": 4,
+      "total": 8
+    },
+    {
+      "pos": 29,
+      "country": "Belgium",
+      "gold": 3,
+      "silver": 1,
+      "bronze": 3,
+      "total": 7
+    },
+    {
+      "pos": 30,
+      "country": "Bulgaria",
+      "gold": 3,
+      "silver": 1,
+      "bronze": 2,
+      "total": 6
+    },
+    {
+      "pos": 31,
+      "country": "Slovenia",
+      "gold": 3,
+      "silver": 1,
+      "bronze": 1,
+      "total": 5
+    },
+    {
+      "pos": 32,
+      "country": "Uzbekistan",
+      "gold": 3,
+      "silver": 0,
+      "bronze": 2,
+      "total": 5
+    },
+    {
+      "pos": 33,
+      "country": "Georgia",
+      "gold": 2,
+      "silver": 5,
+      "bronze": 1,
+      "total": 8
+    },
+    {
+      "pos": 34,
+      "country": "Chinese Taipei",
+      "gold": 2,
+      "silver": 4,
+      "bronze": 6,
+      "total": 12
+    },
+    {
+      "pos": 35,
+      "country": "Turkey",
+      "gold": 2,
+      "silver": 2,
+      "bronze": 9,
+      "total": 13
+    },
+    {
+      "pos": 36,
+      "country": "Greece",
+      "gold": 2,
+      "silver": 1,
+      "bronze": 1,
+      "total": 4
+    },
+    {
+      "pos": null,
+      "country": "Uganda",
+      "gold": 2,
+      "silver": 1,
+      "bronze": 1,
+      "total": 4
+    },
+    {
+      "pos": 38,
+      "country": "Ecuador",
+      "gold": 2,
+      "silver": 1,
+      "bronze": 0,
+      "total": 3
+    },
+    {
+      "pos": 39,
+      "country": "Ireland",
+      "gold": 2,
+      "silver": 0,
+      "bronze": 2,
+      "total": 4
+    },
+    {
+      "pos": null,
+      "country": "Israel",
+      "gold": 2,
+      "silver": 0,
+      "bronze": 2,
+      "total": 4
+    },
+    {
+      "pos": 41,
+      "country": "Qatar",
+      "gold": 2,
+      "silver": 0,
+      "bronze": 1,
+      "total": 3
+    },
+    {
+      "pos": 42,
+      "country": "Bahamas",
+      "gold": 2,
+      "silver": 0,
+      "bronze": 0,
+      "total": 2
+    },
+    {
+      "pos": null,
+      "country": "Kosovo",
+      "gold": 2,
+      "silver": 0,
+      "bronze": 0,
+      "total": 2
+    },
+    {
+      "pos": 44,
+      "country": "Ukraine",
+      "gold": 1,
+      "silver": 6,
+      "bronze": 12,
+      "total": 19
+    },
+    {
+      "pos": 45,
+      "country": "Belarus",
+      "gold": 1,
+      "silver": 3,
+      "bronze": 3,
+      "total": 7
+    },
+    {
+      "pos": 46,
+      "country": "Romania",
+      "gold": 1,
+      "silver": 3,
+      "bronze": 0,
+      "total": 4
+    },
+    {
+      "pos": null,
+      "country": "Venezuela",
+      "gold": 1,
+      "silver": 3,
+      "bronze": 0,
+      "total": 4
+    },
+    {
+      "pos": 48,
+      "country": "India",
+      "gold": 1,
+      "silver": 2,
+      "bronze": 4,
+      "total": 7
+    },
+    {
+      "pos": 49,
+      "country": "Hong Kong",
+      "gold": 1,
+      "silver": 2,
+      "bronze": 3,
+      "total": 6
+    },
+    {
+      "pos": 50,
+      "country": "Philippines",
+      "gold": 1,
+      "silver": 2,
+      "bronze": 1,
+      "total": 4
+    },
+    {
+      "pos": null,
+      "country": "Slovakia",
+      "gold": 1,
+      "silver": 2,
+      "bronze": 1,
+      "total": 4
+    },
+    {
+      "pos": 52,
+      "country": "South Africa",
+      "gold": 1,
+      "silver": 2,
+      "bronze": 0,
+      "total": 3
+    },
+    {
+      "pos": 53,
+      "country": "Austria",
+      "gold": 1,
+      "silver": 1,
+      "bronze": 5,
+      "total": 7
+    },
+    {
+      "pos": 54,
+      "country": "Egypt",
+      "gold": 1,
+      "silver": 1,
+      "bronze": 4,
+      "total": 6
+    },
+    {
+      "pos": 55,
+      "country": "Indonesia",
+      "gold": 1,
+      "silver": 1,
+      "bronze": 3,
+      "total": 5
+    },
+    {
+      "pos": 56,
+      "country": "Ethiopia",
+      "gold": 1,
+      "silver": 1,
+      "bronze": 2,
+      "total": 4
+    },
+    {
+      "pos": null,
+      "country": "Portugal",
+      "gold": 1,
+      "silver": 1,
+      "bronze": 2,
+      "total": 4
+    },
+    {
+      "pos": 58,
+      "country": "Tunisia",
+      "gold": 1,
+      "silver": 1,
+      "bronze": 0,
+      "total": 2
+    },
+    {
+      "pos": 59,
+      "country": "Estonia",
+      "gold": 1,
+      "silver": 0,
+      "bronze": 1,
+      "total": 2
+    },
+    {
+      "pos": null,
+      "country": "Fiji",
+      "gold": 1,
+      "silver": 0,
+      "bronze": 1,
+      "total": 2
+    },
+    {
+      "pos": null,
+      "country": "Latvia",
+      "gold": 1,
+      "silver": 0,
+      "bronze": 1,
+      "total": 2
+    },
+    {
+      "pos": null,
+      "country": "Thailand",
+      "gold": 1,
+      "silver": 0,
+      "bronze": 1,
+      "total": 2
+    },
+    {
+      "pos": 63,
+      "country": "Bermuda",
+      "gold": 1,
+      "silver": 0,
+      "bronze": 0,
+      "total": 1
+    },
+    {
+      "pos": null,
+      "country": "Morocco",
+      "gold": 1,
+      "silver": 0,
+      "bronze": 0,
+      "total": 1
+    },
+    {
+      "pos": null,
+      "country": "Puerto Rico",
+      "gold": 1,
+      "silver": 0,
+      "bronze": 0,
+      "total": 1
+    },
+    {
+      "pos": 66,
+      "country": "Colombia",
+      "gold": 0,
+      "silver": 4,
+      "bronze": 1,
+      "total": 5
+    },
+    {
+      "pos": 67,
+      "country": "Azerbaijan",
+      "gold": 0,
+      "silver": 3,
+      "bronze": 4,
+      "total": 7
+    },
+    {
+      "pos": 68,
+      "country": "Dominican Republic",
+      "gold": 0,
+      "silver": 3,
+      "bronze": 2,
+      "total": 5
+    },
+    {
+      "pos": 69,
+      "country": "Armenia",
+      "gold": 0,
+      "silver": 2,
+      "bronze": 2,
+      "total": 4
+    },
+    {
+      "pos": 70,
+      "country": "Kyrgyzstan",
+      "gold": 0,
+      "silver": 2,
+      "bronze": 1,
+      "total": 3
+    },
+    {
+      "pos": 71,
+      "country": "Mongolia",
+      "gold": 0,
+      "silver": 1,
+      "bronze": 3,
+      "total": 4
+    },
+    {
+      "pos": 72,
+      "country": "Argentina",
+      "gold": 0,
+      "silver": 1,
+      "bronze": 2,
+      "total": 3
+    },
+    {
+      "pos": null,
+      "country": "San Marino",
+      "gold": 0,
+      "silver": 1,
+      "bronze": 2,
+      "total": 3
+    },
+    {
+      "pos": 74,
+      "country": "Jordan",
+      "gold": 0,
+      "silver": 1,
+      "bronze": 1,
+      "total": 2
+    },
+    {
+      "pos": null,
+      "country": "Malaysia",
+      "gold": 0,
+      "silver": 1,
+      "bronze": 1,
+      "total": 2
+    },
+    {
+      "pos": null,
+      "country": "Nigeria",
+      "gold": 0,
+      "silver": 1,
+      "bronze": 1,
+      "total": 2
+    },
+    {
+      "pos": 77,
+      "country": "Bahrain",
+      "gold": 0,
+      "silver": 1,
+      "bronze": 0,
+      "total": 1
+    },
+    {
+      "pos": null,
+      "country": "Lithuania",
+      "gold": 0,
+      "silver": 1,
+      "bronze": 0,
+      "total": 1
+    },
+    {
+      "pos": null,
+      "country": "Namibia",
+      "gold": 0,
+      "silver": 1,
+      "bronze": 0,
+      "total": 1
+    },
+    {
+      "pos": null,
+      "country": "North Macedonia",
+      "gold": 0,
+      "silver": 1,
+      "bronze": 0,
+      "total": 1
+    },
+    {
+      "pos": null,
+      "country": "Saudi Arabia",
+      "gold": 0,
+      "silver": 1,
+      "bronze": 0,
+      "total": 1
+    },
+    {
+      "pos": null,
+      "country": "Turkmenistan",
+      "gold": 0,
+      "silver": 1,
+      "bronze": 0,
+      "total": 1
+    },
+    {
+      "pos": 83,
+      "country": "Kazakhstan",
+      "gold": 0,
+      "silver": 0,
+      "bronze": 8,
+      "total": 8
+    },
+    {
+      "pos": 84,
+      "country": "Mexico",
+      "gold": 0,
+      "silver": 0,
+      "bronze": 4,
+      "total": 4
+    },
+    {
+      "pos": 85,
+      "country": "Finland",
+      "gold": 0,
+      "silver": 0,
+      "bronze": 2,
+      "total": 2
+    },
+    {
+      "pos": 86,
+      "country": "Botswana",
+      "gold": 0,
+      "silver": 0,
+      "bronze": 1,
+      "total": 1
+    },
+    {
+      "pos": null,
+      "country": "Burkina Faso",
+      "gold": 0,
+      "silver": 0,
+      "bronze": 1,
+      "total": 1
+    },
+    {
+      "pos": null,
+      "country": "Ghana",
+      "gold": 0,
+      "silver": 0,
+      "bronze": 1,
+      "total": 1
+    },
+    {
+      "pos": null,
+      "country": "Grenada",
+      "gold": 0,
+      "silver": 0,
+      "bronze": 1,
+      "total": 1
+    },
+    {
+      "pos": null,
+      "country": "Ivory Coast",
+      "gold": 0,
+      "silver": 0,
+      "bronze": 1,
+      "total": 1
+    },
+    {
+      "pos": null,
+      "country": "Kuwait",
+      "gold": 0,
+      "silver": 0,
+      "bronze": 1,
+      "total": 1
+    },
+    {
+      "pos": null,
+      "country": "Moldova",
+      "gold": 0,
+      "silver": 0,
+      "bronze": 1,
+      "total": 1
+    },
+    {
+      "pos": null,
+      "country": "Syria",
+      "gold": 0,
+      "silver": 0,
+      "bronze": 1,
+      "total": 1
+    }
+  ]
+}

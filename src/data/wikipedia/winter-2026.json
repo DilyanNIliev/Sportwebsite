@@ -1,0 +1,250 @@
+{
+  "games": "Milano-Cortina 2026",
+  "source": "https://en.wikipedia.org/wiki/2026_Winter_Olympics_medal_table",
+  "sourceName": "Wikipedia",
+  "licence": "CC BY-SA 4.0",
+  "fetched": "2026-09-11",
+  "rejectedRows": 0,
+  "rows": [
+    {
+      "pos": 1,
+      "country": "Norway",
+      "gold": 18,
+      "silver": 12,
+      "bronze": 11,
+      "total": 41
+    },
+    {
+      "pos": 2,
+      "country": "United States",
+      "gold": 12,
+      "silver": 12,
+      "bronze": 9,
+      "total": 33
+    },
+    {
+      "pos": 3,
+      "country": "Netherlands",
+      "gold": 10,
+      "silver": 7,
+      "bronze": 3,
+      "total": 20
+    },
+    {
+      "pos": 4,
+      "country": "Italy",
+      "gold": 10,
+      "silver": 6,
+      "bronze": 14,
+      "total": 30
+    },
+    {
+      "pos": 5,
+      "country": "Germany",
+      "gold": 8,
+      "silver": 10,
+      "bronze": 8,
+      "total": 26
+    },
+    {
+      "pos": 6,
+      "country": "France",
+      "gold": 8,
+      "silver": 9,
+      "bronze": 6,
+      "total": 23
+    },
+    {
+      "pos": 7,
+      "country": "Sweden",
+      "gold": 8,
+      "silver": 6,
+      "bronze": 4,
+      "total": 18
+    },
+    {
+      "pos": 8,
+      "country": "Switzerland",
+      "gold": 6,
+      "silver": 9,
+      "bronze": 8,
+      "total": 23
+    },
+    {
+      "pos": 9,
+      "country": "Austria",
+      "gold": 5,
+      "silver": 8,
+      "bronze": 5,
+      "total": 18
+    },
+    {
+      "pos": 10,
+      "country": "Japan",
+      "gold": 5,
+      "silver": 7,
+      "bronze": 12,
+      "total": 24
+    },
+    {
+      "pos": 11,
+      "country": "Canada",
+      "gold": 5,
+      "silver": 7,
+      "bronze": 9,
+      "total": 21
+    },
+    {
+      "pos": 12,
+      "country": "China",
+      "gold": 5,
+      "silver": 4,
+      "bronze": 6,
+      "total": 15
+    },
+    {
+      "pos": 13,
+      "country": "South Korea",
+      "gold": 3,
+      "silver": 4,
+      "bronze": 3,
+      "total": 10
+    },
+    {
+      "pos": 14,
+      "country": "Australia",
+      "gold": 3,
+      "silver": 2,
+      "bronze": 1,
+      "total": 6
+    },
+    {
+      "pos": 15,
+      "country": "Great Britain",
+      "gold": 3,
+      "silver": 1,
+      "bronze": 1,
+      "total": 5
+    },
+    {
+      "pos": 16,
+      "country": "Czech Republic",
+      "gold": 2,
+      "silver": 2,
+      "bronze": 1,
+      "total": 5
+    },
+    {
+      "pos": 17,
+      "country": "Slovenia",
+      "gold": 2,
+      "silver": 1,
+      "bronze": 1,
+      "total": 4
+    },
+    {
+      "pos": 18,
+      "country": "Spain",
+      "gold": 1,
+      "silver": 0,
+      "bronze": 2,
+      "total": 3
+    },
+    {
+      "pos": 19,
+      "country": "Brazil",
+      "gold": 1,
+      "silver": 0,
+      "bronze": 0,
+      "total": 1
+    },
+    {
+      "pos": null,
+      "country": "Kazakhstan",
+      "gold": 1,
+      "silver": 0,
+      "bronze": 0,
+      "total": 1
+    },
+    {
+      "pos": 21,
+      "country": "Poland",
+      "gold": 0,
+      "silver": 3,
+      "bronze": 1,
+      "total": 4
+    },
+    {
+      "pos": 22,
+      "country": "New Zealand",
+      "gold": 0,
+      "silver": 2,
+      "bronze": 1,
+      "total": 3
+    },
+    {
+      "pos": 23,
+      "country": "Finland",
+      "gold": 0,
+      "silver": 1,
+      "bronze": 5,
+      "total": 6
+    },
+    {
+      "pos": 24,
+      "country": "Latvia",
+      "gold": 0,
+      "silver": 1,
+      "bronze": 1,
+      "total": 2
+    },
+    {
+      "pos": 25,
+      "country": "Denmark",
+      "gold": 0,
+      "silver": 1,
+      "bronze": 0,
+      "total": 1
+    },
+    {
+      "pos": null,
+      "country": "Estonia",
+      "gold": 0,
+      "silver": 1,
+      "bronze": 0,
+      "total": 1
+    },
+    {
+      "pos": null,
+      "country": "Georgia",
+      "gold": 0,
+      "silver": 1,
+      "bronze": 0,
+      "total": 1
+    },
+    {
+      "pos": null,
+      "country": "Individual Neutral Athletes",
+      "gold": 0,
+      "silver": 1,
+      "bronze": 0,
+      "total": 1
+    },
+    {
+      "pos": 28,
+      "country": "Bulgaria",
+      "gold": 0,
+      "silver": 0,
+      "bronze": 2,
+      "total": 2
+    },
+    {
+      "pos": 29,
+      "country": "Belgium",
+      "gold": 0,
+      "silver": 0,
+      "bronze": 1,
+      "total": 1
+    }
+  ]
+}

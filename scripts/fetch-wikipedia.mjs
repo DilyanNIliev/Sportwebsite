@@ -40,6 +40,19 @@ const GAMES = [
   { id: 'summer-2024', label: 'Paris 2024', page: '2024 Summer Olympics medal table' },
 ];
 
+/** Страниците „всеки медал по дисциплини“ — по една на Игри. */
+const MEDALLIST_PAGES = [
+  { id: 'winter-2010', label: 'Vancouver 2010', page: 'List of 2010 Winter Olympics medal winners', expect: [80, 110] },
+  { id: 'winter-2014', label: 'Sochi 2014', page: 'List of 2014 Winter Olympics medal winners', expect: [85, 115] },
+  { id: 'winter-2018', label: 'Pyeongchang 2018', page: 'List of 2018 Winter Olympics medal winners', expect: [90, 120] },
+  { id: 'winter-2022', label: 'Beijing 2022', page: 'List of 2022 Winter Olympics medal winners', expect: [95, 125] },
+  { id: 'summer-2008', label: 'Beijing 2008', page: 'List of 2008 Summer Olympics medal winners', expect: [280, 340] },
+  { id: 'summer-2012', label: 'London 2012', page: 'List of 2012 Summer Olympics medal winners', expect: [280, 340] },
+  { id: 'summer-2016', label: 'Rio 2016', page: 'List of 2016 Summer Olympics medal winners', expect: [280, 345] },
+  { id: 'summer-2020', label: 'Tokyo 2020', page: 'List of 2020 Summer Olympics medal winners', expect: [300, 360] },
+  { id: 'summer-2024', label: 'Paris 2024', page: 'List of 2024 Summer Olympics medal winners', expect: [300, 360] },
+];
+
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
 /**
@@ -122,7 +135,51 @@ function parseMedalTable(rows) {
   return { rows: out, rejected };
 }
 
+/**
+ * Дисциплините и тримата медалисти, заедно със спорта от заглавието отгоре.
+ *
+ * Страницата е поредица от заглавие на спорт и таблица под него, затова HTML-ът
+ * се обхожда по ред и всяка таблица наследява последното заглавие.
+ */
+function parseMedallists(html) {
+  const events = [];
+  const skipped = [];
+  let sport = null;
+
+  const re = /<h[23][^>]*>([\s\S]*?)<\/h[23]>|<table[^>]*class="[^"]*wikitable[^"]*"[\s\S]*?<\/table>/g;
+  for (const m of html.matchAll(re)) {
+    if (m[0].startsWith('<h')) {
+      const name = strip(m[1]).replace(/\[edit\]$/i, '').trim();
+      // Заглавия като „See also“ и „References“ не са спортове.
+      sport = /^(see also|references|notes|external links|contents|medal table)$/i.test(name) ? null : name;
+      continue;
+    }
+    if (!sport) continue;
+
+    const rows = [...m[0].matchAll(/<tr[\s\S]*?<\/tr>/g)]
+      .map((r) => [...r[0].matchAll(/<t[hd][^>]*>([\s\S]*?)<\/t[hd]>/g)].map((c) => strip(c[1])));
+    if (rows.length < 2) continue;
+
+    const head = rows[0].map((h) => h.toLowerCase());
+    const gi = head.findIndex((h) => h.startsWith('gold'));
+    const si = head.findIndex((h) => h.startsWith('silver'));
+    const bi = head.findIndex((h) => h.startsWith('bronze'));
+    // Без трите медални колони това не е таблица с медалисти.
+    if (gi < 0 || si < 0 || bi < 0) continue;
+    const ei = head.findIndex((h) => h.startsWith('event')) >= 0 ? head.findIndex((h) => h.startsWith('event')) : 0;
+
+    for (const r of rows.slice(1)) {
+      const event = r[ei];
+      const gold = r[gi];
+      if (!event || !gold) { skipped.push({ sport, row: r.slice(0, 2) }); continue; }
+      events.push({ sport, event, gold, silver: r[si] ?? '', bronze: r[bi] ?? '' });
+    }
+  }
+  return { events, skipped };
+}
+
 const probe = process.argv.includes('--probe');
+const only = process.argv.find((a) => a.startsWith('--only='))?.slice(7);
 
 async function main() {
   fs.mkdirSync(OUT_DIR, { recursive: true });
@@ -160,9 +217,48 @@ async function main() {
     await sleep(1500);
   }
 
-  console.log('\n' + report.join('\n'));
-  console.log(`\n${okCount} от ${GAMES.length} игри успешно.` + (probe ? ' (проверка — нищо не е записано)' : ''));
-  if (okCount === 0) process.exit(1);
+  console.log('\n=== Медални таблици ===\n' + report.join('\n'));
+  console.log(`${okCount} от ${GAMES.length} игри.`);
+
+  // Втори проход: медалистите по дисциплини.
+  const report2 = [];
+  let ok2 = 0;
+  for (const g of MEDALLIST_PAGES) {
+    try {
+      const html = await pageHtml(g.page);
+      const { events, skipped } = parseMedallists(html);
+      const [lo, hi] = g.expect;
+      if (events.length < lo || events.length > hi) {
+        throw new Error(`${events.length} дисциплини, а се очакваха между ${lo} и ${hi}`);
+      }
+      const sports = new Set(events.map((e) => e.sport));
+      report2.push(`${g.label.padEnd(22)} ${String(events.length).padStart(4)} дисциплини, ` +
+        `${String(sports.size).padStart(2)} спорта, ${skipped.length} пропуснати реда`);
+      ok2 += 1;
+
+      if (!probe) {
+        fs.writeFileSync(path.join(OUT_DIR, `medallists-${g.id}.json`), JSON.stringify({
+          games: g.label,
+          source: `https://en.wikipedia.org/wiki/${encodeURIComponent(g.page.replace(/ /g, '_'))}`,
+          sourceName: 'Wikipedia',
+          licence: 'CC BY-SA 4.0',
+          fetched: new Date().toISOString().slice(0, 10),
+          eventCount: events.length,
+          sportCount: sports.size,
+          skippedRows: skipped.length,
+          events,
+        }, null, 2) + '\n');
+      }
+    } catch (err) {
+      report2.push(`${g.label.padEnd(22)} ГРЕШКА: ${err.message}`);
+    }
+    await sleep(1500);
+  }
+
+  console.log('\n=== Медалисти по дисциплини ===\n' + report2.join('\n'));
+  console.log(`\n${okCount + ok2} от ${GAMES.length + MEDALLIST_PAGES.length} страници успешно.` +
+    (probe ? ' (проверка — нищо не е записано)' : ''));
+  if (okCount === 0 && ok2 === 0) process.exit(1);
 }
 
 main().catch((e) => { console.error('Скриптът се провали:', e.message); process.exit(1); });

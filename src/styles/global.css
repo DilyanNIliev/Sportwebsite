@@ -441,6 +441,9 @@ tbody td:nth-child(2) { font-weight: 650; }
 
 /* ---------- съставите върху терена ---------- */
 .lineups { margin: 40px 0 8px; }
+/* На собствената си страница заглавието идва от блока отгоре, така че
+   горният отстъп остава празна дупка — маха се. */
+.lineups-bare { margin-top: 0; }
 .lineups-head h2 { margin: 0; font-size: 1.3rem; }
 .lineups-head p { margin: 4px 0 0; font-size: .85rem; color: var(--text-faint); }
 
@@ -644,3 +647,29 @@ tbody td:nth-child(2) { font-weight: 650; }
   .next-facts.compact { grid-template-columns: minmax(88px, auto) 1fr; }
   .next-facts.compact dd { margin-bottom: 0; }
 }
+
+/* ---------- връзка от репортажа към съставите ---------- */
+.lineup-link {
+  display: block; margin: 30px 0; padding: 16px 18px;
+  border: 1px solid var(--border); border-left: 3px solid var(--accent, var(--brand));
+  border-radius: 12px; background: var(--bg-raised);
+  text-decoration: none; color: var(--text);
+  transition: border-color .15s ease, background .15s ease;
+}
+:root[data-theme="dark"] .lineup-link { border-left-color: var(--accent-dark, var(--brand)); }
+.lineup-link:hover { background: var(--bg-soft); border-color: var(--border-strong); }
+.lineup-link:focus-visible { outline: 2px solid var(--brand); outline-offset: 2px; }
+.lineup-link-label {
+  display: block; font-size: .68rem; font-weight: 700; letter-spacing: .09em;
+  text-transform: uppercase; color: var(--text-faint);
+}
+.lineup-link-main {
+  display: block; margin-top: 5px; font-size: 1rem; font-weight: 650;
+}
+/* Стрелката е на псевдоелемент, за да не се копира с текста. */
+.lineup-link-main::after { content: ' →'; color: var(--text-faint); }
+.lineup-link-sub {
+  display: block; margin-top: 4px; font-size: .82rem; color: var(--text-soft);
+}
+.back-to-report { margin-top: 30px; }
+.back-to-report a { margin-left: 4px; }

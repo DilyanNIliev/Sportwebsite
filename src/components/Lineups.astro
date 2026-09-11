@@ -6,7 +6,7 @@
  * една линия, а играчите в `xi` се четат по ред — вратар, после линия по линия
  * отзад напред, всяка отляво надясно както я гледа читателят.
  */
-const { data } = Astro.props;
+const { data, showHead = true } = Astro.props;
 
 /** Разпределя единайсетте по схемата и връща процентни координати за всеки. */
 function place(formation, xi) {
@@ -50,11 +50,13 @@ const footnotes = data.teams.flatMap((t) =>
   t.xi.filter((p) => p.uncertain).map((p) => `${t.short}: ${p.why}.`)
 );
 ---
-<div class="lineups">
-  <div class="lineups-head">
-    <h2>Line-ups</h2>
-    <p>{data.match} · {data.venue} · {data.date}</p>
-  </div>
+<div class:list={['lineups', !showHead && 'lineups-bare']}>
+  {showHead && (
+    <div class="lineups-head">
+      <h2>Line-ups</h2>
+      <p>{data.match} · {data.venue} · {data.date}</p>
+    </div>
+  )}
 
   <div class:list={['lineup-teams', tabbed && 'tabs']}>
     {tabbed && teams.map((t, i) => (

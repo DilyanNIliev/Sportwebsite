@@ -438,3 +438,96 @@ tbody td:nth-child(2) { font-weight: 650; }
 .more-count { margin: 0; font-size: .8rem; color: var(--text-faint); }
 /* Клетката получава фокус след „още“ — рамка около целия ред не помага. */
 #rank-table td:focus-visible { outline: 2px solid var(--brand); outline-offset: -2px; }
+
+/* ---------- съставите върху терена ---------- */
+.lineups { margin: 40px 0 8px; }
+.lineups-head h2 { margin: 0; font-size: 1.3rem; }
+.lineups-head p { margin: 4px 0 0; font-size: .85rem; color: var(--text-faint); }
+
+.pitch-pair {
+  display: grid; gap: 22px; margin: 20px 0 0;
+  grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr));
+}
+.pitch-card {
+  border: 1px solid var(--border); border-radius: 14px;
+  background: var(--bg-raised); padding: 16px 16px 4px;
+}
+.pitch-card-head h3 {
+  margin: 0; font-size: 1.02rem;
+  color: var(--club, var(--brand));
+}
+:root[data-theme="dark"] .pitch-card-head h3 { color: var(--club-dark, var(--brand)); }
+.pitch-card-head p { margin: 3px 0 0; font-size: .8rem; color: var(--text-faint); }
+.formation {
+  font-weight: 700; letter-spacing: .04em;
+  color: var(--text-soft);
+}
+
+/* Тревата е плътен цвят, не картинка — нула килобайта и еднакво в двете теми. */
+.pitch {
+  position: relative; margin: 14px 0 0;
+  aspect-ratio: 100 / 150; border-radius: 10px; overflow: hidden;
+  background: #17693f;
+}
+:root[data-theme="dark"] .pitch { background: #10432a; }
+.pitch-lines {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  fill: none; stroke: rgba(255, 255, 255, .32); stroke-width: .7;
+  vector-effect: non-scaling-stroke;
+}
+
+.pitch-players { list-style: none; margin: 0; padding: 0; }
+.spot {
+  position: absolute; transform: translate(-50%, -50%);
+  display: flex; flex-direction: column; align-items: center; gap: 3px;
+  width: 21%;
+}
+.spot-dot {
+  width: 15px; height: 15px; border-radius: 50%;
+  background: #fff; border: 2px solid rgba(0, 0, 0, .28);
+  display: grid; place-items: center;
+  font-size: .6rem; font-weight: 800; color: #333;
+}
+.spot-name {
+  font-size: .64rem; font-weight: 650; line-height: 1.15; text-align: center;
+  color: #fff; text-shadow: 0 1px 3px rgba(0, 0, 0, .9), 0 0 6px rgba(0, 0, 0, .7);
+  /* Дълго име прелива извън точката, но не се реже по средата на думата —
+     „Alexand er-Arnold“ е по-лошо от лека застъпка със съседа. */
+  overflow-wrap: normal; word-break: keep-all; white-space: normal;
+}
+/* Пет души в една линия се събират трудно — смаляваме само тях. */
+.spot-dense { width: 18%; }
+.spot-dense .spot-name { font-size: .58rem; letter-spacing: -.01em; }
+
+/* Непотвърдена позиция: кръгът остава, името — не. */
+.spot-unknown .spot-dot { background: transparent; border-style: dashed; border-color: rgba(255, 255, 255, .8); color: #fff; }
+.spot-unknown .spot-name { font-weight: 500; font-style: italic; opacity: .85; }
+
+.bench { margin: 14px 0 0; padding: 12px 0 10px; border-top: 1px solid var(--border); }
+.bench-label {
+  margin: 0 0 7px; font-size: .7rem; font-weight: 700; letter-spacing: .08em;
+  text-transform: uppercase; color: var(--text-faint);
+}
+.bench-list {
+  list-style: none; margin: 0; padding: 0;
+  display: flex; flex-wrap: wrap; gap: 6px;
+}
+.bench-list li {
+  font-size: .78rem; padding: 4px 10px; border-radius: 999px;
+  background: var(--bg-soft); border: 1px solid var(--border); color: var(--text-soft);
+}
+.bench-empty { margin: 0; font-size: .78rem; font-style: italic; color: var(--text-faint); }
+.bench-note { margin: 8px 0 0; font-size: .72rem; color: var(--text-faint); }
+
+.pitch-note { margin-top: 18px; }
+.pitch-footnotes {
+  margin: 10px 0 0; padding-left: 18px;
+  font-size: .78rem; color: var(--text-faint);
+}
+.pitch-footnotes li { margin: 3px 0; }
+
+@media (min-width: 700px) {
+  .spot-name { font-size: .72rem; }
+  .spot-dense .spot-name { font-size: .63rem; }
+  .spot-dot { width: 17px; height: 17px; }
+}

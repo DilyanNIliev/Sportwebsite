@@ -36,6 +36,25 @@ const jsonLd = {
 
   <section class="block">
     <div class="wrap">
+      {/* Ключовите дати стоят над таблиците — те са това, което се търси сега. */}
+      {data.next && (
+        <div class="next-edition" style="margin-bottom:34px">
+          <p class="eyebrow">{data.next.eyebrow ?? 'Next edition'}</p>
+          <h2 style="margin:8px 0 0;font-size:1.15rem">{data.next.event}</h2>
+          <p class="next-summary">{data.next.summary}</p>
+          <dl class="next-facts">
+            {data.next.rows.map(([k, v]) => (
+              <>
+                <dt>{k}</dt>
+                <dd>{v}</dd>
+              </>
+            ))}
+          </dl>
+          {data.next.caution && <p class="note">{data.next.caution}</p>}
+          <p class="next-checked">{data.next.checked}</p>
+        </div>
+      )}
+
       {tables.map((t, i) => (
         <>
           {t.title && (

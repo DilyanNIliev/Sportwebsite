@@ -1,0 +1,109 @@
+---
+/**
+ * Съставите на един мач върху карта на терена: точки с имена, резервите отдолу.
+ *
+ * Позициите не се пишат на ръка. Идват от схемата („4-2-3-1“): всяко число е
+ * една линия, а играчите в `xi` се четат по ред — вратар, после линия по линия
+ * отзад напред, всяка отляво надясно както я гледа читателят.
+ */
+const { data } = Astro.props;
+
+/** Разпределя единайсетте по схемата и връща процентни координати за всеки. */
+function place(formation, xi) {
+  const lines = formation.split('-').map(Number);
+  const outfield = lines.reduce((a, b) => a + b, 0);
+  if (outfield !== 10) {
+    throw new Error(`Схемата „${formation}“ описва ${outfield} играчи в полето, а трябва да са 10.`);
+  }
+  if (xi.length !== 11) {
+    throw new Error(`Съставът има ${xi.length} играчи вместо 11.`);
+  }
+
+  // Вратарят е долу, атаката горе. Линиите се разпределят между двете.
+  const top = 16;
+  const bottom = 74;
+  const step = lines.length > 1 ? (bottom - top) / (lines.length - 1) : 0;
+
+  const out = [{ ...xi[0], x: 50, y: 91, line: 'GK' }];
+  let i = 1;
+  lines.forEach((count, li) => {
+    const y = bottom - li * step;
+    // Колкото по-малко са в една линия, толкова по-навътре стоят: двама
+    // нападатели са в центъра, а петима в средата опират до страничните линии.
+    const inset = count <= 2 ? 32 : count === 3 ? 19 : count === 4 ? 13 : 8;
+    for (let n = 0; n < count; n++) {
+      const x = count === 1 ? 50 : inset + n * ((100 - 2 * inset) / (count - 1));
+      out.push({ ...xi[i], x, y, line: li, dense: count >= 5 });
+      i += 1;
+    }
+  });
+  return out;
+}
+
+const teams = data.teams.map((t) => ({ ...t, spots: place(t.formation, t.xi) }));
+const footnotes = data.teams.flatMap((t) =>
+  t.xi.filter((p) => p.uncertain).map((p) => `${t.short}: ${p.why}.`)
+);
+---
+<div class="lineups">
+  <div class="lineups-head">
+    <h2>Line-ups</h2>
+    <p>{data.match} · {data.venue} · {data.date}</p>
+  </div>
+
+  <div class="pitch-pair">
+    {teams.map((t) => (
+      <div class="pitch-card" style={`--club:${t.colour};--club-dark:${t.colourDark}`}>
+        <div class="pitch-card-head">
+          <h3>{t.team}</h3>
+          <p><span class="formation">{t.formation}</span> · {t.coach}</p>
+        </div>
+
+        <div class="pitch">
+          <svg class="pitch-lines" viewBox="0 0 100 150" preserveAspectRatio="none" aria-hidden="true">
+            <rect x="1" y="1" width="98" height="148" />
+            <line x1="1" y1="75" x2="99" y2="75" />
+            <circle cx="50" cy="75" r="14" />
+            <rect x="22" y="128" width="56" height="21" />
+            <rect x="37" y="141" width="26" height="8" />
+            <rect x="22" y="1" width="56" height="21" />
+            <rect x="37" y="1" width="26" height="8" />
+          </svg>
+
+          <ol class="pitch-players">
+            {t.spots.map((p) => (
+              <li
+                class:list={['spot', p.uncertain && 'spot-unknown', p.dense && 'spot-dense']}
+                style={`left:${p.x}%;top:${p.y}%`}
+                aria-label={p.name ?? 'Position not confirmed'}
+              >
+                <span class="spot-dot" aria-hidden="true">{p.uncertain ? '?' : ''}</span>
+                {/* Без име показваме само кръга — „not confirmed“ на терена изяжда съседите. */}
+                {p.name && <span class="spot-name" title={p.full ?? undefined}>{p.name}</span>}
+              </li>
+            ))}
+          </ol>
+        </div>
+
+        <div class="bench">
+          <p class="bench-label">Bench</p>
+          {t.bench.length > 0 ? (
+            <ul class="bench-list">
+              {t.bench.map((p) => <li title={p.full ?? undefined}>{p.name}</li>)}
+            </ul>
+          ) : (
+            <p class="bench-empty">Not confirmed</p>
+          )}
+          {t.benchNote && <p class="bench-note">{t.benchNote}</p>}
+        </div>
+      </div>
+    ))}
+  </div>
+
+  <p class="note pitch-note">{data.note}</p>
+  {footnotes.length > 0 && (
+    <ul class="pitch-footnotes">
+      {footnotes.map((f) => <li>{f}</li>)}
+    </ul>
+  )}
+</div>

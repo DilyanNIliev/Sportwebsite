@@ -14,6 +14,8 @@ const articles = defineCollection({
     alsoSports: z.array(z.string()).optional(),
     date: z.coerce.date(),
     author: z.string(),
+    // Съставите на мача, ако има такива: името на файла в src/data/lineups.
+    lineups: z.string().optional(),
     // Вътрешен одитен запис, не се показва на страницата. Редакционното правило
     // от Стъпка 2: факт се публикува при поне два независими източника.
     // Схемата го налага — статия с по-малко от два не се билдва.

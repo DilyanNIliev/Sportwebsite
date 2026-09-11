@@ -5,6 +5,7 @@ description: "Real Madrid opened the 2026/27 Champions League league phase with 
 sport: football
 date: 2026-09-08
 author: Global Sports Archive
+lineups: real-madrid-inter-2026-09-08
 sources:
   - label: "Al Jazeera — Real Madrid beat Inter Milan as Mbappé goal sets Mourinho's men on way"
     url: "https://www.aljazeera.com/amp/sports/2026/9/8/real-madrid-beat-inter-milan-as-mbappe-goal-sets-mourinhos-men-on-way"

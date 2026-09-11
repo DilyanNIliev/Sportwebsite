@@ -1,0 +1,55 @@
+{
+  "match": "Real Madrid 2–1 Inter",
+  "competition": "Champions League 2026/27, league phase matchday 1",
+  "venue": "Santiago Bernabéu, Madrid",
+  "date": "8 September 2026",
+  "note": "Formations are our reading of the match reports, not an official label — one report described Madrid's shape as 4-3-3 and another as 4-2-3-1 with the same eleven players. Where a position could not be pinned down, the dot is left without a name rather than filled with a guess.",
+  "teams": [
+    {
+      "team": "Real Madrid",
+      "short": "Madrid",
+      "coach": "José Mourinho",
+      "formation": "4-2-3-1",
+      "colour": "#1d3a8a",
+      "colourDark": "#6f8ede",
+      "xi": [
+        { "name": "Courtois", "full": "Thibaut Courtois" },
+        { "name": "Cucurella", "full": "Marc Cucurella" },
+        { "name": "Huijsen", "full": "Dean Huijsen" },
+        { "name": "Konaté", "full": "Ibrahima Konaté" },
+        { "name": "Dumfries", "full": "Denzel Dumfries" },
+        { "name": "Valverde", "full": "Federico Valverde — captain" },
+        { "name": "Alexander-Arnold", "full": "Trent Alexander-Arnold" },
+        { "name": "Vinícius", "full": "Vinícius Júnior" },
+        { "name": "Bellingham", "full": "Jude Bellingham" },
+        { "name": "Brahim", "full": "Brahim Díaz" },
+        { "name": "Mbappé", "full": "Kylian Mbappé" }
+      ],
+      "bench": [{ "name": "Carreras", "full": "Álvaro Carreras" }],
+      "benchNote": "Only Carreras is confirmed on the bench. Arda Güler was suspended and did not travel into the squad. The rest of the bench is not yet confirmed and is deliberately left blank."
+    },
+    {
+      "team": "Inter",
+      "short": "Inter",
+      "coach": "Cristian Chivu",
+      "formation": "3-5-2",
+      "colour": "#0b2d6e",
+      "colourDark": "#7ba1e8",
+      "xi": [
+        { "name": "Martínez", "full": "Josep Martínez" },
+        { "name": "Bastoni", "full": "Alessandro Bastoni" },
+        { "name": "Bisseck", "full": "Yann Bisseck" },
+        { "name": "Pavard", "full": "Benjamin Pavard" },
+        { "name": "C. Augusto", "full": "Carlos Augusto" },
+        { "name": "Barella", "full": "Nicolò Barella" },
+        { "name": "Çalhanoğlu", "full": "Hakan Çalhanoğlu" },
+        { "name": "Jones", "full": "Jones", "uncertain": true, "why": "Named in every line-up report we found, but we could not confirm the full name" },
+        { "name": null, "uncertain": true, "why": "Right of midfield: reports split between Andy Diouf and Luis Henrique" },
+        { "name": "L. Martínez", "full": "Lautaro Martínez" },
+        { "name": "Thuram", "full": "Marcus Thuram" }
+      ],
+      "bench": [],
+      "benchNote": "Inter's bench is not yet confirmed, so it is left empty rather than filled in from a predicted line-up."
+    }
+  ]
+}

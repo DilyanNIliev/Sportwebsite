@@ -1,0 +1,53 @@
+name: Deploy to hosting (FTPS)
+
+# Пуска се само когато данните за FTP са сложени в Secrets.
+# Дотогава се пропуска мълчаливо, вместо да се проваля.
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: hosting
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Има ли данни за качване
+        id: check
+        run: |
+          if [ -n "${{ secrets.FTP_SERVER }}" ]; then
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+            echo "FTP_SERVER липсва в Secrets — качването се пропуска."
+          fi
+
+      - uses: actions/setup-node@v4
+        if: steps.check.outputs.ready == 'true'
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+        if: steps.check.outputs.ready == 'true'
+      - run: npm run build
+        if: steps.check.outputs.ready == 'true'
+
+      # Първо на сухо: показва точните пътища, без да пише нищо.
+      # След като се увериш, че server-dir е верен, смени dry-run на false.
+      - name: Качване по FTPS
+        if: steps.check.outputs.ready == 'true'
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftps
+          local-dir: ./dist/
+          server-dir: ${{ secrets.FTP_SERVER_DIR || './public_html/' }}
+          dry-run: true
+          log-level: verbose

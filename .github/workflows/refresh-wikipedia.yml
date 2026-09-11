@@ -35,6 +35,12 @@ jobs:
       - name: Fetch and write
         run: node scripts/fetch-wikipedia.mjs
 
+      # Обобщението последно, за да е винаги в края на лога — досега редовете
+      # с грешките падаха извън прозореца, който мога да прочета.
+      - name: Summary
+        if: always()
+        run: cat fetch-report.txt || echo 'няма отчет'
+
       - name: Show what changed
         run: |
           git --no-pager diff --stat

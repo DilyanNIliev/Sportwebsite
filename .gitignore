@@ -7,3 +7,4 @@ dist/
 # Не добавяй .nojekyll в корена: той кара вградения деплой на Pages да
 # публикува репото вместо сайта. Виж docs/deploy-problemi.md.
 /.nojekyll
+fetch-report.txt

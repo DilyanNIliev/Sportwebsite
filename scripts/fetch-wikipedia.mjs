@@ -42,15 +42,15 @@ const GAMES = [
 
 /** Страниците „всеки медал по дисциплини“ — по една на Игри. */
 const MEDALLIST_PAGES = [
-  { id: 'winter-2010', label: 'Vancouver 2010', page: 'List of 2010 Winter Olympics medal winners', expect: [84, 88] },
-  { id: 'winter-2014', label: 'Sochi 2014', page: 'List of 2014 Winter Olympics medal winners', expect: [96, 100] },
-  { id: 'winter-2018', label: 'Pyeongchang 2018', page: 'List of 2018 Winter Olympics medal winners', expect: [100, 104] },
-  { id: 'winter-2022', label: 'Beijing 2022', page: 'List of 2022 Winter Olympics medal winners', expect: [107, 111] },
-  { id: 'summer-2008', label: 'Beijing 2008', page: 'List of 2008 Summer Olympics medal winners', expect: [300, 304] },
-  { id: 'summer-2012', label: 'London 2012', page: 'List of 2012 Summer Olympics medal winners', expect: [300, 304] },
-  { id: 'summer-2016', label: 'Rio 2016', page: 'List of 2016 Summer Olympics medal winners', expect: [304, 308] },
-  { id: 'summer-2020', label: 'Tokyo 2020', page: 'List of 2020 Summer Olympics medal winners', expect: [337, 341] },
-  { id: 'summer-2024', label: 'Paris 2024', page: 'List of 2024 Summer Olympics medal winners', expect: [327, 331] },
+  { id: 'winter-2010', label: 'Vancouver 2010', page: 'List of 2010 Winter Olympics medal winners', expect: [78, 94] },
+  { id: 'winter-2014', label: 'Sochi 2014', page: 'List of 2014 Winter Olympics medal winners', expect: [90, 106] },
+  { id: 'winter-2018', label: 'Pyeongchang 2018', page: 'List of 2018 Winter Olympics medal winners', expect: [94, 110] },
+  { id: 'winter-2022', label: 'Beijing 2022', page: 'List of 2022 Winter Olympics medal winners', expect: [101, 117] },
+  { id: 'summer-2008', label: 'Beijing 2008', page: 'List of 2008 Summer Olympics medal winners', expect: [294, 310] },
+  { id: 'summer-2012', label: 'London 2012', page: 'List of 2012 Summer Olympics medal winners', expect: [294, 310] },
+  { id: 'summer-2016', label: 'Rio 2016', page: 'List of 2016 Summer Olympics medal winners', expect: [298, 314] },
+  { id: 'summer-2020', label: 'Tokyo 2020', page: 'List of 2020 Summer Olympics medal winners', expect: [331, 347] },
+  { id: 'summer-2024', label: 'Paris 2024', page: 'List of 2024 Summer Olympics medal winners', expect: [321, 337] },
 ];
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
@@ -311,6 +311,9 @@ async function main() {
     await sleep(1500);
   }
 
+  const summary = '=== Медални таблици ===\n' + report.join('\n') +
+    '\n\n=== Медалисти по дисциплини ===\n' + report2.join('\n');
+  fs.writeFileSync('fetch-report.txt', summary + '\n');
   console.log('\n=== Медалисти по дисциплини ===\n' + report2.join('\n'));
   console.log(`\n${okCount + ok2} от ${GAMES.length + MEDALLIST_PAGES.length} страници успешно.` +
     (probe ? ' (проверка — нищо не е записано)' : ''));

@@ -11,8 +11,23 @@ const { d } = Astro.props;
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const sport = sports.find((s) => s.slug === d.sport);
 const crumbs = [{ label: 'Home', href: `${base}/` }, { label: 'Standings', href: `${base}/standings/` }, { label: d.series }];
-const pending = d.drivers.length <= d.confirmedThrough && d.drivers.length < 10;
-const hasTeams = d.drivers.some((r) => r.team);
+const rows = d.drivers;
+const pending = rows.filter((r) => !r.gap).length < 10 && !d.footnote;
+const hasTeams = rows.some((r) => r.team);
+const hasCountry = rows.some((r) => r.country);
+const hasMove = rows.some((r) => r.move !== undefined);
+const cols = 2 + (hasCountry ? 1 : 0) + (hasTeams ? 1 : 0) + (hasMove ? 1 : 0);
+
+/** Без диакритики и малки букви — за да намира „swiatek“ и „Świątek“. */
+const fold = (t) => t.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+
+/** Движение спрямо предишната седмица: положително е нагоре. */
+function moveLabel(m) {
+  if (m === null || m === undefined) return { text: '—', cls: 'move-none', aria: 'not checked' };
+  if (m === 0) return { text: '=', cls: 'move-same', aria: 'unchanged' };
+  if (m > 0) return { text: `▲ ${m}`, cls: 'move-up', aria: `up ${m}` };
+  return { text: `▼ ${Math.abs(m)}`, cls: 'move-down', aria: `down ${Math.abs(m)}` };
+}
 ---
 <Base
   title={d.seriesLong ?? `${d.series} ${d.season} standings`}
@@ -30,16 +45,43 @@ const hasTeams = d.drivers.some((r) => r.team);
   <section class="block">
     <div class="wrap">
       <div class="block-head"><h2>{d.entityLabel ? d.entityLabel + 's' : 'Drivers'}</h2></div>
+
+      {d.searchable && (
+        <div class="table-search">
+          <label for="row-search">Search by name or country</label>
+          <input id="row-search" type="search" placeholder="e.g. Sinner, Ukraine" autocomplete="off" />
+          <p class="search-count" data-search-count hidden></p>
+        </div>
+      )}
       <div class="table-scroll">
         <table>
-          <thead><tr><th>#</th><th>{d.entityLabel ?? 'Driver'}</th>{hasTeams && <th>Team</th>}<th>Points</th></tr></thead>
+          <thead>
+                <tr>
+                  <th>#</th>
+                  <th>{d.entityLabel ?? 'Driver'}</th>
+                  {hasCountry && <th>Country</th>}
+                  {hasTeams && <th>Team</th>}
+                  <th>Points</th>
+                  {hasMove && <th>Week</th>}
+                </tr>
+              </thead>
           <tbody>
-            {d.drivers.map((r) => (
-              <tr>
+            {rows.map((r) => r.gap ? (
+              <tr class="row-gap"><td colspan={cols}>{r.gap} — {r.note}</td></tr>
+            ) : (
+              <tr data-row data-name={fold(`${r.name} ${r.country ?? ''} ${r.team ?? ''}`)}>
                 <td>{r.pos}</td>
                 <td>{r.name}</td>
+                {hasCountry && <td class="td-note">{r.country}</td>}
                 {hasTeams && <td class="td-note">{r.team}</td>}
                 <td><strong>{r.points.toLocaleString('en-GB')}</strong></td>
+                {hasMove && (
+                  <td>
+                    <span class={`move ${moveLabel(r.move).cls}`} aria-label={moveLabel(r.move).aria}>
+                      {moveLabel(r.move).text}
+                    </span>
+                  </td>
+                )}
               </tr>
             ))}
           </tbody>
@@ -77,4 +119,35 @@ const hasTeams = d.drivers.some((r) => r.team);
       </p>
     </div>
   </section>
+  <script is:inline>
+    (function () {
+      var input = document.getElementById('row-search');
+      if (!input) return;
+      // Същото сгъване като при генерирането, за да съвпадат двете страни.
+      function fold(t) {
+        return t.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+      }
+      var rows = [].slice.call(document.querySelectorAll('tr[data-row]'));
+      var gaps = [].slice.call(document.querySelectorAll('tr.row-gap'));
+      var count = document.querySelector('[data-search-count]');
+
+      input.addEventListener('input', function () {
+        var q = fold(input.value.trim());
+        var shown = 0;
+        rows.forEach(function (r) {
+          var hit = !q || r.dataset.name.indexOf(q) !== -1;
+          r.hidden = !hit;
+          if (hit) shown++;
+        });
+        // Редът за пропуснатите позиции няма смисъл, докато се търси.
+        gaps.forEach(function (g) { g.hidden = !!q; });
+        if (count) {
+          count.hidden = !q;
+          count.textContent = shown === 0
+            ? 'Nobody matches "' + input.value + '".'
+            : shown + (shown === 1 ? ' match' : ' matches');
+        }
+      });
+    })();
+  </script>
 </Base>

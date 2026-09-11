@@ -719,3 +719,7 @@ tbody td:nth-child(2) { font-weight: 650; }
   margin: 0 0 6px; font-size: .8rem; font-weight: 700; color: var(--text);
 }
 .comp-gap p { margin: 0; font-size: .8rem; color: var(--text-faint); }
+.comp-why {
+  margin: 9px 0 0; font-size: .82rem; color: var(--text-faint);
+  max-width: 64ch;
+}

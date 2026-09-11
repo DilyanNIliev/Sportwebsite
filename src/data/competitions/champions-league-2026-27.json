@@ -4,44 +4,91 @@
   "phase": "League phase",
   "total": 36,
   "intro": "Thirty-six clubs were drawn into one table on 27 August 2026: twenty-nine qualified directly, seven came through the qualifying rounds.",
+  "coveredMatch": "Real Madrid v Inter",
+  "nextMatchday": "matchday two, on 13 and 14 October",
   "countries": [
     {
       "country": "England",
       "teams": [
-        { "name": "Arsenal" },
-        { "name": "Manchester City" },
-        { "name": "Manchester United" },
-        { "name": "Aston Villa" },
-        { "name": "Liverpool" }
+        {
+          "name": "Arsenal"
+        },
+        {
+          "name": "Manchester City"
+        },
+        {
+          "name": "Manchester United"
+        },
+        {
+          "name": "Aston Villa"
+        },
+        {
+          "name": "Liverpool"
+        }
       ]
     },
     {
       "country": "Spain",
       "teams": [
-        { "name": "Real Madrid", "lineup": "real-madrid-inter-2026-09-08" },
-        { "name": "Barcelona" },
-        { "name": "Atlético Madrid" },
-        { "name": "Villarreal" },
-        { "name": "Real Betis" }
+        {
+          "name": "Real Madrid",
+          "lineup": "real-madrid-inter-2026-09-08"
+        },
+        {
+          "name": "Barcelona"
+        },
+        {
+          "name": "Atlético Madrid"
+        },
+        {
+          "name": "Villarreal"
+        },
+        {
+          "name": "Real Betis"
+        }
       ]
     },
     {
       "country": "Italy",
       "teams": [
-        { "name": "Inter", "lineup": "real-madrid-inter-2026-09-08" }
+        {
+          "name": "Inter",
+          "lineup": "real-madrid-inter-2026-09-08"
+        }
       ]
     },
     {
       "country": "Through qualifying",
       "note": "The seven play-off winners, listed together because they came in by the same route.",
       "teams": [
-        { "name": "Fenerbahçe", "country": "Turkey" },
-        { "name": "AEK Athens", "country": "Greece" },
-        { "name": "Bodø/Glimt", "country": "Norway" },
-        { "name": "Viking", "country": "Norway" },
-        { "name": "Slovan Bratislava", "country": "Slovakia" },
-        { "name": "LASK", "country": "Austria" },
-        { "name": "Sabah", "country": "Azerbaijan" }
+        {
+          "name": "Fenerbahçe",
+          "country": "Turkey"
+        },
+        {
+          "name": "AEK Athens",
+          "country": "Greece"
+        },
+        {
+          "name": "Bodø/Glimt",
+          "country": "Norway"
+        },
+        {
+          "name": "Viking",
+          "country": "Norway"
+        },
+        {
+          "name": "Slovan Bratislava",
+          "country": "Slovakia"
+        },
+        {
+          "name": "LASK",
+          "country": "Austria"
+        },
+        {
+          "name": "Sabah",
+          "country": "Azerbaijan"
+        }
       ]
     }
   ],

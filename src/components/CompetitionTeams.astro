@@ -19,8 +19,17 @@ const withLineup = data.countries.flatMap((c) => c.teams).filter((t) => t.lineup
   <p class="comp-intro">{data.intro}</p>
 
   <p class="comp-count">
-    <strong>{listed} of {data.total}</strong> confirmed so far.
-    {withLineup > 0 && ` ${withLineup} of them have a line-up published — those names are links.`}
+    <strong>{listed} of {data.total}</strong> clubs confirmed so far.
+  </p>
+
+  {/* Най-честият въпрос към този списък: защо само два отбора имат играчи. */}
+  <p class="comp-why">
+    A line-up belongs to a match, not to a club: it is the eleven who actually
+    started, so it exists only once we have covered that match. We have covered
+    one so far — matchday one's {data.coveredMatch} — which is why
+    {' '}{withLineup} {withLineup === 1 ? 'club' : 'clubs'} below
+    {withLineup === 1 ? ' is a link' : ' are links'} and the rest are not.
+    More appear as the matchdays are played; the next is {data.nextMatchday}.
   </p>
 
   {data.countries.map((c) => (

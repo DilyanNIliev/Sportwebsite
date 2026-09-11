@@ -3,6 +3,8 @@ import { getCollection, render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import sports from '../../data/sports.json';
 import ArchiveBlocks from '../../components/ArchiveBlocks.astro';
+import CompetitionTeams from '../../components/CompetitionTeams.astro';
+import { competitions } from '../../data/competitions.js';
 import { lineups } from '../../data/lineups.js';
 import SportMotif from '../../components/SportMotif.astro';
 import { sportVars } from '../../data/sport-style.js';
@@ -14,6 +16,12 @@ export async function getStaticPaths() {
 
 const { article } = Astro.props;
 const lineup = article.data.lineups ? lineups[article.data.lineups] : null;
+const comp = article.data.competitionTeams ? competitions[article.data.competitionTeams] : null;
+if (article.data.competitionTeams && !comp) {
+  throw new Error(
+    `Статията сочи състезание „${article.data.competitionTeams}“, но такова няма в src/data/competitions.js.`
+  );
+}
 if (article.data.lineups && !lineup) {
   throw new Error(`Статията сочи състави „${article.data.lineups}“, но такъв файл няма в src/data/lineups.js.`);
 }
@@ -54,6 +62,8 @@ const jsonLd = {
         <Content />
 
         {article.data.archiveBlocks && <ArchiveBlocks blocks={article.data.archiveBlocks} />}
+
+        {comp && <CompetitionTeams data={comp} />}
 
         {lineup && (
           <a class="lineup-link" href={`${base}/lineups/${article.data.lineups}/`}>

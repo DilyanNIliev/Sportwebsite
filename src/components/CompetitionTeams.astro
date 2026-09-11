@@ -1,0 +1,62 @@
+---
+/**
+ * Отборите в едно състезание, групирани по държава.
+ *
+ * Отбор, за който имаме публикуван състав, е връзка към терена си — това е
+ * начинът „да се гледат отборите“: избираш отбор и виждаш кой е играл.
+ * Непотвърдените не се изброяват; вместо това се казва колко липсват, както
+ * при пропуснатите позиции в класиранията.
+ */
+const { data } = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+
+const listed = data.countries.reduce((n, c) => n + c.teams.length, 0);
+const missing = data.total - listed;
+const withLineup = data.countries.flatMap((c) => c.teams).filter((t) => t.lineup).length;
+---
+<div class="comp-teams">
+  <h2>{data.phase} teams</h2>
+  <p class="comp-intro">{data.intro}</p>
+
+  <p class="comp-count">
+    <strong>{listed} of {data.total}</strong> confirmed so far.
+    {withLineup > 0 && ` ${withLineup} of them have a line-up published — those names are links.`}
+  </p>
+
+  {data.countries.map((c) => (
+    <div class="comp-country">
+      <p class="comp-country-name">
+        {c.country}
+        <span class="comp-country-n">{c.teams.length}</span>
+      </p>
+      {c.note && <p class="comp-country-note">{c.note}</p>}
+      <ul class="comp-list">
+        {c.teams.map((t) => (
+          <li>
+            {t.lineup ? (
+              <a class="comp-team is-link" href={`${base}/lineups/${t.lineup}/`}>
+                {t.name}
+                {t.country && <i>{t.country}</i>}
+                <em>see the eleven</em>
+              </a>
+            ) : (
+              <span class="comp-team">
+                {t.name}
+                {t.country && <i>{t.country}</i>}
+              </span>
+            )}
+          </li>
+        ))}
+      </ul>
+    </div>
+  ))}
+
+  {missing > 0 && (
+    <div class="comp-gap">
+      <p class="comp-gap-head">{missing} clubs still to confirm</p>
+      <p>{data.gapNote}</p>
+    </div>
+  )}
+
+  <p class="next-checked">{data.checked}</p>
+</div>

@@ -1,0 +1,50 @@
+{
+  "competition": "Champions League",
+  "season": "2026/27",
+  "phase": "League phase",
+  "total": 36,
+  "intro": "Thirty-six clubs were drawn into one table on 27 August 2026: twenty-nine qualified directly, seven came through the qualifying rounds.",
+  "countries": [
+    {
+      "country": "England",
+      "teams": [
+        { "name": "Arsenal" },
+        { "name": "Manchester City" },
+        { "name": "Manchester United" },
+        { "name": "Aston Villa" },
+        { "name": "Liverpool" }
+      ]
+    },
+    {
+      "country": "Spain",
+      "teams": [
+        { "name": "Real Madrid", "lineup": "real-madrid-inter-2026-09-08" },
+        { "name": "Barcelona" },
+        { "name": "Atlético Madrid" },
+        { "name": "Villarreal" },
+        { "name": "Real Betis" }
+      ]
+    },
+    {
+      "country": "Italy",
+      "teams": [
+        { "name": "Inter", "lineup": "real-madrid-inter-2026-09-08" }
+      ]
+    },
+    {
+      "country": "Through qualifying",
+      "note": "The seven play-off winners, listed together because they came in by the same route.",
+      "teams": [
+        { "name": "Fenerbahçe", "country": "Turkey" },
+        { "name": "AEK Athens", "country": "Greece" },
+        { "name": "Bodø/Glimt", "country": "Norway" },
+        { "name": "Viking", "country": "Norway" },
+        { "name": "Slovan Bratislava", "country": "Slovakia" },
+        { "name": "LASK", "country": "Austria" },
+        { "name": "Sabah", "country": "Azerbaijan" }
+      ]
+    }
+  ],
+  "gapNote": "The rest of the field is not listed yet. Three searches agreed on the English and Spanish clubs and on the seven play-off winners, and Real Madrid and Inter are confirmed by the matchday one report. They disagreed on Italy — one named Como among the qualifiers and another said Como did not make the league phase — and gave the German, French, Portuguese and Dutch clubs only once. Naming a club that is not in the competition is the kind of mistake that gets a page quoted for years, so those stay out until they are checked twice.",
+  "checked": "Checked against three separate searches on 11 September 2026. Only clubs confirmed twice, or by our own match report, are listed."
+}

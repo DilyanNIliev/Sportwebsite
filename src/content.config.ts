@@ -16,6 +16,8 @@ const articles = defineCollection({
     author: z.string(),
     // Съставите на мача, ако има такива: името на файла в src/data/lineups.
     lineups: z.string().optional(),
+    // Отборите в едно състезание: ключ от src/data/competitions.js.
+    competitionTeams: z.string().optional(),
     // Части от архив, вкарани в статията. Числата стоят само в архива, за да
     // не се получат две копия, които след месец се разминават.
     archiveBlocks: z

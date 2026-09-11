@@ -5,6 +5,7 @@ description: "The 2026/27 league phase is under way but matchday two waits until
 sport: football
 date: 2026-09-11
 author: Global Sports Archive
+competitionTeams: champions-league-2026-27
 archiveBlocks:
   archive: champions-league
   keyDates: true

@@ -673,3 +673,49 @@ tbody td:nth-child(2) { font-weight: 650; }
 }
 .back-to-report { margin-top: 30px; }
 .back-to-report a { margin-left: 4px; }
+
+/* ---------- отборите в едно състезание ---------- */
+.comp-teams { margin: 38px 0 8px; }
+.comp-intro { margin: 6px 0 0; color: var(--text-soft); font-size: .92rem; }
+.comp-count { margin: 12px 0 0; font-size: .88rem; color: var(--text-soft); }
+
+.comp-country { margin-top: 20px; }
+.comp-country-name {
+  display: flex; align-items: center; gap: 8px; margin: 0 0 9px;
+  font-size: .72rem; font-weight: 700; letter-spacing: .08em;
+  text-transform: uppercase; color: var(--text-faint);
+}
+.comp-country-n {
+  font-size: .68rem; letter-spacing: 0; padding: 1px 6px; border-radius: 20px;
+  background: var(--bg-soft); border: 1px solid var(--border);
+}
+.comp-country-note { margin: -3px 0 9px; font-size: .78rem; color: var(--text-faint); }
+
+.comp-list { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 7px; }
+.comp-team {
+  display: inline-flex; align-items: baseline; gap: 7px;
+  padding: 7px 12px; border-radius: 9px; font-size: .88rem;
+  border: 1px solid var(--border); background: var(--bg-raised); color: var(--text);
+  text-decoration: none;
+}
+.comp-team i { font-style: normal; font-size: .72rem; color: var(--text-faint); }
+/* Отбор с публикуван състав е връзка и го показва, вместо да се гадае. */
+.comp-team.is-link { border-left: 3px solid var(--accent, var(--brand)); }
+:root[data-theme="dark"] .comp-team.is-link { border-left-color: var(--accent-dark, var(--brand)); }
+.comp-team.is-link:hover { background: var(--bg-soft); border-color: var(--border-strong); }
+.comp-team.is-link:focus-visible { outline: 2px solid var(--brand); outline-offset: 2px; }
+.comp-team em {
+  font-style: normal; font-size: .7rem; font-weight: 650;
+  color: var(--accent, var(--brand));
+}
+:root[data-theme="dark"] .comp-team em { color: var(--accent-dark, var(--brand)); }
+.comp-team em::after { content: ' →'; }
+
+.comp-gap {
+  margin: 22px 0 0; padding: 13px 15px; border-radius: 10px;
+  background: var(--bg-soft); border: 1px dashed var(--border-strong);
+}
+.comp-gap-head {
+  margin: 0 0 6px; font-size: .8rem; font-weight: 700; color: var(--text);
+}
+.comp-gap p { margin: 0; font-size: .8rem; color: var(--text-faint); }

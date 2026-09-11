@@ -72,10 +72,27 @@ assert.ok(!events.some((e) => e.event === 'Marit Bjørgen'), 'спортист �
 // Дисциплината под h3 „Men's events“ носи спорта от h2 отгоре.
 const road = events.find((e) => e.event === 'Road race');
 assert.equal(road.sport, 'Cycling', 'спортът идва от h2, не от h3 за пола');
+assert.equal(road.category, "Men's events", 'полът се пази отделно, за да не се слеят мъже и жени');
+
+// Наставката „details“ от връзката в клетката.
+const dh = events.find((e) => /downhill/i.test(e.event));
+assert.equal(dh.event, "Men's downhill", 'без наставка details');
+
+// Ред с друг брой клетки не е ред от таблицата.
+const ragged = parseMedallists(`
+<div class="mw-heading"><h2 id="Wrestling">Wrestling</h2></div>
+<table class="wikitable"><tbody>
+<tr><th>Event</th><th>Gold</th><th>Silver</th><th>Bronze</th></tr>
+<tr><td>Men's 55 kg</td><td>A</td><td>B</td><td>C</td></tr>
+<tr><td>Bilyal Makhov Russia</td><td>only two</td></tr>
+</tbody></table>`);
+assert.equal(ragged.events.length, 1, 'кривият ред не влиза');
+assert.equal(ragged.skipped.length, 1, 'кривият ред е преброен');
 
 assert.equal(events[0].event, "Men's downhill");
 assert.ok(events[0].gold.startsWith('Beat Feuz'), 'златото с името');
 assert.equal(events[0].silver, 'Johan Clarey', 'бележката [1] е махната');
+assert.equal(events[0].event, "Men's downhill", 'името на дисциплината е чисто');
 
 // Отборна дисциплина: двете имена остават, просто слепени.
 assert.ok(events[2].gold.includes('Stefania Constantini'), 'първото име');

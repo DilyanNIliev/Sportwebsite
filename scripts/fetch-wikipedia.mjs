@@ -96,6 +96,8 @@ const strip = (html) =>
     // „United States‡“ — истинският пробег извади това. Бележките в таблиците
     // на Уикипедия не са винаги в <sup>, някои са обикновен текст.
     .replace(/[*†‡§¶]+$/, '')
+    // Клетката с дисциплината носи връзка „details“, слепена за името.
+    .replace(/\s*details$/i, '')
     .trim();
 
 /** Първата „wikitable“ на страницата, като масив от масиви. */
@@ -152,16 +154,29 @@ function parseMedallists(html) {
   const events = [];
   const skipped = [];
   let sport = null;
+  let container = false;
 
   // Само h2. Първият истински пробег показа защо: страницата за Париж 2024
   // разделя всеки спорт на h3 „Men's events“ и „Women's events“, така че
   // четенето на h3 даваше сто петдесет и четири дисциплини със спорт „Men's
   // events“. Спортът е h2; h3 е подраздел в него.
-  const re = /<h2[^>]*>([\s\S]*?)<\/h2>|<table[^>]*class="[^"]*wikitable[^"]*"[\s\S]*?<\/table>/g;
+  let category = null;
+  const re = /<h([23])[^>]*>([\s\S]*?)<\/h\1>|<table[^>]*class="[^"]*wikitable[^"]*"[\s\S]*?<\/table>/g;
   for (const m of html.matchAll(re)) {
     if (m[0].startsWith('<h')) {
-      const name = strip(m[1]).replace(/\[edit\]$/i, '').trim();
-      sport = NOT_A_SPORT.test(name) ? null : name;
+      const name = strip(m[2]).replace(/\[edit\]$/i, '').trim();
+      if (m[1] === '2') {
+        // Общ контейнер като „Medalists“ не е спорт; тогава спортът е h3.
+        sport = NOT_A_SPORT.test(name) ? null : name;
+        container = sport === null && /^medal(l?ists|s)$/i.test(name);
+        category = null;
+      } else {
+        // h3 е или спортът (когато h2 е контейнер), или подраздел в спорта —
+        // най-често полът. Полът трябва да се запази: без него „100 metres“
+        // на мъжете и на жените стават един и същи ред.
+        if (container && !NOT_A_SPORT.test(name)) sport = name;
+        else category = name;
+      }
       continue;
     }
     if (!sport) continue;
@@ -179,10 +194,13 @@ function parseMedallists(html) {
     const ei = head.findIndex((h) => h.startsWith('event')) >= 0 ? head.findIndex((h) => h.startsWith('event')) : 0;
 
     for (const r of rows.slice(1)) {
+      // Ред с друг брой клетки не е ред от тази таблица. Точно такъв ред
+      // сложи борец на мястото на дисциплина в Лондон 2012.
+      if (r.length !== rows[0].length) { skipped.push({ sport, why: 'друг брой клетки', row: r.slice(0, 2) }); continue; }
       const event = r[ei];
       const gold = r[gi];
-      if (!event || !gold) { skipped.push({ sport, row: r.slice(0, 2) }); continue; }
-      events.push({ sport, event, gold, silver: r[si] ?? '', bronze: r[bi] ?? '' });
+      if (!event || !gold) { skipped.push({ sport, why: 'липсва дисциплина или злато', row: r.slice(0, 2) }); continue; }
+      events.push({ sport, ...(category ? { category } : {}), event, gold, silver: r[si] ?? '', bronze: r[bi] ?? '' });
     }
   }
   return { events, skipped };
@@ -248,6 +266,13 @@ async function main() {
       if (sports.size < minSports) {
         throw new Error(`само ${sports.size} спорта, а се очакваха поне ${minSports} — разборът е сгрешил заглавията`);
       }
+      // Две еднакви дисциплини в един спорт значи изгубен различаващ признак
+      // (обикновено полът). По-добре да падне, отколкото да се слеят.
+      const keys = events.map((e) => `${e.sport}|${e.category ?? ''}|${e.event}`);
+      const dupes = keys.filter((k, i) => keys.indexOf(k) !== i);
+      if (dupes.length) {
+        throw new Error(`${dupes.length} повторени дисциплини, първата „${dupes[0]}“ — липсва различаващ признак`);
+      }
       report2.push(`${g.label.padEnd(22)} ${String(events.length).padStart(4)} дисциплини, ` +
         `${String(sports.size).padStart(2)} спорта, ${skipped.length} пропуснати реда`);
       ok2 += 1;
@@ -267,6 +292,14 @@ async function main() {
       }
     } catch (err) {
       report2.push(`${g.label.padEnd(22)} ГРЕШКА: ${err.message}`);
+      // Структурата на страницата не се гадае — принтира се.
+      try {
+        const html = await pageHtml(g.page);
+        const heads = [...html.matchAll(/<h([23])[^>]*>([\s\S]*?)<\/h\1>/g)]
+          .map((m) => `  h${m[1]} ${strip(m[2]).replace(/\[edit\]$/i, '').trim()}`)
+          .slice(0, 40);
+        report2.push(`  заглавия на „${g.page}“ (първите 40):\n${heads.join('\n')}`);
+      } catch { /* няма как да помогнем повече */ }
     }
     await sleep(1500);
   }

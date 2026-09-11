@@ -559,3 +559,43 @@ tbody td:nth-child(2) { font-weight: 650; }
   .spot-dense .spot-name { font-size: .63rem; }
   .spot-dot { width: 17px; height: 17px; }
 }
+
+/* ---------- фонов мотив и втори цвят в заглавния блок ----------
+   Двата цвята влизат само като много прозрачен фон и линии, затова не
+   пипат контраста на текста отгоре. Вторият цвят никога не носи текст. */
+.hero { position: relative; overflow: hidden; }
+.hero > .wrap { position: relative; z-index: 1; }
+
+.hero.accented::before {
+  content: ''; position: absolute; inset: 0; pointer-events: none;
+  background: linear-gradient(118deg, var(--accent, var(--brand)) 0%, transparent 58%, var(--accent2, var(--accent)) 100%);
+  opacity: .11;
+}
+:root[data-theme="dark"] .hero.accented::before {
+  background: linear-gradient(118deg, var(--accent-dark, var(--brand)) 0%, transparent 58%, var(--accent2-dark, var(--accent-dark)) 100%);
+  opacity: .16;
+}
+
+.motif {
+  /* Долепен до ъгъла, не отрязан на 14 пиксела — половин наказателно поле
+     изглежда като грешка, а цялото поле изглежда като решение. */
+  position: absolute; right: 0; bottom: 0;
+  width: min(400px, 46%); height: auto;
+  fill: none; stroke: currentColor; stroke-width: 1;
+  stroke-linejoin: round; stroke-linecap: round;
+  color: var(--accent, var(--brand));
+  opacity: .17; pointer-events: none; z-index: 0;
+}
+:root[data-theme="dark"] .motif { color: var(--accent-dark, var(--brand)); opacity: .2; }
+.motif .motif-hi { color: var(--accent2, var(--accent)); stroke: currentColor; }
+:root[data-theme="dark"] .motif .motif-hi { color: var(--accent2-dark, var(--accent-dark)); }
+
+/* На телефон заглавният блок е нисък и текстът минава точно през мотива,
+   затова той се свива в ъгъла и става почти текстура. */
+@media (max-width: 620px) {
+  .motif { width: 58%; right: -34px; bottom: -22px; opacity: .09; }
+  :root[data-theme="dark"] .motif { opacity: .12; }
+}
+@media (prefers-reduced-transparency: reduce) {
+  .motif { opacity: .1; }
+}

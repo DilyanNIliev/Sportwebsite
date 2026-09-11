@@ -2,13 +2,16 @@
 import Base from '../../layouts/Base.astro';
 import data from '../../data/archives/boxing-lineal.json';
 import sports from '../../data/sports.json';
+import SportMotif from '../../components/SportMotif.astro';
+import { sportVars } from '../../data/sport-style.js';
 
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const sport = sports.find((s) => s.slug === data.sport);
 const crumbs = [{ label: 'Home', href: `${base}/` }, { label: 'Archives', href: `${base}/archives/` }, { label: data.title }];
 ---
 <Base title={data.title} description={data.intro} crumbs={crumbs}>
-  <section class="hero accented" style={`--accent:${sport?.accent};--accent-dark:${sport?.accentDark}`}>
+  <section class="hero accented" style={sportVars(sport)}>
+    <SportMotif motif={sport?.motif} />
     <div class="wrap">
       <p class="eyebrow">{sport?.name} · Archive</p>
       <h1>{data.title}</h1>

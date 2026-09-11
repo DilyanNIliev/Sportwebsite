@@ -2,6 +2,8 @@
 import Base from '../../layouts/Base.astro';
 import { archives } from '../../data/archives.js';
 import sports from '../../data/sports.json';
+import SportMotif from '../../components/SportMotif.astro';
+import { sportVars } from '../../data/sport-style.js';
 
 export function getStaticPaths() {
   // Архивите с няколко таблици имат свои страници (напр. боксът с табовете).
@@ -26,7 +28,8 @@ const jsonLd = {
 };
 ---
 <Base title={data.title} description={`${data.intro} Checked before publication.`} crumbs={crumbs}>
-  <section class="hero accented" style={`--accent:${sport?.accent};--accent-dark:${sport?.accentDark}`}>
+  <section class="hero accented" style={sportVars(sport)}>
+    <SportMotif motif={sport?.motif} />
     <div class="wrap">
       <p class="eyebrow">{sport?.name} · Archive</p>
       <h1>{data.title}</h1>

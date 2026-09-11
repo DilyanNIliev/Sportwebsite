@@ -4,6 +4,8 @@ import Base from '../../layouts/Base.astro';
 import sports from '../../data/sports.json';
 import Lineups from '../../components/Lineups.astro';
 import { lineups } from '../../data/lineups.js';
+import SportMotif from '../../components/SportMotif.astro';
+import { sportVars } from '../../data/sport-style.js';
 
 export async function getStaticPaths() {
   const articles = await getCollection('articles');
@@ -35,10 +37,11 @@ const jsonLd = {
 ---
 <Base title={article.data.title} seoTitle={article.data.seoTitle} description={article.data.description} crumbs={crumbs}>
   <article>
-    <section class="hero accented" style={`--accent:${sport?.accent};--accent-dark:${sport?.accentDark}`}>
+    <section class="hero accented" style={sportVars(sport)}>
+    <SportMotif motif={sport?.motif} />
       <div class="wrap">
         <p class="eyebrow">
-          <a class="accent" href={`${base}/${sport?.slug}/`} style={`--accent:${sport?.accent};--accent-dark:${sport?.accentDark}`}>{sport?.name}</a>
+          <a class="accent" href={`${base}/${sport?.slug}/`} style={sportVars(sport)}>{sport?.name}</a>
           · <time datetime={iso}>{nice}</time>
         </p>
         <h1>{article.data.title}</h1>

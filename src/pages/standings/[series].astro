@@ -2,6 +2,8 @@
 import Base from '../../layouts/Base.astro';
 import { standings } from '../../data/standings.js';
 import sports from '../../data/sports.json';
+import SportMotif from '../../components/SportMotif.astro';
+import { sportVars } from '../../data/sport-style.js';
 
 export function getStaticPaths() {
   return standings.map((s) => ({ params: { series: s.slug }, props: { d: s.data } }));
@@ -59,7 +61,8 @@ function moveLabel(m) {
   description={`${d.series} ${d.season} drivers' championship points, leader first: ${d.drivers[0].name} leads on ${d.drivers[0].points}. ${d.asOf}`}
   crumbs={crumbs}
 >
-  <section class="hero accented" style={`--accent:${sport?.accent};--accent-dark:${sport?.accentDark}`}>
+  <section class="hero accented" style={sportVars(sport)}>
+    <SportMotif motif={sport?.motif} />
     <div class="wrap">
       <p class="eyebrow">{sport?.name} · {d.season} Rankings</p>
       <h1>{d.seriesLong ?? `${d.series} ${d.season}`}</h1>

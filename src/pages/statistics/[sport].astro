@@ -3,6 +3,8 @@ import Base from '../../layouts/Base.astro';
 import sports from '../../data/sports.json';
 import { archivesFor, rowCount } from '../../data/archives.js';
 import { standingsFor } from '../../data/standings.js';
+import SportMotif from '../../components/SportMotif.astro';
+import { sportVars } from '../../data/sport-style.js';
 
 export function getStaticPaths() {
   return sports.map((s) => ({ params: { sport: s.slug }, props: { sport: s } }));
@@ -25,7 +27,8 @@ const crumbs = [{ label: 'Home', href: `${base}/` }, { label: 'Statistics', href
   crumbs={crumbs}
   noindex={thin}
 >
-  <section class="hero accented" style={`--accent:${sport.accent};--accent-dark:${sport.accentDark}`}>
+  <section class="hero accented" style={sportVars(sport)}>
+    <SportMotif motif={sport?.motif} />
     <div class="wrap">
       <p class="eyebrow">{sport.name} · Statistics</p>
       <h1>{sport.icon} {sport.name} records</h1>
@@ -41,7 +44,7 @@ const crumbs = [{ label: 'Home', href: `${base}/` }, { label: 'Statistics', href
           {tables.map((t) => (
             <a class="card" href={`${base}/standings/${t.slug}/`}>
               <div class="meta">
-                <span class="accent" style={`--accent:${sport.accent};--accent-dark:${sport.accentDark}`}>{t.data.series}</span>
+                <span class="accent" style={sportVars(sport)}>{t.data.series}</span>
                 <span>{t.data.season}</span>
               </div>
               <h3>{t.data.drivers[0].name} leads on {t.data.drivers[0].points.toLocaleString('en-GB')}</h3>
@@ -61,7 +64,7 @@ const crumbs = [{ label: 'Home', href: `${base}/` }, { label: 'Statistics', href
           {archives.map((a) => (
             <a class="card" href={`${base}/archives/${a.href}/`}>
               <div class="meta">
-                <span class="accent" style={`--accent:${sport.accent};--accent-dark:${sport.accentDark}`}>Archive</span>
+                <span class="accent" style={sportVars(sport)}>Archive</span>
                 <span>{rowCount(a)} entries</span>
               </div>
               <h3>{a.data.title}</h3>

@@ -8,6 +8,8 @@ import volleyball from './archives/volleyball-world-championship.json';
 import f2champs from './archives/f2-champions.json';
 import f3champs from './archives/f3-champions.json';
 import ucl from './archives/champions-league.json';
+import olyWinter from './archives/olympics-winter.json';
+import olySummer from './archives/olympics-summer.json';
 
 export const archives = [
   { slug: 'world-cup', data: worldCup, href: 'world-cup' },
@@ -18,6 +20,8 @@ export const archives = [
   { slug: 'f2-champions', data: f2champs, href: 'f2-champions' },
   { slug: 'f3-champions', data: f3champs, href: 'f3-champions' },
   { slug: 'champions-league', data: ucl, href: 'champions-league' },
+  { slug: 'olympics-winter', data: olyWinter, href: 'olympics-winter' },
+  { slug: 'olympics-summer', data: olySummer, href: 'olympics-summer' },
 ];
 
 /** Броят редове, независимо дали архивът е с една таблица или с няколко. */

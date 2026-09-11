@@ -1,0 +1,21 @@
+{
+  "title": "Winter Olympics: hosts and who topped the table",
+  "sport": "winter-sports",
+  "group": "world",
+  "intro": "Every Winter Games of the last twenty years and the next two: where they were held, and which country finished top of the medal table.",
+  "dataNote": "Hosts and years are not in dispute anywhere. The medal figures are the finishing positions as recorded, with two exceptions flagged in the table itself: Sochi 2014, where Russia's totals were revised downward after the doping cases and sources still differ, and Pyeongchang 2018, where Norway and Germany tied on golds and the order depends on which tiebreak is applied.",
+  "tables": [
+    {
+      "title": "The Games",
+      "columns": ["Year", "Host", "Country", "Top of the medal table"],
+      "rows": [
+        [2010, "Vancouver", "Canada", "Canada — 14 golds. The United States took the most medals overall, 37"],
+        [2014, "Sochi", "Russia", "Russia led as the Games finished; the totals were later revised after the doping cases and sources differ"],
+        [2018, "Pyeongchang", "South Korea", "Norway and Germany tied on 14 golds; Norway took the most medals, 39"],
+        [2022, "Beijing", "China", "Norway — 16 golds and 37 medals"],
+        [2026, "Milano-Cortina", "Italy", "Norway — 18 golds and 41 medals, a record for a single Winter Games"],
+        [2030, "French Alps", "France", "1–17 February 2030 — not yet held, and the first Games awarded to a region rather than a city"]
+      ]
+    }
+  ]
+}

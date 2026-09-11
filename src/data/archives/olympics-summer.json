@@ -3,18 +3,53 @@
   "sport": "athletics",
   "group": "world",
   "intro": "Every Summer Games of the last twenty years and the next one: where they were held, and which country finished top of the medal table.",
-  "dataNote": "Hosts and years are settled. Gold counts are given only where two sources agreed: for London 2012 our sources split between 46 and 48 golds for the United States, so the number is left out rather than guessed — the country that finished top is not in doubt, the figure is.",
+  "dataNote": "Hosts and years are settled. The medal figures come from Wikipedia's current tables, fetched by scripts/fetch-wikipedia.mjs, with every row checked to add up. London 2012 was left blank here until that ran: the figure most people remember is forty-six golds for the United States, and the current table says forty-eight. Both were true at different times — medals reassigned after the doping cases moved the number, and forty-eight is where it stands now.",
   "tables": [
     {
       "title": "The Games",
-      "columns": ["Year", "Host", "Country", "Top of the medal table"],
+      "columns": [
+        "Year",
+        "Host",
+        "Country",
+        "Top of the medal table"
+      ],
       "rows": [
-        [2008, "Beijing", "China", "China — 48 golds, the only host to top the table in this span"],
-        [2012, "London", "Great Britain", "United States — the gold count is disputed between our sources, so it is not stated here"],
-        [2016, "Rio de Janeiro", "Brazil", "United States — 46 golds"],
-        [2020, "Tokyo", "Japan", "United States — 39 golds to China's 38. Held in 2021 after being postponed"],
-        [2024, "Paris", "France", "United States and China tied on 40 golds; the United States finished top on silvers"],
-        [2028, "Los Angeles", "United States", "14–30 July 2028 — not yet held"]
+        [
+          2008,
+          "Beijing",
+          "China",
+          "China — 48 golds, the only host to top the table in this span"
+        ],
+        [
+          2012,
+          "London",
+          "Great Britain",
+          "United States — 48 golds and 106 medals"
+        ],
+        [
+          2016,
+          "Rio de Janeiro",
+          "Brazil",
+          "United States — 46 golds"
+        ],
+        [
+          2020,
+          "Tokyo",
+          "Japan",
+          "United States — 39 golds to China's 38. Held in 2021 after being postponed"
+        ],
+        [
+          2024,
+          "Paris",
+          "France",
+          "United States and China tied on 40 golds; the United States finished top on silvers"
+        ],
+        [
+          2028,
+          "Los Angeles",
+          "United States",
+          "14–30 July 2028 — not yet held"
+        ]
       ]
     }
   ]

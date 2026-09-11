@@ -54,7 +54,7 @@ const metaDesc =
                 <span class="accent" style={sportVars(sport)}>{t.data.series}</span>
                 <span>{t.data.season}</span>
               </div>
-              <h3>{t.data.drivers[0].name} leads on {t.data.drivers[0].points.toLocaleString('en-GB')}</h3>
+              <h3>{t.data.drivers[0].name} {t.data.leadVerb ?? 'leads on'} {t.data.drivers[0].points.toLocaleString('en-GB')}{t.data.leadUnit ? ` ${t.data.leadUnit}` : ''}</h3>
               <p>{t.data.asOf}</p>
             </a>
           ))}

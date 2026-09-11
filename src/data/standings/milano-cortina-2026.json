@@ -1,0 +1,51 @@
+{
+  "series": "Milano-Cortina 2026",
+  "seriesLong": "Milano-Cortina 2026 Winter Olympics: final medal table",
+  "sport": "winter-sports",
+  "season": 2026,
+  "entityLabel": "Country",
+  "entityPlural": "Medal table",
+  "searchLabel": "Search by country",
+  "searchPlaceholder": "e.g. Norway, Japan",
+  "searchable": true,
+  "pointsLabel": "Total",
+  "leadVerb": "took",
+  "leadUnit": "medals",
+  "extraCols": [
+    { "key": "gold", "label": "Gold" },
+    { "key": "silver", "label": "Silver" },
+    { "key": "bronze", "label": "Bronze" }
+  ],
+  "asOf": "Final table, 22 February 2026. Ordered by gold medals first, then silver, then bronze — the standard Olympic ranking, which is why the Netherlands finish above Italy on ten golds each.",
+  "confirmedThrough": 10,
+  "listTo": 10,
+  "drivers": [
+    { "pos": 1, "name": "Norway", "gold": 18, "silver": 12, "bronze": 11, "points": 41 },
+    { "pos": 2, "name": "United States", "gold": 12, "silver": 12, "bronze": 9, "points": 33 },
+    { "pos": 3, "name": "Netherlands", "gold": 10, "silver": 7, "bronze": 3, "points": 20 },
+    { "pos": 4, "name": "Italy", "gold": 10, "silver": 6, "bronze": 14, "points": 30 },
+    { "pos": 5, "name": "Germany", "gold": 8, "silver": 10, "bronze": 8, "points": 26 },
+    { "pos": 6, "name": "France", "gold": 8, "silver": 9, "bronze": 6, "points": 23 },
+    { "pos": 7, "name": "Sweden", "gold": 8, "silver": 6, "bronze": 4, "points": 18 },
+    { "pos": 8, "name": "Switzerland", "gold": 6, "silver": 9, "bronze": 8, "points": 23 },
+    { "pos": 9, "name": "Austria", "gold": 5, "silver": 8, "bronze": 5, "points": 18 },
+    { "pos": 10, "name": "Japan", "gold": 5, "silver": 7, "bronze": 12, "points": 24 }
+  ],
+  "teams": [],
+  "next": {
+    "eyebrow": "What is next",
+    "event": "The next Olympic Games",
+    "summary": "Milano-Cortina is finished — it was held from 6 to 22 February 2026. The next Games are the summer ones in Los Angeles, and the next winter ones are in the French Alps four years from now.",
+    "rowsLabel": "Dates",
+    "rows": [
+      ["Summer 2028", "14–30 July — Los Angeles"],
+      ["Winter 2030", "1–17 February — French Alps"],
+      ["Athletics worlds", "11–19 September 2027 — Beijing"],
+      ["Rugby World Cup", "1 Oct – 13 Nov 2027 — Australia"],
+      ["Cricket World Cup", "4 Oct – 21 Nov 2027 — South Africa, Zimbabwe, Namibia"]
+    ],
+    "caution": "The French Alps Games are the first to be awarded to a region rather than a host city. Note the pile-up in the autumn of 2027: the athletics, rugby and cricket world championships all land within weeks of each other, and two of them overlap almost completely.",
+    "checked": "Dates checked twice each against separate searches on 11 September 2026."
+  },
+  "footnote": "Norway's eighteen golds are the most any country has won at a single Winter Games, and its forty-one medals are a record too. The United States finished second on its own best winter return, twelve golds and thirty-three medals. Every row here adds up: golds plus silvers plus bronzes equals the total, in all ten cases, which is the first check we run on a table like this."
+}

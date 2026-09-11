@@ -4,6 +4,7 @@ import { standings } from '../../data/standings.js';
 import sports from '../../data/sports.json';
 import SportMotif from '../../components/SportMotif.astro';
 import { sportVars } from '../../data/sport-style.js';
+import KeyDates from '../../components/KeyDates.astro';
 
 export function getStaticPaths() {
   return standings.map((s) => ({ params: { series: s.slug }, props: { d: s.data } }));
@@ -43,7 +44,9 @@ const pending = total < 10 && !d.footnote;
 const hasTeams = rows.some((r) => r.team);
 const hasCountry = rows.some((r) => r.country);
 const hasMove = rows.some((r) => r.move !== undefined);
-const cols = 2 + (hasCountry ? 1 : 0) + (hasTeams ? 1 : 0) + (hasMove ? 1 : 0);
+/** Допълнителни числови колони — медалната таблица има злато, сребро, бронз. */
+const extraCols = d.extraCols ?? [];
+const cols = 2 + (hasCountry ? 1 : 0) + (hasTeams ? 1 : 0) + extraCols.length + 1 + (hasMove ? 1 : 0);
 
 /** Без диакритики и малки букви — за да намира „swiatek“ и „Świątek“. */
 const fold = (t) => t.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
@@ -72,13 +75,13 @@ function moveLabel(m) {
 
   <section class="block">
     <div class="wrap">
-      <div class="block-head"><h2>{d.entityLabel ? d.entityLabel + 's' : 'Drivers'}</h2></div>
+      <div class="block-head"><h2>{d.entityPlural ?? (d.entityLabel ? d.entityLabel + 's' : 'Drivers')}</h2></div>
 
       <div data-rank-table data-page-size={PAGE_SIZE} data-total={total} data-shown={initial}>
         {d.searchable && (
           <div class="table-search">
-            <label for="row-search">Search by name or country</label>
-            <input id="row-search" type="search" placeholder="e.g. Sinner, Ukraine" autocomplete="off" />
+            <label for="row-search">{d.searchLabel ?? 'Search by name or country'}</label>
+            <input id="row-search" type="search" placeholder={d.searchPlaceholder ?? 'e.g. Sinner, Ukraine'} autocomplete="off" />
             <p class="search-count" data-search-count hidden></p>
           </div>
         )}
@@ -90,7 +93,8 @@ function moveLabel(m) {
                 <th>{d.entityLabel ?? 'Driver'}</th>
                 {hasCountry && <th>Country</th>}
                 {hasTeams && <th>Team</th>}
-                <th>Points</th>
+                {extraCols.map((c) => <th>{c.label}</th>)}
+                <th>{d.pointsLabel ?? 'Points'}</th>
                 {hasMove && <th>Week</th>}
               </tr>
             </thead>
@@ -110,6 +114,7 @@ function moveLabel(m) {
                   <td>{r.name}</td>
                   {hasCountry && <td class="td-note">{r.country}</td>}
                   {hasTeams && <td class="td-note">{r.team}</td>}
+                  {extraCols.map((c) => <td>{r[c.key]?.toLocaleString('en-GB') ?? '—'}</td>)}
                   <td><strong>{r.points.toLocaleString('en-GB')}</strong></td>
                   {hasMove && (
                     <td>
@@ -181,6 +186,8 @@ function moveLabel(m) {
           </div>
         </>
       )}
+
+      {d.next && <div style="margin-top:34px"><KeyDates next={d.next} /></div>}
 
       {d.footnote && <p class="note" style="margin-top:26px">{d.footnote}</p>}
 

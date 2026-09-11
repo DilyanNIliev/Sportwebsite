@@ -3,6 +3,7 @@ import Base from '../../layouts/Base.astro';
 import sports from '../../data/sports.json';
 import { archivesFor, rowCount } from '../../data/archives.js';
 import { standingsFor } from '../../data/standings.js';
+import { sportHasData } from '../../data/has-data.js';
 import SportMotif from '../../components/SportMotif.astro';
 import { sportVars } from '../../data/sport-style.js';
 
@@ -18,7 +19,8 @@ const tables = standingsFor(sport.slug);
 // Страница без собствени данни още не е готова да се индексира.
 // Тънкото съдържание е риск по политиката за scaled content abuse (Стъпка 2).
 // Класиранията се броят за съдържание — тенисът има ATP и WTA, но още няма архив.
-const thin = archives.length === 0 && tables.length === 0;
+// Едно условие за двете места: и тук, и в sitemap-а (виж src/data/has-data.js).
+const thin = !sportHasData(sport.slug);
 const crumbs = [{ label: 'Home', href: `${base}/` }, { label: 'Statistics', href: `${base}/statistics/` }, { label: sport.name }];
 ---
 <Base

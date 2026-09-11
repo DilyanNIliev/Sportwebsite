@@ -3,6 +3,7 @@ import { getCollection, render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import sports from '../../data/sports.json';
 import Lineups from '../../components/Lineups.astro';
+import ArchiveBlocks from '../../components/ArchiveBlocks.astro';
 import { lineups } from '../../data/lineups.js';
 import SportMotif from '../../components/SportMotif.astro';
 import { sportVars } from '../../data/sport-style.js';
@@ -52,6 +53,8 @@ const jsonLd = {
     <section class="block">
       <div class="wrap prose article-body">
         <Content />
+
+        {article.data.archiveBlocks && <ArchiveBlocks blocks={article.data.archiveBlocks} />}
 
         {lineup && <Lineups data={lineup} />}
 

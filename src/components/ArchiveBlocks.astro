@@ -1,0 +1,50 @@
+---
+/**
+ * Вкарва части от един архив в статия: ключовите дати и избрани таблици.
+ *
+ * Числата остават на едно място — в JSON файла на архива. Статията само
+ * посочва кои части иска, за да не се разминат двете копия след месец.
+ */
+import { archives } from '../data/archives.js';
+import KeyDates from './KeyDates.astro';
+
+const { blocks } = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+
+const entry = archives.find((a) => a.slug === blocks.archive);
+if (!entry) {
+  throw new Error(`Статията иска архив „${blocks.archive}“, но такъв няма в src/data/archives.js.`);
+}
+
+const all = entry.data.tables ?? [];
+const wanted = (blocks.tables ?? []).map((title) => {
+  const t = all.find((x) => x.title === title);
+  if (!t) {
+    throw new Error(
+      `Архивът „${blocks.archive}“ няма таблица „${title}“. Има: ${all.map((x) => x.title).join(', ')}.`
+    );
+  }
+  return t;
+});
+---
+{blocks.keyDates && entry.data.next && <KeyDates next={entry.data.next} />}
+
+{wanted.map((t) => (
+  <>
+    <h2>{t.title}</h2>
+    <div class="table-scroll">
+      <table>
+        <thead><tr>{t.columns.map((c) => <th>{c}</th>)}</tr></thead>
+        <tbody>
+          {t.rows.map((r) => <tr>{r.map((cell) => <td>{cell}</td>)}</tr>)}
+        </tbody>
+      </table>
+    </div>
+  </>
+))}
+
+<p class="note">
+  The full archive — most titles, titles by country and the whole run of finals —
+  is at <a href={`${base}/archives/${entry.href}/`}>{entry.data.title}</a>.
+  These figures come from that one file, so the two cannot drift apart.
+</p>

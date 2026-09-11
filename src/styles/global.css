@@ -599,3 +599,48 @@ tbody td:nth-child(2) { font-weight: 650; }
 @media (prefers-reduced-transparency: reduce) {
   .motif { opacity: .1; }
 }
+
+/* ---------- компактни ключови дати ---------- */
+.key-dates { margin-bottom: 34px; }
+.key-dates-title { margin: 8px 0 0; font-size: 1.15rem; }
+.key-label {
+  margin: 18px 0 8px; font-size: .7rem; font-weight: 700; letter-spacing: .08em;
+  text-transform: uppercase; color: var(--text-faint);
+}
+.key-sub { margin: 9px 0 0; font-size: .76rem; color: var(--text-faint); }
+.key-next {
+  display: flex; align-items: center; gap: 9px; flex-wrap: wrap;
+  margin: 12px 0 0; font-size: .95rem; font-weight: 650;
+}
+.key-next-label {
+  font-size: .66rem; font-weight: 800; letter-spacing: .09em; text-transform: uppercase;
+  padding: 3px 8px; border-radius: 5px;
+  background: var(--accent, var(--brand)); color: #fff;
+}
+:root[data-theme="dark"] .key-next-label { background: var(--accent-dark, var(--brand)); color: #10131a; }
+
+/* Осемте кръга в редичка етикети вместо осем реда в списък. */
+.md-chips {
+  list-style: none; margin: 0; padding: 0;
+  display: flex; flex-wrap: wrap; gap: 6px;
+}
+.md-chip {
+  display: flex; align-items: baseline; gap: 5px;
+  padding: 5px 9px; border-radius: 8px; font-size: .76rem;
+  border: 1px solid var(--border); background: var(--bg-raised); color: var(--text-soft);
+}
+.md-chip b { font-size: .72rem; color: var(--text-faint); font-weight: 700; }
+.md-chip.is-played { opacity: .55; }
+.md-chip.is-next {
+  border-color: var(--accent, var(--brand)); color: var(--text); font-weight: 650;
+}
+:root[data-theme="dark"] .md-chip.is-next { border-color: var(--accent-dark, var(--brand)); }
+
+/* Фазите след групите: тесен етикет, за да не стават два реда на телефон. */
+.next-facts.compact { gap: 5px 14px; margin: 0; grid-template-columns: minmax(92px, auto) 1fr; }
+.next-facts.compact dt { font-size: .68rem; padding-top: 1px; }
+.next-facts.compact dd { font-size: .84rem; }
+@media (max-width: 560px) {
+  .next-facts.compact { grid-template-columns: minmax(88px, auto) 1fr; }
+  .next-facts.compact dd { margin-bottom: 0; }
+}

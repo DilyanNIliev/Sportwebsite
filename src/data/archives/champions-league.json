@@ -7,73 +7,244 @@
   "next": {
     "eyebrow": "Season calendar",
     "event": "2026/27 season — key dates",
-    "summary": "The league phase opened on 8 September 2026 and runs to the end of January. A World Cup summer pushed the whole calendar later than usual, which is why matchday two does not come until mid-October.",
-    "rows": [
-      ["League phase draw", "27 August 2026"],
-      ["Matchday 1", "8–10 September 2026 — played"],
-      ["Matchday 2", "13–14 October 2026"],
-      ["Matchday 3", "20–21 October 2026"],
-      ["Matchday 4", "3–4 November 2026"],
-      ["Matchday 5", "24–25 November 2026"],
-      ["Matchday 6", "8–9 December 2026"],
-      ["Matchday 7", "19–20 January 2027"],
-      ["Matchday 8", "27 January 2027 — all 18 matches at once"],
-      ["Knockout play-off draw", "29 January 2027"],
-      ["Knockout play-offs", "16–17 and 23–24 February 2027"],
-      ["Round of 16", "9–10 and 16–17 March 2027"],
-      ["Quarter-finals", "6–7 and 13–14 April 2027"],
-      ["Semi-finals", "27–28 April and 4–5 May 2027"],
-      ["Final", "Saturday 5 June 2027 — Estadio Metropolitano, Madrid"]
+    "summary": "The league phase opened on 8 September and runs to the end of January. A World Cup summer pushed everything later, which is why matchday two waits until mid-October.",
+    "matchdays": [
+      {
+        "n": 1,
+        "dates": "8–10 Sep",
+        "played": true
+      },
+      {
+        "n": 2,
+        "dates": "13–14 Oct"
+      },
+      {
+        "n": 3,
+        "dates": "20–21 Oct"
+      },
+      {
+        "n": 4,
+        "dates": "3–4 Nov"
+      },
+      {
+        "n": 5,
+        "dates": "24–25 Nov"
+      },
+      {
+        "n": 6,
+        "dates": "8–9 Dec"
+      },
+      {
+        "n": 7,
+        "dates": "19–20 Jan"
+      },
+      {
+        "n": 8,
+        "dates": "27 Jan"
+      }
     ],
-    "caution": "Matchday eight is played as a single round with every fixture kicking off simultaneously, so that no team learns its required result in advance. Dates for the knockout rounds are UEFA's published slots; individual kick-off times are set closer to each round.",
-    "checked": "Checked three times against UEFA's published calendar, including its own calendar-by-matchday document, on 11 September 2026."
+    "matchdaysNote": "Matchday eight is one round, all eighteen matches at once. Drawn 27 August 2026; the knockout play-off draw is 29 January 2027.",
+    "rowsLabel": "Knockout · 2027",
+    "rows": [
+      [
+        "Play-offs",
+        "16–17, 23–24 Feb"
+      ],
+      [
+        "Round of 16",
+        "9–10, 16–17 Mar"
+      ],
+      [
+        "Quarter-finals",
+        "6–7, 13–14 Apr"
+      ],
+      [
+        "Semi-finals",
+        "27–28 Apr, 4–5 May"
+      ],
+      [
+        "Final",
+        "5 Jun · Metropolitano, Madrid"
+      ]
+    ],
+    "caution": "Knockout dates are UEFA's published slots; kick-off times are set closer to each round.",
+    "checked": "Checked three times against UEFA's published calendar, 11 September 2026."
   },
   "tables": [
     {
       "title": "Most titles",
-      "columns": ["Club", "Titles"],
+      "columns": [
+        "Club",
+        "Titles"
+      ],
       "rows": [
-        ["Real Madrid", 15],
-        ["AC Milan", 7],
-        ["Bayern Munich", 6],
-        ["Liverpool", 6],
-        ["Barcelona", 5],
-        ["Ajax", 4],
-        ["Inter", 3],
-        ["Manchester United", 3],
-        ["Paris Saint-Germain", 2]
+        [
+          "Real Madrid",
+          15
+        ],
+        [
+          "AC Milan",
+          7
+        ],
+        [
+          "Bayern Munich",
+          6
+        ],
+        [
+          "Liverpool",
+          6
+        ],
+        [
+          "Barcelona",
+          5
+        ],
+        [
+          "Ajax",
+          4
+        ],
+        [
+          "Inter",
+          3
+        ],
+        [
+          "Manchester United",
+          3
+        ],
+        [
+          "Paris Saint-Germain",
+          2
+        ]
       ]
     },
     {
       "title": "Titles by country",
-      "columns": ["Country", "Titles"],
+      "columns": [
+        "Country",
+        "Titles"
+      ],
       "rows": [
-        ["Spain", 20],
-        ["England", 15],
-        ["Italy", 12],
-        ["Germany", 8],
-        ["Netherlands", 6],
-        ["Portugal", 4],
-        ["France", 3],
-        ["Scotland", 1],
-        ["Romania", 1],
-        ["Serbia (as Yugoslavia)", 1]
+        [
+          "Spain",
+          20
+        ],
+        [
+          "England",
+          15
+        ],
+        [
+          "Italy",
+          12
+        ],
+        [
+          "Germany",
+          8
+        ],
+        [
+          "Netherlands",
+          6
+        ],
+        [
+          "Portugal",
+          4
+        ],
+        [
+          "France",
+          3
+        ],
+        [
+          "Scotland",
+          1
+        ],
+        [
+          "Romania",
+          1
+        ],
+        [
+          "Serbia (as Yugoslavia)",
+          1
+        ]
       ]
     },
     {
       "title": "The last ten finals",
-      "columns": ["Year", "Winner", "Score", "Runner-up", "Venue"],
+      "columns": [
+        "Year",
+        "Winner",
+        "Score",
+        "Runner-up",
+        "Venue"
+      ],
       "rows": [
-        [2026, "Paris Saint-Germain", "1–1, 4–3 pens", "Arsenal", "Puskás Aréna, Budapest"],
-        [2025, "Paris Saint-Germain", "5–0", "Inter", "Allianz Arena, Munich"],
-        [2024, "Real Madrid", "2–0", "Borussia Dortmund", "Wembley Stadium, London"],
-        [2023, "Manchester City", "1–0", "Inter", "Atatürk Olympic Stadium, Istanbul"],
-        [2022, "Real Madrid", "1–0", "Liverpool", "Stade de France, Saint-Denis"],
-        [2021, "Chelsea", "1–0", "Manchester City", "Estádio do Dragão, Porto"],
-        [2020, "Bayern Munich", "1–0", "Paris Saint-Germain", "Estádio da Luz, Lisbon"],
-        [2019, "Liverpool", "2–0", "Tottenham Hotspur", "Metropolitano, Madrid"],
-        [2018, "Real Madrid", "3–1", "Liverpool", "Olimpiyskiy, Kyiv"],
-        [2017, "Real Madrid", "4–1", "Juventus", "Millennium Stadium, Cardiff"]
+        [
+          2026,
+          "Paris Saint-Germain",
+          "1–1, 4–3 pens",
+          "Arsenal",
+          "Puskás Aréna, Budapest"
+        ],
+        [
+          2025,
+          "Paris Saint-Germain",
+          "5–0",
+          "Inter",
+          "Allianz Arena, Munich"
+        ],
+        [
+          2024,
+          "Real Madrid",
+          "2–0",
+          "Borussia Dortmund",
+          "Wembley Stadium, London"
+        ],
+        [
+          2023,
+          "Manchester City",
+          "1–0",
+          "Inter",
+          "Atatürk Olympic Stadium, Istanbul"
+        ],
+        [
+          2022,
+          "Real Madrid",
+          "1–0",
+          "Liverpool",
+          "Stade de France, Saint-Denis"
+        ],
+        [
+          2021,
+          "Chelsea",
+          "1–0",
+          "Manchester City",
+          "Estádio do Dragão, Porto"
+        ],
+        [
+          2020,
+          "Bayern Munich",
+          "1–0",
+          "Paris Saint-Germain",
+          "Estádio da Luz, Lisbon"
+        ],
+        [
+          2019,
+          "Liverpool",
+          "2–0",
+          "Tottenham Hotspur",
+          "Metropolitano, Madrid"
+        ],
+        [
+          2018,
+          "Real Madrid",
+          "3–1",
+          "Liverpool",
+          "Olimpiyskiy, Kyiv"
+        ],
+        [
+          2017,
+          "Real Madrid",
+          "4–1",
+          "Juventus",
+          "Millennium Stadium, Cardiff"
+        ]
       ]
     }
   ]

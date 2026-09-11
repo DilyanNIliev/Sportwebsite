@@ -1,0 +1,57 @@
+---
+/**
+ * Ключовите дати на едно състезание.
+ *
+ * Осемте кръга на груповата фаза не са осем реда, а редичка от етикети:
+ * петнайсет реда „етикет плюс стойност“ на телефон заемаха 1437 пиксела,
+ * тоест два екрана само за дати. Следващият кръг е подчертан, защото той е
+ * причината някой да отвори страницата.
+ */
+const { next } = Astro.props;
+const upcoming = (next.matchdays ?? []).find((m) => !m.played);
+---
+<div class="next-edition key-dates">
+  <p class="eyebrow">{next.eyebrow ?? 'Next edition'}</p>
+  <h2 class="key-dates-title">{next.event}</h2>
+
+  {upcoming && (
+    <p class="key-next">
+      <span class="key-next-label">Next</span>
+      Matchday {upcoming.n} · {upcoming.dates}
+    </p>
+  )}
+
+  <p class="next-summary">{next.summary}</p>
+
+  {next.matchdays && (
+    <>
+      <p class="key-label">League phase</p>
+      <ol class="md-chips">
+        {next.matchdays.map((m) => (
+          <li class:list={['md-chip', m.played && 'is-played', m === upcoming && 'is-next']}>
+            <b>{m.n}</b>
+            <span>{m.dates}</span>
+          </li>
+        ))}
+      </ol>
+      {next.matchdaysNote && <p class="key-sub">{next.matchdaysNote}</p>}
+    </>
+  )}
+
+  {next.rows?.length > 0 && (
+    <>
+      <p class="key-label">{next.rowsLabel ?? 'Knockout'}</p>
+      <dl class="next-facts compact">
+        {next.rows.map(([k, v]) => (
+          <>
+            <dt>{k}</dt>
+            <dd>{v}</dd>
+          </>
+        ))}
+      </dl>
+    </>
+  )}
+
+  {next.caution && <p class="note">{next.caution}</p>}
+  <p class="next-checked">{next.checked}</p>
+</div>

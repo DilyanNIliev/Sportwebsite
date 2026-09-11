@@ -1,0 +1,26 @@
+{
+  "title": "The sporting calendar",
+  "note": "Only events whose dates we have checked twice appear here. The list is deliberately shorter than a full fixture list.",
+  "checked": "Checked on 11 September 2026.",
+  "gapNote": "The rest of the autumn — the WTA Finals, the Davis Cup, the closing MotoGP rounds and the darts world championship — is not listed yet. Single sources gave dates for them and one aggregator had the Masters in November, which is four months out, so nothing from that page is trusted here.",
+  "events": [
+    { "from": "2026-10-13", "to": "2026-10-14", "name": "Champions League, matchday 2", "sport": "football", "scope": "club", "where": "Across Europe" },
+    { "from": "2026-10-20", "to": "2026-10-21", "name": "Champions League, matchday 3", "sport": "football", "scope": "club", "where": "Across Europe" },
+    { "from": "2026-11-03", "to": "2026-11-04", "name": "Champions League, matchday 4", "sport": "football", "scope": "club", "where": "Across Europe" },
+    { "from": "2026-11-15", "to": "2026-11-22", "name": "ATP Finals", "sport": "tennis", "scope": "world", "where": "Inalpi Arena, Turin", "note": "The eight best of the season, indoors." },
+    { "from": "2026-11-24", "to": "2026-11-25", "name": "Champions League, matchday 5", "sport": "football", "scope": "club", "where": "Across Europe" },
+    { "from": "2026-12-06", "to": "2026-12-06", "name": "Abu Dhabi Grand Prix — season finale", "sport": "formula-1", "scope": "world", "where": "Yas Marina Circuit", "note": "Closes a 24-round season that opened in Australia in March." },
+    { "from": "2026-12-08", "to": "2026-12-09", "name": "Champions League, matchday 6", "sport": "football", "scope": "club", "where": "Across Europe" },
+
+    { "from": "2027-01-19", "to": "2027-01-20", "name": "Champions League, matchday 7", "sport": "football", "scope": "club", "where": "Across Europe" },
+    { "from": "2027-01-27", "to": "2027-01-27", "name": "Champions League, matchday 8", "sport": "football", "scope": "club", "where": "Across Europe", "note": "All eighteen matches kick off at the same time." },
+    { "from": "2027-02-16", "to": "2027-02-24", "name": "Champions League knockout play-offs", "sport": "football", "scope": "club", "where": "Across Europe", "note": "Two legs, 16–17 and 23–24 February." },
+    { "from": "2027-03-09", "to": "2027-03-17", "name": "Champions League round of 16", "sport": "football", "scope": "club", "where": "Across Europe", "note": "Two legs, 9–10 and 16–17 March." },
+    { "from": "2027-04-06", "to": "2027-04-14", "name": "Champions League quarter-finals", "sport": "football", "scope": "club", "where": "Across Europe", "note": "Two legs, 6–7 and 13–14 April." },
+    { "from": "2027-04-27", "to": "2027-05-05", "name": "Champions League semi-finals", "sport": "football", "scope": "club", "where": "Across Europe", "note": "Two legs, 27–28 April and 4–5 May." },
+    { "from": "2027-06-05", "to": "2027-06-05", "name": "Champions League final", "sport": "football", "scope": "club", "where": "Estadio Metropolitano, Madrid" },
+    { "from": "2027-09-11", "to": "2027-09-19", "name": "World Athletics Championships", "sport": "athletics", "scope": "world", "where": "National Stadium, Beijing" },
+    { "from": "2027-10-01", "to": "2027-11-13", "name": "Rugby World Cup", "sport": "rugby", "scope": "world", "where": "Australia", "note": "The first with twenty-four teams." },
+    { "from": "2027-10-04", "to": "2027-11-21", "name": "Cricket World Cup", "sport": "cricket", "scope": "world", "where": "South Africa, Zimbabwe and Namibia" }
+  ]
+}

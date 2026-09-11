@@ -1,0 +1,161 @@
+---
+/**
+ * Календар на големите събития с два изгледа: по месец и по година.
+ *
+ * „Този месец“ зависи от часовника на читателя, не от деня на билда, затова
+ * сървърът рисува всички месеци, а малък скрипт показва текущия и следващия.
+ * Без JavaScript остават видими всички — по-добре пълен списък, отколкото
+ * празна таблица.
+ */
+import sports from '../data/sports.json';
+import { sportVars } from '../data/sport-style.js';
+
+const { data } = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+
+const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June',
+                'July', 'August', 'September', 'October', 'November', 'December'];
+
+/** Датите се четат от ISO, за да няма два записа на един и същ ден. */
+const parse = (iso) => {
+  const [y, m, d] = iso.split('-').map(Number);
+  return { y, m, d };
+};
+
+/** „13–14 October“, „6 December“, „1 Oct – 13 Nov“. */
+function range(fromIso, toIso) {
+  const a = parse(fromIso);
+  const b = parse(toIso);
+  if (fromIso === toIso) return `${a.d} ${MONTHS[a.m - 1]}`;
+  if (a.m === b.m && a.y === b.y) return `${a.d}–${b.d} ${MONTHS[a.m - 1]}`;
+  const short = (x) => `${x.d} ${MONTHS[x.m - 1].slice(0, 3)}`;
+  return `${short(a)} – ${short(b)}`;
+}
+
+const withMeta = data.events.map((e) => {
+  const a = parse(e.from);
+  return {
+    ...e,
+    key: `${a.y}-${String(a.m).padStart(2, '0')}`,
+    year: a.y,
+    dates: range(e.from, e.to),
+    sportInfo: sports.find((s) => s.slug === e.sport),
+  };
+});
+
+/** Групиране по месец, в реда на датите. */
+const byMonth = [];
+for (const e of withMeta) {
+  const last = byMonth[byMonth.length - 1];
+  if (last && last.key === e.key) last.events.push(e);
+  else byMonth.push({ key: e.key, year: e.year, label: `${MONTHS[parse(e.from).m - 1]} ${e.year}`, events: [e] });
+}
+
+/** Годините, които изобщо имаме. */
+const years = [...new Set(withMeta.map((e) => e.year))].sort();
+const nextYear = years.find((y) => y > years[0]) ?? years[0];
+
+// Денят на билда е резервният отговор, докато скриптът не намери истинския.
+const built = new Date();
+const buildKey = `${built.getFullYear()}-${String(built.getMonth() + 1).padStart(2, '0')}`;
+---
+<div class="cal" data-calendar data-build-month={buildKey}>
+  <div class="cal-head">
+    <h2>{data.title}</h2>
+    <p class="cal-note">{data.note}</p>
+  </div>
+
+  <div class="tabs cal-tabs">
+    <input type="radio" name="cal-view" id="cal-month" checked />
+    <input type="radio" name="cal-view" id="cal-year" />
+    <div class="tablist" role="radiogroup" aria-label="Choose a view">
+      <label for="cal-month">By month</label>
+      <label for="cal-year">By year</label>
+    </div>
+
+    <section class="tabpanel">
+      <p class="cal-scope" data-month-scope>Showing the current month and the next one.</p>
+      {byMonth.map((m) => (
+        <div class="cal-month" data-month={m.key}>
+          <p class="cal-month-name">{m.label}</p>
+          <ul class="cal-list">
+            {m.events.map((e) => (
+              <li class="cal-row" style={sportVars(e.sportInfo)}>
+                <span class="cal-date">{e.dates}</span>
+                <span class="cal-main">
+                  <a class="cal-sport" href={`${base}/${e.sport}/`}>{e.sportInfo?.icon} {e.sportInfo?.name}</a>
+                  <strong>{e.name}</strong>
+                  <em>{e.where}{e.note ? ` · ${e.note}` : ''}</em>
+                </span>
+                <span class:list={['cal-scope-tag', `is-${e.scope}`]}>{e.scope === 'world' ? 'World' : 'Club'}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+      <p class="cal-empty" data-month-empty hidden>
+        Nothing in those two months that we have checked. Switch to the year view.
+      </p>
+    </section>
+
+    <section class="tabpanel">
+      <p class="cal-scope">Everything we have for {nextYear}, with the dates each event runs.</p>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th>Dates</th><th>Event</th><th>Sport</th><th>Where</th></tr></thead>
+          <tbody>
+            {withMeta.filter((e) => e.year === nextYear).map((e) => (
+              <tr>
+                <td class="cal-cell-date">{e.dates}</td>
+                <td><strong>{e.name}</strong></td>
+                <td class="td-note">{e.sportInfo?.name}</td>
+                <td class="td-note">{e.where}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+
+  <noscript>
+    <style>.cal-month[hidden] { display: block !important; }</style>
+  </noscript>
+
+  <p class="note cal-gap">{data.gapNote}</p>
+  <p class="next-checked">{data.checked}</p>
+</div>
+
+<script is:inline>
+  (function () {
+    var cal = document.querySelector('[data-calendar]');
+    if (!cal) return;
+    var months = [].slice.call(cal.querySelectorAll('.cal-month'));
+    var scope = cal.querySelector('[data-month-scope]');
+    var empty = cal.querySelector('[data-month-empty]');
+
+    // Часовникът на читателя, не денят на билда.
+    var now = new Date();
+    var y = now.getFullYear();
+    var m = now.getMonth() + 1;
+    var pad = function (n) { return (n < 10 ? '0' : '') + n; };
+    var thisKey = y + '-' + pad(m);
+    var nextKey = m === 12 ? (y + 1) + '-01' : y + '-' + pad(m + 1);
+
+    var shown = 0;
+    months.forEach(function (el) {
+      var hit = el.dataset.month === thisKey || el.dataset.month === nextKey;
+      el.hidden = !hit;
+      if (hit) shown++;
+    });
+
+    var names = ['January', 'February', 'March', 'April', 'May', 'June',
+                 'July', 'August', 'September', 'October', 'November', 'December'];
+    var nm = m === 12 ? 0 : m;
+    if (scope) {
+      scope.textContent = 'Showing ' + names[m - 1] + ' and ' + names[nm] +
+        (m === 12 ? ' ' + (y + 1) : ' ' + y) + '.';
+    }
+    if (empty) empty.hidden = shown > 0;
+  })();
+</script>

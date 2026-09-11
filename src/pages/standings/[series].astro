@@ -7,12 +7,37 @@ export function getStaticPaths() {
   return standings.map((s) => ({ params: { series: s.slug }, props: { d: s.data } }));
 }
 
+/** Показваме по десет наведнъж и спираме на стотния. */
+const PAGE_SIZE = 10;
+const MAX_ROWS = 100;
+
 const { d } = Astro.props;
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const sport = sports.find((s) => s.slug === d.sport);
 const crumbs = [{ label: 'Home', href: `${base}/` }, { label: 'Standings', href: `${base}/standings/` }, { label: d.series }];
-const rows = d.drivers;
-const pending = rows.filter((r) => !r.gap).length < 10 && !d.footnote;
+
+/**
+ * На всеки ред слагаме пореден номер по броя истински редове преди него.
+ * Редът за пропуснати позиции носи номера на реда преди себе си, за да
+ * се показва заедно с него, а не сам в празна таблица.
+ */
+let counted = 0;
+const rows = [];
+for (const r of d.drivers) {
+  if (r.gap) { rows.push({ ...r, seq: counted }); continue; }
+  if (counted >= MAX_ROWS) break;
+  counted += 1;
+  rows.push({ ...r, seq: counted });
+}
+const total = counted;
+const truncated = d.drivers.filter((r) => !r.gap).length > MAX_ROWS;
+/** Докъде стига класирането, когато го публикуваме изцяло — за да се вижда колко липсва. */
+const listTo = Math.min(d.listTo ?? total, MAX_ROWS);
+const short = total < listTo;
+const collapsible = total > PAGE_SIZE;
+const initial = collapsible ? PAGE_SIZE : total;
+
+const pending = total < 10 && !d.footnote;
 const hasTeams = rows.some((r) => r.team);
 const hasCountry = rows.some((r) => r.country);
 const hasMove = rows.some((r) => r.move !== undefined);
@@ -46,47 +71,90 @@ function moveLabel(m) {
     <div class="wrap">
       <div class="block-head"><h2>{d.entityLabel ? d.entityLabel + 's' : 'Drivers'}</h2></div>
 
-      {d.searchable && (
-        <div class="table-search">
-          <label for="row-search">Search by name or country</label>
-          <input id="row-search" type="search" placeholder="e.g. Sinner, Ukraine" autocomplete="off" />
-          <p class="search-count" data-search-count hidden></p>
-        </div>
-      )}
-      <div class="table-scroll">
-        <table>
-          <thead>
-                <tr>
-                  <th>#</th>
-                  <th>{d.entityLabel ?? 'Driver'}</th>
-                  {hasCountry && <th>Country</th>}
-                  {hasTeams && <th>Team</th>}
-                  <th>Points</th>
-                  {hasMove && <th>Week</th>}
-                </tr>
-              </thead>
-          <tbody>
-            {rows.map((r) => r.gap ? (
-              <tr class="row-gap"><td colspan={cols}>{r.gap} — {r.note}</td></tr>
-            ) : (
-              <tr data-row data-name={fold(`${r.name} ${r.country ?? ''} ${r.team ?? ''}`)}>
-                <td>{r.pos}</td>
-                <td>{r.name}</td>
-                {hasCountry && <td class="td-note">{r.country}</td>}
-                {hasTeams && <td class="td-note">{r.team}</td>}
-                <td><strong>{r.points.toLocaleString('en-GB')}</strong></td>
-                {hasMove && (
-                  <td>
-                    <span class={`move ${moveLabel(r.move).cls}`} aria-label={moveLabel(r.move).aria}>
-                      {moveLabel(r.move).text}
-                    </span>
-                  </td>
-                )}
+      <div data-rank-table data-page-size={PAGE_SIZE} data-total={total} data-shown={initial}>
+        {d.searchable && (
+          <div class="table-search">
+            <label for="row-search">Search by name or country</label>
+            <input id="row-search" type="search" placeholder="e.g. Sinner, Ukraine" autocomplete="off" />
+            <p class="search-count" data-search-count hidden></p>
+          </div>
+        )}
+        <div class="table-scroll">
+          <table id="rank-table">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>{d.entityLabel ?? 'Driver'}</th>
+                {hasCountry && <th>Country</th>}
+                {hasTeams && <th>Team</th>}
+                <th>Points</th>
+                {hasMove && <th>Week</th>}
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {rows.map((r) => r.gap ? (
+                <tr class="row-gap" data-seq={r.seq} hidden={collapsible && r.seq > initial}>
+                  <td colspan={cols}>{r.gap} — {r.note}</td>
+                </tr>
+              ) : (
+                <tr
+                  data-row
+                  data-seq={r.seq}
+                  data-name={fold(`${r.name} ${r.country ?? ''} ${r.team ?? ''}`)}
+                  hidden={collapsible && r.seq > initial}
+                >
+                  <td>{r.pos}</td>
+                  <td>{r.name}</td>
+                  {hasCountry && <td class="td-note">{r.country}</td>}
+                  {hasTeams && <td class="td-note">{r.team}</td>}
+                  <td><strong>{r.points.toLocaleString('en-GB')}</strong></td>
+                  {hasMove && (
+                    <td>
+                      <span class={`move ${moveLabel(r.move).cls}`} aria-label={moveLabel(r.move).aria}>
+                        {moveLabel(r.move).text}
+                      </span>
+                    </td>
+                  )}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        {collapsible && (
+          <div class="table-more">
+            <button type="button" class="btn-more" data-more aria-controls="rank-table">
+              Show {PAGE_SIZE} more
+            </button>
+            <p class="more-count" data-more-count aria-live="polite">Showing {initial} of {total}</p>
+          </div>
+        )}
       </div>
+
+      {/* Без JavaScript показваме цялата таблица наведнъж — по-добре дълга, отколкото отрязана. */}
+      <noscript>
+        <style>
+          #rank-table tbody tr[hidden] { display: table-row !important; }
+          .table-more { display: none !important; }
+        </style>
+      </noscript>
+
+      {truncated && (
+        <p class="note">
+          The table stops at the hundredth place. Anyone further down the list is outside
+          the part of the ranking that decides seedings and direct entries.
+        </p>
+      )}
+
+      {short && (
+        <p class="note">
+          The list runs to {total} at the moment; it is meant to reach {listTo}.
+          Positions are added in blocks of ten, and only once the points and the
+          country have been checked against the published ranking — so the table
+          grows a little slower than the ranking itself.
+        </p>
+      )}
+
       {pending && (
         <p class="note">
           Positions 1–{d.confirmedThrough} are confirmed against published classifications.
@@ -119,35 +187,73 @@ function moveLabel(m) {
       </p>
     </div>
   </section>
+
   <script is:inline>
     (function () {
+      var wrap = document.querySelector('[data-rank-table]');
+      if (!wrap) return;
+
+      var pageSize = Number(wrap.dataset.pageSize) || 10;
+      var total = Number(wrap.dataset.total) || 0;
+      var shown = Number(wrap.dataset.shown) || total;
+
+      var trs = [].slice.call(wrap.querySelectorAll('tbody tr'));
       var input = document.getElementById('row-search');
-      if (!input) return;
+      var searchCount = wrap.querySelector('[data-search-count]');
+      var moreBtn = wrap.querySelector('[data-more]');
+      var moreCount = wrap.querySelector('[data-more-count]');
+
       // Същото сгъване като при генерирането, за да съвпадат двете страни.
       function fold(t) {
         return t.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
       }
-      var rows = [].slice.call(document.querySelectorAll('tr[data-row]'));
-      var gaps = [].slice.call(document.querySelectorAll('tr.row-gap'));
-      var count = document.querySelector('[data-search-count]');
 
-      input.addEventListener('input', function () {
-        var q = fold(input.value.trim());
-        var shown = 0;
-        rows.forEach(function (r) {
-          var hit = !q || r.dataset.name.indexOf(q) !== -1;
-          r.hidden = !hit;
-          if (hit) shown++;
+      /** Без търсене показваме първите `shown` реда; при търсене — всички съвпадения. */
+      function render() {
+        var q = input ? fold(input.value.trim()) : '';
+        var hits = 0;
+
+        trs.forEach(function (tr) {
+          if (q) {
+            // Редът за пропуснати позиции няма смисъл, докато се търси.
+            if (!tr.dataset.name) { tr.hidden = true; return; }
+            var hit = tr.dataset.name.indexOf(q) !== -1;
+            tr.hidden = !hit;
+            if (hit) hits++;
+          } else {
+            tr.hidden = Number(tr.dataset.seq) > shown;
+          }
         });
-        // Редът за пропуснатите позиции няма смисъл, докато се търси.
-        gaps.forEach(function (g) { g.hidden = !!q; });
-        if (count) {
-          count.hidden = !q;
-          count.textContent = shown === 0
+
+        if (searchCount) {
+          searchCount.hidden = !q;
+          searchCount.textContent = hits === 0
             ? 'Nobody matches "' + input.value + '".'
-            : shown + (shown === 1 ? ' match' : ' matches');
+            : hits + (hits === 1 ? ' match' : ' matches') + ' out of ' + total;
         }
-      });
+        if (moreBtn) {
+          // Търсенето вече гледа цялата таблица, така че бутонът е излишен.
+          moreBtn.hidden = !!q || shown >= total;
+          moreCount.hidden = !!q;
+          var left = total - shown;
+          moreBtn.textContent = 'Show ' + Math.min(pageSize, left) + ' more';
+          moreCount.textContent = 'Showing ' + shown + ' of ' + total;
+        }
+      }
+
+      if (moreBtn) {
+        moreBtn.addEventListener('click', function () {
+          var firstNew = shown + 1;
+          shown = Math.min(shown + pageSize, total);
+          render();
+          // Фокусът отива на първия нов ред, за да не се губи четецът на екран.
+          var target = wrap.querySelector('tr[data-seq="' + firstNew + '"] td');
+          if (target) { target.setAttribute('tabindex', '-1'); target.focus(); }
+        });
+      }
+      if (input) input.addEventListener('input', render);
+
+      render();
     })();
   </script>
 </Base>

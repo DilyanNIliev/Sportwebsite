@@ -421,3 +421,20 @@ tbody td:nth-child(2) { font-weight: 650; }
   font-size: .82rem; color: var(--text-faint); font-style: italic;
   background: var(--bg-soft); text-align: center;
 }
+
+/* ---------- „още десет“ под класирането ---------- */
+.table-more {
+  display: flex; flex-wrap: wrap; align-items: center;
+  gap: 10px 16px; margin: 16px 0 0;
+}
+.btn-more {
+  font: inherit; font-size: .9rem; font-weight: 650; cursor: pointer;
+  padding: 10px 20px; border-radius: 999px; color: var(--text);
+  border: 1px solid var(--border); background: var(--bg-raised);
+  transition: border-color .15s ease, background .15s ease;
+}
+.btn-more:hover { border-color: var(--brand); background: var(--bg-soft); }
+.btn-more:focus-visible { outline: 2px solid var(--brand); outline-offset: 2px; }
+.more-count { margin: 0; font-size: .8rem; color: var(--text-faint); }
+/* Клетката получава фокус след „още“ — рамка около целия ред не помага. */
+#rank-table td:focus-visible { outline: 2px solid var(--brand); outline-offset: -2px; }

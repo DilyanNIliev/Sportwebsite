@@ -7,6 +7,7 @@
   "searchable": true,
   "asOf": "As of 10 September 2026. The WTA rankings are recalculated every Monday over a rolling 52 weeks.",
   "confirmedThrough": 10,
+  "listTo": 100,
   "drivers": [
     { "pos": 1, "name": "Elena Rybakina", "country": "Kazakhstan", "points": 8681, "move": 1 },
     { "pos": 2, "name": "Aryna Sabalenka", "country": "Belarus", "points": 7355, "move": -1 },

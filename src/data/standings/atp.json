@@ -7,6 +7,7 @@
   "searchable": true,
   "asOf": "As of 10 September 2026. The ATP rankings are recalculated every Monday over a rolling 52 weeks.",
   "confirmedThrough": 10,
+  "listTo": 100,
   "drivers": [
     { "pos": 1, "name": "Jannik Sinner", "country": "Italy", "points": 12800, "move": 0 },
     { "pos": 2, "name": "Alexander Zverev", "country": "Germany", "points": 7790, "move": 1 },

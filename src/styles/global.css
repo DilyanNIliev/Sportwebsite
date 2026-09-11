@@ -444,13 +444,38 @@ tbody td:nth-child(2) { font-weight: 650; }
 .lineups-head h2 { margin: 0; font-size: 1.3rem; }
 .lineups-head p { margin: 4px 0 0; font-size: .85rem; color: var(--text-faint); }
 
-.pitch-pair {
-  display: grid; gap: 22px; margin: 20px 0 0;
-  grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr));
+/* Един отбор наведнъж — иначе двата терена изяждат цял екран. Табовете са
+   същите радио бутони като в архива на бокса, значи работят и без JavaScript
+   и двата състава стоят в HTML-а, видими за обхождачите. */
+.lineup-teams { margin: 18px 0 0; }
+.lineup-teams .tablist { margin-bottom: 16px; }
+/* Активният таб взима цвета на клуба, за да се вижда чий състав гледаш. */
+.lineup-teams > input:nth-of-type(1):checked ~ .tablist label:nth-of-type(1),
+.lineup-teams > input:nth-of-type(2):checked ~ .tablist label:nth-of-type(2) {
+  background: var(--club, var(--brand)); border-color: var(--club, var(--brand)); color: #fff;
 }
+:root[data-theme="dark"] .lineup-teams > input:nth-of-type(1):checked ~ .tablist label:nth-of-type(1),
+:root[data-theme="dark"] .lineup-teams > input:nth-of-type(2):checked ~ .tablist label:nth-of-type(2) {
+  background: var(--club-dark, var(--brand)); border-color: var(--club-dark, var(--brand)); color: #10131a;
+}
+
 .pitch-card {
   border: 1px solid var(--border); border-radius: 14px;
-  background: var(--bg-raised); padding: 16px 16px 4px;
+  background: var(--bg-raised); padding: 16px;
+  max-width: 420px;
+}
+/* Един отбор наведнъж освобождава ширина — на широк екран резервите отиват
+   до терена, вместо под него, и блокът става по-нисък, не по-висок. */
+@media (min-width: 720px) {
+  .pitch-card {
+    max-width: none;
+    display: grid; gap: 4px 26px; align-items: start;
+    grid-template-columns: 320px minmax(0, 1fr);
+    grid-template-areas: "head head" "pitch bench";
+  }
+  .pitch-card-head { grid-area: head; }
+  .pitch { grid-area: pitch; }
+  .bench { grid-area: bench; border-top: 0; padding-top: 16px; margin-top: 14px; }
 }
 .pitch-card-head h3 {
   margin: 0; font-size: 1.02rem;
@@ -465,8 +490,11 @@ tbody td:nth-child(2) { font-weight: 650; }
 
 /* Тревата е плътен цвят, не картинка — нула килобайта и еднакво в двете теми. */
 .pitch {
-  position: relative; margin: 14px 0 0;
+  position: relative; margin: 14px auto 0;
   aspect-ratio: 100 / 150; border-radius: 10px; overflow: hidden;
+  /* Ширината е изрична: в grid клетка „margin:auto“ без width свива терена
+     до нула, защото всички играчи в него са абсолютно позиционирани. */
+  width: 100%; max-width: 320px;
   background: #17693f;
 }
 :root[data-theme="dark"] .pitch { background: #10432a; }

@@ -3,7 +3,7 @@
   "competition": "Champions League 2026/27, league phase matchday 1",
   "venue": "Santiago Bernabéu, Madrid",
   "date": "8 September 2026",
-  "note": "Formations are our reading of the match reports, not an official label — one report described Madrid's shape as 4-3-3 and another as 4-2-3-1 with the same eleven players. Where a position could not be pinned down, the dot is left without a name rather than filled with a guess.",
+  "note": "Formations are our reading of the reports, not an official label: one described Madrid as 4-3-3, another as 4-2-3-1 with the same eleven. A dot without a name is a position we could not pin down.",
   "teams": [
     {
       "team": "Real Madrid",
@@ -26,7 +26,7 @@
         { "name": "Mbappé", "full": "Kylian Mbappé" }
       ],
       "bench": [{ "name": "Carreras", "full": "Álvaro Carreras" }],
-      "benchNote": "Only Carreras is confirmed on the bench. Arda Güler was suspended and did not travel into the squad. The rest of the bench is not yet confirmed and is deliberately left blank."
+      "benchNote": "Only Carreras is confirmed. Arda Güler was suspended. The rest is left blank until we can check it."
     },
     {
       "team": "Inter",
@@ -49,7 +49,7 @@
         { "name": "Thuram", "full": "Marcus Thuram" }
       ],
       "bench": [],
-      "benchNote": "Inter's bench is not yet confirmed, so it is left empty rather than filled in from a predicted line-up."
+      "benchNote": "Not confirmed. The only lists we found were predicted line-ups, so this stays empty."
     }
   ]
 }

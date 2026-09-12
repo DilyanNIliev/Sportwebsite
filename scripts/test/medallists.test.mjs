@@ -303,6 +303,20 @@ assert.equal(team.events[0].bronze, 'Oliver Zeidler Germany', 'индивиду�
 // Краят на ред пред „details“ не бива да оставя запетая след името.
 assert.equal(team.events[0].event, 'Double sculls', 'без „, details“ накрая');
 
+// Черта в клетката дели двама носители на един медал (тройното сребро на
+// 100 метра бътерфлай в Рио). Изчезваше без следа и лепеше имената.
+const hr = parseMedallists(`
+<div class="mw-heading"><h2 id="Swimming">Swimming</h2></div>
+<table class="wikitable"><tbody>
+<tr><th>Event</th><th>Gold</th><th>Silver</th><th>Bronze</th></tr>
+<tr><td>100 metre butterfly</td><td>Joseph Schooling<br>Singapore</td>
+<td>Michael Phelps<br>United States<hr>Chad le Clos<br>South Africa<hr>László Cseh<br>Hungary</td>
+<td>Not awarded</td></tr>
+</tbody></table>`);
+assert.equal(hr.events[0].silver,
+  'Michael Phelps, United States · Chad le Clos, South Africa · László Cseh, Hungary',
+  'тримата със сребро са трима, не един слепен');
+
 // Пояснение в скоби на нов ред не е нов запис.
 const paren = parseMedallists(`
 <div class="mw-heading"><h2 id="Athletics">Athletics</h2></div>

@@ -95,6 +95,10 @@ const strip = (html) =>
     // е засегната — там между името и държавата стои интервал.
     .replace(/<br\s*\/?>/gi, ', ')
     .replace(/<\/(li|p|div|dd|dt)\s*>/gi, ', ')
+    // Черта в клетката дели ДВАМА носители на един и същи медал (тройното
+    // сребро на 100 метра бътерфлай в Рио). Същият разделител, който се
+    // ползва и когато двамата са на отделни редове.
+    .replace(/<hr\s*\/?>/gi, ' · ')
     .replace(/<[^>]+>/g, '')
     .replace(/&nbsp;/g, ' ')
     .replace(/&amp;/g, '&')
@@ -532,8 +536,13 @@ async function main() {
       if (dupes.length) {
         throw new Error(`${dupes.length} повторени дисциплини, първата „${dupes[0]}“ — липсва различаващ признак`);
       }
+      // Слепено поле не е грешка, която проверките хващат — затова се брои.
+      // „McEwen“ и „MyKayla“ са истински имена, оттам изключенията.
+      const glued = events.flatMap((e) => [e.gold, e.silver, e.bronze])
+        .filter((v) => /[a-zà-ÿ][A-ZÀ-Þ]/.test(v ?? '') && !/(Mc|Mac|La|Le|De|Van|Di|O')[A-Z]/.test(v));
       report2.push(`${g.label.padEnd(22)} ${String(events.length).padStart(4)} дисциплини, ` +
-        `${String(sports.size).padStart(2)} спорта, ${skipped.length} пропуснати реда`);
+        `${String(sports.size).padStart(2)} спорта, ${skipped.length} пропуснати реда` +
+        (glued.length ? `, ${glued.length} слепени полета: „${glued[0]}“` : ''));
       ok2 += 1;
 
       if (!probe) {

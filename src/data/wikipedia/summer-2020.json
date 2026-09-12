@@ -3,7 +3,7 @@
   "source": "https://en.wikipedia.org/wiki/2020_Summer_Olympics_medal_table",
   "sourceName": "Wikipedia",
   "licence": "CC BY-SA 4.0",
-  "fetched": "2026-09-11",
+  "fetched": "2026-09-12",
   "rejectedRows": 0,
   "rows": [
     {
@@ -295,7 +295,7 @@
       "total": 4
     },
     {
-      "pos": null,
+      "pos": 36,
       "country": "Uganda",
       "gold": 2,
       "silver": 1,
@@ -319,7 +319,7 @@
       "total": 4
     },
     {
-      "pos": null,
+      "pos": 39,
       "country": "Israel",
       "gold": 2,
       "silver": 0,
@@ -343,7 +343,7 @@
       "total": 2
     },
     {
-      "pos": null,
+      "pos": 42,
       "country": "Kosovo",
       "gold": 2,
       "silver": 0,
@@ -375,7 +375,7 @@
       "total": 4
     },
     {
-      "pos": null,
+      "pos": 46,
       "country": "Venezuela",
       "gold": 1,
       "silver": 3,
@@ -407,7 +407,7 @@
       "total": 4
     },
     {
-      "pos": null,
+      "pos": 50,
       "country": "Slovakia",
       "gold": 1,
       "silver": 2,
@@ -455,7 +455,7 @@
       "total": 4
     },
     {
-      "pos": null,
+      "pos": 56,
       "country": "Portugal",
       "gold": 1,
       "silver": 1,
@@ -479,7 +479,7 @@
       "total": 2
     },
     {
-      "pos": null,
+      "pos": 59,
       "country": "Fiji",
       "gold": 1,
       "silver": 0,
@@ -487,7 +487,7 @@
       "total": 2
     },
     {
-      "pos": null,
+      "pos": 59,
       "country": "Latvia",
       "gold": 1,
       "silver": 0,
@@ -495,7 +495,7 @@
       "total": 2
     },
     {
-      "pos": null,
+      "pos": 59,
       "country": "Thailand",
       "gold": 1,
       "silver": 0,
@@ -511,7 +511,7 @@
       "total": 1
     },
     {
-      "pos": null,
+      "pos": 63,
       "country": "Morocco",
       "gold": 1,
       "silver": 0,
@@ -519,7 +519,7 @@
       "total": 1
     },
     {
-      "pos": null,
+      "pos": 63,
       "country": "Puerto Rico",
       "gold": 1,
       "silver": 0,
@@ -583,7 +583,7 @@
       "total": 3
     },
     {
-      "pos": null,
+      "pos": 72,
       "country": "San Marino",
       "gold": 0,
       "silver": 1,
@@ -599,7 +599,7 @@
       "total": 2
     },
     {
-      "pos": null,
+      "pos": 74,
       "country": "Malaysia",
       "gold": 0,
       "silver": 1,
@@ -607,7 +607,7 @@
       "total": 2
     },
     {
-      "pos": null,
+      "pos": 74,
       "country": "Nigeria",
       "gold": 0,
       "silver": 1,
@@ -623,7 +623,7 @@
       "total": 1
     },
     {
-      "pos": null,
+      "pos": 77,
       "country": "Lithuania",
       "gold": 0,
       "silver": 1,
@@ -631,7 +631,7 @@
       "total": 1
     },
     {
-      "pos": null,
+      "pos": 77,
       "country": "Namibia",
       "gold": 0,
       "silver": 1,
@@ -639,7 +639,7 @@
       "total": 1
     },
     {
-      "pos": null,
+      "pos": 77,
       "country": "North Macedonia",
       "gold": 0,
       "silver": 1,
@@ -647,7 +647,7 @@
       "total": 1
     },
     {
-      "pos": null,
+      "pos": 77,
       "country": "Saudi Arabia",
       "gold": 0,
       "silver": 1,
@@ -655,7 +655,7 @@
       "total": 1
     },
     {
-      "pos": null,
+      "pos": 77,
       "country": "Turkmenistan",
       "gold": 0,
       "silver": 1,
@@ -695,7 +695,7 @@
       "total": 1
     },
     {
-      "pos": null,
+      "pos": 86,
       "country": "Burkina Faso",
       "gold": 0,
       "silver": 0,
@@ -703,7 +703,7 @@
       "total": 1
     },
     {
-      "pos": null,
+      "pos": 86,
       "country": "Ghana",
       "gold": 0,
       "silver": 0,
@@ -711,7 +711,7 @@
       "total": 1
     },
     {
-      "pos": null,
+      "pos": 86,
       "country": "Grenada",
       "gold": 0,
       "silver": 0,
@@ -719,7 +719,7 @@
       "total": 1
     },
     {
-      "pos": null,
+      "pos": 86,
       "country": "Ivory Coast",
       "gold": 0,
       "silver": 0,
@@ -727,7 +727,7 @@
       "total": 1
     },
     {
-      "pos": null,
+      "pos": 86,
       "country": "Kuwait",
       "gold": 0,
       "silver": 0,
@@ -735,7 +735,7 @@
       "total": 1
     },
     {
-      "pos": null,
+      "pos": 86,
       "country": "Moldova",
       "gold": 0,
       "silver": 0,
@@ -743,7 +743,7 @@
       "total": 1
     },
     {
-      "pos": null,
+      "pos": 86,
       "country": "Syria",
       "gold": 0,
       "silver": 0,

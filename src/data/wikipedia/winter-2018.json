@@ -3,7 +3,7 @@
   "source": "https://en.wikipedia.org/wiki/2018_Winter_Olympics_medal_table",
   "sourceName": "Wikipedia",
   "licence": "CC BY-SA 4.0",
-  "fetched": "2026-09-11",
+  "fetched": "2026-09-12",
   "rejectedRows": 0,
   "rows": [
     {
@@ -175,7 +175,7 @@
       "total": 1
     },
     {
-      "pos": null,
+      "pos": 21,
       "country": "Ukraine",
       "gold": 1,
       "silver": 0,
@@ -215,7 +215,7 @@
       "total": 2
     },
     {
-      "pos": null,
+      "pos": 26,
       "country": "Spain",
       "gold": 0,
       "silver": 0,
@@ -231,7 +231,7 @@
       "total": 1
     },
     {
-      "pos": null,
+      "pos": 28,
       "country": "Latvia",
       "gold": 0,
       "silver": 0,
@@ -239,7 +239,7 @@
       "total": 1
     },
     {
-      "pos": null,
+      "pos": 28,
       "country": "Liechtenstein",
       "gold": 0,
       "silver": 0,

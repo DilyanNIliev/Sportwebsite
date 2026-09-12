@@ -3,7 +3,7 @@
   "source": "https://en.wikipedia.org/wiki/2010_Winter_Olympics_medal_table",
   "sourceName": "Wikipedia",
   "licence": "CC BY-SA 4.0",
-  "fetched": "2026-09-11",
+  "fetched": "2026-09-12",
   "rejectedRows": 0,
   "rows": [
     {
@@ -175,7 +175,7 @@
       "total": 3
     },
     {
-      "pos": null,
+      "pos": 21,
       "country": "Slovenia",
       "gold": 0,
       "silver": 2,
@@ -207,7 +207,7 @@
       "total": 1
     },
     {
-      "pos": null,
+      "pos": 25,
       "country": "Kazakhstan",
       "gold": 0,
       "silver": 1,

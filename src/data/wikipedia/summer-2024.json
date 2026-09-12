@@ -3,7 +3,7 @@
   "source": "https://en.wikipedia.org/wiki/2024_Summer_Olympics_medal_table",
   "sourceName": "Wikipedia",
   "licence": "CC BY-SA 4.0",
-  "fetched": "2026-09-11",
+  "fetched": "2026-09-12",
   "rejectedRows": 0,
   "rows": [
     {
@@ -247,7 +247,7 @@
       "total": 7
     },
     {
-      "pos": null,
+      "pos": 30,
       "country": "Croatia",
       "gold": 2,
       "silver": 2,
@@ -303,7 +303,7 @@
       "total": 4
     },
     {
-      "pos": null,
+      "pos": 37,
       "country": "Philippines",
       "gold": 2,
       "silver": 0,
@@ -319,7 +319,7 @@
       "total": 3
     },
     {
-      "pos": null,
+      "pos": 39,
       "country": "Indonesia",
       "gold": 2,
       "silver": 0,
@@ -359,7 +359,7 @@
       "total": 6
     },
     {
-      "pos": null,
+      "pos": 44,
       "country": "South Africa",
       "gold": 1,
       "silver": 3,
@@ -367,7 +367,7 @@
       "total": 6
     },
     {
-      "pos": null,
+      "pos": 44,
       "country": "Thailand",
       "gold": 1,
       "silver": 3,
@@ -431,7 +431,7 @@
       "total": 3
     },
     {
-      "pos": null,
+      "pos": 52,
       "country": "Egypt",
       "gold": 1,
       "silver": 1,
@@ -439,7 +439,7 @@
       "total": 3
     },
     {
-      "pos": null,
+      "pos": 52,
       "country": "Tunisia",
       "gold": 1,
       "silver": 1,
@@ -455,7 +455,7 @@
       "total": 2
     },
     {
-      "pos": null,
+      "pos": 55,
       "country": "Chile",
       "gold": 1,
       "silver": 1,
@@ -463,7 +463,7 @@
       "total": 2
     },
     {
-      "pos": null,
+      "pos": 55,
       "country": "Saint Lucia",
       "gold": 1,
       "silver": 1,
@@ -471,7 +471,7 @@
       "total": 2
     },
     {
-      "pos": null,
+      "pos": 55,
       "country": "Uganda",
       "gold": 1,
       "silver": 1,
@@ -495,7 +495,7 @@
       "total": 2
     },
     {
-      "pos": null,
+      "pos": 60,
       "country": "Morocco",
       "gold": 1,
       "silver": 0,
@@ -511,7 +511,7 @@
       "total": 1
     },
     {
-      "pos": null,
+      "pos": 62,
       "country": "Pakistan",
       "gold": 1,
       "silver": 0,
@@ -543,7 +543,7 @@
       "total": 4
     },
     {
-      "pos": null,
+      "pos": 66,
       "country": "Colombia",
       "gold": 0,
       "silver": 3,
@@ -559,7 +559,7 @@
       "total": 6
     },
     {
-      "pos": null,
+      "pos": 68,
       "country": "North Korea",
       "gold": 0,
       "silver": 2,
@@ -607,7 +607,7 @@
       "total": 1
     },
     {
-      "pos": null,
+      "pos": 74,
       "country": "Fiji",
       "gold": 0,
       "silver": 1,
@@ -615,7 +615,7 @@
       "total": 1
     },
     {
-      "pos": null,
+      "pos": 74,
       "country": "Jordan",
       "gold": 0,
       "silver": 1,
@@ -623,7 +623,7 @@
       "total": 1
     },
     {
-      "pos": null,
+      "pos": 74,
       "country": "Mongolia",
       "gold": 0,
       "silver": 1,
@@ -631,7 +631,7 @@
       "total": 1
     },
     {
-      "pos": null,
+      "pos": 74,
       "country": "Panama",
       "gold": 0,
       "silver": 1,
@@ -655,7 +655,7 @@
       "total": 2
     },
     {
-      "pos": null,
+      "pos": 80,
       "country": "Grenada",
       "gold": 0,
       "silver": 0,
@@ -663,7 +663,7 @@
       "total": 2
     },
     {
-      "pos": null,
+      "pos": 80,
       "country": "Malaysia",
       "gold": 0,
       "silver": 0,
@@ -671,7 +671,7 @@
       "total": 2
     },
     {
-      "pos": null,
+      "pos": 80,
       "country": "Puerto Rico",
       "gold": 0,
       "silver": 0,
@@ -687,7 +687,7 @@
       "total": 1
     },
     {
-      "pos": null,
+      "pos": 84,
       "country": "Ivory Coast",
       "gold": 0,
       "silver": 0,
@@ -695,7 +695,7 @@
       "total": 1
     },
     {
-      "pos": null,
+      "pos": 84,
       "country": "Peru",
       "gold": 0,
       "silver": 0,
@@ -703,7 +703,7 @@
       "total": 1
     },
     {
-      "pos": null,
+      "pos": 84,
       "country": "Qatar",
       "gold": 0,
       "silver": 0,
@@ -711,7 +711,7 @@
       "total": 1
     },
     {
-      "pos": null,
+      "pos": 84,
       "country": "Refugee Olympic Team",
       "gold": 0,
       "silver": 0,
@@ -719,7 +719,7 @@
       "total": 1
     },
     {
-      "pos": null,
+      "pos": 84,
       "country": "Singapore",
       "gold": 0,
       "silver": 0,
@@ -727,7 +727,7 @@
       "total": 1
     },
     {
-      "pos": null,
+      "pos": 84,
       "country": "Slovakia",
       "gold": 0,
       "silver": 0,
@@ -735,7 +735,7 @@
       "total": 1
     },
     {
-      "pos": null,
+      "pos": 84,
       "country": "Zambia",
       "gold": 0,
       "silver": 0,

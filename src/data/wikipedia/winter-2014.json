@@ -3,7 +3,7 @@
   "source": "https://en.wikipedia.org/wiki/2014_Winter_Olympics_medal_table",
   "sourceName": "Wikipedia",
   "licence": "CC BY-SA 4.0",
-  "fetched": "2026-09-11",
+  "fetched": "2026-09-12",
   "rejectedRows": 0,
   "rows": [
     {
@@ -159,7 +159,7 @@
       "total": 5
     },
     {
-      "pos": null,
+      "pos": 19,
       "country": "Latvia",
       "gold": 1,
       "silver": 1,

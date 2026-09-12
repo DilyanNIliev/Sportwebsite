@@ -282,3 +282,25 @@ assert.equal(dt.events[1].category, 'Sprint · Women');
 assert.equal(dt.events[2].category, undefined, 'и пада при следващото истинско заглавие');
 
 console.log('минава и получереният надред');
+
+// 8. Отборна клетка. Държавата и имената са разделени с край на ред, който
+//    изчезваше без следа: „RomaniaAndrei CorneaMarian Enache“.
+const team = parseMedallists(`
+<div class="mw-heading"><h2 id="Rowing">Rowing</h2></div>
+<table class="wikitable"><tbody>
+<tr><th>Event</th><th>Gold</th><th>Silver</th><th>Bronze</th></tr>
+<tr>
+<td><a>Double sculls</a><br><a>details</a></td>
+<td><span class="flagicon"><img src="ro.png"></span><a>Romania</a><br><a>Andrei Cornea</a><br><a>Marian Enache</a></td>
+<td><ul><li>Netherlands</li><li>Melvin Twellaar</li><li>Stef Broenink</li></ul></td>
+<td><a>Oliver Zeidler</a>&nbsp;<small><a>Germany</a></small></td>
+</tr>
+</tbody></table>`);
+assert.equal(team.events.length, 1);
+assert.equal(team.events[0].gold, 'Romania, Andrei Cornea, Marian Enache', 'имената вече не са слепени');
+assert.equal(team.events[0].silver, 'Netherlands, Melvin Twellaar, Stef Broenink', 'и от списък с точки');
+assert.equal(team.events[0].bronze, 'Oliver Zeidler Germany', 'индивидуалната клетка е както преди');
+// Краят на ред пред „details“ не бива да оставя запетая след името.
+assert.equal(team.events[0].event, 'Double sculls', 'без „, details“ накрая');
+
+console.log('минава и отборната клетка');

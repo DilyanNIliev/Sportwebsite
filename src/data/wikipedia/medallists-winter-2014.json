@@ -12,300 +12,300 @@
       "sport": "Alpine skiing",
       "category": "Men's events",
       "event": "Downhill",
-      "gold": "Matthias Mayer Austria",
-      "silver": "Christof Innerhofer Italy",
-      "bronze": "Kjetil Jansrud Norway"
+      "gold": "Matthias Mayer, Austria",
+      "silver": "Christof Innerhofer, Italy",
+      "bronze": "Kjetil Jansrud, Norway"
     },
     {
       "sport": "Alpine skiing",
       "category": "Men's events",
       "event": "Super-G",
-      "gold": "Kjetil Jansrud Norway",
-      "silver": "Andrew Weibrecht United States",
-      "bronze": "Jan Hudec Canada · Bode Miller United States"
+      "gold": "Kjetil Jansrud, Norway",
+      "silver": "Andrew Weibrecht, United States",
+      "bronze": "Jan Hudec, Canada · Bode Miller, United States"
     },
     {
       "sport": "Alpine skiing",
       "category": "Men's events",
       "event": "Giant slalom",
-      "gold": "Ted Ligety United States",
-      "silver": "Steve Missillier France",
-      "bronze": "Alexis Pinturault France"
+      "gold": "Ted Ligety, United States",
+      "silver": "Steve Missillier, France",
+      "bronze": "Alexis Pinturault, France"
     },
     {
       "sport": "Alpine skiing",
       "category": "Men's events",
       "event": "Slalom",
-      "gold": "Mario Matt Austria",
-      "silver": "Marcel Hirscher Austria",
-      "bronze": "Henrik Kristoffersen Norway"
+      "gold": "Mario Matt, Austria",
+      "silver": "Marcel Hirscher, Austria",
+      "bronze": "Henrik Kristoffersen, Norway"
     },
     {
       "sport": "Alpine skiing",
       "category": "Men's events",
       "event": "Combined",
-      "gold": "Sandro Viletta Switzerland",
-      "silver": "Ivica Kostelić Croatia",
-      "bronze": "Christof Innerhofer Italy"
+      "gold": "Sandro Viletta, Switzerland",
+      "silver": "Ivica Kostelić, Croatia",
+      "bronze": "Christof Innerhofer, Italy"
     },
     {
       "sport": "Alpine skiing",
       "category": "Women's events",
       "event": "Downhill",
-      "gold": "Dominique Gisin Switzerland · Tina Maze Slovenia",
+      "gold": "Dominique Gisin, Switzerland · Tina Maze, Slovenia",
       "silver": "Not awarded",
-      "bronze": "Lara Gut Switzerland"
+      "bronze": "Lara Gut, Switzerland"
     },
     {
       "sport": "Alpine skiing",
       "category": "Women's events",
       "event": "Super-G",
-      "gold": "Anna Fenninger Austria",
-      "silver": "Maria Höfl-Riesch Germany",
-      "bronze": "Nicole Hosp Austria"
+      "gold": "Anna Fenninger, Austria",
+      "silver": "Maria Höfl-Riesch, Germany",
+      "bronze": "Nicole Hosp, Austria"
     },
     {
       "sport": "Alpine skiing",
       "category": "Women's events",
       "event": "Giant slalom",
-      "gold": "Tina Maze Slovenia",
-      "silver": "Anna Fenninger Austria",
-      "bronze": "Viktoria Rebensburg Germany"
+      "gold": "Tina Maze, Slovenia",
+      "silver": "Anna Fenninger, Austria",
+      "bronze": "Viktoria Rebensburg, Germany"
     },
     {
       "sport": "Alpine skiing",
       "category": "Women's events",
       "event": "Slalom",
-      "gold": "Mikaela Shiffrin United States",
-      "silver": "Marlies Schild Austria",
-      "bronze": "Kathrin Zettel Austria"
+      "gold": "Mikaela Shiffrin, United States",
+      "silver": "Marlies Schild, Austria",
+      "bronze": "Kathrin Zettel, Austria"
     },
     {
       "sport": "Alpine skiing",
       "category": "Women's events",
       "event": "Combined",
-      "gold": "Maria Höfl-Riesch Germany",
-      "silver": "Nicole Hosp Austria",
-      "bronze": "Julia Mancuso United States"
+      "gold": "Maria Höfl-Riesch, Germany",
+      "silver": "Nicole Hosp, Austria",
+      "bronze": "Julia Mancuso, United States"
     },
     {
       "sport": "Biathlon",
       "category": "Men's events",
       "event": "Individual",
-      "gold": "Martin Fourcade France",
-      "silver": "Erik Lesser Germany",
-      "bronze": "Evgeniy Garanichev Russia"
+      "gold": "Martin Fourcade, France",
+      "silver": "Erik Lesser, Germany",
+      "bronze": "Evgeniy Garanichev, Russia"
     },
     {
       "sport": "Biathlon",
       "category": "Men's events",
       "event": "Sprint",
-      "gold": "Ole Einar Bjørndalen Norway",
-      "silver": "Dominik Landertinger Austria",
-      "bronze": "Jaroslav Soukup Czech Republic"
+      "gold": "Ole Einar Bjørndalen, Norway",
+      "silver": "Dominik Landertinger, Austria",
+      "bronze": "Jaroslav Soukup, Czech Republic"
     },
     {
       "sport": "Biathlon",
       "category": "Men's events",
       "event": "Pursuit",
-      "gold": "Martin Fourcade France",
-      "silver": "Ondřej Moravec Czech Republic",
-      "bronze": "Jean-Guillaume Béatrix France"
+      "gold": "Martin Fourcade, France",
+      "silver": "Ondřej Moravec, Czech Republic",
+      "bronze": "Jean-Guillaume Béatrix, France"
     },
     {
       "sport": "Biathlon",
       "category": "Men's events",
       "event": "Mass start",
-      "gold": "Emil Hegle Svendsen Norway",
-      "silver": "Martin Fourcade France",
-      "bronze": "Ondřej Moravec Czech Republic"
+      "gold": "Emil Hegle Svendsen, Norway",
+      "silver": "Martin Fourcade, France",
+      "bronze": "Ondřej Moravec, Czech Republic"
     },
     {
       "sport": "Biathlon",
       "category": "Men's events",
       "event": "Relay",
-      "gold": "RussiaAlexey VolkovEvgeny UstyugovDmitry MalyshkoAnton Shipulin",
-      "silver": "GermanyErik LesserDaniel BöhmArnd PeifferSimon Schempp",
-      "bronze": "AustriaChristoph SumannDaniel MesotitschSimon EderDominik Landertinger"
+      "gold": "Russia, Alexey Volkov, Evgeny Ustyugov, Dmitry Malyshko, Anton Shipulin",
+      "silver": "Germany, Erik Lesser, Daniel Böhm, Arnd Peiffer, Simon Schempp",
+      "bronze": "Austria, Christoph Sumann, Daniel Mesotitsch, Simon Eder, Dominik Landertinger"
     },
     {
       "sport": "Biathlon",
       "category": "Women's events",
       "event": "Individual",
-      "gold": "Darya Domracheva Belarus",
-      "silver": "Selina Gasparin Switzerland",
-      "bronze": "Nadezhda Skardino Belarus"
+      "gold": "Darya Domracheva, Belarus",
+      "silver": "Selina Gasparin, Switzerland",
+      "bronze": "Nadezhda Skardino, Belarus"
     },
     {
       "sport": "Biathlon",
       "category": "Women's events",
       "event": "Sprint",
-      "gold": "Anastasiya Kuzmina Slovakia",
-      "silver": "Olga Vilukhina Russia",
-      "bronze": "Vita Semerenko Ukraine"
+      "gold": "Anastasiya Kuzmina, Slovakia",
+      "silver": "Olga Vilukhina, Russia",
+      "bronze": "Vita Semerenko, Ukraine"
     },
     {
       "sport": "Biathlon",
       "category": "Women's events",
       "event": "Pursuit",
-      "gold": "Darya Domracheva Belarus",
-      "silver": "Tora Berger Norway",
-      "bronze": "Teja Gregorin Slovenia"
+      "gold": "Darya Domracheva, Belarus",
+      "silver": "Tora Berger, Norway",
+      "bronze": "Teja Gregorin, Slovenia"
     },
     {
       "sport": "Biathlon",
       "category": "Women's events",
       "event": "Mass start",
-      "gold": "Darya Domracheva Belarus",
-      "silver": "Gabriela Soukalová Czech Republic",
-      "bronze": "Tiril Eckhoff Norway"
+      "gold": "Darya Domracheva, Belarus",
+      "silver": "Gabriela Soukalová, Czech Republic",
+      "bronze": "Tiril Eckhoff, Norway"
     },
     {
       "sport": "Biathlon",
       "category": "Women's events",
       "event": "Relay",
-      "gold": "Ukraine Vita SemerenkoJuliya DzhymaValentyna SemerenkoOlena Pidhrushna",
+      "gold": "Ukraine, Vita Semerenko, Juliya Dzhyma, Valentyna Semerenko, Olena Pidhrushna",
       "silver": "Vacant",
-      "bronze": "Norway Fanny Welle-Strand HornTiril EckhoffAnn Kristin Aafeldt FlatlandTora Berger"
+      "bronze": "Norway, Fanny Welle-Strand Horn, Tiril Eckhoff, Ann Kristin Aafeldt Flatland, Tora Berger"
     },
     {
       "sport": "Biathlon",
       "category": "Mixed events",
       "event": "Relay",
-      "gold": "Norway Tora BergerTiril EckhoffOle Einar BjørndalenEmil Hegle Svendsen",
-      "silver": "Czech Republic Veronika VítkováGabriela SoukalováJaroslav SoukupOndřej Moravec",
-      "bronze": "Italy Dorothea WiererKarin OberhoferDominik WindischLukas Hofer"
+      "gold": "Norway, Tora Berger, Tiril Eckhoff, Ole Einar Bjørndalen, Emil Hegle Svendsen",
+      "silver": "Czech Republic, Veronika Vítková, Gabriela Soukalová, Jaroslav Soukup, Ondřej Moravec",
+      "bronze": "Italy, Dorothea Wierer, Karin Oberhofer, Dominik Windisch, Lukas Hofer"
     },
     {
       "sport": "Bobsleigh",
       "event": "Two-man",
-      "gold": "SwitzerlandBeat HeftiAlex Baumann",
-      "silver": "United StatesSteven HolcombSteven Langton",
-      "bronze": "LatviaOskars MelbārdisDaumants Dreiskens"
+      "gold": "Switzerland, Beat Hefti, Alex Baumann",
+      "silver": "United States, Steven Holcomb, Steven Langton",
+      "bronze": "Latvia, Oskars Melbārdis, Daumants Dreiskens"
     },
     {
       "sport": "Bobsleigh",
       "event": "Four-man",
-      "gold": "LatviaOskars MelbārdisArvis VilkasteDaumants DreiškensJānis Strenga",
-      "silver": "United StatesSteven HolcombSteven LangtonCurtis TomaseviczChristopher Fogt",
-      "bronze": "Great BritainJohn James JacksonStuart BensonBruce TaskerJoel Fearon"
+      "gold": "Latvia, Oskars Melbārdis, Arvis Vilkaste, Daumants Dreiškens, Jānis Strenga",
+      "silver": "United States, Steven Holcomb, Steven Langton, Curtis Tomasevicz, Christopher Fogt",
+      "bronze": "Great Britain, John James Jackson, Stuart Benson, Bruce Tasker, Joel Fearon"
     },
     {
       "sport": "Bobsleigh",
       "event": "Two-woman",
-      "gold": "CanadaKaillie HumphriesHeather Moyse",
-      "silver": "United StatesElana MeyersLauryn Williams",
-      "bronze": "United StatesJamie GreubelAja Evans"
+      "gold": "Canada, Kaillie Humphries, Heather Moyse",
+      "silver": "United States, Elana Meyers, Lauryn Williams",
+      "bronze": "United States, Jamie Greubel, Aja Evans"
     },
     {
       "sport": "Cross-country skiing",
       "category": "Men's events",
       "event": "15 kilometre classical",
-      "gold": "Dario Cologna Switzerland",
-      "silver": "Johan Olsson Sweden",
-      "bronze": "Daniel Richardsson Sweden"
+      "gold": "Dario Cologna, Switzerland",
+      "silver": "Johan Olsson, Sweden",
+      "bronze": "Daniel Richardsson, Sweden"
     },
     {
       "sport": "Cross-country skiing",
       "category": "Men's events",
       "event": "30 kilometre skiathlon",
-      "gold": "Dario Cologna Switzerland",
-      "silver": "Marcus Hellner Sweden",
-      "bronze": "Martin Johnsrud Sundby Norway"
+      "gold": "Dario Cologna, Switzerland",
+      "silver": "Marcus Hellner, Sweden",
+      "bronze": "Martin Johnsrud Sundby, Norway"
     },
     {
       "sport": "Cross-country skiing",
       "category": "Men's events",
       "event": "50 kilometre freestyle",
-      "gold": "Alexander Legkov Russia",
-      "silver": "Maxim Vylegzhanin Russia",
-      "bronze": "Ilia Chernousov Russia"
+      "gold": "Alexander Legkov, Russia",
+      "silver": "Maxim Vylegzhanin, Russia",
+      "bronze": "Ilia Chernousov, Russia"
     },
     {
       "sport": "Cross-country skiing",
       "category": "Men's events",
       "event": "4 × 10 kilometre relay",
-      "gold": "SwedenLars NelsonDaniel RichardssonJohan OlssonMarcus Hellner",
-      "silver": "RussiaDmitry JaparovAlexander BessmertnykhAlexander LegkovMaxim Vylegzhanin",
-      "bronze": "FranceJean-Marc GaillardMaurice ManificatRobin DuvillardIvan Perrillat Boiteux"
+      "gold": "Sweden, Lars Nelson, Daniel Richardsson, Johan Olsson, Marcus Hellner",
+      "silver": "Russia, Dmitry Japarov, Alexander Bessmertnykh, Alexander Legkov, Maxim Vylegzhanin",
+      "bronze": "France, Jean-Marc Gaillard, Maurice Manificat, Robin Duvillard, Ivan Perrillat Boiteux"
     },
     {
       "sport": "Cross-country skiing",
       "category": "Men's events",
       "event": "Sprint",
-      "gold": "Ola Vigen Hattestad Norway",
-      "silver": "Teodor Peterson Sweden",
-      "bronze": "Emil Jönsson Sweden"
+      "gold": "Ola Vigen Hattestad, Norway",
+      "silver": "Teodor Peterson, Sweden",
+      "bronze": "Emil Jönsson, Sweden"
     },
     {
       "sport": "Cross-country skiing",
       "category": "Men's events",
       "event": "Team sprint",
-      "gold": "FinlandIivo NiskanenSami Jauhojärvi",
-      "silver": "RussiaMaxim VylegzhaninNikita Kriukov",
-      "bronze": "SwedenEmil JönssonTeodor Peterson"
+      "gold": "Finland, Iivo Niskanen, Sami Jauhojärvi",
+      "silver": "Russia, Maxim Vylegzhanin, Nikita Kriukov",
+      "bronze": "Sweden, Emil Jönsson, Teodor Peterson"
     },
     {
       "sport": "Cross-country skiing",
       "category": "Women's events",
       "event": "10 kilometre classical",
-      "gold": "Justyna Kowalczyk Poland",
-      "silver": "Charlotte Kalla Sweden",
-      "bronze": "Therese Johaug Norway"
+      "gold": "Justyna Kowalczyk, Poland",
+      "silver": "Charlotte Kalla, Sweden",
+      "bronze": "Therese Johaug, Norway"
     },
     {
       "sport": "Cross-country skiing",
       "category": "Women's events",
       "event": "15 kilometre skiathlon",
-      "gold": "Marit Bjørgen Norway",
-      "silver": "Charlotte Kalla Sweden",
-      "bronze": "Heidi Weng Norway"
+      "gold": "Marit Bjørgen, Norway",
+      "silver": "Charlotte Kalla, Sweden",
+      "bronze": "Heidi Weng, Norway"
     },
     {
       "sport": "Cross-country skiing",
       "category": "Women's events",
       "event": "30 kilometre freestyle",
-      "gold": "Marit Bjørgen Norway",
-      "silver": "Therese Johaug Norway",
-      "bronze": "Kristin Størmer Steira Norway"
+      "gold": "Marit Bjørgen, Norway",
+      "silver": "Therese Johaug, Norway",
+      "bronze": "Kristin Størmer Steira, Norway"
     },
     {
       "sport": "Cross-country skiing",
       "category": "Women's events",
       "event": "4 × 5 kilometre relay",
-      "gold": "SwedenIda IngemarsdotterEmma WikénAnna HaagCharlotte Kalla",
-      "silver": "FinlandAnne KyllönenAino-Kaisa SaarinenKerttu NiskanenKrista Lähteenmäki",
-      "bronze": "GermanyNicole FesselStefanie BöhlerClaudia NystadDenise Herrmann"
+      "gold": "Sweden, Ida Ingemarsdotter, Emma Wikén, Anna Haag, Charlotte Kalla",
+      "silver": "Finland, Anne Kyllönen, Aino-Kaisa Saarinen, Kerttu Niskanen, Krista Lähteenmäki",
+      "bronze": "Germany, Nicole Fessel, Stefanie Böhler, Claudia Nystad, Denise Herrmann"
     },
     {
       "sport": "Cross-country skiing",
       "category": "Women's events",
       "event": "Sprint",
-      "gold": "Maiken Caspersen Falla Norway",
-      "silver": "Ingvild Flugstad Østberg Norway",
-      "bronze": "Vesna Fabjan Slovenia"
+      "gold": "Maiken Caspersen Falla, Norway",
+      "silver": "Ingvild Flugstad Østberg, Norway",
+      "bronze": "Vesna Fabjan, Slovenia"
     },
     {
       "sport": "Cross-country skiing",
       "category": "Women's events",
       "event": "Team sprint",
-      "gold": "NorwayIngvild Flugstad ØstbergMarit Bjørgen",
-      "silver": "FinlandAino-Kaisa SaarinenKerttu Niskanen",
-      "bronze": "SwedenIda IngemarsdotterStina Nilsson"
+      "gold": "Norway, Ingvild Flugstad Østberg, Marit Bjørgen",
+      "silver": "Finland, Aino-Kaisa Saarinen, Kerttu Niskanen",
+      "bronze": "Sweden, Ida Ingemarsdotter, Stina Nilsson"
     },
     {
       "sport": "Curling",
       "event": "Men",
-      "gold": "CanadaBrad JacobsRyan FryE. J. HarndenRyan HarndenCaleb Flaxey",
-      "silver": "Great BritainDavid MurdochGreg DrummondScott AndrewsMichael GoodfellowTom Brewster",
-      "bronze": "SwedenNiklas EdinSebastian KrauppFredrik LindbergViktor KjällOskar Eriksson"
+      "gold": "Canada, Brad Jacobs, Ryan Fry, E. J. Harnden, Ryan Harnden, Caleb Flaxey",
+      "silver": "Great Britain, David Murdoch, Greg Drummond, Scott Andrews, Michael Goodfellow, Tom Brewster",
+      "bronze": "Sweden, Niklas Edin, Sebastian Kraupp, Fredrik Lindberg, Viktor Kjäll, Oskar Eriksson"
     },
     {
       "sport": "Curling",
       "event": "Women",
-      "gold": "CanadaJennifer JonesKaitlyn LawesJill OfficerDawn McEwenKirsten Wall",
-      "silver": "SwedenMargaretha SigfridssonMaria WennerströmChristina BertrupMaria PrytzAgnes Knochenhauer",
-      "bronze": "Great BritainEve MuirheadAnna SloanVicki AdamsClaire HamiltonLauren Gray"
+      "gold": "Canada, Jennifer Jones, Kaitlyn Lawes, Jill Officer, Dawn McEwen, Kirsten Wall",
+      "silver": "Sweden, Margaretha Sigfridsson, Maria Wennerström, Christina Bertrup, Maria Prytz, Agnes Knochenhauer",
+      "bronze": "Great Britain, Eve Muirhead, Anna Sloan, Vicki Adams, Claire Hamilton, Lauren Gray"
     },
     {
       "sport": "Figure skating",
@@ -324,448 +324,448 @@
     {
       "sport": "Figure skating",
       "event": "Pair skating",
-      "gold": "RussiaTatiana VolosozharMaxim Trankov",
-      "silver": "RussiaKsenia StolbovaFedor Klimov",
-      "bronze": "GermanyAliona Savchenko Robin Szolkowy"
+      "gold": "Russia, Tatiana Volosozhar, Maxim Trankov",
+      "silver": "Russia, Ksenia Stolbova, Fedor Klimov",
+      "bronze": "Germany, Aliona Savchenko, Robin Szolkowy"
     },
     {
       "sport": "Figure skating",
       "event": "Ice dancing",
-      "gold": "United StatesMeryl DavisCharlie White",
-      "silver": "CanadaTessa VirtueScott Moir",
-      "bronze": "RussiaElena IlinykhNikita Katsalapov"
+      "gold": "United States, Meryl Davis, Charlie White",
+      "silver": "Canada, Tessa Virtue, Scott Moir",
+      "bronze": "Russia, Elena Ilinykh, Nikita Katsalapov"
     },
     {
       "sport": "Figure skating",
       "event": "Team trophy",
-      "gold": "RussiaEvgeni PlushenkoYulia LipnitskayaKsenia Stolbova / Fedor Klimov**Elena Ilinykh / Nikita Katsalapov** Tatiana Volosozhar / Maxim Trankov* Ekaterina Bobrova / Dmitri Soloviev",
-      "silver": "CanadaKevin Reynolds**Kaetlyn OsmondKirsten Moore-Towers / Dylan Moscovitch**Tessa Virtue / Scott Moir Patrick Chan*Meagan Duhamel / Eric Radford",
-      "bronze": "United StatesJason Brown** Gracie Gold** Marissa Castelli / Simon ShnapirMeryl Davis / Charlie WhiteJeremy Abbott*Ashley Wagner"
+      "gold": "Russia, Evgeni Plushenko, Yulia Lipnitskaya, Ksenia Stolbova / Fedor Klimov**, Elena Ilinykh / Nikita Katsalapov**, Tatiana Volosozhar / Maxim Trankov*, Ekaterina Bobrova / Dmitri Soloviev",
+      "silver": "Canada, Kevin Reynolds**, Kaetlyn Osmond, Kirsten Moore-Towers / Dylan Moscovitch**, Tessa Virtue / Scott Moir, Patrick Chan*, Meagan Duhamel / Eric Radford",
+      "bronze": "United States, Jason Brown**, Gracie Gold**, Marissa Castelli / Simon Shnapir, Meryl Davis / Charlie White, Jeremy Abbott*, Ashley Wagner"
     },
     {
       "sport": "Freestyle skiing",
       "category": "Men's events",
       "event": "aerials",
-      "gold": "Anton Kushnir Belarus",
-      "silver": "David Morris Australia",
-      "bronze": "Jia Zongyang China"
+      "gold": "Anton Kushnir, Belarus",
+      "silver": "David Morris, Australia",
+      "bronze": "Jia Zongyang, China"
     },
     {
       "sport": "Freestyle skiing",
       "category": "Men's events",
       "event": "halfpipe",
-      "gold": "David Wise United States",
-      "silver": "Mike Riddle Canada",
-      "bronze": "Kevin Rolland France"
+      "gold": "David Wise, United States",
+      "silver": "Mike Riddle, Canada",
+      "bronze": "Kevin Rolland, France"
     },
     {
       "sport": "Freestyle skiing",
       "category": "Men's events",
       "event": "moguls",
-      "gold": "Alexandre Bilodeau Canada",
-      "silver": "Mikaël Kingsbury Canada",
-      "bronze": "Alexandr Smyshlyaev Russia"
+      "gold": "Alexandre Bilodeau, Canada",
+      "silver": "Mikaël Kingsbury, Canada",
+      "bronze": "Alexandr Smyshlyaev, Russia"
     },
     {
       "sport": "Freestyle skiing",
       "category": "Men's events",
       "event": "slopestyle",
-      "gold": "Joss Christensen United States",
-      "silver": "Gus Kenworthy United States",
-      "bronze": "Nick Goepper United States"
+      "gold": "Joss Christensen, United States",
+      "silver": "Gus Kenworthy, United States",
+      "bronze": "Nick Goepper, United States"
     },
     {
       "sport": "Freestyle skiing",
       "category": "Men's events",
       "event": "ski cross",
-      "gold": "Jean-Frédéric Chapuis France",
-      "silver": "Arnaud Bovolenta France",
-      "bronze": "Jonathan Midol France"
+      "gold": "Jean-Frédéric Chapuis, France",
+      "silver": "Arnaud Bovolenta, France",
+      "bronze": "Jonathan Midol, France"
     },
     {
       "sport": "Freestyle skiing",
       "category": "Women's events",
       "event": "aerials",
-      "gold": "Alla Tsuper Belarus",
-      "silver": "Xu Mengtao China",
-      "bronze": "Lydia Lassila Australia"
+      "gold": "Alla Tsuper, Belarus",
+      "silver": "Xu Mengtao, China",
+      "bronze": "Lydia Lassila, Australia"
     },
     {
       "sport": "Freestyle skiing",
       "category": "Women's events",
       "event": "halfpipe",
-      "gold": "Maddie Bowman United States",
-      "silver": "Marie Martinod France",
-      "bronze": "Ayana Onozuka Japan"
+      "gold": "Maddie Bowman, United States",
+      "silver": "Marie Martinod, France",
+      "bronze": "Ayana Onozuka, Japan"
     },
     {
       "sport": "Freestyle skiing",
       "category": "Women's events",
       "event": "moguls",
-      "gold": "Justine Dufour-Lapointe Canada",
-      "silver": "Chloé Dufour-Lapointe Canada",
-      "bronze": "Hannah Kearney United States"
+      "gold": "Justine Dufour-Lapointe, Canada",
+      "silver": "Chloé Dufour-Lapointe, Canada",
+      "bronze": "Hannah Kearney, United States"
     },
     {
       "sport": "Freestyle skiing",
       "category": "Women's events",
       "event": "slopestyle",
-      "gold": "Dara Howell Canada",
-      "silver": "Devin Logan United States",
-      "bronze": "Kim Lamarre Canada"
+      "gold": "Dara Howell, Canada",
+      "silver": "Devin Logan, United States",
+      "bronze": "Kim Lamarre, Canada"
     },
     {
       "sport": "Freestyle skiing",
       "category": "Women's events",
       "event": "ski cross",
-      "gold": "Marielle Thompson Canada",
-      "silver": "Kelsey Serwa Canada",
-      "bronze": "Anna Holmlund Sweden"
+      "gold": "Marielle Thompson, Canada",
+      "silver": "Kelsey Serwa, Canada",
+      "bronze": "Anna Holmlund, Sweden"
     },
     {
       "sport": "Ice hockey",
       "event": "Men's tournament",
-      "gold": "CanadaJamie BennPatrice BergeronJay BouwmeesterJeff CarterSidney CrosbyDrew DoughtyMatt DucheneRyan GetzlafDan HamhuisDuncan KeithChris KunitzRoberto LuongoPatrick MarleauRick NashCorey PerryAlex PietrangeloCarey PricePatrick SharpMike SmithMartin St. LouisP. K. SubbanJohn TavaresJonathan ToewsMarc-Édouard VlasicShea Weber",
-      "silver": "SwedenDaniel AlfredssonNicklas BäckströmPatrik BerglundAlexander EdlerOliver Ekman-LarssonJhonas EnrothJimmie EricssonJonathan EricssonLoui ErikssonJonas GustavssonCarl HagelinNiklas HjalmarssonMarcus JohanssonErik KarlssonNiklas KronwallMarcus KrügerGabriel LandeskogHenrik LundqvistGustav NyquistJohnny OduyaDaniel SedinJakob SilfverbergAlexander SteenHenrik TallinderHenrik Zetterberg",
-      "bronze": "FinlandJuhamatti AaltonenAleksander BarkovMikael GranlundJuuso HietanenJarkko ImmonenJussi JokinenOlli JokinenLeo KomarovSami LepistöPetri KontiolaLauri KorpikoskiLasse KukkonenJori LehteräKari LehtonenOlli MäättäAntti NiemiAntti PihlströmTuukka RaskTuomo RuutuSakari SalminenSami SaloTeemu SelänneKimmo TimonenOssi VäänänenSami Vatanen"
+      "gold": "Canada, Jamie Benn, Patrice Bergeron, Jay Bouwmeester, Jeff Carter, Sidney Crosby, Drew Doughty, Matt Duchene, Ryan Getzlaf, Dan Hamhuis, Duncan Keith, Chris Kunitz, Roberto Luongo, Patrick Marleau, Rick Nash, Corey Perry, Alex Pietrangelo, Carey Price, Patrick Sharp, Mike Smith, Martin St. Louis, P. K. Subban, John Tavares, Jonathan Toews, Marc-Édouard Vlasic, Shea Weber",
+      "silver": "Sweden, Daniel Alfredsson, Nicklas Bäckström, Patrik Berglund, Alexander Edler, Oliver Ekman-Larsson, Jhonas Enroth, Jimmie Ericsson, Jonathan Ericsson, Loui Eriksson, Jonas Gustavsson, Carl Hagelin, Niklas Hjalmarsson, Marcus Johansson, Erik Karlsson, Niklas Kronwall, Marcus Krüger, Gabriel Landeskog, Henrik Lundqvist, Gustav Nyquist, Johnny Oduya, Daniel Sedin, Jakob Silfverberg, Alexander Steen, Henrik Tallinder, Henrik Zetterberg",
+      "bronze": "Finland, Juhamatti Aaltonen, Aleksander Barkov, Mikael Granlund, Juuso Hietanen, Jarkko Immonen, Jussi Jokinen, Olli Jokinen, Leo Komarov, Sami Lepistö, Petri Kontiola, Lauri Korpikoski, Lasse Kukkonen, Jori Lehterä, Kari Lehtonen, Olli Määttä, Antti Niemi, Antti Pihlström, Tuukka Rask, Tuomo Ruutu, Sakari Salminen, Sami Salo, Teemu Selänne, Kimmo Timonen, Ossi Väänänen, Sami Vatanen"
     },
     {
       "sport": "Ice hockey",
       "event": "Women's tournament",
-      "gold": "CanadaMeghan Agosta-MarcianoGillian AppsMélodie DaoustLaura FortinoJayna HeffordHaley IrwinBrianne JennerRebecca JohnstonCharline LabontéGeneviève LacasseJocelyne LarocqueMeaghan Mikkelson-ReidCaroline OuelletteMarie-Philip PoulinLauriane RougeauNatalie SpoonerShannon SzabadosJenn WakefieldCatherine WardTara WatchornHayley Wickenheiser",
-      "silver": "United StatesKacey BellamyMegan BozekAlex CarpenterJulie ChuKendall CoyneBrianna DeckerMeghan DugganLyndsey FryAmanda KesselHilary KnightJocelyne LamoureuxMonique Lamoureux-KollsGisele MarvinBrianne McLaughlinMichelle PicardJosephine PucciMolly SchausAnne SchleperKelli StackLee SteckleinJessie Vetter",
-      "bronze": "SwitzerlandJanine AlderLivia AltmannSophie AnthamattenLaura BenzSara BenzNicole BulloRomy EggimannSarah ForsterAngela FrautschiJessica LutzJulia MartyStefanie MartyAlina MüllerKatrin NabholzEvelina RaselliFlorence SchellingLara StalderPhoebe StanzAnja StiefelSandra ThalmannNina Waidacher"
+      "gold": "Canada, Meghan Agosta-Marciano, Gillian Apps, Mélodie Daoust, Laura Fortino, Jayna Hefford, Haley Irwin, Brianne Jenner, Rebecca Johnston, Charline Labonté, Geneviève Lacasse, Jocelyne Larocque, Meaghan Mikkelson-Reid, Caroline Ouellette, Marie-Philip Poulin, Lauriane Rougeau, Natalie Spooner, Shannon Szabados, Jenn Wakefield, Catherine Ward, Tara Watchorn, Hayley Wickenheiser",
+      "silver": "United States, Kacey Bellamy, Megan Bozek, Alex Carpenter, Julie Chu, Kendall Coyne, Brianna Decker, Meghan Duggan, Lyndsey Fry, Amanda Kessel, Hilary Knight, Jocelyne Lamoureux, Monique Lamoureux-Kolls, Gisele Marvin, Brianne McLaughlin, Michelle Picard, Josephine Pucci, Molly Schaus, Anne Schleper, Kelli Stack, Lee Stecklein, Jessie Vetter",
+      "bronze": "Switzerland, Janine Alder, Livia Altmann, Sophie Anthamatten, Laura Benz, Sara Benz, Nicole Bullo, Romy Eggimann, Sarah Forster, Angela Frautschi, Jessica Lutz, Julia Marty, Stefanie Marty, Alina Müller, Katrin Nabholz, Evelina Raselli, Florence Schelling, Lara Stalder, Phoebe Stanz, Anja Stiefel, Sandra Thalmann, Nina Waidacher"
     },
     {
       "sport": "Luge",
       "event": "Men's singles",
-      "gold": "Felix Loch Germany",
-      "silver": "Albert Demchenko Russia",
-      "bronze": "Armin Zöggeler Italy"
+      "gold": "Felix Loch, Germany",
+      "silver": "Albert Demchenko, Russia",
+      "bronze": "Armin Zöggeler, Italy"
     },
     {
       "sport": "Luge",
       "event": "Women's singles",
-      "gold": "Natalie Geisenberger Germany",
-      "silver": "Tatjana Hüfner Germany",
-      "bronze": "Erin Hamlin United States"
+      "gold": "Natalie Geisenberger, Germany",
+      "silver": "Tatjana Hüfner, Germany",
+      "bronze": "Erin Hamlin, United States"
     },
     {
       "sport": "Luge",
       "event": "Doubles",
-      "gold": "GermanyTobias WendlTobias Arlt",
-      "silver": "AustriaAndreas LingerWolfgang Linger",
-      "bronze": "LatviaAndris ŠicsJuris Šics"
+      "gold": "Germany, Tobias Wendl, Tobias Arlt",
+      "silver": "Austria, Andreas Linger, Wolfgang Linger",
+      "bronze": "Latvia, Andris Šics, Juris Šics"
     },
     {
       "sport": "Luge",
       "event": "Team relay",
-      "gold": "GermanyNatalie GeisenbergerFelix LochTobias WendlTobias Arlt",
-      "silver": "RussiaTatiana IvanovaAlbert DemchenkoAlexander DenisyevVladislav Antonov",
-      "bronze": "LatviaElīza TīrumaMārtiņš RubenisAndris ŠicsJuris Šics"
+      "gold": "Germany, Natalie Geisenberger, Felix Loch, Tobias Wendl, Tobias Arlt",
+      "silver": "Russia, Tatiana Ivanova, Albert Demchenko, Alexander Denisyev, Vladislav Antonov",
+      "bronze": "Latvia, Elīza Tīruma, Mārtiņš Rubenis, Andris Šics, Juris Šics"
     },
     {
       "sport": "Nordic combined",
       "event": "large hill/10 km",
-      "gold": "Jørgen Graabak Norway",
-      "silver": "Magnus Hovdal Moan Norway",
-      "bronze": "Fabian Riessle Germany"
+      "gold": "Jørgen Graabak, Norway",
+      "silver": "Magnus Hovdal Moan, Norway",
+      "bronze": "Fabian Riessle, Germany"
     },
     {
       "sport": "Nordic combined",
       "event": "normal hill/10 km",
-      "gold": "Eric Frenzel Germany",
-      "silver": "Akito Watabe Japan",
-      "bronze": "Magnus Krog Norway"
+      "gold": "Eric Frenzel, Germany",
+      "silver": "Akito Watabe, Japan",
+      "bronze": "Magnus Krog, Norway"
     },
     {
       "sport": "Nordic combined",
       "event": "Team large hill/4 × 5 km",
-      "gold": "NorwayMagnus Hovdal MoanHåvard KlemetsenMagnus KrogJørgen Graabak",
-      "silver": "GermanyEric FrenzelBjörn KircheisenJohannes RydzekFabian Rießle",
-      "bronze": "AustriaChristoph BielerBernhard GruberLukas KlapferMario Stecher"
+      "gold": "Norway, Magnus Hovdal Moan, Håvard Klemetsen, Magnus Krog, Jørgen Graabak",
+      "silver": "Germany, Eric Frenzel, Björn Kircheisen, Johannes Rydzek, Fabian Rießle",
+      "bronze": "Austria, Christoph Bieler, Bernhard Gruber, Lukas Klapfer, Mario Stecher"
     },
     {
       "sport": "Short track speed skating",
       "category": "Men's events",
       "event": "500 metres",
-      "gold": "Viktor Ahn Russia",
-      "silver": "Wu Dajing China",
-      "bronze": "Charle Cournoyer Canada"
+      "gold": "Viktor Ahn, Russia",
+      "silver": "Wu Dajing, China",
+      "bronze": "Charle Cournoyer, Canada"
     },
     {
       "sport": "Short track speed skating",
       "category": "Men's events",
       "event": "1000 metres",
-      "gold": "Viktor Ahn Russia",
-      "silver": "Vladimir Grigorev Russia",
-      "bronze": "Sjinkie Knegt Netherlands"
+      "gold": "Viktor Ahn, Russia",
+      "silver": "Vladimir Grigorev, Russia",
+      "bronze": "Sjinkie Knegt, Netherlands"
     },
     {
       "sport": "Short track speed skating",
       "category": "Men's events",
       "event": "1500 metres",
-      "gold": "Charles Hamelin Canada",
-      "silver": "Han Tianyu China",
-      "bronze": "Viktor Ahn Russia"
+      "gold": "Charles Hamelin, Canada",
+      "silver": "Han Tianyu, China",
+      "bronze": "Viktor Ahn, Russia"
     },
     {
       "sport": "Short track speed skating",
       "category": "Men's events",
       "event": "5000 metre relay",
-      "gold": "RussiaViktor AhnSemion ElistratovVladimir GrigorevRuslan Zakharov",
-      "silver": "United StatesEddy AlvarezJ. R. CelskiChristopher CrevelingJordan Malone",
-      "bronze": "ChinaChen DequanHan TianyuShi JingnanWu Dajing"
+      "gold": "Russia, Viktor Ahn, Semion Elistratov, Vladimir Grigorev, Ruslan Zakharov",
+      "silver": "United States, Eddy Alvarez, J. R. Celski, Christopher Creveling, Jordan Malone",
+      "bronze": "China, Chen Dequan, Han Tianyu, Shi Jingnan, Wu Dajing"
     },
     {
       "sport": "Short track speed skating",
       "category": "Women's events",
       "event": "500 metres",
-      "gold": "Li Jianrou China",
-      "silver": "Arianna Fontana Italy",
-      "bronze": "Park Seung-Hi South Korea"
+      "gold": "Li Jianrou, China",
+      "silver": "Arianna Fontana, Italy",
+      "bronze": "Park Seung-Hi, South Korea"
     },
     {
       "sport": "Short track speed skating",
       "category": "Women's events",
       "event": "1000 metres",
-      "gold": "Park Seung-Hi South Korea",
-      "silver": "Fan Kexin China",
-      "bronze": "Shim Suk-Hee South Korea"
+      "gold": "Park Seung-Hi, South Korea",
+      "silver": "Fan Kexin, China",
+      "bronze": "Shim Suk-Hee, South Korea"
     },
     {
       "sport": "Short track speed skating",
       "category": "Women's events",
       "event": "1500 metres",
-      "gold": "Zhou Yang China",
-      "silver": "Shim Suk-Hee South Korea",
-      "bronze": "Arianna Fontana Italy"
+      "gold": "Zhou Yang, China",
+      "silver": "Shim Suk-Hee, South Korea",
+      "bronze": "Arianna Fontana, Italy"
     },
     {
       "sport": "Short track speed skating",
       "category": "Women's events",
       "event": "3000 metre relay",
-      "gold": "South KoreaShim Suk-HeePark Seung-HiKim A-LangKong Sang-JeongCho Ha-Ri",
-      "silver": "CanadaMarie-Ève DroletJessica HewittValérie MaltaisMarianne St-Gelais",
-      "bronze": "ItalyArianna FontanaLucia PerettiMartina ValcepinaElena Viviani"
+      "gold": "South Korea, Shim Suk-Hee, Park Seung-Hi, Kim A-Lang, Kong Sang-Jeong, Cho Ha-Ri",
+      "silver": "Canada, Marie-Ève Drolet, Jessica Hewitt, Valérie Maltais, Marianne St-Gelais",
+      "bronze": "Italy, Arianna Fontana, Lucia Peretti, Martina Valcepina, Elena Viviani"
     },
     {
       "sport": "Skeleton",
       "event": "Men's",
-      "gold": "Aleksandr Tretyakov Russia",
-      "silver": "Martins Dukurs Latvia",
-      "bronze": "Matthew Antoine United States"
+      "gold": "Aleksandr Tretyakov, Russia",
+      "silver": "Martins Dukurs, Latvia",
+      "bronze": "Matthew Antoine, United States"
     },
     {
       "sport": "Skeleton",
       "event": "Women's",
-      "gold": "Lizzy Yarnold Great Britain",
-      "silver": "Noelle Pikus-Pace United States",
-      "bronze": "Elena Nikitina Russia"
+      "gold": "Lizzy Yarnold, Great Britain",
+      "silver": "Noelle Pikus-Pace, United States",
+      "bronze": "Elena Nikitina, Russia"
     },
     {
       "sport": "Ski jumping",
       "event": "Men's individual normal hill",
-      "gold": "Kamil Stoch Poland",
-      "silver": "Peter Prevc Slovenia",
-      "bronze": "Anders Bardal Norway"
+      "gold": "Kamil Stoch, Poland",
+      "silver": "Peter Prevc, Slovenia",
+      "bronze": "Anders Bardal, Norway"
     },
     {
       "sport": "Ski jumping",
       "event": "Men's individual large hill",
-      "gold": "Kamil Stoch Poland",
-      "silver": "Noriaki Kasai Japan",
-      "bronze": "Peter Prevc Slovenia"
+      "gold": "Kamil Stoch, Poland",
+      "silver": "Noriaki Kasai, Japan",
+      "bronze": "Peter Prevc, Slovenia"
     },
     {
       "sport": "Ski jumping",
-      "event": "Men's teamlarge hill",
-      "gold": "GermanyAndreas WankMarinus KrausAndreas WellingerSeverin Freund",
-      "silver": "AustriaMichael HayböckThomas MorgensternThomas DiethartGregor Schlierenzauer",
-      "bronze": "JapanReruhi ShimizuTaku TakeuchiDaiki ItoNoriaki Kasai"
+      "event": "Men's team, large hill",
+      "gold": "Germany, Andreas Wank, Marinus Kraus, Andreas Wellinger, Severin Freund",
+      "silver": "Austria, Michael Hayböck, Thomas Morgenstern, Thomas Diethart, Gregor Schlierenzauer",
+      "bronze": "Japan, Reruhi Shimizu, Taku Takeuchi, Daiki Ito, Noriaki Kasai"
     },
     {
       "sport": "Ski jumping",
       "event": "Women's individual normal hill",
-      "gold": "Carina Vogt Germany",
-      "silver": "Daniela Iraschko-Stolz Austria",
-      "bronze": "Coline Mattel France"
+      "gold": "Carina Vogt, Germany",
+      "silver": "Daniela Iraschko-Stolz, Austria",
+      "bronze": "Coline Mattel, France"
     },
     {
       "sport": "Snowboarding",
       "category": "Men's events",
       "event": "parallel slalom",
-      "gold": "Vic Wild Russia",
-      "silver": "Žan Košir Slovenia",
-      "bronze": "Benjamin Karl Austria"
+      "gold": "Vic Wild, Russia",
+      "silver": "Žan Košir, Slovenia",
+      "bronze": "Benjamin Karl, Austria"
     },
     {
       "sport": "Snowboarding",
       "category": "Men's events",
       "event": "parallel giant slalom",
-      "gold": "Vic Wild Russia",
-      "silver": "Nevin Galmarini Switzerland",
-      "bronze": "Zan Kosir Slovenia"
+      "gold": "Vic Wild, Russia",
+      "silver": "Nevin Galmarini, Switzerland",
+      "bronze": "Zan Kosir, Slovenia"
     },
     {
       "sport": "Snowboarding",
       "category": "Men's events",
       "event": "halfpipe",
-      "gold": "Iouri Podladtchikov Switzerland",
-      "silver": "Ayumu Hirano Japan",
-      "bronze": "Taku Hiraoka Japan"
+      "gold": "Iouri Podladtchikov, Switzerland",
+      "silver": "Ayumu Hirano, Japan",
+      "bronze": "Taku Hiraoka, Japan"
     },
     {
       "sport": "Snowboarding",
       "category": "Men's events",
       "event": "slopestyle",
-      "gold": "Sage Kotsenburg United States",
-      "silver": "Ståle Sandbech Norway",
-      "bronze": "Mark McMorris Canada"
+      "gold": "Sage Kotsenburg, United States",
+      "silver": "Ståle Sandbech, Norway",
+      "bronze": "Mark McMorris, Canada"
     },
     {
       "sport": "Snowboarding",
       "category": "Men's events",
       "event": "snowboard cross",
-      "gold": "Pierre Vaultier France",
-      "silver": "Nikolay Olyunin Russia",
-      "bronze": "Alex Deibold United States"
+      "gold": "Pierre Vaultier, France",
+      "silver": "Nikolay Olyunin, Russia",
+      "bronze": "Alex Deibold, United States"
     },
     {
       "sport": "Snowboarding",
       "category": "Women's events",
       "event": "parallel slalom",
-      "gold": "Julia Dujmovits Austria",
-      "silver": "Anke Karstens Germany",
-      "bronze": "Amelie Kober Germany"
+      "gold": "Julia Dujmovits, Austria",
+      "silver": "Anke Karstens, Germany",
+      "bronze": "Amelie Kober, Germany"
     },
     {
       "sport": "Snowboarding",
       "category": "Women's events",
       "event": "parallel giant slalom",
-      "gold": "Patrizia Kummer Switzerland",
-      "silver": "Tomoka Takeuchi Japan",
-      "bronze": "Alena Zavarzina Russia"
+      "gold": "Patrizia Kummer, Switzerland",
+      "silver": "Tomoka Takeuchi, Japan",
+      "bronze": "Alena Zavarzina, Russia"
     },
     {
       "sport": "Snowboarding",
       "category": "Women's events",
       "event": "halfpipe",
-      "gold": "Kaitlyn Farrington United States",
-      "silver": "Torah Bright Australia",
-      "bronze": "Kelly Clark United States"
+      "gold": "Kaitlyn Farrington, United States",
+      "silver": "Torah Bright, Australia",
+      "bronze": "Kelly Clark, United States"
     },
     {
       "sport": "Snowboarding",
       "category": "Women's events",
       "event": "slopestyle",
-      "gold": "Jamie Anderson United States",
-      "silver": "Enni Rukajärvi Finland",
-      "bronze": "Jenny Jones Great Britain"
+      "gold": "Jamie Anderson, United States",
+      "silver": "Enni Rukajärvi, Finland",
+      "bronze": "Jenny Jones, Great Britain"
     },
     {
       "sport": "Snowboarding",
       "category": "Women's events",
       "event": "snowboard cross",
-      "gold": "Eva Samkova Czech Republic",
-      "silver": "Dominique Maltais Canada",
-      "bronze": "Chloé Trespeuch France"
+      "gold": "Eva Samkova, Czech Republic",
+      "silver": "Dominique Maltais, Canada",
+      "bronze": "Chloé Trespeuch, France"
     },
     {
       "sport": "Speed skating",
       "category": "Men's events",
       "event": "500 metres",
-      "gold": "Michel Mulder Netherlands",
-      "silver": "Jan Smeekens Netherlands",
-      "bronze": "Ronald Mulder Netherlands"
+      "gold": "Michel Mulder, Netherlands",
+      "silver": "Jan Smeekens, Netherlands",
+      "bronze": "Ronald Mulder, Netherlands"
     },
     {
       "sport": "Speed skating",
       "category": "Men's events",
       "event": "1000 metres",
-      "gold": "Stefan Groothuis Netherlands",
-      "silver": "Denny Morrison Canada",
-      "bronze": "Michel Mulder Netherlands"
+      "gold": "Stefan Groothuis, Netherlands",
+      "silver": "Denny Morrison, Canada",
+      "bronze": "Michel Mulder, Netherlands"
     },
     {
       "sport": "Speed skating",
       "category": "Men's events",
       "event": "1500 metres",
-      "gold": "Zbigniew Bródka Poland",
-      "silver": "Koen Verweij Netherlands",
-      "bronze": "Denny Morrison Canada"
+      "gold": "Zbigniew Bródka, Poland",
+      "silver": "Koen Verweij, Netherlands",
+      "bronze": "Denny Morrison, Canada"
     },
     {
       "sport": "Speed skating",
       "category": "Men's events",
       "event": "5000 metres",
-      "gold": "Sven Kramer Netherlands",
-      "silver": "Jan Blokhuijsen Netherlands",
-      "bronze": "Jorrit Bergsma Netherlands"
+      "gold": "Sven Kramer, Netherlands",
+      "silver": "Jan Blokhuijsen, Netherlands",
+      "bronze": "Jorrit Bergsma, Netherlands"
     },
     {
       "sport": "Speed skating",
       "category": "Men's events",
       "event": "10000 metres",
-      "gold": "Jorrit Bergsma Netherlands",
-      "silver": "Sven Kramer Netherlands",
-      "bronze": "Bob de Jong Netherlands"
+      "gold": "Jorrit Bergsma, Netherlands",
+      "silver": "Sven Kramer, Netherlands",
+      "bronze": "Bob de Jong, Netherlands"
     },
     {
       "sport": "Speed skating",
       "category": "Men's events",
       "event": "Team pursuit",
-      "gold": "NetherlandsJan BlokhuijsenSven KramerKoen Verweij",
-      "silver": "South KoreaJoo Hyong-junKim Cheol-minLee Seung-hoon",
-      "bronze": "PolandZbigniew BródkaKonrad NiedźwiedzkiJan Szymański"
+      "gold": "Netherlands, Jan Blokhuijsen, Sven Kramer, Koen Verweij",
+      "silver": "South Korea, Joo Hyong-jun, Kim Cheol-min, Lee Seung-hoon",
+      "bronze": "Poland, Zbigniew Bródka, Konrad Niedźwiedzki, Jan Szymański"
     },
     {
       "sport": "Speed skating",
       "category": "Women's events",
       "event": "500 metres",
-      "gold": "Lee Sang-hwa South Korea",
-      "silver": "Olga Fatkulina Russia",
-      "bronze": "Margot Boer Netherlands"
+      "gold": "Lee Sang-hwa, South Korea",
+      "silver": "Olga Fatkulina, Russia",
+      "bronze": "Margot Boer, Netherlands"
     },
     {
       "sport": "Speed skating",
       "category": "Women's events",
       "event": "1000 metres",
-      "gold": "Zhang Hong China",
-      "silver": "Ireen Wüst Netherlands",
-      "bronze": "Margot Boer Netherlands"
+      "gold": "Zhang Hong, China",
+      "silver": "Ireen Wüst, Netherlands",
+      "bronze": "Margot Boer, Netherlands"
     },
     {
       "sport": "Speed skating",
       "category": "Women's events",
       "event": "1500 metres",
-      "gold": "Jorien ter Mors Netherlands",
-      "silver": "Ireen Wüst Netherlands",
-      "bronze": "Lotte van Beek Netherlands"
+      "gold": "Jorien ter Mors, Netherlands",
+      "silver": "Ireen Wüst, Netherlands",
+      "bronze": "Lotte van Beek, Netherlands"
     },
     {
       "sport": "Speed skating",
       "category": "Women's events",
       "event": "3000 metres",
-      "gold": "Ireen Wüst Netherlands",
-      "silver": "Martina Sáblíková Czech Republic",
-      "bronze": "Olga Graf Russia"
+      "gold": "Ireen Wüst, Netherlands",
+      "silver": "Martina Sáblíková, Czech Republic",
+      "bronze": "Olga Graf, Russia"
     },
     {
       "sport": "Speed skating",
       "category": "Women's events",
       "event": "5000 metres",
-      "gold": "Martina Sáblíková Czech Republic",
-      "silver": "Ireen Wüst Netherlands",
-      "bronze": "Carien Kleibeuker Netherlands"
+      "gold": "Martina Sáblíková, Czech Republic",
+      "silver": "Ireen Wüst, Netherlands",
+      "bronze": "Carien Kleibeuker, Netherlands"
     },
     {
       "sport": "Speed skating",
       "category": "Women's events",
       "event": "Team pursuit",
-      "gold": "NetherlandsJorien ter MorsMarrit LeenstraIreen WüstLotte van Beek",
-      "silver": "PolandKatarzyna Bachleda-CuruśNatalia CzerwonkaLuiza ZłotkowskaKatarzyna Woźniak",
-      "bronze": "RussiaOlga GrafYekaterina LobyshevaYuliya SkokovaYekaterina Shikhova"
+      "gold": "Netherlands, Jorien ter Mors, Marrit Leenstra, Ireen Wüst, Lotte van Beek",
+      "silver": "Poland, Katarzyna Bachleda-Curuś, Natalia Czerwonka, Luiza Złotkowska, Katarzyna Woźniak",
+      "bronze": "Russia, Olga Graf, Yekaterina Lobysheva, Yuliya Skokova, Yekaterina Shikhova"
     }
   ]
 }

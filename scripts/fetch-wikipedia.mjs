@@ -102,16 +102,109 @@ const strip = (html) =>
     .replace(/details$/i, '')
     .trim();
 
+/**
+ * Всяка „wikitable“ на страницата, с мястото ѝ в текста.
+ *
+ * Не с „<table…>[\s\S]*?</table>“: този израз спира на ПЪРВОТО затваряне, а
+ * вътре в клетка може да има друга таблица — тогава външната се реже наполовина
+ * и редовете след вложената изчезват. Затова се брои дълбочина.
+ */
+function* tablesIn(html) {
+  const open = /<table\b[^>]*>/gi;
+  let m;
+  while ((m = open.exec(html))) {
+    if (!/class="[^"]*wikitable/i.test(m[0])) continue;
+    const start = m.index;
+    const tag = /<\/?table\b[^>]*>/gi;
+    tag.lastIndex = open.lastIndex;
+    let depth = 1;
+    let end = html.length;
+    let t;
+    while (depth > 0 && (t = tag.exec(html))) {
+      depth += t[0][1] === '/' ? -1 : 1;
+      end = tag.lastIndex;
+    }
+    yield { at: start, html: html.slice(start, end) };
+    open.lastIndex = end;
+  }
+}
+
+/**
+ * Вложените таблици се махат, за да не се четат техните редове като наши.
+ * Търси се всяка „<table“, не само „wikitable“ — вложената рядко е такава.
+ */
+function withoutNested(inner) {
+  let out = '';
+  let i = 0;
+  const open = /<table\b[^>]*>/gi;
+  let m;
+  while ((m = open.exec(inner))) {
+    out += inner.slice(i, m.index);
+    const tag = /<\/?table\b[^>]*>/gi;
+    tag.lastIndex = open.lastIndex;
+    let depth = 1;
+    let end = inner.length;
+    let t;
+    while (depth > 0 && (t = tag.exec(inner))) {
+      depth += t[0][1] === '/' ? -1 : 1;
+      end = tag.lastIndex;
+    }
+    i = end;
+    open.lastIndex = end;
+  }
+  return out + inner.slice(i);
+}
+
+/**
+ * Таблицата като правоъгълна решетка, с разгънати rowspan и colspan.
+ *
+ * Уикипедия слива клетки често: един ранг за две държави, една дисциплина за
+ * два реда. Без разгъване следващият ред идва с по-малко клетки и правилото
+ * „ред с друг брой клетки не е ред“ го изхвърля — това е начинът, по който се
+ * губят цели дисциплини, без нищо да изглежда счупено.
+ */
+function gridRows(tableHtml) {
+  const inner = withoutNested(
+    tableHtml.replace(/^<table\b[^>]*>/i, '').replace(/<\/table>\s*$/i, '')
+  );
+  const out = [];
+  const pending = new Map(); // колона → {text, left} от rowspan отгоре
+
+  for (const tr of inner.matchAll(/<tr\b[\s\S]*?<\/tr>/gi)) {
+    // Сборният ред долу („Totals“) се сумира коректно и иначе минава за държава.
+    if (/class="[^"]*sortbottom/.test(tr[0])) continue;
+    const row = [];
+    let col = 0;
+    const fill = () => {
+      while (pending.has(col)) {
+        const p = pending.get(col);
+        row[col] = p.text;
+        if (--p.left <= 0) pending.delete(col);
+        col += 1;
+      }
+    };
+    for (const c of tr[0].matchAll(/<t([hd])\b([^>]*)>([\s\S]*?)<\/t\1>/gi)) {
+      fill();
+      const text = strip(c[3]);
+      const span = (name) => Number(new RegExp(name + '="?(\\d+)', 'i').exec(c[2])?.[1] ?? 1);
+      const cols = Math.min(span('colspan'), 20);
+      const rows = Math.min(span('rowspan'), 60);
+      for (let k = 0; k < cols; k += 1) {
+        if (rows > 1) pending.set(col, { text, left: rows - 1 });
+        row[col] = text;
+        col += 1;
+      }
+    }
+    fill();
+    if (row.length) out.push([...row].map((c) => c ?? ''));
+  }
+  return out;
+}
+
 /** Първата „wikitable“ на страницата, като масив от масиви. */
 function firstTable(html) {
-  const m = html.match(/<table[^>]*class="[^"]*wikitable[^"]*"[\s\S]*?<\/table>/);
-  if (!m) return null;
-  const rows = [...m[0].matchAll(/<tr[\s\S]*?<\/tr>/g)]
-    // Сборният ред долу („Totals“) се сумира коректно и иначе минава за
-    // държава. Маха се по класа, който Уикипедия винаги му слага.
-    .filter((r) => !/class="[^"]*sortbottom/.test(r[0]))
-    .map((r) => [...r[0].matchAll(/<t[hd][^>]*>([\s\S]*?)<\/t[hd]>/g)].map((c) => strip(c[1])));
-  return rows.filter((r) => r.length > 0);
+  for (const t of tablesIn(html)) return gridRows(t.html).filter((r) => r.length > 0);
+  return null;
 }
 
 /**
@@ -161,35 +254,44 @@ const GENERIC_SUB = /^(medalists|medallists|events|list of medalists)$/i;
 function parseMedallists(html) {
   const events = [];
   const skipped = [];
-  let sport = null;
+  /** Таблици с редове, които не бяха прочетени — с какво заглавие стояха. */
+  const rejectedTables = [];
 
-  // Само h2. Първият истински пробег показа защо: страницата за Париж 2024
-  // разделя всеки спорт на h3 „Men's events“ и „Women's events“, така че
-  // четенето на h3 даваше сто петдесет и четири дисциплини със спорт „Men's
-  // events“. Спортът е h2; h3 е подраздел в него.
-  let category = null;
-  let skip = false;
-  const re = /<h([23])[^>]*>([\s\S]*?)<\/h\1>|<table[^>]*class="[^"]*wikitable[^"]*"[\s\S]*?<\/table>/g;
-  for (const m of html.matchAll(re)) {
-    if (m[0].startsWith('<h')) {
-      const name = strip(m[2]).replace(/\[edit\]$/i, '').trim();
-      if (m[1] === '2') {
-        skip = SKIP_SECTION.test(name);
-        sport = skip ? null : name;
-        category = null;
-      } else {
-        // Всеки спорт на страницата за Париж има свой подраздел „Medal table“
-        // с ДЪРЖАВИ. Той има медални колони и се четеше като дисциплини — оттам
-        // дойдоха 482 вместо 329. Такъв подраздел се прескача.
-        skip = SKIP_SECTION.test(name);
-        category = skip || GENERIC_SUB.test(name) ? null : name;
-      }
+  // Заглавията се четат до h4. Спортът е винаги h2; всичко по-долу е признак,
+  // който отличава дисциплините една от друга. Лондон 2012 и Токио 2020 паднаха
+  // точно тук: „Keirin“ се появи два пъти, защото мъжете и жените стоят под h4
+  // вътре в h3 „Track cycling“, а h4 изобщо не се четеше.
+  const heads = { 2: null, 3: null, 4: null };
+  let skipLevel = null;
+
+  const marks = [];
+  for (const m of html.matchAll(/<h([234])\b[^>]*>([\s\S]*?)<\/h\1>/g)) {
+    marks.push({ at: m.index, level: Number(m[1]), name: strip(m[2]).replace(/\[edit\]$/i, '').trim() });
+  }
+  for (const t of tablesIn(html)) marks.push({ at: t.at, table: t.html });
+  marks.sort((a, b) => a.at - b.at);
+
+  const context = () => {
+    const sport = heads[2];
+    const subs = [heads[3], heads[4]].filter((x) => x && !GENERIC_SUB.test(x));
+    return { sport, category: subs.length ? subs.join(' · ') : null };
+  };
+
+  for (const mark of marks) {
+    if (mark.table === undefined) {
+      // Излизане от прескочен раздел: заглавие на същото или по-горно ниво.
+      if (skipLevel !== null && mark.level <= skipLevel) skipLevel = null;
+      for (let l = mark.level; l <= 4; l += 1) heads[l] = null;
+      heads[mark.level] = mark.name;
+      // Всеки спорт на страницата за Париж има свой подраздел „Medal table“ с
+      // ДЪРЖАВИ — има медални колони и се четеше като дисциплини.
+      if (skipLevel === null && SKIP_SECTION.test(mark.name)) skipLevel = mark.level;
       continue;
     }
-    if (!sport || skip) continue;
+    const { sport, category } = context();
+    if (!sport || skipLevel !== null) continue;
 
-    const rows = [...m[0].matchAll(/<tr[\s\S]*?<\/tr>/g)]
-      .map((r) => [...r[0].matchAll(/<t[hd][^>]*>([\s\S]*?)<\/t[hd]>/g)].map((c) => strip(c[1])));
+    const rows = gridRows(mark.table);
     if (rows.length < 2) continue;
 
     const head = rows[0].map((h) => h.toLowerCase());
@@ -197,7 +299,10 @@ function parseMedallists(html) {
     const si = head.findIndex((h) => h.startsWith('silver'));
     const bi = head.findIndex((h) => h.startsWith('bronze'));
     // Без трите медални колони това не е таблица с медалисти.
-    if (gi < 0 || si < 0 || bi < 0) continue;
+    if (gi < 0 || si < 0 || bi < 0) {
+      rejectedTables.push({ sport, category, rows: rows.length - 1, head: rows[0].slice(0, 6) });
+      continue;
+    }
     const ei = head.findIndex((h) => h.startsWith('event')) >= 0 ? head.findIndex((h) => h.startsWith('event')) : 0;
 
     for (const r of rows.slice(1)) {
@@ -210,7 +315,50 @@ function parseMedallists(html) {
       events.push({ sport, ...(category ? { category } : {}), event, gold, silver: r[si] ?? '', bronze: r[bi] ?? '' });
     }
   }
-  return { events, skipped };
+  return { events, skipped, rejectedTables };
+}
+
+/**
+ * Какво да се напише в лога, когато страница не мине проверките.
+ *
+ * Четирите летни Игри паднаха на четири различни неща и всеки път губех по
+ * един пробег в гадаене на структурата. Затова тук се печата всичко, което
+ * различава „разборът сгреши“ от „страницата е друга“: заглавията, колко
+ * дисциплини е дал всеки спорт, и таблиците, които са били подминати.
+ */
+function diagnose(page, html) {
+  const out = [`  заглавия на „${page}“ (първите 60):`];
+  const heads = [...html.matchAll(/<h([234])\b[^>]*>([\s\S]*?)<\/h\1>/g)]
+    .map((m) => `    h${m[1]} ${strip(m[2]).replace(/\[edit\]$/i, '').trim()}`)
+    .slice(0, 60);
+  out.push(heads.join('\n'));
+
+  const { events, skipped, rejectedTables } = parseMedallists(html);
+  const perSport = new Map();
+  for (const e of events) perSport.set(e.sport, (perSport.get(e.sport) ?? 0) + 1);
+  out.push('  дисциплини по спорт: ' +
+    [...perSport].map(([s, n]) => `${s} ${n}`).join(', '));
+
+  if (rejectedTables.length) {
+    out.push(`  подминати таблици (${rejectedTables.length}) — без трите медални колони:`);
+    for (const t of rejectedTables.slice(0, 12)) {
+      out.push(`    ${t.sport}${t.category ? ' · ' + t.category : ''}: ${t.rows} реда, колони [${t.head.join(' | ')}]`);
+    }
+  }
+  if (skipped.length) {
+    out.push(`  пропуснати редове (${skipped.length}):`);
+    for (const r of skipped.slice(0, 10)) out.push(`    ${r.sport}: ${r.why} — ${r.row.join(' | ')}`);
+  }
+
+  const keys = events.map((e) => `${e.sport}|${e.category ?? ''}|${e.event}`);
+  const dupe = keys.find((k, i) => keys.indexOf(k) !== i);
+  if (dupe) {
+    out.push('  повтореният запис, и двата пъти:');
+    events.filter((e, i) => keys[i] === dupe).forEach((e) => {
+      out.push(`    ${e.sport} · ${e.category ?? '—'} · ${e.event} → ${e.gold} / ${e.silver} / ${e.bronze}`);
+    });
+  }
+  return out.join('\n');
 }
 
 const probe = process.argv.includes('--probe');
@@ -259,8 +407,11 @@ async function main() {
   const report2 = [];
   let ok2 = 0;
   for (const g of MEDALLIST_PAGES) {
+    // Страницата се тегли ВЕДНЪЖ. Вторият опит в пътя на грешката пращаше по
+    // две заявки на игра и Уикипедия отвръщаше с 429 по средата на пробега.
+    let html = null;
     try {
-      const html = await pageHtml(g.page);
+      html = await pageHtml(g.page);
       const { events, skipped } = parseMedallists(html);
       const [lo, hi] = g.expect;
       if (events.length < lo || events.length > hi) {
@@ -300,13 +451,7 @@ async function main() {
     } catch (err) {
       report2.push(`${g.label.padEnd(22)} ГРЕШКА: ${err.message}`);
       // Структурата на страницата не се гадае — принтира се.
-      try {
-        const html = await pageHtml(g.page);
-        const heads = [...html.matchAll(/<h([23])[^>]*>([\s\S]*?)<\/h\1>/g)]
-          .map((m) => `  h${m[1]} ${strip(m[2]).replace(/\[edit\]$/i, '').trim()}`)
-          .slice(0, 40);
-        report2.push(`  заглавия на „${g.page}“ (първите 40):\n${heads.join('\n')}`);
-      } catch { /* няма как да помогнем повече */ }
+      if (html) report2.push(diagnose(g.page, html));
     }
     await sleep(1500);
   }

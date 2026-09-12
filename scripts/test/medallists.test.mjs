@@ -131,3 +131,55 @@ assert.ok(!events.some((e) => e.event === 'Should not appear'), '„See also“ 
 assert.ok(!events.some((e) => /^\d+$/.test(e.event)), 'няма ред, чието „събитие“ е число');
 
 console.log('минава:', events.length, 'дисциплини в', sports.length, 'спорта,', skipped.length, 'пропуснати');
+
+// --- трите случая, заради които парсерът беше пипнат ---
+
+// 1. Лондон 2012 и Токио 2020: полът стои под h4 вътре в h3 с дисциплината.
+//    С четене само до h3 „Keirin“ се появяваше два пъти и страницата падаше
+//    на проверката за повторени дисциплини.
+const nested = parseMedallists(`
+<div class="mw-heading"><h2 id="Cycling">Cycling</h2></div>
+<div class="mw-heading"><h3 id="Track">Track cycling</h3></div>
+<div class="mw-heading"><h4 id="Men">Men's events</h4></div>
+<table class="wikitable"><tbody>
+<tr><th>Event</th><th>Gold</th><th>Silver</th><th>Bronze</th></tr>
+<tr><td>Keirin</td><td>Chris Hoy</td><td>Maximilian Levy</td><td>Simon van Velthooven</td></tr>
+</tbody></table>
+<div class="mw-heading"><h4 id="Women">Women's events</h4></div>
+<table class="wikitable"><tbody>
+<tr><th>Event</th><th>Gold</th><th>Silver</th><th>Bronze</th></tr>
+<tr><td>Keirin</td><td>Victoria Pendleton</td><td>Guo Shuang</td><td>Lee Wai-sze</td></tr>
+</tbody></table>`);
+assert.equal(nested.events.length, 2, 'двете кейрин-състезания са два реда');
+assert.equal(nested.events[0].sport, 'Cycling', 'спортът пак е h2');
+assert.equal(nested.events[0].category, "Track cycling · Men's events", 'веригата от подзаглавия');
+assert.notEqual(nested.events[0].category, nested.events[1].category, 'мъжете и жените се различават');
+
+// 2. Слети клетки. Един ранг за две държави, една дисциплина за два реда:
+//    следващият ред идва с по-малко клетки и правилото „друг брой клетки“ го
+//    изхвърляше — така се губят цели дисциплини, без нищо да изглежда счупено.
+const spans = parseMedallists(`
+<div class="mw-heading"><h2 id="Canoeing">Canoeing</h2></div>
+<table class="wikitable"><tbody>
+<tr><th>Event</th><th>Gold</th><th>Silver</th><th>Bronze</th></tr>
+<tr><td rowspan="2">K-1 200 metres</td><td>Liam Heath</td><td>Maxime Beaumont</td><td>Saúl Craviotto</td></tr>
+<tr><td>Danuta Kozák</td><td>Emma Jørgensen</td><td>Lisa Carrington</td></tr>
+</tbody></table>`);
+assert.equal(spans.events.length, 2, 'и вторият ред се чете');
+assert.equal(spans.skipped.length, 0, 'нищо не е изхвърлено като криво');
+assert.equal(spans.events[1].event, 'K-1 200 metres', 'слятата клетка се пренася надолу');
+assert.equal(spans.events[1].gold, 'Danuta Kozák');
+
+// 3. Вложена таблица в клетка. С израз, който спира на първото „</table>“,
+//    външната таблица се реже и всичко под вложената изчезва.
+const inner = parseMedallists(`
+<div class="mw-heading"><h2 id="Rowing">Rowing</h2></div>
+<table class="wikitable"><tbody>
+<tr><th>Event</th><th>Gold</th><th>Silver</th><th>Bronze</th></tr>
+<tr><td>Men's eight</td><td><table class="nested"><tr><td>Crew list</td></tr></table>Germany</td><td>Great Britain</td><td>Netherlands</td></tr>
+<tr><td>Women's eight</td><td>United States</td><td>Great Britain</td><td>Romania</td></tr>
+</tbody></table>`);
+assert.equal(inner.events.length, 2, 'редът след вложената таблица не се губи');
+assert.ok(!inner.events.some((e) => e.event === 'Crew list'), 'редът на вложената не е дисциплина');
+
+console.log('минават и трите случая от истинските страници');

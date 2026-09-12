@@ -155,20 +155,21 @@ assert.equal(nested.events[0].sport, 'Cycling', 'спортът пак е h2');
 assert.equal(nested.events[0].category, "Track cycling · Men's events", 'веригата от подзаглавия');
 assert.notEqual(nested.events[0].category, nested.events[1].category, 'мъжете и жените се различават');
 
-// 2. Слети клетки. Един ранг за две държави, една дисциплина за два реда:
-//    следващият ред идва с по-малко клетки и правилото „друг брой клетки“ го
-//    изхвърляше — така се губят цели дисциплини, без нищо да изглежда счупено.
+// 2. Слети клетки в съседна колона. Класът на лодката стои веднъж за два
+//    реда: вторият ред идва с една клетка по-малко и правилото „ред с друг
+//    брой клетки не е ред“ го изхвърляше. Така се губят цели дисциплини, без
+//    нищо да изглежда счупено — Рио върна 225 от 306, Париж 221 от 329.
 const spans = parseMedallists(`
 <div class="mw-heading"><h2 id="Canoeing">Canoeing</h2></div>
 <table class="wikitable"><tbody>
-<tr><th>Event</th><th>Gold</th><th>Silver</th><th>Bronze</th></tr>
-<tr><td rowspan="2">K-1 200 metres</td><td>Liam Heath</td><td>Maxime Beaumont</td><td>Saúl Craviotto</td></tr>
-<tr><td>Danuta Kozák</td><td>Emma Jørgensen</td><td>Lisa Carrington</td></tr>
+<tr><th>Class</th><th>Event</th><th>Gold</th><th>Silver</th><th>Bronze</th></tr>
+<tr><td rowspan="2">Sprint</td><td>K-1 200 metres</td><td>Liam Heath</td><td>Maxime Beaumont</td><td>Saúl Craviotto</td></tr>
+<tr><td>K-1 1000 metres</td><td>Marcus Walz</td><td>Josef Dostál</td><td>Roland Varga</td></tr>
 </tbody></table>`);
 assert.equal(spans.events.length, 2, 'и вторият ред се чете');
 assert.equal(spans.skipped.length, 0, 'нищо не е изхвърлено като криво');
-assert.equal(spans.events[1].event, 'K-1 200 metres', 'слятата клетка се пренася надолу');
-assert.equal(spans.events[1].gold, 'Danuta Kozák');
+assert.equal(spans.events[1].event, 'K-1 1000 metres', 'дисциплината е от своята колона');
+assert.equal(spans.events[1].gold, 'Marcus Walz');
 
 // 3. Вложена таблица в клетка. С израз, който спира на първото „</table>“,
 //    външната таблица се реже и всичко под вложената изчезва.
@@ -183,3 +184,30 @@ assert.equal(inner.events.length, 2, 'редът след вложената т�
 assert.ok(!inner.events.some((e) => e.event === 'Crew list'), 'редът на вложената не е дисциплина');
 
 console.log('минават и трите случая от истинските страници');
+
+// 4. Една дисциплина на няколко реда. Боксът раздава два бронза, а при
+//    равенство златото е на двама — клетката с дисциплината е слята надолу.
+//    Преди разгъването на слетите клетки тези редове просто изчезваха; след
+//    него станаха по две дисциплини с едно и също име и страницата падна на
+//    проверката за повторени. И двете са грешни: това е една дисциплина.
+const shared = parseMedallists(`
+<div class="mw-heading"><h2 id="Boxing">Boxing</h2></div>
+<div class="mw-heading"><h3 id="Men">Men</h3></div>
+<table class="wikitable"><tbody>
+<tr><th>Event</th><th>Gold</th><th>Silver</th><th>Bronze</th></tr>
+<tr><td rowspan="2">Light flyweight</td><td rowspan="2">Hasanboy Dusmatov</td><td rowspan="2">Yuberjen Martínez</td><td>Joahnys Argilagos</td></tr>
+<tr><td>Nico Hernández</td></tr>
+</tbody></table>
+<div class="mw-heading"><h2 id="Athletics">Athletics</h2></div>
+<table class="wikitable"><tbody>
+<tr><th>Event</th><th>Gold</th><th>Silver</th><th>Bronze</th></tr>
+<tr><td rowspan="2">High jump</td><td>Gianmarco Tamberi</td><td rowspan="2">Not awarded</td><td rowspan="2">Maksim Nedasekau</td></tr>
+<tr><td>Mutaz Essa Barshim</td></tr>
+</tbody></table>`);
+assert.equal(shared.events.length, 2, 'две дисциплини, не четири');
+assert.equal(shared.events[0].bronze, 'Joahnys Argilagos · Nico Hernández', 'двата бронза в един запис');
+assert.equal(shared.events[0].gold, 'Hasanboy Dusmatov', 'златото не се повтаря');
+assert.equal(shared.events[1].gold, 'Gianmarco Tamberi · Mutaz Essa Barshim', 'деленото злато е на двамата');
+assert.equal(shared.events[1].silver, 'Not awarded', 'сребро няма при делено злато');
+
+console.log('минава и споделеният медал');

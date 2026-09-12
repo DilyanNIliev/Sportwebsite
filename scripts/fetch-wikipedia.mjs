@@ -251,6 +251,17 @@ const SKIP_SECTION = /^(see also|references|notes|sources|external links|content
  */
 const GENERIC_SUB = /^(medalists|medallists|events|list of medalists)$/i;
 
+/**
+ * Втори носител на един и същи медал се долепя, вместо да става втора
+ * дисциплина. Повторение на същото име не се записва два пъти.
+ */
+function addMedallist(rec, key, value) {
+  const v = (value ?? '').trim();
+  if (!v) return;
+  const parts = rec[key] ? rec[key].split(' · ') : [];
+  if (!parts.includes(v)) rec[key] = [...parts, v].join(' · ');
+}
+
 function parseMedallists(html) {
   const events = [];
   const skipped = [];
@@ -305,6 +316,11 @@ function parseMedallists(html) {
     }
     const ei = head.findIndex((h) => h.startsWith('event')) >= 0 ? head.findIndex((h) => h.startsWith('event')) : 0;
 
+    // Една дисциплина може да заема няколко реда: боксът раздава два бронза,
+    // а при равенство златото е на двама. Клетката с дисциплината тогава е
+    // слята надолу, тоест след разгъването съседните редове носят едно и също
+    // име — и това е знакът, че са една дисциплина, а не две.
+    let prev = null;
     for (const r of rows.slice(1)) {
       // Ред с друг брой клетки не е ред от тази таблица. Точно такъв ред
       // сложи борец на мястото на дисциплина в Лондон 2012.
@@ -312,7 +328,15 @@ function parseMedallists(html) {
       const event = r[ei];
       const gold = r[gi];
       if (!event || !gold) { skipped.push({ sport, why: 'липсва дисциплина или злато', row: r.slice(0, 2) }); continue; }
-      events.push({ sport, ...(category ? { category } : {}), event, gold, silver: r[si] ?? '', bronze: r[bi] ?? '' });
+
+      if (prev && prev.event === event) {
+        addMedallist(prev, 'gold', gold);
+        addMedallist(prev, 'silver', r[si]);
+        addMedallist(prev, 'bronze', r[bi]);
+        continue;
+      }
+      prev = { sport, ...(category ? { category } : {}), event, gold, silver: r[si] ?? '', bronze: r[bi] ?? '' };
+      events.push(prev);
     }
   }
   return { events, skipped, rejectedTables };

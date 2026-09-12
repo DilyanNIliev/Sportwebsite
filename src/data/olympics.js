@@ -22,6 +22,7 @@ import mw2010 from './wikipedia/medallists-winter-2010.json';
 import mw2014 from './wikipedia/medallists-winter-2014.json';
 import mw2018 from './wikipedia/medallists-winter-2018.json';
 import mw2022 from './wikipedia/medallists-winter-2022.json';
+import mw2026 from './wikipedia/medallists-winter-2026.json';
 
 const MEDALLISTS = {
   'summer-2008': ms2008,
@@ -33,6 +34,7 @@ const MEDALLISTS = {
   'winter-2014': mw2014,
   'winter-2018': mw2018,
   'winter-2022': mw2022,
+  'winter-2026': mw2026,
 };
 
 /** Домакин и период — не идват от медалната таблица. */

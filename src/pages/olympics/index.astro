@@ -16,7 +16,9 @@ const seasons = [
 <Base
   title="Olympic medal tables"
   seoTitle="Olympic medal tables and medallists"
-  description={`Medal tables for ten Olympic Games, ${totalRows} country rows in all, and every event with its three medallists for ${withEvents.length} of them — ${totalEvents} events so far.`}
+  description={withEvents.length === games.length
+    ? `Medal tables for all ten Olympic Games since 2008, ${totalRows} country rows in all, plus every one of the ${totalEvents} events with its gold, silver and bronze.`
+    : `Medal tables for ten Olympic Games, ${totalRows} country rows in all, and every event with its three medallists for ${withEvents.length} of them — ${totalEvents} events so far.`}
   crumbs={crumbs}
 >
   <section class="hero accented" style="--accent:#0369a1;--accent-dark:#3f8db8;--accent2:#a8cfe8;--accent2-dark:#cfe3f2">
@@ -60,7 +62,13 @@ const seasons = [
       <p class="note">
         Medal data from Wikipedia under CC BY-SA 4.0, fetched and checked by a script that
         runs separately from the site build — so the pages never wait on the network, and a
-        row whose medals do not add up to its total is dropped rather than corrected.
+        row whose medals do not add up to its total is dropped rather than corrected. The
+        same script refuses to publish a Games whose event count falls outside what that
+        Games actually held, or whose events come back with a name that appears twice.</p>
+        <p class="note">
+        Where two athletes shared a medal — the tied high jump gold in Tokyo, the two
+        bronzes every boxing weight awards — both names are in the same row, because both
+        of them won it.
       </p>
     </div>
   </section>

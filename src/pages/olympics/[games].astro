@@ -58,6 +58,7 @@ const jsonLd = {
         <p class="search-count" data-oly-count hidden></p>
       </div>
 
+      <div data-oly-block>
       <div class="block-head"><h2>Medal table</h2></div>
       <div class="table-scroll">
         <table data-medal-table>
@@ -80,6 +81,7 @@ const jsonLd = {
         {rows.length} countries won at least one medal. Golds, silvers and bronzes were
         each checked to add up to the stated total before this table was published.
       </p>
+      </div>
 
       {bySport.length > 0 ? (
         <>
@@ -137,7 +139,9 @@ const jsonLd = {
       var input = document.getElementById('oly-search');
       if (!input) return;
       var rows = [].slice.call(document.querySelectorAll('[data-oly-row]'));
-      var blocks = [].slice.call(document.querySelectorAll('[data-oly-sport]'));
+      // И медалната таблица се скрива, когато търсенето не остави ред в нея —
+      // иначе остава глава с бележка под нея и нищо между тях.
+      var blocks = [].slice.call(document.querySelectorAll('[data-oly-sport], [data-oly-block]'));
       var count = document.querySelector('[data-oly-count]');
 
       input.addEventListener('input', function () {

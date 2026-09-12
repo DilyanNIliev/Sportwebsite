@@ -303,4 +303,14 @@ assert.equal(team.events[0].bronze, 'Oliver Zeidler Germany', 'индивиду�
 // Краят на ред пред „details“ не бива да оставя запетая след името.
 assert.equal(team.events[0].event, 'Double sculls', 'без „, details“ накрая');
 
+// Пояснение в скоби на нов ред не е нов запис.
+const paren = parseMedallists(`
+<div class="mw-heading"><h2 id="Athletics">Athletics</h2></div>
+<table class="wikitable"><tbody>
+<tr><th>Event</th><th>Gold</th><th>Silver</th><th>Bronze</th></tr>
+<tr><td>High jump</td><td>Gianmarco Tamberi</td><td>Not awarded<br>(as there was a tie for gold)</td><td>Maksim Nedasekau</td></tr>
+</tbody></table>`);
+assert.equal(paren.events[0].silver, 'Not awarded (as there was a tie for gold)',
+  'скобата не става отделна част');
+
 console.log('минава и отборната клетка');

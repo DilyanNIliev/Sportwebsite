@@ -22,6 +22,21 @@ const rows = g.table.rows;
 const top = rows[0];
 const bySport = eventsBySport(g);
 
+// Клетката с медалист е „Име, Държава“ или „Държава, Име, Име…“ за отбор.
+// Кое от частите е държава не се гадае — сверява се с медалната таблица на
+// същите Игри, а тя е точно списъкът от държави, спечелили медал.
+const nations = new Set(rows.map((r) => r.country));
+/**
+ * Клетката на разбираеми части. „ · “ дели двама носители на един медал.
+ * Вътре в един носител държавата отива накрая, за да чете еднакво и при
+ * отбор, и при отделен състезател: „имена, държава“.
+ */
+const medalParts = (cell) =>
+  (cell ?? '').split(' · ').map((winner) => {
+    const parts = winner.split(', ').map((text) => ({ text, nation: nations.has(text) }));
+    return [...parts.filter((p) => !p.nation), ...parts.filter((p) => p.nation)];
+  });
+
 const description = g.events
   ? `The full ${g.label} medal table — ${rows.length} countries, led by ${top.country} on ${top.gold} golds — and every one of the ${g.eventCount} events with its gold, silver and bronze.`
   : `The full ${g.label} medal table: ${rows.length} countries that won a medal, led by ${top.country} on ${top.gold} golds and ${top.total} medals in total.`;
@@ -106,9 +121,20 @@ const jsonLd = {
                           {e.event}
                           {e.category && <span class="oly-cat">{e.category}</span>}
                         </td>
-                        <td>{e.gold}</td>
-                        <td class="td-note">{e.silver}</td>
-                        <td class="td-note">{e.bronze}</td>
+                        {['gold', 'silver', 'bronze'].map((medal) => (
+                          <td class={medal === 'gold' ? undefined : 'td-note'}>
+                            {medalParts(e[medal]).map((winner, wi) => (
+                              <>
+                                {wi > 0 && <span class="oly-and"> · </span>}
+                                {/* Запетаята влиза В предната част: отделен текстов
+                                     възел на свой ред остава с интервал пред себе си. */}
+                                {winner.map((part, pi) => (
+                                  <span class={part.nation ? 'oly-nat' : undefined}>{part.text}{pi < winner.length - 1 ? ', ' : ''}</span>
+                                ))}
+                              </>
+                            ))}
+                          </td>
+                        ))}
                       </tr>
                     ))}
                   </tbody>

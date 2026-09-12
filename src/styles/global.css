@@ -799,3 +799,8 @@ tbody td:nth-child(2) { font-weight: 650; }
 .oly-cat {
   display: block; font-size: .72rem; color: var(--text-faint); margin-top: 2px;
 }
+
+/* Държавата в клетка с медалисти. Кое е държава се сверява с медалната
+   таблица на същите Игри, затова е безопасно да се оцвети различно. */
+.oly-nat { color: var(--muted); }
+.oly-and { color: var(--accent); font-weight: 700; }

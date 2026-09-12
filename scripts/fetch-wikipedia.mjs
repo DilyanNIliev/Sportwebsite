@@ -291,19 +291,27 @@ function parseMedallists(html) {
   // който отличава дисциплините една от друга. Лондон 2012 и Токио 2020 паднаха
   // точно тук: „Keirin“ се появи два пъти, защото мъжете и жените стоят под h4
   // вътре в h3 „Track cycling“, а h4 изобщо не се четеше.
-  const heads = { 2: null, 3: null, 4: null };
+  const heads = { 2: null, 3: null, 4: null, 5: null };
   let skipLevel = null;
 
   const marks = [];
   for (const m of html.matchAll(/<h([234])\b[^>]*>([\s\S]*?)<\/h\1>/g)) {
     marks.push({ at: m.index, level: Number(m[1]), name: strip(m[2]).replace(/\[edit\]$/i, '').trim() });
   }
+  // Получерен надред, който не е заглавие: в уикитекста „;Men“, в HTML <dt>.
+  // Париж 2024 дели кану-спринта точно така — две таблици под едно h3 „Sprint“,
+  // без заглавие, без надпис и без пол в имената на дисциплините. Брои се като
+  // най-долното ниво, тоест пада при всяко истинско заглавие.
+  for (const m of html.matchAll(/<dt\b[^>]*>([\s\S]*?)<\/dt>/g)) {
+    const name = strip(m[1]).trim();
+    if (name && name.length < 60) marks.push({ at: m.index, level: 5, name });
+  }
   for (const t of tablesIn(html)) marks.push({ at: t.at, table: t.html });
   marks.sort((a, b) => a.at - b.at);
 
   const context = () => {
     const sport = heads[2];
-    const subs = [heads[3], heads[4]].filter((x) => x && !GENERIC_SUB.test(x));
+    const subs = [heads[3], heads[4], heads[5]].filter((x) => x && !GENERIC_SUB.test(x));
     return { sport, category: subs.length ? subs.join(' · ') : null };
   };
 
@@ -311,7 +319,7 @@ function parseMedallists(html) {
     if (mark.table === undefined) {
       // Излизане от прескочен раздел: заглавие на същото или по-горно ниво.
       if (skipLevel !== null && mark.level <= skipLevel) skipLevel = null;
-      for (let l = mark.level; l <= 4; l += 1) heads[l] = null;
+      for (let l = mark.level; l <= 5; l += 1) heads[l] = null;
       heads[mark.level] = mark.name;
       // Всеки спорт на страницата за Париж има свой подраздел „Medal table“ с
       // ДЪРЖАВИ — има медални колони и се четеше като дисциплини.
@@ -396,8 +404,8 @@ function parseMedallists(html) {
  */
 function diagnose(page, html) {
   const out = [`  заглавия на „${page}“ (първите 60):`];
-  const heads = [...html.matchAll(/<h([234])\b[^>]*>([\s\S]*?)<\/h\1>/g)]
-    .map((m) => `    h${m[1]} ${strip(m[2]).replace(/\[edit\]$/i, '').trim()}`)
+  const heads = [...html.matchAll(/<h([234])\b[^>]*>([\s\S]*?)<\/h\1>|<dt\b[^>]*>([\s\S]*?)<\/dt>/g)]
+    .map((m) => (m[1] ? `    h${m[1]} ${strip(m[2])}` : `    dt ${strip(m[3])}`).replace(/\[edit\]$/i, ''))
     .slice(0, 60);
   out.push(heads.join('\n'));
 

@@ -254,3 +254,31 @@ assert.equal(captioned.events[1].category, "Sprint · Women's events", 'и пъ�
 assert.ok(!captioned.events.some((e) => /events$/.test(e.event)), 'надписът не е дисциплина');
 
 console.log('минава и надписът на таблицата')
+
+// 7. Получерен надред, който не е заглавие. В уикитекста „;Men“, в HTML <dt>.
+//    Париж 2024 дели кану-спринта точно така: две таблици под едно h3
+//    „Sprint“, без пол в имената на дисциплините и без нищо друго между тях.
+const dt = parseMedallists(`
+<div class="mw-heading"><h2 id="Canoeing">Canoeing</h2></div>
+<div class="mw-heading"><h3 id="Sprint">Sprint</h3></div>
+<dl><dt>Men</dt></dl>
+<table class="wikitable"><tbody>
+<tr><th>Event</th><th>Gold</th><th>Silver</th><th>Bronze</th></tr>
+<tr><td>C-2 500 metres</td><td>Liu Hao</td><td>Gabriele Casadei</td><td>Joan Antoni Moreno</td></tr>
+</tbody></table>
+<dl><dt>Women</dt></dl>
+<table class="wikitable"><tbody>
+<tr><th>Event</th><th>Gold</th><th>Silver</th><th>Bronze</th></tr>
+<tr><td>C-2 500 metres</td><td>Xu Shixiao</td><td>Liudmyla Luzan</td><td>Sloan MacKenzie</td></tr>
+</tbody></table>
+<div class="mw-heading"><h2 id="Cycling">Cycling</h2></div>
+<table class="wikitable"><tbody>
+<tr><th>Event</th><th>Gold</th><th>Silver</th><th>Bronze</th></tr>
+<tr><td>Road race</td><td>Remco Evenepoel</td><td>Valentin Madouas</td><td>Christophe Laporte</td></tr>
+</tbody></table>`);
+assert.equal(dt.events.length, 3);
+assert.equal(dt.events[0].category, 'Sprint · Men', 'надредът се брои като най-долно ниво');
+assert.equal(dt.events[1].category, 'Sprint · Women');
+assert.equal(dt.events[2].category, undefined, 'и пада при следващото истинско заглавие');
+
+console.log('минава и получереният надред');

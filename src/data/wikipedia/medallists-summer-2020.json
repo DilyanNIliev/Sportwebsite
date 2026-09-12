@@ -1,0 +1,2665 @@
+{
+  "games": "Tokyo 2020",
+  "source": "https://en.wikipedia.org/wiki/List_of_2020_Summer_Olympics_medal_winners",
+  "sourceName": "Wikipedia",
+  "licence": "CC BY-SA 4.0",
+  "fetched": "2026-09-12",
+  "eventCount": 339,
+  "sportCount": 37,
+  "skippedRows": 0,
+  "events": [
+    {
+      "sport": "Archery",
+      "event": "Men's individual",
+      "gold": "Mete Gazoz Turkey",
+      "silver": "Mauro Nespoli Italy",
+      "bronze": "Takaharu Furukawa Japan"
+    },
+    {
+      "sport": "Archery",
+      "event": "Men's team",
+      "gold": "South KoreaKim Woo-jinOh Jin-hyekKim Je-deok",
+      "silver": "Chinese TaipeiDeng Yu-chengTang Chih-chunWei Chun-heng",
+      "bronze": "JapanTakaharu FurukawaYuki KawataHiroki Muto"
+    },
+    {
+      "sport": "Archery",
+      "event": "Women's individual",
+      "gold": "An San South Korea",
+      "silver": "Elena Osipova ROC",
+      "bronze": "Lucilla Boari Italy"
+    },
+    {
+      "sport": "Archery",
+      "event": "Women's team",
+      "gold": "South KoreaAn SanJang Min-heeKang Chae-young",
+      "silver": "ROCSvetlana GomboevaElena OsipovaKsenia Perova",
+      "bronze": "GermanyMichelle KroppenCharline SchwarzLisa Unruh"
+    },
+    {
+      "sport": "Archery",
+      "event": "Mixed team",
+      "gold": "South KoreaKim Je-deokAn San",
+      "silver": "NetherlandsSteve WijlerGabriela Schloesser",
+      "bronze": "MexicoLuis ÁlvarezAlejandra Valencia"
+    },
+    {
+      "sport": "Artistic swimming",
+      "event": "Duet",
+      "gold": "Svetlana KolesnichenkoSvetlana Romashina ROC",
+      "silver": "Huang XuechenSun Wenyan China",
+      "bronze": "Marta FiedinaAnastasiya Savchuk Ukraine"
+    },
+    {
+      "sport": "Artistic swimming",
+      "event": "Team",
+      "gold": "ROCVlada ChigirevaMarina GoliadkinaSvetlana KolesnichenkoPolina KomarAlexandra PatskevichSvetlana RomashinaAlla ShishkinaMaria Shurochkina",
+      "silver": "ChinaFeng YuGuo LiHuang XuechenLiang XinpingSun WenyanWang QianyiXiao YanningYin Chengxin",
+      "bronze": "UkraineMaryna AleksiivaVladyslava AleksiivaMarta FiedinaKateryna ReznikAnastasiya SavchukAlina ShynkarenkoKseniya SydorenkoYelyzaveta Yakhno"
+    },
+    {
+      "sport": "Athletics",
+      "category": "Men's events",
+      "event": "100 metres",
+      "gold": "Marcell Jacobs Italy",
+      "silver": "Fred Kerley United States",
+      "bronze": "Andre De Grasse Canada"
+    },
+    {
+      "sport": "Athletics",
+      "category": "Men's events",
+      "event": "200 metres",
+      "gold": "Andre De Grasse Canada",
+      "silver": "Kenny Bednarek United States",
+      "bronze": "Noah Lyles United States"
+    },
+    {
+      "sport": "Athletics",
+      "category": "Men's events",
+      "event": "400 metres",
+      "gold": "Steven Gardiner Bahamas",
+      "silver": "Anthony Zambrano Colombia",
+      "bronze": "Kirani James Grenada"
+    },
+    {
+      "sport": "Athletics",
+      "category": "Men's events",
+      "event": "800 metres",
+      "gold": "Emmanuel Korir Kenya",
+      "silver": "Ferguson Rotich Kenya",
+      "bronze": "Patryk Dobek Poland"
+    },
+    {
+      "sport": "Athletics",
+      "category": "Men's events",
+      "event": "1500 metres",
+      "gold": "Jakob Ingebrigtsen Norway",
+      "silver": "Timothy Cheruiyot Kenya",
+      "bronze": "Josh Kerr Great Britain"
+    },
+    {
+      "sport": "Athletics",
+      "category": "Men's events",
+      "event": "5000 metres",
+      "gold": "Joshua Cheptegei Uganda",
+      "silver": "Mohammed Ahmed Canada",
+      "bronze": "Paul Chelimo United States"
+    },
+    {
+      "sport": "Athletics",
+      "category": "Men's events",
+      "event": "10,000 metres",
+      "gold": "Selemon Barega Ethiopia",
+      "silver": "Joshua Cheptegei Uganda",
+      "bronze": "Jacob Kiplimo Uganda"
+    },
+    {
+      "sport": "Athletics",
+      "category": "Men's events",
+      "event": "110 metres hurdles",
+      "gold": "Hansle Parchment Jamaica",
+      "silver": "Grant Holloway United States",
+      "bronze": "Ronald Levy Jamaica"
+    },
+    {
+      "sport": "Athletics",
+      "category": "Men's events",
+      "event": "400 metres hurdles",
+      "gold": "Karsten Warholm Norway",
+      "silver": "Rai Benjamin United States",
+      "bronze": "Alison dos Santos Brazil"
+    },
+    {
+      "sport": "Athletics",
+      "category": "Men's events",
+      "event": "3000 metres steeplechase",
+      "gold": "Soufiane El Bakkali Morocco",
+      "silver": "Lamecha Girma Ethiopia",
+      "bronze": "Benjamin Kigen Kenya"
+    },
+    {
+      "sport": "Athletics",
+      "category": "Men's events",
+      "event": "4 × 100 metres relay",
+      "gold": "ItalyLorenzo PattaMarcell JacobsFausto DesaluFilippo Tortu",
+      "silver": "CanadaAaron BrownJerome BlakeBrendon RodneyAndre De Grasse",
+      "bronze": "ChinaTang XingqiangXie ZhenyeSu BingtianWu Zhiqiang"
+    },
+    {
+      "sport": "Athletics",
+      "category": "Men's events",
+      "event": "4 × 400 metres relay",
+      "gold": "United StatesMichael CherryMichael NormanBryce DeadmonRai BenjaminTrevor StewartRandolph RossVernon Norwood",
+      "silver": "NetherlandsLiemarvin BonevaciaTerrence AgardTony van DiepenRamsey AngelaJochem Dobber",
+      "bronze": "BotswanaIsaac MakwalaBaboloki ThebeZibane NgoziBayapo Ndori"
+    },
+    {
+      "sport": "Athletics",
+      "category": "Men's events",
+      "event": "Marathon",
+      "gold": "Eliud Kipchoge Kenya",
+      "silver": "Abdi Nageeye Netherlands",
+      "bronze": "Bashir Abdi Belgium"
+    },
+    {
+      "sport": "Athletics",
+      "category": "Men's events",
+      "event": "20 kilometres walk",
+      "gold": "Massimo Stano Italy",
+      "silver": "Koki Ikeda Japan",
+      "bronze": "Toshikazu Yamanishi Japan"
+    },
+    {
+      "sport": "Athletics",
+      "category": "Men's events",
+      "event": "50 kilometres walk",
+      "gold": "Dawid Tomala Poland",
+      "silver": "Jonathan Hilbert Germany",
+      "bronze": "Evan Dunfee Canada"
+    },
+    {
+      "sport": "Athletics",
+      "category": "Men's events",
+      "event": "High jump",
+      "gold": "Gianmarco Tamberi Italy · Mutaz Essa Barshim Qatar",
+      "silver": "Not awarded (as there was a tie for gold)",
+      "bronze": "Maksim Nedasekau Belarus"
+    },
+    {
+      "sport": "Athletics",
+      "category": "Men's events",
+      "event": "Pole vault",
+      "gold": "Armand Duplantis Sweden",
+      "silver": "Chris Nilsen United States",
+      "bronze": "Thiago Braz Brazil"
+    },
+    {
+      "sport": "Athletics",
+      "category": "Men's events",
+      "event": "Long jump",
+      "gold": "Miltiadis Tentoglou Greece",
+      "silver": "Juan Miguel Echevarría Cuba",
+      "bronze": "Maykel Massó Cuba"
+    },
+    {
+      "sport": "Athletics",
+      "category": "Men's events",
+      "event": "Triple jump",
+      "gold": "Pedro Pichardo Portugal",
+      "silver": "Zhu Yaming China",
+      "bronze": "Hugues Fabrice Zango Burkina Faso"
+    },
+    {
+      "sport": "Athletics",
+      "category": "Men's events",
+      "event": "Shot put",
+      "gold": "Ryan Crouser United States",
+      "silver": "Joe Kovacs United States",
+      "bronze": "Tom Walsh New Zealand"
+    },
+    {
+      "sport": "Athletics",
+      "category": "Men's events",
+      "event": "Discus throw",
+      "gold": "Daniel Ståhl Sweden",
+      "silver": "Simon Pettersson Sweden",
+      "bronze": "Lukas Weißhaidinger Austria"
+    },
+    {
+      "sport": "Athletics",
+      "category": "Men's events",
+      "event": "Hammer throw",
+      "gold": "Wojciech Nowicki Poland",
+      "silver": "Eivind Henriksen Norway",
+      "bronze": "Paweł Fajdek Poland"
+    },
+    {
+      "sport": "Athletics",
+      "category": "Men's events",
+      "event": "Javelin throw",
+      "gold": "Neeraj Chopra India",
+      "silver": "Jakub Vadlejch Czech Republic",
+      "bronze": "Vítězslav Veselý Czech Republic"
+    },
+    {
+      "sport": "Athletics",
+      "category": "Men's events",
+      "event": "Decathlon",
+      "gold": "Damian Warner Canada",
+      "silver": "Kevin Mayer France",
+      "bronze": "Ashley Moloney Australia"
+    },
+    {
+      "sport": "Athletics",
+      "category": "Women's events",
+      "event": "100 metres",
+      "gold": "Elaine Thompson-Herah Jamaica",
+      "silver": "Shelly-Ann Fraser-Pryce Jamaica",
+      "bronze": "Shericka Jackson Jamaica"
+    },
+    {
+      "sport": "Athletics",
+      "category": "Women's events",
+      "event": "200 metres",
+      "gold": "Elaine Thompson-Herah Jamaica",
+      "silver": "Christine Mboma Namibia",
+      "bronze": "Gabrielle Thomas United States"
+    },
+    {
+      "sport": "Athletics",
+      "category": "Women's events",
+      "event": "400 metres",
+      "gold": "Shaunae Miller-Uibo Bahamas",
+      "silver": "Marileidy Paulino Dominican Republic",
+      "bronze": "Allyson Felix United States"
+    },
+    {
+      "sport": "Athletics",
+      "category": "Women's events",
+      "event": "800 metres",
+      "gold": "Athing Mu United States",
+      "silver": "Keely Hodgkinson Great Britain",
+      "bronze": "Raevyn Rogers United States"
+    },
+    {
+      "sport": "Athletics",
+      "category": "Women's events",
+      "event": "1500 metres",
+      "gold": "Faith Kipyegon Kenya",
+      "silver": "Laura Muir Great Britain",
+      "bronze": "Sifan Hassan Netherlands"
+    },
+    {
+      "sport": "Athletics",
+      "category": "Women's events",
+      "event": "5000 metres",
+      "gold": "Sifan Hassan Netherlands",
+      "silver": "Hellen Obiri Kenya",
+      "bronze": "Gudaf Tsegay Ethiopia"
+    },
+    {
+      "sport": "Athletics",
+      "category": "Women's events",
+      "event": "10,000 metres",
+      "gold": "Sifan Hassan Netherlands",
+      "silver": "Kalkidan Gezahegne Bahrain",
+      "bronze": "Letesenbet Gidey Ethiopia"
+    },
+    {
+      "sport": "Athletics",
+      "category": "Women's events",
+      "event": "100 metres hurdles",
+      "gold": "Jasmine Camacho-Quinn Puerto Rico",
+      "silver": "Kendra Harrison United States",
+      "bronze": "Megan Tapper Jamaica"
+    },
+    {
+      "sport": "Athletics",
+      "category": "Women's events",
+      "event": "400 metres hurdles",
+      "gold": "Sydney McLaughlin United States",
+      "silver": "Dalilah Muhammad United States",
+      "bronze": "Femke Bol Netherlands"
+    },
+    {
+      "sport": "Athletics",
+      "category": "Women's events",
+      "event": "3000 metres steeplechase",
+      "gold": "Peruth Chemutai Uganda",
+      "silver": "Courtney Frerichs United States",
+      "bronze": "Hyvin Jepkemoi Kenya"
+    },
+    {
+      "sport": "Athletics",
+      "category": "Women's events",
+      "event": "4 × 100 metres relay",
+      "gold": "JamaicaBriana WilliamsElaine Thompson-HerahShelly-Ann Fraser-PryceShericka JacksonNatasha MorrisonRemona Burchell",
+      "silver": "United StatesJavianne OliverTeahna DanielsJenna PrandiniGabrielle ThomasEnglish GardnerAleia Hobbs",
+      "bronze": "Great BritainAsha PhilipImani-Lara LansiquotDina Asher-SmithDaryll Neita"
+    },
+    {
+      "sport": "Athletics",
+      "category": "Women's events",
+      "event": "4 × 400 metres relay",
+      "gold": "United StatesSydney McLaughlinAllyson FelixDalilah MuhammadAthing MuKendall EllisLynna IrbyWadeline JonathasKaylin Whitney",
+      "silver": "PolandNatalia KaczmarekIga Baumgart-WitanMałgorzata Hołub-KowalikJustyna Święty-ErseticAnna Kiełbasińska",
+      "bronze": "JamaicaRoneisha McGregorJanieve RussellShericka JacksonCandice McLeodJunelle BromfieldStacey-Ann Williams"
+    },
+    {
+      "sport": "Athletics",
+      "category": "Women's events",
+      "event": "Marathon",
+      "gold": "Peres Jepchirchir Kenya",
+      "silver": "Brigid Kosgei Kenya",
+      "bronze": "Molly Seidel United States"
+    },
+    {
+      "sport": "Athletics",
+      "category": "Women's events",
+      "event": "20 kilometres walk",
+      "gold": "Antonella Palmisano Italy",
+      "silver": "Sandra Arenas Colombia",
+      "bronze": "Liu Hong China"
+    },
+    {
+      "sport": "Athletics",
+      "category": "Women's events",
+      "event": "High jump",
+      "gold": "Mariya Lasitskene ROC",
+      "silver": "Nicola McDermott Australia",
+      "bronze": "Yaroslava Mahuchikh Ukraine"
+    },
+    {
+      "sport": "Athletics",
+      "category": "Women's events",
+      "event": "Pole vault",
+      "gold": "Katie Nageotte United States",
+      "silver": "Anzhelika Sidorova ROC",
+      "bronze": "Holly Bradshaw Great Britain"
+    },
+    {
+      "sport": "Athletics",
+      "category": "Women's events",
+      "event": "Long jump",
+      "gold": "Malaika Mihambo Germany",
+      "silver": "Brittney Reese United States",
+      "bronze": "Ese Brume Nigeria"
+    },
+    {
+      "sport": "Athletics",
+      "category": "Women's events",
+      "event": "Triple jump",
+      "gold": "Yulimar Rojas Venezuela",
+      "silver": "Patrícia Mamona Portugal",
+      "bronze": "Ana Peleteiro Spain"
+    },
+    {
+      "sport": "Athletics",
+      "category": "Women's events",
+      "event": "Shot put",
+      "gold": "Gong Lijiao China",
+      "silver": "Raven Saunders United States",
+      "bronze": "Valerie Adams New Zealand"
+    },
+    {
+      "sport": "Athletics",
+      "category": "Women's events",
+      "event": "Discus throw",
+      "gold": "Valarie Allman United States",
+      "silver": "Kristin Pudenz Germany",
+      "bronze": "Yaime Pérez Cuba"
+    },
+    {
+      "sport": "Athletics",
+      "category": "Women's events",
+      "event": "Hammer throw",
+      "gold": "Anita Włodarczyk Poland",
+      "silver": "Wang Zheng China",
+      "bronze": "Malwina Kopron Poland"
+    },
+    {
+      "sport": "Athletics",
+      "category": "Women's events",
+      "event": "Javelin throw",
+      "gold": "Liu Shiying China",
+      "silver": "Maria Andrejczyk Poland",
+      "bronze": "Kelsey-Lee Barber Australia"
+    },
+    {
+      "sport": "Athletics",
+      "category": "Women's events",
+      "event": "Heptathlon",
+      "gold": "Nafissatou Thiam Belgium",
+      "silver": "Anouk Vetter Netherlands",
+      "bronze": "Emma Oosterwegel Netherlands"
+    },
+    {
+      "sport": "Athletics",
+      "category": "Mixed events",
+      "event": "4 × 400 metres relay",
+      "gold": "PolandKajetan DuszyńskiNatalia KaczmarekJustyna Święty-ErseticKarol ZalewskiDariusz KowalukIga Baumgart-WitanMałgorzata Hołub-Kowalik",
+      "silver": "Dominican RepublicLidio Andrés FelizMarileidy PaulinoAnabel MedinaAlexander OgandoLuguelín Santos",
+      "bronze": "United StatesKendall EllisVernon NorwoodTrevor StewartKaylin WhitneyElija GodwinLynna IrbyTaylor MansonBryce Deadmon"
+    },
+    {
+      "sport": "Badminton",
+      "event": "Men's singles",
+      "gold": "Viktor Axelsen Denmark",
+      "silver": "Chen Long China",
+      "bronze": "Anthony Sinisuka Ginting Indonesia"
+    },
+    {
+      "sport": "Badminton",
+      "event": "Men's doubles",
+      "gold": "Lee Yangand Wang Chi-lin Chinese Taipei",
+      "silver": "Li Junhuiand Liu Yuchen China",
+      "bronze": "Aaron Chiaand Soh Wooi Yik Malaysia"
+    },
+    {
+      "sport": "Badminton",
+      "event": "Women's singles",
+      "gold": "Chen Yufei China",
+      "silver": "Tai Tzu-ying Chinese Taipei",
+      "bronze": "P. V. Sindhu India"
+    },
+    {
+      "sport": "Badminton",
+      "event": "Women's doubles",
+      "gold": "Greysia Poliiand Apriyani Rahayu Indonesia",
+      "silver": "Chen Qingchenand Jia Yifan China",
+      "bronze": "Kim So-yeongand Kong Hee-yong South Korea"
+    },
+    {
+      "sport": "Badminton",
+      "event": "Mixed doubles",
+      "gold": "Wang Yilyuand Huang Dongping China",
+      "silver": "Zheng Siweiand Huang Yaqiong China",
+      "bronze": "Yuta Watanabeand Arisa Higashino Japan"
+    },
+    {
+      "sport": "Baseball",
+      "event": "Men",
+      "gold": "JapanKōyō AoyagiSuguru IwazakiMasato MorishitaHiromi ItohYoshinobu YamamotoMasahiro TanakaYasuaki YamasakiRyoji KuribayashiYūdai ŌnoKodai SengaKaima TairaRyutaro UmenoTakuya KaiTetsuto YamadaSōsuke GendaHideto AsamuraRyosuke KikuchiHayato SakamotoMunetaka MurakamiKensuke KondoYuki YanagitaRyoya KuriharaMasataka YoshidaSeiya Suzuki",
+      "silver": "United StatesShane BazAnthony CarterBrandon DicksonAnthony GoseEdwin JacksonScott KazmirNick MartinezScott McGoughDavid RobertsonJoe RyanRyder RyanSimeon Woods RichardsonTim FederowiczMark KolozsvaryNick AllenEddy AlvarezTriston CasasTodd FrazierJamie WestbrookTyler AustinEric FiliaPatrick KivlehanJack LópezBubba Starling",
+      "bronze": "Dominican RepublicDarío ÁlvarezGabriel AriasJairo AsencioLuis Felipe CastilloJumbo DíazJunior GarcíaJhan MariñezCristopher MercedesDenyi ReyesRamón RossoÁngel SánchezRaúl ValdésRoldani BaldwinCharlie ValerioJosé BautistaJuan FranciscoJeison GuzmánErick MejiaGustavo NúñezEmilio BonifácioMelky CabreraJohan MiesesYefri PérezJulio Rodríguez"
+    },
+    {
+      "sport": "Basketball",
+      "event": "Men",
+      "gold": "United StatesBam AdebayoDevin BookerKevin DurantJerami GrantDraymond GreenJrue HolidayKeldon JohnsonZach LaVineDamian LillardJaVale McGeeKhris MiddletonJayson Tatum",
+      "silver": "FranceAndrew AlbicyNicolas BatumPetr CornelieNando de ColoMoustapha FallEvan FournierRudy GobertThomas HeurtelTimothé Luwawu-CabarrotFrank NtilikinaVincent PoirierGuerschon Yabusele",
+      "bronze": "AustraliaAron BaynesMatthew DellavedovaDante ExumChris GouldingJosh GreenJoe InglesNick KayJock LandalePatty MillsDuop ReathNathan SobeyMatisse Thybulle"
+    },
+    {
+      "sport": "Basketball",
+      "event": "Women",
+      "gold": "United StatesJewell LoydSkylar Diggins-SmithSue BirdAriel AtkinsChelsea GrayA'ja WilsonBreanna StewartNapheesa CollierDiana TaurasiSylvia FowlesTina CharlesBrittney Griner",
+      "silver": "JapanMoeko NagaokaMaki TakadaNaho MiyoshiRui MachidaNako MotohashiNanaka TodoSaki HayashiEvelyn MawuliSaori MiyazakiYuki MiyazawaHimawari AkahoMonica Okoye",
+      "bronze": "FranceAlexia ChartereauHéléna CiakAlix DuchetMarine FauthouxSandrine GrudaMarine JohannèsSarah MichelEndéné MiyemIliana RupertDiandra TchatchouangValériane VukosavljevićGabby Williams"
+    },
+    {
+      "sport": "Basketball",
+      "event": "Men 3x3",
+      "gold": "LatviaAgnis ČavarsEdgars KrūmiņšKārlis LasmanisNauris Miezis",
+      "silver": "ROCIlia KarpenkovKirill PisklovStanislav SharovAlexander Zuev",
+      "bronze": "SerbiaDušan Domović BulutDejan MajstorovićAleksandar RatkovMihailo Vasić"
+    },
+    {
+      "sport": "Basketball",
+      "event": "Women 3x3",
+      "gold": "United StatesStefanie DolsonAllisha GrayKelsey PlumJackie Young",
+      "silver": "ROCEvgeniia FrolkinaOlga FrolkinaYulia KozikAnastasia Logunova",
+      "bronze": "ChinaWan JiyuanWang LiliYang ShuyuZhang Zhiting"
+    },
+    {
+      "sport": "Boxing",
+      "category": "Men's events",
+      "event": "Flyweight",
+      "gold": "Galal Yafai Great Britain",
+      "silver": "Carlo Paalam Philippines",
+      "bronze": "Ryomei Tanaka Japan · Saken Bibossinov Kazakhstan"
+    },
+    {
+      "sport": "Boxing",
+      "category": "Men's events",
+      "event": "Featherweight",
+      "gold": "Albert Batyrgaziev ROC",
+      "silver": "Duke Ragan United States",
+      "bronze": "Samuel Takyi Ghana · Lázaro Álvarez Cuba"
+    },
+    {
+      "sport": "Boxing",
+      "category": "Men's events",
+      "event": "Lightweight",
+      "gold": "Andy Cruz Cuba",
+      "silver": "Keyshawn Davis United States",
+      "bronze": "Hovhannes Bachkov Armenia · Harry Garside Australia"
+    },
+    {
+      "sport": "Boxing",
+      "category": "Men's events",
+      "event": "Welterweight",
+      "gold": "Roniel Iglesias Cuba",
+      "silver": "Pat McCormack Great Britain",
+      "bronze": "Andrey Zamkovoy ROC · Aidan Walsh Ireland"
+    },
+    {
+      "sport": "Boxing",
+      "category": "Men's events",
+      "event": "Middleweight",
+      "gold": "Hebert Conceição Brazil",
+      "silver": "Oleksandr Khyzhniak Ukraine",
+      "bronze": "Eumir Marcial Philippines · Gleb Bakshi ROC"
+    },
+    {
+      "sport": "Boxing",
+      "category": "Men's events",
+      "event": "Light heavyweight",
+      "gold": "Arlen López Cuba",
+      "silver": "Benjamin Whittaker Great Britain",
+      "bronze": "Loren Alfonso Azerbaijan · Imam Khataev ROC"
+    },
+    {
+      "sport": "Boxing",
+      "category": "Men's events",
+      "event": "Heavyweight",
+      "gold": "Julio César La Cruz Cuba",
+      "silver": "Muslim Gadzhimagomedov ROC",
+      "bronze": "David Nyika New Zealand · Abner Teixeira Brazil"
+    },
+    {
+      "sport": "Boxing",
+      "category": "Men's events",
+      "event": "Super heavyweight",
+      "gold": "Bakhodir Jalolov Uzbekistan",
+      "silver": "Richard Torrez United States",
+      "bronze": "Frazer Clarke Great Britain · Kamshybek Kunkabayev Kazakhstan"
+    },
+    {
+      "sport": "Boxing",
+      "category": "Women's events",
+      "event": "Flyweight",
+      "gold": "Stoyka Krasteva Bulgaria",
+      "silver": "Buse Naz Çakıroğlu Turkey",
+      "bronze": "Huang Hsiao-wen Chinese Taipei · Tsukimi Namiki Japan"
+    },
+    {
+      "sport": "Boxing",
+      "category": "Women's events",
+      "event": "Featherweight",
+      "gold": "Sena Irie Japan",
+      "silver": "Nesthy Petecio Philippines",
+      "bronze": "Karriss Artingstall Great Britain · Irma Testa Italy"
+    },
+    {
+      "sport": "Boxing",
+      "category": "Women's events",
+      "event": "Lightweight",
+      "gold": "Kellie Harrington Ireland",
+      "silver": "Beatriz Ferreira Brazil",
+      "bronze": "Sudaporn Seesondee Thailand · Mira Potkonen Finland"
+    },
+    {
+      "sport": "Boxing",
+      "category": "Women's events",
+      "event": "Welterweight",
+      "gold": "Busenaz Sürmeneli Turkey",
+      "silver": "Gu Hong China",
+      "bronze": "Lovlina Borgohain India · Oshae Jones United States"
+    },
+    {
+      "sport": "Boxing",
+      "category": "Women's events",
+      "event": "Middleweight",
+      "gold": "Lauren Price Great Britain",
+      "silver": "Li Qian China",
+      "bronze": "Nouchka Fontijn Netherlands · Zemfira Magomedalieva ROC"
+    },
+    {
+      "sport": "Canoeing",
+      "category": "Slalom",
+      "event": "Men's C-1",
+      "gold": "Benjamin Savšek Slovenia",
+      "silver": "Lukáš Rohan Czech Republic",
+      "bronze": "Sideris Tasiadis Germany"
+    },
+    {
+      "sport": "Canoeing",
+      "category": "Slalom",
+      "event": "Men's K-1",
+      "gold": "Jiří Prskavec Czech Republic",
+      "silver": "Jakub Grigar Slovakia",
+      "bronze": "Hannes Aigner Germany"
+    },
+    {
+      "sport": "Canoeing",
+      "category": "Slalom",
+      "event": "Women's C-1",
+      "gold": "Jessica Fox Australia",
+      "silver": "Mallory Franklin Great Britain",
+      "bronze": "Andrea Herzog Germany"
+    },
+    {
+      "sport": "Canoeing",
+      "category": "Slalom",
+      "event": "Women's K-1",
+      "gold": "Ricarda Funk Germany",
+      "silver": "Maialen Chourraut Spain",
+      "bronze": "Jessica Fox Australia"
+    },
+    {
+      "sport": "Canoeing",
+      "category": "Sprint · Men's events",
+      "event": "C-1 1000 metres",
+      "gold": "Isaquias Queiroz Brazil",
+      "silver": "Liu Hao China",
+      "bronze": "Serghei Tarnovschi Moldova"
+    },
+    {
+      "sport": "Canoeing",
+      "category": "Sprint · Men's events",
+      "event": "C-2 1000 metres",
+      "gold": "Serguey Torresand Fernando Jorge Cuba",
+      "silver": "Liu Haoand Zheng Pengfei China",
+      "bronze": "Sebastian Brendeland Tim Hecker Germany"
+    },
+    {
+      "sport": "Canoeing",
+      "category": "Sprint · Men's events",
+      "event": "K-1 200 metres",
+      "gold": "Sándor Tótka Hungary",
+      "silver": "Manfredi Rizza Italy",
+      "bronze": "Liam Heath Great Britain"
+    },
+    {
+      "sport": "Canoeing",
+      "category": "Sprint · Men's events",
+      "event": "K-1 1000 metres",
+      "gold": "Bálint Kopasz Hungary",
+      "silver": "Ádám Varga Hungary",
+      "bronze": "Fernando Pimenta Portugal"
+    },
+    {
+      "sport": "Canoeing",
+      "category": "Sprint · Men's events",
+      "event": "K-2 1000 metres",
+      "gold": "Jean van der Westhuyzenand Thomas Green Australia",
+      "silver": "Max Hoffand Jacob Schopf Germany",
+      "bronze": "Josef Dostáland Radek Šlouf Czech Republic"
+    },
+    {
+      "sport": "Canoeing",
+      "category": "Sprint · Men's events",
+      "event": "K-4 500 metres",
+      "gold": "GermanyMax RendschmidtRonald RauheTom LiebscherMax Lemke",
+      "silver": "SpainSaúl CraviottoMarcus WalzCarlos ArévaloRodrigo Germade",
+      "bronze": "SlovakiaSamuel BalážDenis MyšákErik VlčekAdam Botek"
+    },
+    {
+      "sport": "Canoeing",
+      "category": "Sprint · Women's events",
+      "event": "C-1 200 metres",
+      "gold": "Nevin Harrison United States",
+      "silver": "Laurence Vincent Lapointe Canada",
+      "bronze": "Liudmyla Luzan Ukraine"
+    },
+    {
+      "sport": "Canoeing",
+      "category": "Sprint · Women's events",
+      "event": "C-2 500 metres",
+      "gold": "Xu Shixiaoand Sun Mengya China",
+      "silver": "Liudmyla Luzanand Anastasiia Chetverikova Ukraine",
+      "bronze": "Laurence Vincent Lapointeand Katie Vincent Canada"
+    },
+    {
+      "sport": "Canoeing",
+      "category": "Sprint · Women's events",
+      "event": "K-1 200 metres",
+      "gold": "Lisa Carrington New Zealand",
+      "silver": "Teresa Portela Spain",
+      "bronze": "Emma Jørgensen Denmark"
+    },
+    {
+      "sport": "Canoeing",
+      "category": "Sprint · Women's events",
+      "event": "K-1 500 metres",
+      "gold": "Lisa Carrington New Zealand",
+      "silver": "Tamara Csipes Hungary",
+      "bronze": "Emma Jørgensen Denmark"
+    },
+    {
+      "sport": "Canoeing",
+      "category": "Sprint · Women's events",
+      "event": "K-2 500 metres",
+      "gold": "Lisa Carringtonand Caitlin Regal New Zealand",
+      "silver": "Karolina Najaand Anna Puławska Poland",
+      "bronze": "Danuta Kozákand Dóra Bodonyi Hungary"
+    },
+    {
+      "sport": "Canoeing",
+      "category": "Sprint · Women's events",
+      "event": "K-4 500 metres",
+      "gold": "HungaryDanuta KozákTamara CsipesAnna KárászDóra Bodonyi",
+      "silver": "BelarusMarharyta MakhnevaNadzeya PapokVolha KhudzenkaMaryna Litvinchuk",
+      "bronze": "PolandKarolina NajaAnna PuławskaJustyna IskrzyckaHelena Wiśniewska"
+    },
+    {
+      "sport": "Cycling",
+      "category": "Road cycling",
+      "event": "Men's road race",
+      "gold": "Richard Carapaz Ecuador",
+      "silver": "Wout van Aert Belgium",
+      "bronze": "Tadej Pogačar Slovenia"
+    },
+    {
+      "sport": "Cycling",
+      "category": "Road cycling",
+      "event": "Men's time trial",
+      "gold": "Primož Roglič Slovenia",
+      "silver": "Tom Dumoulin Netherlands",
+      "bronze": "Rohan Dennis Australia"
+    },
+    {
+      "sport": "Cycling",
+      "category": "Road cycling",
+      "event": "Women's road race",
+      "gold": "Anna Kiesenhofer Austria",
+      "silver": "Annemiek van Vleuten Netherlands",
+      "bronze": "Elisa Longo Borghini Italy"
+    },
+    {
+      "sport": "Cycling",
+      "category": "Road cycling",
+      "event": "Women's time trial",
+      "gold": "Annemiek van Vleuten Netherlands",
+      "silver": "Marlen Reusser Switzerland",
+      "bronze": "Anna van der Breggen Netherlands"
+    },
+    {
+      "sport": "Cycling",
+      "category": "Track cycling · Men's events",
+      "event": "Keirin",
+      "gold": "Jason Kenny Great Britain",
+      "silver": "Azizulhasni Awang Malaysia",
+      "bronze": "Harrie Lavreysen Netherlands"
+    },
+    {
+      "sport": "Cycling",
+      "category": "Track cycling · Men's events",
+      "event": "Madison",
+      "gold": "Lasse Norman Hansenand Michael Mørkøv Denmark",
+      "silver": "Ethan Hayterand Matt Walls Great Britain",
+      "bronze": "Donavan Grondinand Benjamin Thomas France"
+    },
+    {
+      "sport": "Cycling",
+      "category": "Track cycling · Men's events",
+      "event": "Omnium",
+      "gold": "Matt Walls Great Britain",
+      "silver": "Campbell Stewart New Zealand",
+      "bronze": "Elia Viviani Italy"
+    },
+    {
+      "sport": "Cycling",
+      "category": "Track cycling · Men's events",
+      "event": "Team pursuit",
+      "gold": "ItalySimone ConsonniFilippo GannaFrancesco LamonJonathan Milan",
+      "silver": "DenmarkNiklas LarsenLasse Norman HansenRasmus PedersenFrederik Rodenberg",
+      "bronze": "AustraliaLeigh HowardKelland O'BrienLuke PlappSam WelsfordAlexander Porter"
+    },
+    {
+      "sport": "Cycling",
+      "category": "Track cycling · Men's events",
+      "event": "Sprint",
+      "gold": "Harrie Lavreysen Netherlands",
+      "silver": "Jeffrey Hoogland Netherlands",
+      "bronze": "Jack Carlin Great Britain"
+    },
+    {
+      "sport": "Cycling",
+      "category": "Track cycling · Men's events",
+      "event": "Team sprint",
+      "gold": "NetherlandsJeffrey HooglandHarrie LavreysenRoy van den BergMatthijs Büchli",
+      "silver": "Great BritainJack CarlinJason KennyRyan Owens",
+      "bronze": "FranceFlorian GrengboRayan HelalSébastien Vigier"
+    },
+    {
+      "sport": "Cycling",
+      "category": "Track cycling · Women's events",
+      "event": "Keirin",
+      "gold": "Shanne Braspennincx Netherlands",
+      "silver": "Ellesse Andrews New Zealand",
+      "bronze": "Lauriane Genest Canada"
+    },
+    {
+      "sport": "Cycling",
+      "category": "Track cycling · Women's events",
+      "event": "Madison",
+      "gold": "Katie Archibaldand Laura Kenny Great Britain",
+      "silver": "Amalie Dideriksenand Julie Leth Denmark",
+      "bronze": "Gulnaz Khatuntsevaand Maria Novolodskaya ROC"
+    },
+    {
+      "sport": "Cycling",
+      "category": "Track cycling · Women's events",
+      "event": "Omnium",
+      "gold": "Jennifer Valente United States",
+      "silver": "Yumi Kajihara Japan",
+      "bronze": "Kirsten Wild Netherlands"
+    },
+    {
+      "sport": "Cycling",
+      "category": "Track cycling · Women's events",
+      "event": "Team pursuit",
+      "gold": "GermanyFranziska BraußeLisa BrennauerLisa KleinMieke Kröger",
+      "silver": "Great BritainKatie ArchibaldLaura KennyNeah EvansJosie KnightElinor Barker",
+      "bronze": "United StatesChloé DygertMegan JastrabJennifer ValenteEmma WhiteLily Williams"
+    },
+    {
+      "sport": "Cycling",
+      "category": "Track cycling · Women's events",
+      "event": "Sprint",
+      "gold": "Kelsey Mitchell Canada",
+      "silver": "Olena Starikova Ukraine",
+      "bronze": "Lee Wai-sze Hong Kong"
+    },
+    {
+      "sport": "Cycling",
+      "category": "Track cycling · Women's events",
+      "event": "Team sprint",
+      "gold": "ChinaBao ShanjuZhong Tianshi",
+      "silver": "GermanyLea FriedrichEmma Hinze",
+      "bronze": "ROCDaria ShmelevaAnastasia Voynova"
+    },
+    {
+      "sport": "Cycling",
+      "category": "Mountain biking",
+      "event": "Men's",
+      "gold": "Tom Pidcock Great Britain",
+      "silver": "Mathias Flückiger Switzerland",
+      "bronze": "David Valero Spain"
+    },
+    {
+      "sport": "Cycling",
+      "category": "Mountain biking",
+      "event": "Women's",
+      "gold": "Jolanda Neff Switzerland",
+      "silver": "Sina Frei Switzerland",
+      "bronze": "Linda Indergand Switzerland"
+    },
+    {
+      "sport": "Cycling",
+      "category": "BMX",
+      "event": "Men's race",
+      "gold": "Niek Kimmann Netherlands",
+      "silver": "Kye Whyte Great Britain",
+      "bronze": "Carlos Ramírez Colombia"
+    },
+    {
+      "sport": "Cycling",
+      "category": "BMX",
+      "event": "Men's freestyle",
+      "gold": "Logan Martin Australia",
+      "silver": "Daniel Dhers Venezuela",
+      "bronze": "Declan Brooks Great Britain"
+    },
+    {
+      "sport": "Cycling",
+      "category": "BMX",
+      "event": "Women's race",
+      "gold": "Beth Shriever Great Britain",
+      "silver": "Mariana Pajón Colombia",
+      "bronze": "Merel Smulders Netherlands"
+    },
+    {
+      "sport": "Cycling",
+      "category": "BMX",
+      "event": "Women's freestyle",
+      "gold": "Charlotte Worthington Great Britain",
+      "silver": "Hannah Roberts United States",
+      "bronze": "Nikita Ducarroz Switzerland"
+    },
+    {
+      "sport": "Diving",
+      "category": "Men's events",
+      "event": "3 m springboard",
+      "gold": "Xie Siyi China",
+      "silver": "Wang Zongyuan China",
+      "bronze": "Jack Laugher Great Britain"
+    },
+    {
+      "sport": "Diving",
+      "category": "Men's events",
+      "event": "10 m platform",
+      "gold": "Cao Yuan China",
+      "silver": "Yang Jian China",
+      "bronze": "Tom Daley Great Britain"
+    },
+    {
+      "sport": "Diving",
+      "category": "Men's events",
+      "event": "Synchronized 3 m springboard",
+      "gold": "Xie Siyiand Wang Zongyuan China",
+      "silver": "Andrew Capobiancoand Michael Hixon United States",
+      "bronze": "Patrick Hausdingand Lars Rüdiger Germany"
+    },
+    {
+      "sport": "Diving",
+      "category": "Men's events",
+      "event": "Synchronized 10 m platform",
+      "gold": "Tom Daleyand Matty Lee Great Britain",
+      "silver": "Cao Yuanand Chen Aisen China",
+      "bronze": "Aleksandr Bondarand Viktor Minibaev ROC"
+    },
+    {
+      "sport": "Diving",
+      "category": "Women's events",
+      "event": "3 m springboard",
+      "gold": "Shi Tingmao China",
+      "silver": "Wang Han China",
+      "bronze": "Krysta Palmer United States"
+    },
+    {
+      "sport": "Diving",
+      "category": "Women's events",
+      "event": "10 m platform",
+      "gold": "Quan Hongchan China",
+      "silver": "Chen Yuxi China",
+      "bronze": "Melissa Wu Australia"
+    },
+    {
+      "sport": "Diving",
+      "category": "Women's events",
+      "event": "Synchronized 3 m springboard",
+      "gold": "Shi Tingmaoand Wang Han China",
+      "silver": "Jennifer Abeland Mélissa Citrini-Beaulieu Canada",
+      "bronze": "Lena Hentscheland Tina Punzel Germany"
+    },
+    {
+      "sport": "Diving",
+      "category": "Women's events",
+      "event": "Synchronized 10 m platform",
+      "gold": "Chen Yuxiand Zhang Jiaqi China",
+      "silver": "Delaney Schnelland Jessica Parratto United States",
+      "bronze": "Gabriela Agúndezand Alejandra Orozco Mexico"
+    },
+    {
+      "sport": "Equestrian",
+      "event": "Individual dressage",
+      "gold": "Jessica von Bredow-Werndl Germany",
+      "silver": "Isabell Werth Germany",
+      "bronze": "Charlotte Dujardin Great Britain"
+    },
+    {
+      "sport": "Equestrian",
+      "event": "Team dressage",
+      "gold": "GermanyJessica von Bredow-WerndlDorothee SchneiderIsabell Werth",
+      "silver": "United StatesSabine Schut-KeryAdrienne LyleSteffen Peters",
+      "bronze": "Great BritainCharlotte FryCarl HesterCharlotte Dujardin"
+    },
+    {
+      "sport": "Equestrian",
+      "event": "Individual eventing",
+      "gold": "Julia Krajewski Germany",
+      "silver": "Tom McEwen Great Britain",
+      "bronze": "Andrew Hoy Australia"
+    },
+    {
+      "sport": "Equestrian",
+      "event": "Team eventing",
+      "gold": "Great BritainLaura CollettTom McEwenOliver Townend",
+      "silver": "AustraliaKevin McNabAndrew HoyShane Rose",
+      "bronze": "FranceNicolas TouzaintKarim LaghouagChristopher Six"
+    },
+    {
+      "sport": "Equestrian",
+      "event": "Individual jumping",
+      "gold": "Ben Maher Great Britain",
+      "silver": "Peder Fredricson Sweden",
+      "bronze": "Maikel van der Vleuten Netherlands"
+    },
+    {
+      "sport": "Equestrian",
+      "event": "Team jumping",
+      "gold": "SwedenHenrik von EckermannMalin Baryard-JohnssonPeder Fredricson",
+      "silver": "United StatesLaura KrautJessica SpringsteenMcLain Ward",
+      "bronze": "BelgiumPieter DevosJérôme GueryGrégory Wathelet"
+    },
+    {
+      "sport": "Fencing",
+      "category": "Men's events",
+      "event": "Individual épée",
+      "gold": "Romain Cannone France",
+      "silver": "Gergely Siklósi Hungary",
+      "bronze": "Ihor Reizlin Ukraine"
+    },
+    {
+      "sport": "Fencing",
+      "category": "Men's events",
+      "event": "Team épée",
+      "gold": "JapanKoki KanoKazuyasu MinobeMasaru YamadaSatoru Uyama",
+      "silver": "ROCSergey BidaSergey KhodosPavel SukhovNikita Glazkov",
+      "bronze": "South KoreaPark Sang-youngMa Se-geonSong Jae-hoKweon Young-jun"
+    },
+    {
+      "sport": "Fencing",
+      "category": "Men's events",
+      "event": "Individual foil",
+      "gold": "Cheung Ka Long Hong Kong",
+      "silver": "Daniele Garozzo Italy",
+      "bronze": "Alexander Choupenitch Czech Republic"
+    },
+    {
+      "sport": "Fencing",
+      "category": "Men's events",
+      "event": "Team foil",
+      "gold": "FranceEnzo LefortErwann Le PéchouxJulien MertineMaxime Pauty",
+      "silver": "ROCAnton BorodachevKirill BorodachevVladislav MylnikovTimur Safin",
+      "bronze": "United StatesRace ImbodenNick ItkinAlexander MassialasGerek Meinhardt"
+    },
+    {
+      "sport": "Fencing",
+      "category": "Men's events",
+      "event": "Individual sabre",
+      "gold": "Áron Szilágyi Hungary",
+      "silver": "Luigi Samele Italy",
+      "bronze": "Kim Jung-hwan South Korea"
+    },
+    {
+      "sport": "Fencing",
+      "category": "Men's events",
+      "event": "Team sabre",
+      "gold": "South KoreaOh Sang-ukKim Jun-hoKim Jung-hwanGu Bon-gil",
+      "silver": "ItalyLuca CuratoliLuigi SameleEnrico BerrèAldo Montano",
+      "bronze": "HungaryÁron SzilágyiAndrás SzatmáriTamás DecsiCsanád Gémesi"
+    },
+    {
+      "sport": "Fencing",
+      "category": "Women's events",
+      "event": "Individual épée",
+      "gold": "Sun Yiwen China",
+      "silver": "Ana Maria Popescu Romania",
+      "bronze": "Katrina Lehis Estonia"
+    },
+    {
+      "sport": "Fencing",
+      "category": "Women's events",
+      "event": "Team épée",
+      "gold": "EstoniaJulia BeljajevaIrina EmbrichErika KirpuKatrina Lehis",
+      "silver": "South KoreaChoi In-jeongKang Young-miLee Hye-inSong Se-ra",
+      "bronze": "ItalyRossella FiamingoFederica IsolaMara NavarriaAlberta Santuccio"
+    },
+    {
+      "sport": "Fencing",
+      "category": "Women's events",
+      "event": "Individual foil",
+      "gold": "Lee Kiefer United States",
+      "silver": "Inna Deriglazova ROC",
+      "bronze": "Larisa Korobeynikova ROC"
+    },
+    {
+      "sport": "Fencing",
+      "category": "Women's events",
+      "event": "Team foil",
+      "gold": "ROCInna DeriglazovaLarisa KorobeynikovaMarta MartyanovaAdelina Zagidullina",
+      "silver": "FranceAnita BlazeAstrid GuyartPauline RanvierYsaora Thibus",
+      "bronze": "ItalyMartina BatiniErica CipressaArianna ErrigoAlice Volpi"
+    },
+    {
+      "sport": "Fencing",
+      "category": "Women's events",
+      "event": "Individual sabre",
+      "gold": "Sofia Pozdniakova ROC",
+      "silver": "Sofya Velikaya ROC",
+      "bronze": "Manon Brunet France"
+    },
+    {
+      "sport": "Fencing",
+      "category": "Women's events",
+      "event": "Team sabre",
+      "gold": "ROCOlga NikitinaSofia PozdniakovaSofya Velikaya",
+      "silver": "FranceSara BalzerCécilia BerderManon BrunetCharlotte Lembach",
+      "bronze": "South KoreaKim Ji-yeonYoon Ji-suSeo Ji-yeonChoi Soo-yeon"
+    },
+    {
+      "sport": "Field hockey",
+      "event": "Men",
+      "gold": "BelgiumGauthier BoccardTom BoonThomas BrielsCédric CharlierFélix DenayerNicolas De KerpelArthur De SlooverSébastien DockierJohn-John DohmenSimon GougnardAlexander HendrickxAntoine KinaLoïck LuypaertAugustin MeurmansVictor WegnezVincent VanaschFlorent Van AubelArthur Van Doren",
+      "silver": "AustraliaDaniel BealeJoshua BeltzTim BrandAndrew CharterTom CraigMatt DawsonBlake GoversJeremy HaywardTim HowardDylan MartinTrent MittonEddie OckendenFlynn OgilvieLachlan SharpJoshua SimmondsJacob WhettonTom WickhamAran Zalewski",
+      "bronze": "IndiaDilpreet SinghRupinder Pal SinghSurender KumarManpreet SinghHardik SinghGurjant SinghSimranjeet SinghMandeep SinghHarmanpreet SinghLalit UpadhyayP. R. SreejeshSumitNilakanta SharmaShamsher SinghVarun KumarBirendra LakraAmit RohidasVivek Prasad"
+    },
+    {
+      "sport": "Field hockey",
+      "event": "Women",
+      "gold": "NetherlandsFelice AlbersEva de GoedeXan de WaardMarloes KeetelsJosine KoningSanne KoolenLaurien LeurinkFrédérique MatlaFreeke MoesLaura NunninkMalou PheninckxPien SandersLauren StamMargot van GeffenStella van GilsCaia van MaasakkerMaria VerschoorLidewij Welten",
+      "silver": "ArgentinaAgustina AlbertarrioAgostina AlonsoNoel BarrionuevoValentina Costa BiondiEmilia ForcherioAgustina GorzelanyMaría José GranattoVictoria GranattoJulieta JankunasSofía MaccariDelfina MerinoValentina RaposoRocío Sánchez MocciaMicaela ReteguiVictoria SauzeBelén SucciSofía ToccalinoEugenia Trinchinetti",
+      "bronze": "Great BritainGiselle AnsleyGrace BalsdonAmy CostelloFiona CracklesSarah HaycroftMaddie HinchSarah JonesHannah MartinShona McCallinLily OwsleyHollie WebbIsabelle PetterEllie RayerSarah RobertsonAnna TomanSusannah TownsendLaura UnsworthLeah Wilkinson"
+    },
+    {
+      "sport": "Football",
+      "event": "Men",
+      "gold": "BrazilSantosGabriel MeninoDiego CarlosRicardo GraçaDouglas LuizGuilherme AranaPaulinhoBruno GuimarãesMatheus CunhaRicharlisonAntonyBrennoDani AlvesBruno FuchsNinoAbnerMalcomMatheus HenriqueReinier JesusClaudinhoGabriel MartinelliLucão",
+      "silver": "SpainUnai SimónÓscar MinguezaMarc CucurellaPau TorresJesús VallejoMartín ZubimendiMarco AsensioMikel MerinoRafa MirDani CeballosMikel OyarzabalEric GarcíaÁlvaro FernándezCarlos SolerJon MoncayolaPedriJavi PuadoÓscar GilDani OlmoJuan MirandaBryan GilIván Villar",
+      "bronze": "MexicoLuis MalagónJorge SánchezCésar MontesJesús Alberto AnguloJohan VásquezVladimir LoroñaLuis RomoCarlos RodríguezHenry MartínDiego LainezAlexis VegaAdrián MoraGuillermo OchoaÉrick AguirreUriel AntunaJosé Joaquín EsquivelSebastián CórdovaEduardo AguirreRicardo AnguloFernando BeltránRoberto AlvaradoSebastián Jurado"
+    },
+    {
+      "sport": "Football",
+      "event": "Women",
+      "gold": "CanadaStephanie LabbéAllysha ChapmanKadeisha BuchananShelina ZadorskyQuinnDeanne RoseJulia GrossoJayde RiviereAdriana LeonAshley LawrenceDesiree ScottChristine SinclairÉvelyne ViensVanessa GillesNichelle PrinceJanine BeckieJessie FlemingKailen SheridanJordyn HuitemaSophie SchmidtGabrielle CarleErin McLeod",
+      "silver": "SwedenHedvig LindahlJonna AnderssonEmma KullbergHanna GlasHanna BennisonMagdalena ErikssonMadelen JanogyLina HurtigKosovare AsllaniSofia JakobssonStina BlacksteniusJennifer FalkAmanda IlestedtNathalie BjörnOlivia SchoughFilippa AngeldalCaroline SegerFridolina RolföAnna AnvegårdJulia RoddarRebecka BlomqvistZećira Mušović",
+      "bronze": "United StatesAlyssa NaeherCrystal DunnSam MewisBecky SauerbrunnKelley O'HaraKristie MewisTobin HeathJulie ErtzLindsey HoranCarli LloydChristen PressTierna DavidsonAlex MorganEmily SonnettMegan RapinoeRose LavelleAbby DahlkemperAdrianna FranchCatarina MacarioCasey KruegerLynn WilliamsJane Campbell"
+    },
+    {
+      "sport": "Golf",
+      "event": "Men's individual",
+      "gold": "Xander Schauffele United States",
+      "silver": "Rory Sabbatini Slovakia",
+      "bronze": "Pan Cheng-tsung Chinese Taipei"
+    },
+    {
+      "sport": "Golf",
+      "event": "Women's individual",
+      "gold": "Nelly Korda United States",
+      "silver": "Mone Inami Japan",
+      "bronze": "Lydia Ko New Zealand"
+    },
+    {
+      "sport": "Gymnastics",
+      "category": "Artistic gymnastics · Men's events",
+      "event": "Team all-around",
+      "gold": "ROCDenis AblyazinDavid BelyavskiyArtur DalaloyanNikita Nagornyy",
+      "silver": "JapanDaiki HashimotoKazuma KayaTakeru KitazonoWataru Tanigawa",
+      "bronze": "ChinaLin ChaopanSun WeiXiao RuotengZou Jingyuan"
+    },
+    {
+      "sport": "Gymnastics",
+      "category": "Artistic gymnastics · Men's events",
+      "event": "Individual all-around",
+      "gold": "Daiki Hashimoto Japan",
+      "silver": "Xiao Ruoteng China",
+      "bronze": "Nikita Nagornyy ROC"
+    },
+    {
+      "sport": "Gymnastics",
+      "category": "Artistic gymnastics · Men's events",
+      "event": "Floor exercise",
+      "gold": "Artem Dolgopyat Israel",
+      "silver": "Rayderley Zapata Spain",
+      "bronze": "Xiao Ruoteng China"
+    },
+    {
+      "sport": "Gymnastics",
+      "category": "Artistic gymnastics · Men's events",
+      "event": "Pommel horse",
+      "gold": "Max Whitlock Great Britain",
+      "silver": "Lee Chih-kai Chinese Taipei",
+      "bronze": "Kazuma Kaya Japan"
+    },
+    {
+      "sport": "Gymnastics",
+      "category": "Artistic gymnastics · Men's events",
+      "event": "Rings",
+      "gold": "Liu Yang China",
+      "silver": "You Hao China",
+      "bronze": "Eleftherios Petrounias Greece"
+    },
+    {
+      "sport": "Gymnastics",
+      "category": "Artistic gymnastics · Men's events",
+      "event": "Vault",
+      "gold": "Shin Jea-hwan South Korea",
+      "silver": "Denis Ablyazin ROC",
+      "bronze": "Artur Davtyan  Armenia"
+    },
+    {
+      "sport": "Gymnastics",
+      "category": "Artistic gymnastics · Men's events",
+      "event": "Parallel bars",
+      "gold": "Zou Jingyuan China",
+      "silver": "Lukas Dauser Germany",
+      "bronze": "Ferhat Arıcan Turkey"
+    },
+    {
+      "sport": "Gymnastics",
+      "category": "Artistic gymnastics · Men's events",
+      "event": "Horizontal bar",
+      "gold": "Daiki Hashimoto Japan",
+      "silver": "Tin Srbić Croatia",
+      "bronze": "Nikita Nagornyy ROC"
+    },
+    {
+      "sport": "Gymnastics",
+      "category": "Artistic gymnastics · Women's events",
+      "event": "Team all-around",
+      "gold": "ROCLilia AkhaimovaViktoria ListunovaAngelina MelnikovaVladislava Urazova",
+      "silver": "United StatesSimone BilesJordan ChilesSunisa LeeGrace McCallum",
+      "bronze": "Great BritainJennifer GadirovaJessica GadirovaAlice KinsellaAmelie Morgan"
+    },
+    {
+      "sport": "Gymnastics",
+      "category": "Artistic gymnastics · Women's events",
+      "event": "Individual all-around",
+      "gold": "Sunisa Lee United States",
+      "silver": "Rebeca Andrade Brazil",
+      "bronze": "Angelina Melnikova ROC"
+    },
+    {
+      "sport": "Gymnastics",
+      "category": "Artistic gymnastics · Women's events",
+      "event": "Vault",
+      "gold": "Rebeca Andrade Brazil",
+      "silver": "MyKayla Skinner United States",
+      "bronze": "Yeo Seo-jeong South Korea"
+    },
+    {
+      "sport": "Gymnastics",
+      "category": "Artistic gymnastics · Women's events",
+      "event": "Uneven bars",
+      "gold": "Nina Derwael Belgium",
+      "silver": "Anastasia Ilyankova ROC",
+      "bronze": "Sunisa Lee United States"
+    },
+    {
+      "sport": "Gymnastics",
+      "category": "Artistic gymnastics · Women's events",
+      "event": "Balance beam",
+      "gold": "Guan Chenchen China",
+      "silver": "Tang Xijing China",
+      "bronze": "Simone Biles United States"
+    },
+    {
+      "sport": "Gymnastics",
+      "category": "Artistic gymnastics · Women's events",
+      "event": "Floor exercise",
+      "gold": "Jade Carey United States",
+      "silver": "Vanessa Ferrari Italy",
+      "bronze": "Mai Murakami Japan · Angelina Melnikova ROC"
+    },
+    {
+      "sport": "Gymnastics",
+      "category": "Rhythmic gymnastics",
+      "event": "Group",
+      "gold": "BulgariaSimona DyankovaStefani KiryakovaMadlen RadukanovaLaura TraetsErika Zafirova",
+      "silver": "ROCAnastasia BliznyukAnastasia MaksimovaAngelina ShkatovaAnastasia TatarevaAlisa Tishchenko",
+      "bronze": "ItalyMartina CentofantiAgnese DurantiAlessia MaurelliDaniela MogureanMartina Santandrea"
+    },
+    {
+      "sport": "Gymnastics",
+      "category": "Rhythmic gymnastics",
+      "event": "Individual all-around",
+      "gold": "Linoy Ashram Israel",
+      "silver": "Dina Averina ROC",
+      "bronze": "Alina Harnasko Belarus"
+    },
+    {
+      "sport": "Gymnastics",
+      "category": "Trampoline",
+      "event": "Men's individual",
+      "gold": "Ivan Litvinovich Belarus",
+      "silver": "Dong Dong China",
+      "bronze": "Dylan Schmidt New Zealand"
+    },
+    {
+      "sport": "Gymnastics",
+      "category": "Trampoline",
+      "event": "Women's individual",
+      "gold": "Zhu Xueying China",
+      "silver": "Liu Lingling China",
+      "bronze": "Bryony Page Great Britain"
+    },
+    {
+      "sport": "Handball",
+      "event": "Men's tournament",
+      "gold": "FranceLuc AbaloHugo DescatLudovic FabregasYann GentyVincent GérardMichaël GuigouLuka KarabaticNikola KarabatićRomain LagardeKentin MahéDika MemTimothey N'GuessanValentin PorteNedim RemiliMelvyn RichardsonNicolas Tournat",
+      "silver": "DenmarkLasse AnderssonMathias GidselJóhan HansenMikkel HansenJacob HolmEmil JakobsenNiklas Landin JacobsenMagnus Landin JacobsenMads Mensah LarsenKevin MøllerHenrik MøllgaardMorten OlsenMagnus SaugstrupLasse SvanHenrik Toft Hansen",
+      "bronze": "SpainJulen AguinagaldeRodrigo CorralesAlex DujshebaevRaúl EntrerríosÁngel FernándezAdrià FiguerasAntonio García RobledoAleix GómezGedeón GuardiolaEduardo GurbindoJorge MaquedaViran MorrosGonzalo Pérez de VargasMiguel Sánchez-MigallónDaniel SarmientoFerran Solé"
+    },
+    {
+      "sport": "Handball",
+      "event": "Women's tournament",
+      "gold": "FranceMéline NocandyBlandine DancettePauline CoataneaChloé ValentiniAllison PineauCoralie LassourceGrâce Zaadi DeunaAmandine LeynaudKalidiatou NiakatéCléopatre DarleuxOcéane Sercien-UgolinLaura FlippesBéatrice EdwigePauletta FoppaEstelle Nze MinkoAlexandra Lacrabère",
+      "silver": "ROCAnna SedoykinaPolina KuznetsovaPolina GorshkovaDaria DmitrievaAnna SenAnna VyakhirevaPolina VedekhinaVladlena BobrovnikovaKseniya MakeyevaElena MikhaylichenkoOlga FominaYekaterina IlyinaYulia ManagarovaAntonina SkorobogatchenkoVictoriya Kalinina",
+      "bronze": "NorwayHenny ReistadVeronica KristiansenMarit Malm FrafjordStine SkograndNora MørkStine Bredal OftedalSilje SolbergKari Brattset DaleKatrine LundeMarit Røsberg JacobsenCamilla HerremSanna Solberg-IsaksenKristine BreistølMarta TomacVilde Johansen"
+    },
+    {
+      "sport": "Judo",
+      "category": "Men's events",
+      "event": "Extra-lightweight (60 kg)",
+      "gold": "Naohisa Takato Japan",
+      "silver": "Yang Yung-wei Chinese Taipei",
+      "bronze": "Yeldos Smetov Kazakhstan · Luka Mkheidze France"
+    },
+    {
+      "sport": "Judo",
+      "category": "Men's events",
+      "event": "Half-lightweight (66 kg)",
+      "gold": "Hifumi Abe Japan",
+      "silver": "Vazha Margvelashvili Georgia",
+      "bronze": "An Ba-ul South Korea · Daniel Cargnin Brazil"
+    },
+    {
+      "sport": "Judo",
+      "category": "Men's events",
+      "event": "Lightweight (73 kg)",
+      "gold": "Shohei Ono Japan",
+      "silver": "Lasha Shavdatuashvili Georgia",
+      "bronze": "An Chang-rim South Korea · Tsend-Ochiryn Tsogtbaatar Mongolia"
+    },
+    {
+      "sport": "Judo",
+      "category": "Men's events",
+      "event": "Half-middleweight (81 kg)",
+      "gold": "Takanori Nagase Japan",
+      "silver": "Saeid Mollaei Mongolia",
+      "bronze": "Shamil Borchashvili Austria · Matthias Casse Belgium"
+    },
+    {
+      "sport": "Judo",
+      "category": "Men's events",
+      "event": "Middleweight (90 kg)",
+      "gold": "Lasha Bekauri Georgia",
+      "silver": "Eduard Trippel Germany",
+      "bronze": "Davlat Bobonov Uzbekistan · Krisztián Tóth Hungary"
+    },
+    {
+      "sport": "Judo",
+      "category": "Men's events",
+      "event": "Half-heavyweight (100 kg)",
+      "gold": "Aaron Wolf Japan",
+      "silver": "Cho Gu-ham South Korea",
+      "bronze": "Jorge Fonseca Portugal · Niyaz Ilyasov ROC"
+    },
+    {
+      "sport": "Judo",
+      "category": "Men's events",
+      "event": "Heavyweight (+100 kg)",
+      "gold": "Lukáš Krpálek Czech Republic",
+      "silver": "Guram Tushishvili Georgia",
+      "bronze": "Teddy Riner France · Tamerlan Bashaev ROC"
+    },
+    {
+      "sport": "Judo",
+      "category": "Women's events",
+      "event": "Extra-lightweight (48 kg)",
+      "gold": "Distria Krasniqi Kosovo",
+      "silver": "Funa Tonaki Japan",
+      "bronze": "Daria Bilodid Ukraine · Mönkhbatyn Urantsetseg Mongolia"
+    },
+    {
+      "sport": "Judo",
+      "category": "Women's events",
+      "event": "Half-lightweight (52 kg)",
+      "gold": "Uta Abe Japan",
+      "silver": "Amandine Buchard France",
+      "bronze": "Odette Giuffrida Italy · Chelsie Giles Great Britain"
+    },
+    {
+      "sport": "Judo",
+      "category": "Women's events",
+      "event": "Lightweight (57 kg)",
+      "gold": "Nora Gjakova Kosovo",
+      "silver": "Sarah-Léonie Cysique France",
+      "bronze": "Jessica Klimkait Canada · Tsukasa Yoshida Japan"
+    },
+    {
+      "sport": "Judo",
+      "category": "Women's events",
+      "event": "Half-middleweight (63 kg)",
+      "gold": "Clarisse Agbegnenou France",
+      "silver": "Tina Trstenjak Slovenia",
+      "bronze": "Maria Centracchio Italy · Catherine Beauchemin-Pinard Canada"
+    },
+    {
+      "sport": "Judo",
+      "category": "Women's events",
+      "event": "Middleweight (70 kg)",
+      "gold": "Chizuru Arai Japan",
+      "silver": "Michaela Polleres Austria",
+      "bronze": "Madina Taimazova ROC · Sanne van Dijke Netherlands"
+    },
+    {
+      "sport": "Judo",
+      "category": "Women's events",
+      "event": "Half-heavyweight (78 kg)",
+      "gold": "Shori Hamada Japan",
+      "silver": "Madeleine Malonga France",
+      "bronze": "Anna-Maria Wagner Germany · Mayra Aguiar Brazil"
+    },
+    {
+      "sport": "Judo",
+      "category": "Women's events",
+      "event": "Heavyweight (+78 kg)",
+      "gold": "Akira Sone Japan",
+      "silver": "Idalys Ortiz Cuba",
+      "bronze": "Iryna Kindzerska Azerbaijan · Romane Dicko France"
+    },
+    {
+      "sport": "Judo",
+      "category": "Mixed events",
+      "event": "Mixed team",
+      "gold": "FranceClarisse AgbegnenouAmandine BuchardGuillaume ChaineAxel ClergetSarah-Léonie CysiqueRomane DickoAlexandre IddirKilian Le BlouchMadeleine MalongaMargaux PinotTeddy Riner",
+      "silver": "JapanHifumi AbeUta AbeChizuru AraiShori HamadaHisayoshi HarasawaShoichiro MukaiTakanori NagaseShohei OnoAkira SoneMiku TashiroAaron WolfTsukasa Yoshida",
+      "bronze": "GermanyJohannes FreyKarl-Richard FreyJasmin GrabowskiKatharina MenzDominic ResselGiovanna ScoccimarroSebastian SeidlTheresa StollMartyna TrajdosEduard TrippelAnna-Maria WagnerIgor Wandtke · IsraelTohar ButbulRaz HershkoLi KochmanInbar LanirSagi MukiTimna Nelson-LevyPeter PaltchikShira RishonyOr SassonGili SharirBaruch Shmailov"
+    },
+    {
+      "sport": "Karate",
+      "category": "Men's events",
+      "event": "Kata",
+      "gold": "Ryo Kiyuna Japan",
+      "silver": "Damián Quintero Spain",
+      "bronze": "Ariel Torres United States · Ali Sofuoğlu Turkey"
+    },
+    {
+      "sport": "Karate",
+      "category": "Men's events",
+      "event": "67 kg",
+      "gold": "Steven Da Costa France",
+      "silver": "Eray Şamdan Turkey",
+      "bronze": "Darkhan Assadilov Kazakhstan · Abdelrahman Al-Masatfa Jordan"
+    },
+    {
+      "sport": "Karate",
+      "category": "Men's events",
+      "event": "75 kg",
+      "gold": "Luigi Busà Italy",
+      "silver": "Rafael Aghayev Azerbaijan",
+      "bronze": "Gábor Hárspataki Hungary · Stanislav Horuna Ukraine"
+    },
+    {
+      "sport": "Karate",
+      "category": "Men's events",
+      "event": "+75 kg",
+      "gold": "Sajjad Ganjzadeh Iran",
+      "silver": "Tareg Hamedi Saudi Arabia",
+      "bronze": "Ryutaro Araga Japan · Uğur Aktaş Turkey"
+    },
+    {
+      "sport": "Karate",
+      "category": "Women's events",
+      "event": "Kata",
+      "gold": "Sandra Sánchez Spain",
+      "silver": "Kiyou Shimizu Japan",
+      "bronze": "Grace Lau Hong Kong · Viviana Bottaro Italy"
+    },
+    {
+      "sport": "Karate",
+      "category": "Women's events",
+      "event": "55 kg",
+      "gold": "Ivet Goranova Bulgaria",
+      "silver": "Anzhelika Terliuga Ukraine",
+      "bronze": "Bettina Plank Austria · Wen Tzu-yun Chinese Taipei"
+    },
+    {
+      "sport": "Karate",
+      "category": "Women's events",
+      "event": "61 kg",
+      "gold": "Jovana Preković Serbia",
+      "silver": "Yin Xiaoyan China",
+      "bronze": "Giana Farouk Egypt · Merve Çoban Turkey"
+    },
+    {
+      "sport": "Karate",
+      "category": "Women's events",
+      "event": "+61 kg",
+      "gold": "Feryal Abdelaziz Egypt",
+      "silver": "Irina Zaretska Azerbaijan",
+      "bronze": "Gong Li China · Sofya Berultseva Kazakhstan"
+    },
+    {
+      "sport": "Modern pentathlon",
+      "event": "Men's",
+      "gold": "Joe Choong Great Britain",
+      "silver": "Ahmed El-Gendy Egypt",
+      "bronze": "Jun Woong-tae South Korea"
+    },
+    {
+      "sport": "Modern pentathlon",
+      "event": "Women's",
+      "gold": "Kate French Great Britain",
+      "silver": "Laura Asadauskaitė Lithuania",
+      "bronze": "Sarolta Kovács Hungary"
+    },
+    {
+      "sport": "Rowing",
+      "category": "Men's events",
+      "event": "Single sculls",
+      "gold": "Stefanos Ntouskos Greece",
+      "silver": "Kjetil Borch Norway",
+      "bronze": "Damir Martin Croatia"
+    },
+    {
+      "sport": "Rowing",
+      "category": "Men's events",
+      "event": "Double sculls",
+      "gold": "Hugo Boucheronand Matthieu Androdias France",
+      "silver": "Melvin Twellaarand Stef Broenink Netherlands",
+      "bronze": "Liu Zhiyuand Zhang Liang China"
+    },
+    {
+      "sport": "Rowing",
+      "category": "Men's events",
+      "event": "Quadruple sculls",
+      "gold": "NetherlandsDirk UittenbogaardAbe WiersmaTone WietenKoen Metsemakers",
+      "silver": "Great BritainHarry LeaskAngus GroomTom BarrasJack Beaumont",
+      "bronze": "AustraliaJack ClearyCaleb AntillCameron GirdlestoneLuke Letcher"
+    },
+    {
+      "sport": "Rowing",
+      "category": "Men's events",
+      "event": "Coxless pair",
+      "gold": "Martin Sinkovićand Valent Sinković Croatia",
+      "silver": "Marius Cozmiucand Ciprian Tudosă Romania",
+      "bronze": "Frederic Vystaveland Joachim Sutton Denmark"
+    },
+    {
+      "sport": "Rowing",
+      "category": "Men's events",
+      "event": "Coxless four",
+      "gold": "AustraliaAlexander PurnellSpencer TurrinJack HargreavesAlexander Hill",
+      "silver": "RomaniaMihăiță ȚigănescuMugurel SemciucȘtefan BerariuCosmin Pascari",
+      "bronze": "ItalyMatteo CastaldoMarco Di CostanzoMatteo LodoGiuseppe VicinoBruno Rosetti"
+    },
+    {
+      "sport": "Rowing",
+      "category": "Men's events",
+      "event": "Coxed eight",
+      "gold": "New ZealandTom MackintoshHamish BondTom MurrayMichael BrakeDan WilliamsonPhillip WilsonShaun KirkhamMatt MacdonaldSam Bosworth",
+      "silver": "GermanyJohannes WeißenfeldLaurits FollertOlaf RoggensackTorben JohannesenJakob SchneiderMalte JakschikRichard SchmidtHannes OcikMartin Sauer",
+      "bronze": "Great BritainJosh BugajskiJacob DawsonThomas GeorgeMoe SbihiCharles ElwesOliver Wynne-GriffithJames RudkinThomas FordHenry Fieldman"
+    },
+    {
+      "sport": "Rowing",
+      "category": "Men's events",
+      "event": "Lightweight double sculls",
+      "gold": "Fintan McCarthyand Paul O'Donovan Ireland",
+      "silver": "Jonathan Rommelmannand Jason Osborne Germany",
+      "bronze": "Stefano Oppoand Pietro Ruta Italy"
+    },
+    {
+      "sport": "Rowing",
+      "category": "Women's events",
+      "event": "Single sculls",
+      "gold": "Emma Twigg New Zealand",
+      "silver": "Hanna Prakatsen ROC",
+      "bronze": "Magdalena Lobnig Austria"
+    },
+    {
+      "sport": "Rowing",
+      "category": "Women's events",
+      "event": "Double sculls",
+      "gold": "Nicoleta-Ancuța Bodnarand Simona Radiș Romania",
+      "silver": "Brooke Donoghueand Hannah Osborne New Zealand",
+      "bronze": "Roos de Jongand Lisa Scheenaard Netherlands"
+    },
+    {
+      "sport": "Rowing",
+      "category": "Women's events",
+      "event": "Quadruple sculls",
+      "gold": "ChinaChen YunxiaZhang LingLü YangCui Xiaotong",
+      "silver": "PolandAgnieszka KobusMarta WieliczkoMaria SajdakKatarzyna Zillmann",
+      "bronze": "AustraliaRia ThompsonRowena MeredithHarriet HudsonCaitlin Cronin"
+    },
+    {
+      "sport": "Rowing",
+      "category": "Women's events",
+      "event": "Coxless pair",
+      "gold": "Grace Prendergastand Kerri Gowler New Zealand",
+      "silver": "Vasilisa Stepanovaand Elena Oriabinskaia ROC",
+      "bronze": "Caileigh Filmerand Hillary Janssens Canada"
+    },
+    {
+      "sport": "Rowing",
+      "category": "Women's events",
+      "event": "Coxless four",
+      "gold": "AustraliaLucy StephanRosemary PopaJessica MorrisonAnnabelle McIntyre",
+      "silver": "NetherlandsEllen HogerwerfKarolien FlorijnYmkje CleveringVeronique Meester",
+      "bronze": "IrelandAifric KeoghEimear LambeFiona MurtaghEmily Hegarty"
+    },
+    {
+      "sport": "Rowing",
+      "category": "Women's events",
+      "event": "Coxed eight",
+      "gold": "CanadaSusanne GraingerKasia Gruchalla-WesierskiMadison MaileySydney PayneAndrea ProskeLisa RomanChristine RoperAvalon WasteneysKristen Kit",
+      "silver": "New ZealandElla GreensladeEmma DykeLucy SpoorsKelsey BevanGrace PrendergastKerri GowlerBeth RossJackie GowlerCaleb Shepherd",
+      "bronze": "ChinaGuo LinlinJu RuiLi JingjingMiao TianWang ZifengWang YuweiXu FeiZhang MinZhang Dechang"
+    },
+    {
+      "sport": "Rowing",
+      "category": "Women's events",
+      "event": "Lightweight double sculls",
+      "gold": "Valentina Rodiniand Federica Cesarini Italy",
+      "silver": "Laura Tarantolaand Claire Bové France",
+      "bronze": "Marieke Keijserand Ilse Paulis Netherlands"
+    },
+    {
+      "sport": "Rugby sevens",
+      "event": "Men's tournament",
+      "gold": "FijiNapolioni BolacaVilimoni BotituMeli DerenalagiSireli MaqalaIosefo MasiWaisea NacuquKalione NasokoSemi RadradraAminiasi TuimabaAsaeli TuivuakaJerry TuwaiJosua VakurunabiliJiuta Wainiqolo",
+      "silver": "New ZealandKurt BakerDylan CollierScott CurryAndrew KnewstubbNgarohi McGarvey-BlackTim MikkelsonSione MoliaEtene Nanai-SeturoTone Ng ShiuAmanaki NicoleWilliam WarbrickRegan WareJoe Webber",
+      "bronze": "ArgentinaSantiago ÁlvarezLautaro BazánLucio CintiFelipe del MestreRodrigo EtchartLuciano GonzálezRodrigo IsgroSantiago MareIgnacio MendyMarcos MonetaMatías OsadczukGastón RevolGermán Schulz"
+    },
+    {
+      "sport": "Rugby sevens",
+      "event": "Women's tournament",
+      "gold": "New ZealandMichaela BlydeKelly BrazierGayle BroughtonTheresa FitzpatrickStacey FluhlerSarah HiriniShiray KakaTyla Nathan-WongRisi Pouri-LaneAlena SailiRuby TuiTenika WillisonPortia Woodman",
+      "silver": "FranceCoralie BertrandAnne-Cécile CiofaniCaroline DrouinCamille GrassineauLina GuérinFanny HortaShannon IzarChloé JacquetCarla NeisenSéraphine OkembaChloé PelleJade Ulutule",
+      "bronze": "FijiLavena CavuruRaijieli DaveuaSesenieli DonuLaisana LikucevaRusila NagasauAna NaimasiAlowesi NakociRoela RadiniyavuniViniana RiwaiAna Maria RoqicaVasiti SolikovitiLavenia TinaiReapi Ulunisau"
+    },
+    {
+      "sport": "Sailing",
+      "category": "Men's events",
+      "event": "Sailboard – RS:X",
+      "gold": "Kiran Badloe Netherlands",
+      "silver": "Thomas Goyard France",
+      "bronze": "Bi Kun China"
+    },
+    {
+      "sport": "Sailing",
+      "category": "Men's events",
+      "event": "One-person dinghy – Laser",
+      "gold": "Matthew Wearn Australia",
+      "silver": "Tonči Stipanović Croatia",
+      "bronze": "Hermann Tomasgaard Norway"
+    },
+    {
+      "sport": "Sailing",
+      "category": "Men's events",
+      "event": "One-person heavyweight dinghy – Finn",
+      "gold": "Giles Scott Great Britain",
+      "silver": "Zsombor Berecz Hungary",
+      "bronze": "Joan Cardona Méndez Spain"
+    },
+    {
+      "sport": "Sailing",
+      "category": "Men's events",
+      "event": "Two-person dinghy – 470",
+      "gold": "AustraliaMathew BelcherWilliam Ryan",
+      "silver": "SwedenAnton DahlbergFredrik Bergström",
+      "bronze": "SpainJordi XammarNicolás Rodríguez"
+    },
+    {
+      "sport": "Sailing",
+      "category": "Men's events",
+      "event": "Skiff – 49er",
+      "gold": "Great BritainDylan FletcherStuart Bithell",
+      "silver": "New ZealandPeter BurlingBlair Tuke",
+      "bronze": "GermanyErik HeilThomas Plößel"
+    },
+    {
+      "sport": "Sailing",
+      "category": "Women's events",
+      "event": "Sailboard – RS:X",
+      "gold": "Lu Yunxiu China",
+      "silver": "Charline Picon France",
+      "bronze": "Emma Wilson Great Britain"
+    },
+    {
+      "sport": "Sailing",
+      "category": "Women's events",
+      "event": "One-person dinghy – Laser Radial",
+      "gold": "Anne-Marie Rindom Denmark",
+      "silver": "Josefin Olsson Sweden",
+      "bronze": "Marit Bouwmeester Netherlands"
+    },
+    {
+      "sport": "Sailing",
+      "category": "Women's events",
+      "event": "Two-person dinghy – 470",
+      "gold": "Great BritainHannah MillsEilidh McIntyre",
+      "silver": "PolandAgnieszka SkrzypulecJolanta Ogar-Hill",
+      "bronze": "FranceCamille LecointreAloïse Retornaz"
+    },
+    {
+      "sport": "Sailing",
+      "category": "Women's events",
+      "event": "Skiff – 49er FX",
+      "gold": "BrazilMartine GraelKahena Kunze",
+      "silver": "GermanyTina LutzSusann Beucke",
+      "bronze": "NetherlandsAnnemiek BekkeringAnnette Duetz"
+    },
+    {
+      "sport": "Sailing",
+      "category": "Mixed events",
+      "event": "Multihull – Nacra 17",
+      "gold": "ItalyRuggero TitaCaterina Banti",
+      "silver": "Great BritainJohn GimsonAnna Burnet",
+      "bronze": "GermanyPaul KohlhoffAlica Stuhlemmer"
+    },
+    {
+      "sport": "Shooting",
+      "category": "Men's events",
+      "event": "10 metre air pistol",
+      "gold": "Javad Foroughi Iran",
+      "silver": "Damir Mikec Serbia",
+      "bronze": "Pang Wei China"
+    },
+    {
+      "sport": "Shooting",
+      "category": "Men's events",
+      "event": "25 metre rapid fire pistol",
+      "gold": "Jean Quiquampoix France",
+      "silver": "Leuris Pupo Cuba",
+      "bronze": "Li Yuehong China"
+    },
+    {
+      "sport": "Shooting",
+      "category": "Men's events",
+      "event": "10 metre air rifle",
+      "gold": "Will Shaner United States",
+      "silver": "Sheng Lihao China",
+      "bronze": "Yang Haoran China"
+    },
+    {
+      "sport": "Shooting",
+      "category": "Men's events",
+      "event": "50 metre rifle three positions",
+      "gold": "Zhang Changhong China",
+      "silver": "Sergey Kamenskiy ROC",
+      "bronze": "Milenko Sebić Serbia"
+    },
+    {
+      "sport": "Shooting",
+      "category": "Men's events",
+      "event": "Skeet",
+      "gold": "Vincent Hancock United States",
+      "silver": "Jesper Hansen Denmark",
+      "bronze": "Abdullah Al-Rashidi Kuwait"
+    },
+    {
+      "sport": "Shooting",
+      "category": "Men's events",
+      "event": "Trap",
+      "gold": "Jiří Lipták Czech Republic",
+      "silver": "David Kostelecký Czech Republic",
+      "bronze": "Matthew Coward-Holley Great Britain"
+    },
+    {
+      "sport": "Shooting",
+      "category": "Women's events",
+      "event": "10 metre air pistol",
+      "gold": "Vitalina Batsarashkina ROC",
+      "silver": "Antoaneta Kostadinova Bulgaria",
+      "bronze": "Jiang Ranxin China"
+    },
+    {
+      "sport": "Shooting",
+      "category": "Women's events",
+      "event": "25 metre pistol",
+      "gold": "Vitalina Batsarashkina ROC",
+      "silver": "Kim Min-jung South Korea",
+      "bronze": "Xiao Jiaruixuan China"
+    },
+    {
+      "sport": "Shooting",
+      "category": "Women's events",
+      "event": "10 metre air rifle",
+      "gold": "Yang Qian China",
+      "silver": "Anastasiia Galashina ROC",
+      "bronze": "Nina Christen Switzerland"
+    },
+    {
+      "sport": "Shooting",
+      "category": "Women's events",
+      "event": "50 metre rifle three positions",
+      "gold": "Nina Christen Switzerland",
+      "silver": "Yulia Zykova ROC",
+      "bronze": "Yulia Karimova ROC"
+    },
+    {
+      "sport": "Shooting",
+      "category": "Women's events",
+      "event": "Skeet",
+      "gold": "Amber English United States",
+      "silver": "Diana Bacosi Italy",
+      "bronze": "Wei Meng China"
+    },
+    {
+      "sport": "Shooting",
+      "category": "Women's events",
+      "event": "Trap",
+      "gold": "Zuzana Rehák-Štefečeková Slovakia",
+      "silver": "Kayle Browning United States",
+      "bronze": "Alessandra Perilli San Marino"
+    },
+    {
+      "sport": "Shooting",
+      "category": "Mixed events",
+      "event": "10 metre air pistol team",
+      "gold": "ChinaJiang RanxinPang Wei",
+      "silver": "ROCVitalina BatsarashkinaArtem Chernousov",
+      "bronze": "UkraineOlena KostevychOleh Omelchuk"
+    },
+    {
+      "sport": "Shooting",
+      "category": "Mixed events",
+      "event": "10 metre air rifle team",
+      "gold": "ChinaYang QianYang Haoran",
+      "silver": "United StatesMary TuckerLucas Kozeniesky",
+      "bronze": "ROCYulia KarimovaSergey Kamenskiy"
+    },
+    {
+      "sport": "Shooting",
+      "category": "Mixed events",
+      "event": "Trap team",
+      "gold": "SpainAlberto FernándezFátima Gálvez",
+      "silver": "San MarinoGian Marco BertiAlessandra Perilli",
+      "bronze": "United StatesBrian BurrowsMadelynn Bernau"
+    },
+    {
+      "sport": "Skateboarding",
+      "event": "Men's park",
+      "gold": "Keegan Palmer Australia",
+      "silver": "Pedro Barros Brazil",
+      "bronze": "Cory Juneau United States"
+    },
+    {
+      "sport": "Skateboarding",
+      "event": "Women's park",
+      "gold": "Sakura Yosozumi Japan",
+      "silver": "Kokona Hiraki Japan",
+      "bronze": "Sky Brown Great Britain"
+    },
+    {
+      "sport": "Skateboarding",
+      "event": "Men's street",
+      "gold": "Yuto Horigome Japan",
+      "silver": "Kelvin Hoefler Brazil",
+      "bronze": "Jagger Eaton United States"
+    },
+    {
+      "sport": "Skateboarding",
+      "event": "Women's street",
+      "gold": "Momiji Nishiya Japan",
+      "silver": "Rayssa Leal Brazil",
+      "bronze": "Funa Nakayama Japan"
+    },
+    {
+      "sport": "Sport climbing",
+      "event": "Men's combined",
+      "gold": "Alberto Ginés López Spain",
+      "silver": "Nathaniel Coleman United States",
+      "bronze": "Jakob Schubert Austria"
+    },
+    {
+      "sport": "Sport climbing",
+      "event": "Women's combined",
+      "gold": "Janja Garnbret Slovenia",
+      "silver": "Miho Nonaka Japan",
+      "bronze": "Akiyo Noguchi Japan"
+    },
+    {
+      "sport": "Softball",
+      "event": "Women",
+      "gold": "JapanHaruka AgatsumaMana AtsumiYamato FujitaMiu GotoNodoka HaradaYuka IchiguchiHitomi KawabataNayu KiyoharaYukiyo MineSayaka MoriMinori NaitoYukiko UenoSaki YamazakiEri YamadaYu Yamamoto",
+      "silver": "United StatesAli AguilarMonica AbbottValerie AriotoAlly CardaAmanda ChidesterRachel GarciaHaylie McCleneyMichelle MoultrieDejah MulipolaAubree MunroBubba NicklesCat OstermanJeanie ReedDelaney SpauldingKelsey Stewart",
+      "bronze": "CanadaJenna CairaEmma EntzmingerLarissa FranklinJennifer GilbertSara GroenewegenKelsey HarshmanVictoria HaywardDanielle LawrieJanet LeungJoey LyeErika PolidoriKaleigh RafterLauren Bay-RegulaJennifer SallingNatalie Wideman"
+    },
+    {
+      "sport": "Surfing",
+      "event": "Men's shortboard",
+      "gold": "Ítalo Ferreira Brazil",
+      "silver": "Kanoa Igarashi Japan",
+      "bronze": "Owen Wright Australia"
+    },
+    {
+      "sport": "Surfing",
+      "event": "Women's shortboard",
+      "gold": "Carissa Moore United States",
+      "silver": "Bianca Buitendag South Africa",
+      "bronze": "Amuro Tsuzuki Japan"
+    },
+    {
+      "sport": "Swimming",
+      "category": "Men's events",
+      "event": "50 m freestyle",
+      "gold": "Caeleb Dressel United States",
+      "silver": "Florent Manaudou France",
+      "bronze": "Bruno Fratus Brazil"
+    },
+    {
+      "sport": "Swimming",
+      "category": "Men's events",
+      "event": "100 m freestyle",
+      "gold": "Caeleb Dressel United States",
+      "silver": "Kyle Chalmers Australia",
+      "bronze": "Kliment Kolesnikov ROC"
+    },
+    {
+      "sport": "Swimming",
+      "category": "Men's events",
+      "event": "200 m freestyle",
+      "gold": "Tom Dean Great Britain",
+      "silver": "Duncan Scott Great Britain",
+      "bronze": "Fernando Scheffer Brazil"
+    },
+    {
+      "sport": "Swimming",
+      "category": "Men's events",
+      "event": "400 m freestyle",
+      "gold": "Ahmed Hafnaoui Tunisia",
+      "silver": "Jack McLoughlin Australia",
+      "bronze": "Kieran Smith United States"
+    },
+    {
+      "sport": "Swimming",
+      "category": "Men's events",
+      "event": "800 m freestyle",
+      "gold": "Bobby Finke United States",
+      "silver": "Gregorio Paltrinieri Italy",
+      "bronze": "Mykhailo Romanchuk Ukraine"
+    },
+    {
+      "sport": "Swimming",
+      "category": "Men's events",
+      "event": "1500 m freestyle",
+      "gold": "Bobby Finke United States",
+      "silver": "Mykhailo Romanchuk Ukraine",
+      "bronze": "Florian Wellbrock Germany"
+    },
+    {
+      "sport": "Swimming",
+      "category": "Men's events",
+      "event": "100 m backstroke",
+      "gold": "Evgeny Rylov ROC",
+      "silver": "Kliment Kolesnikov ROC",
+      "bronze": "Ryan Murphy United States"
+    },
+    {
+      "sport": "Swimming",
+      "category": "Men's events",
+      "event": "200 m backstroke",
+      "gold": "Evgeny Rylov ROC",
+      "silver": "Ryan Murphy United States",
+      "bronze": "Luke Greenbank Great Britain"
+    },
+    {
+      "sport": "Swimming",
+      "category": "Men's events",
+      "event": "100 m breaststroke",
+      "gold": "Adam Peaty Great Britain",
+      "silver": "Arno Kamminga Netherlands",
+      "bronze": "Nicolò Martinenghi Italy"
+    },
+    {
+      "sport": "Swimming",
+      "category": "Men's events",
+      "event": "200 m breaststroke",
+      "gold": "Zac Stubblety-Cook Australia",
+      "silver": "Arno Kamminga Netherlands",
+      "bronze": "Matti Mattsson Finland"
+    },
+    {
+      "sport": "Swimming",
+      "category": "Men's events",
+      "event": "100 m butterfly",
+      "gold": "Caeleb Dressel United States",
+      "silver": "Kristóf Milák Hungary",
+      "bronze": "Noè Ponti Switzerland"
+    },
+    {
+      "sport": "Swimming",
+      "category": "Men's events",
+      "event": "200 m butterfly",
+      "gold": "Kristóf Milák Hungary",
+      "silver": "Tomoru Honda Japan",
+      "bronze": "Federico Burdisso Italy"
+    },
+    {
+      "sport": "Swimming",
+      "category": "Men's events",
+      "event": "200 m individual medley",
+      "gold": "Wang Shun China",
+      "silver": "Duncan Scott Great Britain",
+      "bronze": "Jérémy Desplanches Switzerland"
+    },
+    {
+      "sport": "Swimming",
+      "category": "Men's events",
+      "event": "400 m individual medley",
+      "gold": "Chase Kalisz United States",
+      "silver": "Jay Litherland United States",
+      "bronze": "Brendon Smith Australia"
+    },
+    {
+      "sport": "Swimming",
+      "category": "Men's events",
+      "event": "4 × 100 m freestyle relay",
+      "gold": "United StatesCaeleb DresselBlake PieroniBowe BeckerZach AppleBrooks Curry",
+      "silver": "ItalyAlessandro MiressiThomas CecconLorenzo ZazzeriManuel FrigoSanto Condorelli",
+      "bronze": "AustraliaMatthew TempleZac IncertiAlexander GrahamKyle ChalmersCameron McEvoy"
+    },
+    {
+      "sport": "Swimming",
+      "category": "Men's events",
+      "event": "4 × 200 m freestyle relay",
+      "gold": "Great BritainTom DeanJames GuyMatthew RichardsDuncan ScottCalum Jarvis",
+      "silver": "ROCMartin MalyutinIvan GirevEvgeny RylovMikhail DovgalyukAleksandr KrasnykhMikhail Vekovishchev",
+      "bronze": "AustraliaAlexander GrahamKyle ChalmersZac IncertiThomas NeillMack HortonElijah Winnington"
+    },
+    {
+      "sport": "Swimming",
+      "category": "Men's events",
+      "event": "4 × 100 m medley relay",
+      "gold": "United StatesRyan MurphyMichael AndrewCaeleb DresselZach AppleHunter ArmstrongBlake PieroniTom ShieldsAndrew Wilson",
+      "silver": "Great BritainLuke GreenbankAdam PeatyJames GuyDuncan ScottJames Wilby",
+      "bronze": "ItalyThomas CecconNicolò MartinenghiFederico BurdissoAlessandro Miressi"
+    },
+    {
+      "sport": "Swimming",
+      "category": "Men's events",
+      "event": "10 km open water",
+      "gold": "Florian Wellbrock Germany",
+      "silver": "Kristóf Rasovszky Hungary",
+      "bronze": "Gregorio Paltrinieri Italy"
+    },
+    {
+      "sport": "Swimming",
+      "category": "Women's events",
+      "event": "50 m freestyle",
+      "gold": "Emma McKeon Australia",
+      "silver": "Sarah Sjöström Sweden",
+      "bronze": "Pernille Blume Denmark"
+    },
+    {
+      "sport": "Swimming",
+      "category": "Women's events",
+      "event": "100 m freestyle",
+      "gold": "Emma McKeon Australia",
+      "silver": "Siobhán Haughey Hong Kong",
+      "bronze": "Cate Campbell Australia"
+    },
+    {
+      "sport": "Swimming",
+      "category": "Women's events",
+      "event": "200 m freestyle",
+      "gold": "Ariarne Titmus Australia",
+      "silver": "Siobhán Haughey Hong Kong",
+      "bronze": "Penny Oleksiak Canada"
+    },
+    {
+      "sport": "Swimming",
+      "category": "Women's events",
+      "event": "400 m freestyle",
+      "gold": "Ariarne Titmus Australia",
+      "silver": "Katie Ledecky United States",
+      "bronze": "Li Bingjie China"
+    },
+    {
+      "sport": "Swimming",
+      "category": "Women's events",
+      "event": "800 m freestyle",
+      "gold": "Katie Ledecky United States",
+      "silver": "Ariarne Titmus Australia",
+      "bronze": "Simona Quadarella Italy"
+    },
+    {
+      "sport": "Swimming",
+      "category": "Women's events",
+      "event": "1500 m freestyle",
+      "gold": "Katie Ledecky United States",
+      "silver": "Erica Sullivan United States",
+      "bronze": "Sarah Köhler Germany"
+    },
+    {
+      "sport": "Swimming",
+      "category": "Women's events",
+      "event": "100 m backstroke",
+      "gold": "Kaylee McKeown Australia",
+      "silver": "Kylie Masse Canada",
+      "bronze": "Regan Smith United States"
+    },
+    {
+      "sport": "Swimming",
+      "category": "Women's events",
+      "event": "200 m backstroke",
+      "gold": "Kaylee McKeown Australia",
+      "silver": "Kylie Masse Canada",
+      "bronze": "Emily Seebohm Australia"
+    },
+    {
+      "sport": "Swimming",
+      "category": "Women's events",
+      "event": "100 m breaststroke",
+      "gold": "Lydia Jacoby United States",
+      "silver": "Tatjana Schoenmaker South Africa",
+      "bronze": "Lilly King United States"
+    },
+    {
+      "sport": "Swimming",
+      "category": "Women's events",
+      "event": "200 m breaststroke",
+      "gold": "Tatjana Schoenmaker South Africa",
+      "silver": "Lilly King United States",
+      "bronze": "Annie Lazor United States"
+    },
+    {
+      "sport": "Swimming",
+      "category": "Women's events",
+      "event": "100 m butterfly",
+      "gold": "Maggie Mac Neil Canada",
+      "silver": "Zhang Yufei China",
+      "bronze": "Emma McKeon Australia"
+    },
+    {
+      "sport": "Swimming",
+      "category": "Women's events",
+      "event": "200 m butterfly",
+      "gold": "Zhang Yufei China",
+      "silver": "Regan Smith United States",
+      "bronze": "Hali Flickinger United States"
+    },
+    {
+      "sport": "Swimming",
+      "category": "Women's events",
+      "event": "200 m individual medley",
+      "gold": "Yui Ohashi Japan",
+      "silver": "Alexandra Walsh United States",
+      "bronze": "Kate Douglass United States"
+    },
+    {
+      "sport": "Swimming",
+      "category": "Women's events",
+      "event": "400 m individual medley",
+      "gold": "Yui Ohashi Japan",
+      "silver": "Emma Weyant United States",
+      "bronze": "Hali Flickinger United States"
+    },
+    {
+      "sport": "Swimming",
+      "category": "Women's events",
+      "event": "4 × 100 m freestyle relay",
+      "gold": "AustraliaBronte CampbellMeg HarrisEmma McKeonCate CampbellMollie O'CallaghanMadison Wilson",
+      "silver": "CanadaKayla SanchezMaggie Mac NeilRebecca SmithPenny OleksiakTaylor Ruck",
+      "bronze": "United StatesErika BrownAbbey WeitzeilNatalie HindsSimone ManuelOlivia SmoligaCatie DeLoofAllison Schmitt"
+    },
+    {
+      "sport": "Swimming",
+      "category": "Women's events",
+      "event": "4 × 200 m freestyle relay",
+      "gold": "ChinaYang JunxuanTang MuhanZhang YufeiLi BingjieZhang YifanDong Jie",
+      "silver": "United StatesAllison SchmittPaige MaddenKatie McLaughlinKatie LedeckyBella SimsBrooke Forde",
+      "bronze": "AustraliaAriarne TitmusEmma McKeonMadison WilsonLeah NealeMollie O'CallaghanMeg HarrisBrianna ThrossellTamsin Cook"
+    },
+    {
+      "sport": "Swimming",
+      "category": "Women's events",
+      "event": "4 × 100 m medley relay",
+      "gold": "AustraliaKaylee McKeownChelsea HodgesEmma McKeonCate CampbellEmily SeebohmBrianna ThrossellMollie O'Callaghan",
+      "silver": "United StatesRegan SmithLydia JacobyTorri HuskeAbbey WeitzeilRhyan WhiteLilly KingClaire CurzanErika Brown",
+      "bronze": "CanadaKylie MasseSydney PickremMaggie Mac NeilPenny OleksiakTaylor RuckKayla Sanchez"
+    },
+    {
+      "sport": "Swimming",
+      "category": "Women's events",
+      "event": "10 km open water",
+      "gold": "Ana Marcela Cunha Brazil",
+      "silver": "Sharon van Rouwendaal Netherlands",
+      "bronze": "Kareena Lee Australia"
+    },
+    {
+      "sport": "Swimming",
+      "category": "Mixed events",
+      "event": "4 × 100 m medley relay",
+      "gold": "Great BritainKathleen DawsonAdam PeatyJames GuyAnna HopkinFreya Anderson",
+      "silver": "ChinaXu JiayuYan ZibeiZhang YufeiYang Junxuan",
+      "bronze": "AustraliaKaylee McKeownZac Stubblety-CookMatthew TempleEmma McKeonBronte CampbellIsaac CooperBrianna Throssell"
+    },
+    {
+      "sport": "Table tennis",
+      "event": "Men's singles",
+      "gold": "Ma Long China",
+      "silver": "Fan Zhendong China",
+      "bronze": "Dimitrij Ovtcharov Germany"
+    },
+    {
+      "sport": "Table tennis",
+      "event": "Men's team",
+      "gold": "ChinaFan ZhendongMa LongXu Xin",
+      "silver": "GermanyDimitrij OvtcharovPatrick FranziskaTimo Boll",
+      "bronze": "JapanJun MizutaniKoki NiwaTomokazu Harimoto"
+    },
+    {
+      "sport": "Table tennis",
+      "event": "Women's singles",
+      "gold": "Chen Meng China",
+      "silver": "Sun Yingsha China",
+      "bronze": "Mima Ito Japan"
+    },
+    {
+      "sport": "Table tennis",
+      "event": "Women's team",
+      "gold": "ChinaChen MengSun YingshaWang Manyu",
+      "silver": "JapanMima ItoKasumi IshikawaMiu Hirano",
+      "bronze": "Hong KongDoo Hoi KemLee Ho ChingMinnie Soo Wai Yam"
+    },
+    {
+      "sport": "Table tennis",
+      "event": "Mixed doubles",
+      "gold": "JapanJun MizutaniMima Ito",
+      "silver": "ChinaXu XinLiu Shiwen",
+      "bronze": "Chinese TaipeiLin Yun-juCheng I-ching"
+    },
+    {
+      "sport": "Taekwondo",
+      "category": "Men's events",
+      "event": "Flyweight (58 kg)",
+      "gold": "Vito Dell'Aquila Italy",
+      "silver": "Mohamed Khalil Jendoubi Tunisia",
+      "bronze": "Jang Jun South Korea · Mikhail Artamonov ROC"
+    },
+    {
+      "sport": "Taekwondo",
+      "category": "Men's events",
+      "event": "Featherweight (68 kg)",
+      "gold": "Ulugbek Rashitov Uzbekistan",
+      "silver": "Bradly Sinden Great Britain",
+      "bronze": "Hakan Reçber Turkey · Zhao Shuai China"
+    },
+    {
+      "sport": "Taekwondo",
+      "category": "Men's events",
+      "event": "Welterweight (80 kg)",
+      "gold": "Maksim Khramtsov ROC",
+      "silver": "Saleh El-Sharabaty Jordan",
+      "bronze": "Toni Kanaet Croatia · Seif Eissa Egypt"
+    },
+    {
+      "sport": "Taekwondo",
+      "category": "Men's events",
+      "event": "Heavyweight (+80 kg)",
+      "gold": "Vladislav Larin ROC",
+      "silver": "Dejan Georgievski North Macedonia",
+      "bronze": "In Kyo-don South Korea · Rafael Alba Cuba"
+    },
+    {
+      "sport": "Taekwondo",
+      "category": "Women's events",
+      "event": "Flyweight (49 kg)",
+      "gold": "Panipak Wongpattanakit Thailand",
+      "silver": "Adriana Cerezo Spain",
+      "bronze": "Tijana Bogdanović Serbia · Avishag Semberg Israel"
+    },
+    {
+      "sport": "Taekwondo",
+      "category": "Women's events",
+      "event": "Featherweight (57 kg)",
+      "gold": "Anastasija Zolotic United States",
+      "silver": "Tatiana Minina ROC",
+      "bronze": "Lo Chia-ling Chinese Taipei · Hatice Kübra İlgün Turkey"
+    },
+    {
+      "sport": "Taekwondo",
+      "category": "Women's events",
+      "event": "Welterweight (67 kg)",
+      "gold": "Matea Jelić Croatia",
+      "silver": "Lauren Williams Great Britain",
+      "bronze": "Ruth Gbagbi Ivory Coast · Hedaya Malak Egypt"
+    },
+    {
+      "sport": "Taekwondo",
+      "category": "Women's events",
+      "event": "Heavyweight (+67 kg)",
+      "gold": "Milica Mandić Serbia",
+      "silver": "Lee Da-bin South Korea",
+      "bronze": "Althéa Laurin France · Bianca Walkden  Great Britain"
+    },
+    {
+      "sport": "Tennis",
+      "event": "Men's singles",
+      "gold": "Alexander Zverev Germany",
+      "silver": "Karen Khachanov ROC",
+      "bronze": "Pablo Carreño Busta Spain"
+    },
+    {
+      "sport": "Tennis",
+      "event": "Men's doubles",
+      "gold": "Nikola Mektićand Mate Pavić Croatia",
+      "silver": "Marin Čilićand Ivan Dodig Croatia",
+      "bronze": "Marcus Danielland Michael Venus New Zealand"
+    },
+    {
+      "sport": "Tennis",
+      "event": "Women's singles",
+      "gold": "Belinda Bencic Switzerland",
+      "silver": "Markéta Vondroušová Czech Republic",
+      "bronze": "Elina Svitolina Ukraine"
+    },
+    {
+      "sport": "Tennis",
+      "event": "Women's doubles",
+      "gold": "Barbora Krejčíkováand Kateřina Siniaková Czech Republic",
+      "silver": "Belinda Bencicand Viktorija Golubic Switzerland",
+      "bronze": "Laura Pigossiand Luisa Stefani Brazil"
+    },
+    {
+      "sport": "Tennis",
+      "event": "Mixed doubles",
+      "gold": "Anastasia Pavlyuchenkovaand Andrey Rublev ROC",
+      "silver": "Elena Vesninaand Aslan Karatsev ROC",
+      "bronze": "Ashleigh Bartyand John Peers Australia"
+    },
+    {
+      "sport": "Triathlon",
+      "event": "Men's individual",
+      "gold": "Kristian Blummenfelt Norway",
+      "silver": "Alex Yee Great Britain",
+      "bronze": "Hayden Wilde New Zealand"
+    },
+    {
+      "sport": "Triathlon",
+      "event": "Women's individual",
+      "gold": "Flora Duffy Bermuda",
+      "silver": "Georgia Taylor-Brown Great Britain",
+      "bronze": "Katie Zaferes United States"
+    },
+    {
+      "sport": "Triathlon",
+      "event": "Mixed relay",
+      "gold": "Great BritainJess LearmonthJonny BrownleeGeorgia Taylor-BrownAlex Yee",
+      "silver": "United StatesKatie ZaferesKevin McDowellTaylor KnibbMorgan Pearson",
+      "bronze": "FranceLéonie PériaultDorian ConinxCassandre BeaugrandVincent Luis"
+    },
+    {
+      "sport": "Volleyball",
+      "category": "Indoor volleyball",
+      "event": "Men's indoor",
+      "gold": "FranceBarthélémy ChinenyezeJenia Grebennikov (L)Jean PatryBenjamin Toniutti (c)Kévin TillieEarvin N'GapethAntoine BrizardStéphen BoyerNicolas Le GoffDaryl BultorTrévor ClévenotYacine Louati",
+      "silver": "ROCYaroslav PodlesnykhArtem VolvichDmitry VolkovIvan IakovlevDenis BogdanPavel PankovViktor PoletaevMaksim MikhaylovEgor KliukaIlyas KurkaevIgor Kobzar (c)Valentin Golubev (L)",
+      "bronze": "ArgentinaMartín RamosFederico PereyraCristian PoglajenFacundo ConteAgustín LoserSantiago Danani (L)Sebastián SoléBruno LimaEzequiel PalaciosLuciano De Cecco (c)Nicolás MéndezMatías Sánchez"
+    },
+    {
+      "sport": "Volleyball",
+      "category": "Indoor volleyball",
+      "event": "Women's indoor",
+      "gold": "United StatesMicha HancockJordyn PoulterJustine Wong-Orantes (L)Jordan Larson (c)Annie DrewsJordan ThompsonMichelle Bartsch-HackleyKim HillFoluke AkinradewoHaleigh WashingtonKelsey RobinsonChiaka Ogbogu",
+      "silver": "BrazilCarol GattazRosamaria MontibellerMacris CarneiroRoberta RatzkeGabriela GuimarãesTandara CaixetaNatália Pereira (c)Ana Carolina da SilvaFernanda GarayAna Cristina de SouzaCamila Brait (L)Ana Beatriz Corrêa",
+      "bronze": "SerbiaBianka BušaMina PopovićSlađana MirkovićBrankica MihajlovićMaja Ognjenović (c)Ana BjelicaMaja AleksićMilena RašićSilvija Popović (L)Tijana BoškovićBojana MilenkovićJelena Blagojević"
+    },
+    {
+      "sport": "Volleyball",
+      "category": "Beach volleyball",
+      "event": "Men's beach",
+      "gold": "Anders Moland Christian Sørum Norway",
+      "silver": "Viacheslav Krasilnikovand Oleg Stoyanovskiy ROC",
+      "bronze": "Ahmed Tijanand Cherif Younousse Qatar"
+    },
+    {
+      "sport": "Volleyball",
+      "category": "Beach volleyball",
+      "event": "Women's beach",
+      "gold": "Alix Klinemanand April Ross United States",
+      "silver": "Mariafe Artacho del Solarand Taliqua Clancy Australia",
+      "bronze": "Joana Heidrichand Anouk Vergé-Dépré Switzerland"
+    },
+    {
+      "sport": "Water polo",
+      "event": "Men",
+      "gold": "SerbiaGojko PijetlovićDušan MandićNikola DedovićSava RanđelovićStrahinja RašovićDuško PijetlovićĐorđe LazićMilan AleksićNikola JakšićFilip FilipovićAndrija PrlainovićStefan MitrovićBranislav Mitrović",
+      "silver": "GreeceEmmanouil ZerdevasKonstantinos GenidouniasDimitrios SkoumpakisMarios KapotsisIoannis FountoulisAlexandros PapanastasiouGeorgios DervisisStylianos ArgyropoulosKonstantinos MourikisChristodoulos KolomvosKonstantinos GkiouvetsisAngelos VlachopoulosKonstantinos Galanidis",
+      "bronze": "HungaryDániel AngyalBalázs ErdélyiBalázs HáraiNorbert HosnyánszkySzilárd JansikKrisztián ManherczTamás MezeiViktor NagyMátyás PásztorMárton VámosDénes VargaSoma VogelGergő Zalánki"
+    },
+    {
+      "sport": "Water polo",
+      "event": "Women",
+      "gold": "United StatesRachel FattalAria FischerMakenzie FischerKaleigh GilchristStephania HaralabidisPaige HauschildAshleigh JohnsonAmanda LonganMaddie MusselmanJamie NeushulMelissa SeidemannMaggie SteffensAlys Williams",
+      "silver": "SpainMarta BachAnni EsparClara EsparLaura EsterJudith ForcaMaica GarcíaIrene GonzálezPaula LeitónBeatriz OrtizPili PeñaElena RuizElena SánchezRoser Tarragó",
+      "bronze": "HungaryKrisztina GardaEdina GanglGréta GurisattiAnikó GyöngyössyAnna IllésRita KeszthelyiDóra LeimeterAlda MagyariRebecca ParkesNataša RybanskáDorottya SzilágyiGabriella SzűcsVanda Vályi"
+    },
+    {
+      "sport": "Weightlifting",
+      "category": "Men's events",
+      "event": "61 kg",
+      "gold": "Li Fabin China",
+      "silver": "Eko Yuli Irawan Indonesia",
+      "bronze": "Igor Son Kazakhstan"
+    },
+    {
+      "sport": "Weightlifting",
+      "category": "Men's events",
+      "event": "67 kg",
+      "gold": "Chen Lijun China",
+      "silver": "Luis Javier Mosquera Colombia",
+      "bronze": "Mirko Zanni Italy"
+    },
+    {
+      "sport": "Weightlifting",
+      "category": "Men's events",
+      "event": "73 kg",
+      "gold": "Shi Zhiyong China",
+      "silver": "Julio Mayora Venezuela",
+      "bronze": "Rahmat Erwin Abdullah Indonesia"
+    },
+    {
+      "sport": "Weightlifting",
+      "category": "Men's events",
+      "event": "81 kg",
+      "gold": "Lü Xiaojun China",
+      "silver": "Zacarías Bonnat Dominican Republic",
+      "bronze": "Antonino Pizzolato Italy"
+    },
+    {
+      "sport": "Weightlifting",
+      "category": "Men's events",
+      "event": "96 kg",
+      "gold": "Fares El-Bakh Qatar",
+      "silver": "Keydomar Vallenilla Venezuela",
+      "bronze": "Anton Pliesnoi Georgia"
+    },
+    {
+      "sport": "Weightlifting",
+      "category": "Men's events",
+      "event": "109 kg",
+      "gold": "Akbar Djuraev Uzbekistan",
+      "silver": "Simon Martirosyan Armenia",
+      "bronze": "Artūrs Plēsnieks Latvia"
+    },
+    {
+      "sport": "Weightlifting",
+      "category": "Men's events",
+      "event": "109+ kg",
+      "gold": "Lasha Talakhadze Georgia",
+      "silver": "Ali Davoudi Iran",
+      "bronze": "Man Asaad Syria"
+    },
+    {
+      "sport": "Weightlifting",
+      "category": "Women's events",
+      "event": "49 kg",
+      "gold": "Hou Zhihui China",
+      "silver": "Saikhom Mirabai Chanu India",
+      "bronze": "Windy Cantika Aisah Indonesia"
+    },
+    {
+      "sport": "Weightlifting",
+      "category": "Women's events",
+      "event": "55 kg",
+      "gold": "Hidilyn Diaz Philippines",
+      "silver": "Liao Qiuyun China",
+      "bronze": "Zulfiya Chinshanlo Kazakhstan"
+    },
+    {
+      "sport": "Weightlifting",
+      "category": "Women's events",
+      "event": "59 kg",
+      "gold": "Kuo Hsing-chun Chinese Taipei",
+      "silver": "Polina Guryeva Turkmenistan",
+      "bronze": "Mikiko Ando Japan"
+    },
+    {
+      "sport": "Weightlifting",
+      "category": "Women's events",
+      "event": "64 kg",
+      "gold": "Maude Charron Canada",
+      "silver": "Giorgia Bordignon Italy",
+      "bronze": "Chen Wen-huei Chinese Taipei"
+    },
+    {
+      "sport": "Weightlifting",
+      "category": "Women's events",
+      "event": "76 kg",
+      "gold": "Neisi Dájomes Ecuador",
+      "silver": "Katherine Nye United States",
+      "bronze": "Aremi Fuentes Mexico"
+    },
+    {
+      "sport": "Weightlifting",
+      "category": "Women's events",
+      "event": "87 kg",
+      "gold": "Wang Zhouyu China",
+      "silver": "Tamara Salazar Ecuador",
+      "bronze": "Crismery Santana Dominican Republic"
+    },
+    {
+      "sport": "Weightlifting",
+      "category": "Women's events",
+      "event": "87+ kg",
+      "gold": "Li Wenwen China",
+      "silver": "Emily Campbell Great Britain",
+      "bronze": "Sarah Robles United States"
+    },
+    {
+      "sport": "Wrestling",
+      "category": "Men's freestyle",
+      "event": "57 kg",
+      "gold": "Zaur Uguev ROC",
+      "silver": "Ravi Kumar India",
+      "bronze": "Nurislam Sanayev Kazakhstan · Thomas Gilman United States"
+    },
+    {
+      "sport": "Wrestling",
+      "category": "Men's freestyle",
+      "event": "65 kg",
+      "gold": "Takuto Otoguro Japan",
+      "silver": "Haji Aliyev Azerbaijan",
+      "bronze": "Gadzhimurad Rashidov ROC · Bajrang Punia India"
+    },
+    {
+      "sport": "Wrestling",
+      "category": "Men's freestyle",
+      "event": "74 kg",
+      "gold": "Zaurbek Sidakov ROC",
+      "silver": "Mahamedkhabib Kadzimahamedau Belarus",
+      "bronze": "Kyle Dake United States · Bekzod Abdurakhmonov Uzbekistan"
+    },
+    {
+      "sport": "Wrestling",
+      "category": "Men's freestyle",
+      "event": "86 kg",
+      "gold": "David Taylor United States",
+      "silver": "Hassan Yazdani Iran",
+      "bronze": "Artur Naifonov ROC · Myles Amine San Marino"
+    },
+    {
+      "sport": "Wrestling",
+      "category": "Men's freestyle",
+      "event": "97 kg",
+      "gold": "Abdulrashid Sadulaev ROC",
+      "silver": "Kyle Snyder United States",
+      "bronze": "Reineris Salas Cuba · Abraham Conyedo Italy"
+    },
+    {
+      "sport": "Wrestling",
+      "category": "Men's freestyle",
+      "event": "125 kg",
+      "gold": "Gable Steveson United States",
+      "silver": "Geno Petriashvili Georgia",
+      "bronze": "Amir Hossein Zare Iran · Taha Akgül Turkey"
+    },
+    {
+      "sport": "Wrestling",
+      "category": "Men's Greco-Roman",
+      "event": "60 kg",
+      "gold": "Luis Orta Cuba",
+      "silver": "Kenichiro Fumita Japan",
+      "bronze": "Walihan Sailike China · Sergey Emelin ROC"
+    },
+    {
+      "sport": "Wrestling",
+      "category": "Men's Greco-Roman",
+      "event": "67 kg",
+      "gold": "Mohammad Reza Geraei Iran",
+      "silver": "Parviz Nasibov Ukraine",
+      "bronze": "Frank Stäbler Germany · Mohamed Ibrahim El-Sayed Egypt"
+    },
+    {
+      "sport": "Wrestling",
+      "category": "Men's Greco-Roman",
+      "event": "77 kg",
+      "gold": "Tamás Lőrincz Hungary",
+      "silver": "Akzhol Makhmudov Kyrgyzstan",
+      "bronze": "Shohei Yabiku Japan · Rafig Huseynov Azerbaijan"
+    },
+    {
+      "sport": "Wrestling",
+      "category": "Men's Greco-Roman",
+      "event": "87 kg",
+      "gold": "Zhan Beleniuk Ukraine",
+      "silver": "Viktor Lőrincz Hungary",
+      "bronze": "Denis Kudla Germany · Ivan Huklek Croatia"
+    },
+    {
+      "sport": "Wrestling",
+      "category": "Men's Greco-Roman",
+      "event": "97 kg",
+      "gold": "Musa Evloev ROC",
+      "silver": "Artur Aleksanyan Armenia",
+      "bronze": "Tadeusz Michalik Poland · Mohammad Hadi Saravi Iran"
+    },
+    {
+      "sport": "Wrestling",
+      "category": "Men's Greco-Roman",
+      "event": "130 kg",
+      "gold": "Mijaín López Cuba",
+      "silver": "Iakob Kajaia Georgia",
+      "bronze": "Rıza Kayaalp Turkey · Sergey Semenov ROC"
+    },
+    {
+      "sport": "Wrestling",
+      "category": "Women's freestyle",
+      "event": "50 kg",
+      "gold": "Yui Susaki Japan",
+      "silver": "Sun Yanan China",
+      "bronze": "Mariya Stadnik Azerbaijan · Sarah Hildebrandt United States"
+    },
+    {
+      "sport": "Wrestling",
+      "category": "Women's freestyle",
+      "event": "53 kg",
+      "gold": "Mayu Mukaida Japan",
+      "silver": "Pang Qianyu China",
+      "bronze": "Vanesa Kaladzinskaya Belarus · Bat-Ochiryn Bolortuyaa Mongolia"
+    },
+    {
+      "sport": "Wrestling",
+      "category": "Women's freestyle",
+      "event": "57 kg",
+      "gold": "Risako Kawai Japan",
+      "silver": "Iryna Kurachkina Belarus",
+      "bronze": "Helen Maroulis United States · Evelina Nikolova Bulgaria"
+    },
+    {
+      "sport": "Wrestling",
+      "category": "Women's freestyle",
+      "event": "62 kg",
+      "gold": "Yukako Kawai Japan",
+      "silver": "Aisuluu Tynybekova Kyrgyzstan",
+      "bronze": "Iryna Koliadenko Ukraine · Taybe Yusein Bulgaria"
+    },
+    {
+      "sport": "Wrestling",
+      "category": "Women's freestyle",
+      "event": "68 kg",
+      "gold": "Tamyra Mensah-Stock United States",
+      "silver": "Blessing Oborududu Nigeria",
+      "bronze": "Alla Cherkasova Ukraine · Meerim Zhumanazarova Kyrgyzstan"
+    },
+    {
+      "sport": "Wrestling",
+      "category": "Women's freestyle",
+      "event": "76 kg",
+      "gold": "Aline Rotter-Focken Germany",
+      "silver": "Adeline Gray United States",
+      "bronze": "Yasemin Adar Turkey · Zhou Qian China"
+    }
+  ]
+}

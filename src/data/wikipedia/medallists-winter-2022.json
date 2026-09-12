@@ -3,10 +3,10 @@
   "source": "https://en.wikipedia.org/wiki/List_of_2022_Winter_Olympics_medal_winners",
   "sourceName": "Wikipedia",
   "licence": "CC BY-SA 4.0",
-  "fetched": "2026-09-11",
+  "fetched": "2026-09-12",
   "eventCount": 109,
   "sportCount": 15,
-  "skippedRows": 1,
+  "skippedRows": 0,
   "events": [
     {
       "sport": "Alpine skiing",
@@ -458,7 +458,7 @@
       "event": "Ski cross",
       "gold": "Sandra Näslund Sweden",
       "silver": "Marielle Thompson Canada",
-      "bronze": "Daniela Maier Germany"
+      "bronze": "Daniela Maier Germany · Fanny Smith Switzerland"
     },
     {
       "sport": "Freestyle skiing",

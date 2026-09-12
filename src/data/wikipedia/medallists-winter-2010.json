@@ -3,10 +3,10 @@
   "source": "https://en.wikipedia.org/wiki/List_of_2010_Winter_Olympics_medal_winners",
   "sourceName": "Wikipedia",
   "licence": "CC BY-SA 4.0",
-  "fetched": "2026-09-11",
+  "fetched": "2026-09-12",
   "eventCount": 86,
   "sportCount": 15,
-  "skippedRows": 1,
+  "skippedRows": 0,
   "events": [
     {
       "sport": "Alpine skiing",
@@ -103,7 +103,7 @@
       "sport": "Biathlon",
       "event": "Men's 20 km individual",
       "gold": "Emil Hegle Svendsen Norway",
-      "silver": "Ole Einar Bjørndalen Norway",
+      "silver": "Ole Einar Bjørndalen Norway · Sergey Novikov Belarus",
       "bronze": "shared silver"
     },
     {

@@ -3,10 +3,10 @@
   "source": "https://en.wikipedia.org/wiki/List_of_2014_Winter_Olympics_medal_winners",
   "sourceName": "Wikipedia",
   "licence": "CC BY-SA 4.0",
-  "fetched": "2026-09-11",
+  "fetched": "2026-09-12",
   "eventCount": 98,
   "sportCount": 15,
-  "skippedRows": 2,
+  "skippedRows": 0,
   "events": [
     {
       "sport": "Alpine skiing",
@@ -22,7 +22,7 @@
       "event": "Super-G",
       "gold": "Kjetil Jansrud Norway",
       "silver": "Andrew Weibrecht United States",
-      "bronze": "Jan Hudec Canada"
+      "bronze": "Jan Hudec Canada · Bode Miller United States"
     },
     {
       "sport": "Alpine skiing",
@@ -52,7 +52,7 @@
       "sport": "Alpine skiing",
       "category": "Women's events",
       "event": "Downhill",
-      "gold": "Dominique Gisin Switzerland",
+      "gold": "Dominique Gisin Switzerland · Tina Maze Slovenia",
       "silver": "Not awarded",
       "bronze": "Lara Gut Switzerland"
     },

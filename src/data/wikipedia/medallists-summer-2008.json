@@ -3,10 +3,10 @@
   "source": "https://en.wikipedia.org/wiki/List_of_2008_Summer_Olympics_medal_winners",
   "sourceName": "Wikipedia",
   "licence": "CC BY-SA 4.0",
-  "fetched": "2026-09-11",
+  "fetched": "2026-09-12",
   "eventCount": 302,
   "sportCount": 31,
-  "skippedRows": 54,
+  "skippedRows": 0,
   "events": [
     {
       "sport": "Archery",
@@ -47,7 +47,7 @@
       "sport": "Athletics",
       "event": "Women's 100 m",
       "gold": "Shelly-Ann Fraser Jamaica",
-      "silver": "Sherone Simpson Jamaica",
+      "silver": "Sherone Simpson Jamaica · Kerron Stewart Jamaica",
       "bronze": "None"
     },
     {
@@ -426,77 +426,77 @@
       "event": "Light flyweight",
       "gold": "Zou Shiming China",
       "silver": "Pürevdorjiin Serdamba Mongolia",
-      "bronze": "Paddy Barnes Ireland"
+      "bronze": "Paddy Barnes Ireland · Yampier Hernández Cuba"
     },
     {
       "sport": "Boxing",
       "event": "Flyweight",
       "gold": "Somjit Jongjohor Thailand",
       "silver": "Andry Laffita Cuba",
-      "bronze": "Georgy Balakshin Russia"
+      "bronze": "Georgy Balakshin Russia · Vincenzo Picardi Italy"
     },
     {
       "sport": "Boxing",
       "event": "Bantamweight",
       "gold": "Enkhbatyn Badar-Uugan Mongolia",
       "silver": "Yankiel León Cuba",
-      "bronze": "Bruno Julie Mauritius"
+      "bronze": "Bruno Julie Mauritius · Veaceslav Gojan Moldova"
     },
     {
       "sport": "Boxing",
       "event": "Featherweight",
       "gold": "Vasyl Lomachenko Ukraine",
       "silver": "Khedafi Djelkhir France",
-      "bronze": "Yakup Kılıç Turkey"
+      "bronze": "Yakup Kılıç Turkey · Shahin Imranov Azerbaijan"
     },
     {
       "sport": "Boxing",
       "event": "Lightweight",
       "gold": "Aleksei Tishchenko Russia",
       "silver": "Daouda Sow France",
-      "bronze": "Hrachik Javakhyan Armenia"
+      "bronze": "Hrachik Javakhyan Armenia · Yordenis Ugás Cuba"
     },
     {
       "sport": "Boxing",
       "event": "Light welterweight",
       "gold": "Manuel Félix Díaz Dominican Republic",
       "silver": "Manus Boonjumnong Thailand",
-      "bronze": "Roniel Iglesias Cuba"
+      "bronze": "Roniel Iglesias Cuba · Alexis Vastine France"
     },
     {
       "sport": "Boxing",
       "event": "Welterweight",
       "gold": "Bakhyt Sarsekbayev Kazakhstan",
       "silver": "Carlos Banteaux Cuba",
-      "bronze": "Hanati Silamu China"
+      "bronze": "Hanati Silamu China · Kim Jung-Joo South Korea"
     },
     {
       "sport": "Boxing",
       "event": "Middleweight",
       "gold": "James DeGale Great Britain",
       "silver": "Emilio Correa Cuba",
-      "bronze": "Darren Sutherland Ireland"
+      "bronze": "Darren Sutherland Ireland · Vijender Singh India"
     },
     {
       "sport": "Boxing",
       "event": "Light heavyweight",
       "gold": "Zhang Xiaoping China",
       "silver": "Kenny Egan Ireland",
-      "bronze": "Tony Jeffries Great Britain"
+      "bronze": "Tony Jeffries Great Britain · Yerkebulan Shynaliyev Kazakhstan"
     },
     {
       "sport": "Boxing",
       "event": "Heavyweight",
       "gold": "Rakhim Chakkhiev Russia",
       "silver": "Clemente Russo Italy",
-      "bronze": "Osmay Acosta Cuba"
+      "bronze": "Osmay Acosta Cuba · Deontay Wilder United States"
     },
     {
       "sport": "Boxing",
       "event": "Super heavyweight",
       "gold": "Roberto Cammarelle Italy",
       "silver": "Zhang Zhilei China",
-      "bronze": "Vyacheslav Glazkov Ukraine"
+      "bronze": "Vyacheslav Glazkov Ukraine · David Price Great Britain"
     },
     {
       "sport": "Canoeing",
@@ -1129,98 +1129,98 @@
       "event": "Men's 60 kg",
       "gold": "Choi Min-Ho South Korea",
       "silver": "Ludwig Paischer Austria",
-      "bronze": "Rishod Sobirov Uzbekistan"
+      "bronze": "Rishod Sobirov Uzbekistan · Ruben Houkes Netherlands"
     },
     {
       "sport": "Judo",
       "event": "Men's 66 kg",
       "gold": "Masato Uchishiba Japan",
       "silver": "Benjamin Darbelet France",
-      "bronze": "Yordanis Arencibia Cuba"
+      "bronze": "Yordanis Arencibia Cuba · Pak Chol-Min North Korea"
     },
     {
       "sport": "Judo",
       "event": "Men's 73 kg",
       "gold": "Elnur Mammadli Azerbaijan",
       "silver": "Wang Ki-Chun South Korea",
-      "bronze": "Rasul Boqiev Tajikistan"
+      "bronze": "Rasul Boqiev Tajikistan · Leandro Guilheiro Brazil"
     },
     {
       "sport": "Judo",
       "event": "Men's 81 kg",
       "gold": "Ole Bischof Germany",
       "silver": "Kim Jae-Bum South Korea",
-      "bronze": "Tiago Camilo Brazil"
+      "bronze": "Tiago Camilo Brazil · Roman Gontiuk Ukraine"
     },
     {
       "sport": "Judo",
       "event": "Men's 90 kg",
       "gold": "Irakli Tsirekidze Georgia",
       "silver": "Amar Benikhlef Algeria",
-      "bronze": "Hesham Mesbah Egypt"
+      "bronze": "Hesham Mesbah Egypt · Sergei Aschwanden Switzerland"
     },
     {
       "sport": "Judo",
       "event": "Men's 100 kg",
       "gold": "Naidangiin Tüvshinbayar Mongolia",
       "silver": "Askhat Zhitkeyev Kazakhstan",
-      "bronze": "Movlud Miraliyev Azerbaijan"
+      "bronze": "Movlud Miraliyev Azerbaijan · Henk Grol Netherlands"
     },
     {
       "sport": "Judo",
       "event": "Men's +100 kg",
       "gold": "Satoshi Ishii Japan",
       "silver": "Abdullo Tangriev Uzbekistan",
-      "bronze": "Oscar Braison Cuba"
+      "bronze": "Oscar Braison Cuba · Teddy Riner France"
     },
     {
       "sport": "Judo",
       "event": "Women's 48 kg",
       "gold": "Alina Alexandra Dumitru Romania",
       "silver": "Yanet Bermoy Cuba",
-      "bronze": "Paula Pareto Argentina"
+      "bronze": "Paula Pareto Argentina · Ryoko Tani Japan"
     },
     {
       "sport": "Judo",
       "event": "Women's 52 kg",
       "gold": "Xian Dongmei China",
       "silver": "An Kum-Ae North Korea",
-      "bronze": "Soraya Haddad Algeria"
+      "bronze": "Soraya Haddad Algeria · Misato Nakamura Japan"
     },
     {
       "sport": "Judo",
       "event": "Women's 57 kg",
       "gold": "Giulia Quintavalle Italy",
       "silver": "Deborah Gravenstijn Netherlands",
-      "bronze": "Xu Yan China"
+      "bronze": "Xu Yan China · Ketleyn Quadros Brazil"
     },
     {
       "sport": "Judo",
       "event": "Women's 63 kg",
       "gold": "Ayumi Tanimoto Japan",
       "silver": "Lucie Décosse France",
-      "bronze": "Elisabeth Willeboordse Netherlands"
+      "bronze": "Elisabeth Willeboordse Netherlands · Won Ok-Im North Korea"
     },
     {
       "sport": "Judo",
       "event": "Women's 70 kg",
       "gold": "Masae Ueno Japan",
       "silver": "Anaysi Hernández Cuba",
-      "bronze": "Ronda Rousey United States"
+      "bronze": "Ronda Rousey United States · Edith Bosch Netherlands"
     },
     {
       "sport": "Judo",
       "event": "Women's 78 kg",
       "gold": "Yang Xiuli China",
       "silver": "Yalennis Castillo Cuba",
-      "bronze": "Jeong Gyeong-Mi South Korea"
+      "bronze": "Jeong Gyeong-Mi South Korea · Stéphanie Possamaï France"
     },
     {
       "sport": "Judo",
       "event": "Women's +78 kg",
       "gold": "Tong Wen China",
       "silver": "Maki Tsukada Japan",
-      "bronze": "Lucija Polavder Slovenia"
+      "bronze": "Lucija Polavder Slovenia · Idalys Ortiz Cuba"
     },
     {
       "sport": "Modern pentathlon",
@@ -1542,7 +1542,7 @@
       "event": "Men's 100 m freestyle",
       "gold": "Alain Bernard France",
       "silver": "Eamon Sullivan Australia",
-      "bronze": "Jason Lezak United States"
+      "bronze": "Jason Lezak United States · César Cielo Filho Brazil"
     },
     {
       "sport": "Swimming",
@@ -1598,7 +1598,7 @@
       "event": "Men's 100 m backstroke",
       "gold": "Aaron Peirsol United States",
       "silver": "Matt Grevers United States",
-      "bronze": "Hayden Stoeckel Australia"
+      "bronze": "Hayden Stoeckel Australia · Arkady Vyatchanin Russia"
     },
     {
       "sport": "Swimming",
@@ -1808,56 +1808,56 @@
       "event": "Men's 58 kg",
       "gold": "Guillermo Pérez Mexico",
       "silver": "Gabriel Mercedes Dominican Republic",
-      "bronze": "Chu Mu-yen Chinese Taipei"
+      "bronze": "Chu Mu-yen Chinese Taipei · Rohullah Nikpai Afghanistan"
     },
     {
       "sport": "Taekwondo",
       "event": "Men's 68 kg",
       "gold": "Son Tae-Jin South Korea",
       "silver": "Mark López United States",
-      "bronze": "Servet Tazegül Turkey"
+      "bronze": "Servet Tazegül Turkey · Sung Yu-Chi Chinese Taipei"
     },
     {
       "sport": "Taekwondo",
       "event": "Men's 80 kg",
       "gold": "Hadi Saei Iran",
       "silver": "Mauro Sarmiento Italy",
-      "bronze": "Zhu Guo China"
+      "bronze": "Zhu Guo China · Steven López United States"
     },
     {
       "sport": "Taekwondo",
       "event": "Men's +80 kg",
       "gold": "Cha Dong-Min South Korea",
       "silver": "Alexandros Nikolaidis Greece",
-      "bronze": "Chika Chukwumerije Nigeria"
+      "bronze": "Chika Chukwumerije Nigeria · Arman Chilmanov Kazakhstan"
     },
     {
       "sport": "Taekwondo",
       "event": "Women's 49 kg",
       "gold": "Wu Jingyu China",
       "silver": "Buttree Puedpong Thailand",
-      "bronze": "Daynellis Montejo Cuba"
+      "bronze": "Daynellis Montejo Cuba · Dalia Contreras Venezuela"
     },
     {
       "sport": "Taekwondo",
       "event": "Women's 57 kg",
       "gold": "Lim Su-Jeong South Korea",
       "silver": "Azize Tanrıkulu Turkey",
-      "bronze": "Diana López United States"
+      "bronze": "Diana López United States · Martina Zubčić Croatia"
     },
     {
       "sport": "Taekwondo",
       "event": "Women's 67 kg",
       "gold": "Hwang Kyung-Seon South Korea",
       "silver": "Karine Sergerie Canada",
-      "bronze": "Gwladys Épangue France"
+      "bronze": "Gwladys Épangue France · Sandra Šarić Croatia"
     },
     {
       "sport": "Taekwondo",
       "event": "Women's +67 kg",
       "gold": "María del Rosario Espinoza Mexico",
       "silver": "Nina Solheim Norway",
-      "bronze": "Sarah Stevenson Great Britain"
+      "bronze": "Sarah Stevenson Great Britain · Natália Falavigna Brazil"
     },
     {
       "sport": "Tennis",
@@ -2058,7 +2058,7 @@
       "event": "Men's 55 kg",
       "gold": "Henry Cejudo (USA)",
       "silver": "Tomohiro Matsunaga (JPN)",
-      "bronze": "Besik Kudukhov (RUS)"
+      "bronze": "Besik Kudukhov (RUS) · Radoslav Velikov (BUL)"
     },
     {
       "sport": "Wrestling",
@@ -2066,7 +2066,7 @@
       "event": "Men's 60 kg",
       "gold": "Mavlet Batirov (RUS)",
       "silver": "Kenichi Yumoto (JPN)",
-      "bronze": "Bazar Bazarguruev (KGZ)"
+      "bronze": "Bazar Bazarguruev (KGZ) · Morad Mohammadi (IRI)"
     },
     {
       "sport": "Wrestling",
@@ -2074,7 +2074,7 @@
       "event": "Men's 66 kg",
       "gold": "Ramazan Şahin (TUR)",
       "silver": "Andriy Stadnik (UKR)",
-      "bronze": "Sushil Kumar (IND)"
+      "bronze": "Sushil Kumar (IND) · Otar Tushishvili (GEO)"
     },
     {
       "sport": "Wrestling",
@@ -2082,7 +2082,7 @@
       "event": "Men's 74 kg",
       "gold": "Buvaisar Saitiev (RUS)",
       "silver": "Murad Gaidarov (BLR)",
-      "bronze": "Kiril Terziev (BUL)"
+      "bronze": "Kiril Terziev (BUL) · Gheorghiță Ștefan (ROU)"
     },
     {
       "sport": "Wrestling",
@@ -2090,7 +2090,7 @@
       "event": "Men's 84 kg",
       "gold": "Revaz Mindorashvili (GEO)",
       "silver": "Yusup Abdusalomov (TJK)",
-      "bronze": "Taras Danko (UKR)"
+      "bronze": "Taras Danko (UKR) · Georgy Ketoyev (RUS)"
     },
     {
       "sport": "Wrestling",
@@ -2098,7 +2098,7 @@
       "event": "Men's 96 kg",
       "gold": "Shirvani Muradov (RUS)",
       "silver": "Giorgi Gogshelidze (GEO)",
-      "bronze": "Khetag Gazyumov (AZE)"
+      "bronze": "Khetag Gazyumov (AZE) · Michel Batista (CUB)"
     },
     {
       "sport": "Wrestling",
@@ -2106,7 +2106,7 @@
       "event": "Men's 120 kg",
       "gold": "Bakhtiyar Akhmedov (RUS)",
       "silver": "David Musuľbes (SVK)",
-      "bronze": "Marid Mutalimov (KAZ)"
+      "bronze": "Marid Mutalimov (KAZ) · Disney Rodríguez (CUB)"
     },
     {
       "sport": "Wrestling",
@@ -2114,7 +2114,7 @@
       "event": "Women's 48 kg",
       "gold": "Carol Huynh (CAN)",
       "silver": "Chiharu Icho (JPN)",
-      "bronze": "Mariya Stadnik (AZE)"
+      "bronze": "Mariya Stadnik (AZE) · Iryna Merleni (UKR)"
     },
     {
       "sport": "Wrestling",
@@ -2122,7 +2122,7 @@
       "event": "Women's 55 kg",
       "gold": "Saori Yoshida (JPN)",
       "silver": "Xu Li (CHN)",
-      "bronze": "Tonya Verbeek (CAN)"
+      "bronze": "Tonya Verbeek (CAN) · Jackeline Rentería (COL)"
     },
     {
       "sport": "Wrestling",
@@ -2130,7 +2130,7 @@
       "event": "Women's 63 kg",
       "gold": "Kaori Icho (JPN)",
       "silver": "Alena Kartashova (RUS)",
-      "bronze": "Yelena Shalygina (KAZ)"
+      "bronze": "Yelena Shalygina (KAZ) · Randi Miller (USA)"
     },
     {
       "sport": "Wrestling",
@@ -2138,7 +2138,7 @@
       "event": "Women's 72 kg",
       "gold": "Wang Jiao (CHN)",
       "silver": "Stanka Zlateva (BUL)",
-      "bronze": "Kyoko Hamaguchi (JPN)"
+      "bronze": "Kyoko Hamaguchi (JPN) · Agnieszka Wieszczek (POL)"
     },
     {
       "sport": "Wrestling",
@@ -2146,7 +2146,7 @@
       "event": "Men's 55 kg",
       "gold": "Nazyr Mankiev (RUS)",
       "silver": "Rovshan Bayramov (AZE)",
-      "bronze": "Park Eun-Chul (KOR)"
+      "bronze": "Park Eun-Chul (KOR) · Roman Amoyan (ARM)"
     },
     {
       "sport": "Wrestling",
@@ -2154,7 +2154,7 @@
       "event": "Men's 60 kg",
       "gold": "Islambek Albiev (RUS)",
       "silver": "Nurbakyt Tengizbayev (KAZ)",
-      "bronze": "Ruslan Tyumenbayev (KGZ)"
+      "bronze": "Ruslan Tyumenbayev (KGZ) · Sheng Jiang (CHN)"
     },
     {
       "sport": "Wrestling",
@@ -2162,7 +2162,7 @@
       "event": "Men's 66 kg",
       "gold": "Steeve Guenot (FRA)",
       "silver": "Kanatbek Begaliev (KGZ)",
-      "bronze": "Armen Vardanyan (UKR)"
+      "bronze": "Armen Vardanyan (UKR) · Mikhail Siamionau (BLR)"
     },
     {
       "sport": "Wrestling",
@@ -2170,7 +2170,7 @@
       "event": "Men's 74 kg",
       "gold": "Manuchar Kvirkelia (GEO)",
       "silver": "Chang Yongxiang (CHN)",
-      "bronze": "Yavor Yanakiev (BUL)"
+      "bronze": "Yavor Yanakiev (BUL) · Christophe Guenot (FRA)"
     },
     {
       "sport": "Wrestling",
@@ -2178,7 +2178,7 @@
       "event": "Men's 84 kg",
       "gold": "Andrea Minguzzi (ITA)",
       "silver": "Zoltán Fodor (HUN)",
-      "bronze": "Nazmi Avluca (TUR)"
+      "bronze": "Nazmi Avluca (TUR) · Vacant"
     },
     {
       "sport": "Wrestling",
@@ -2186,7 +2186,7 @@
       "event": "Men's 96 kg",
       "gold": "Aslanbek Khushtov (RUS)",
       "silver": "Mirko Englich (GER)",
-      "bronze": "Adam Wheeler (USA)"
+      "bronze": "Adam Wheeler (USA) · Marek Švec (CZE)"
     },
     {
       "sport": "Wrestling",
@@ -2194,7 +2194,7 @@
       "event": "Men's 120 kg",
       "gold": "Mijaín López (CUB)",
       "silver": "Mindaugas Mizgaitis (LTU)",
-      "bronze": "Yury Patrikeyev (ARM)"
+      "bronze": "Yury Patrikeyev (ARM) · Yannick Szczepaniak (FRA)"
     }
   ]
 }

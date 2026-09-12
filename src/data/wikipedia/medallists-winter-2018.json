@@ -3,10 +3,10 @@
   "source": "https://en.wikipedia.org/wiki/List_of_2018_Winter_Olympics_medal_winners",
   "sourceName": "Wikipedia",
   "licence": "CC BY-SA 4.0",
-  "fetched": "2026-09-11",
+  "fetched": "2026-09-12",
   "eventCount": 102,
   "sportCount": 15,
-  "skippedRows": 2,
+  "skippedRows": 0,
   "events": [
     {
       "sport": "Alpine skiing",
@@ -187,7 +187,7 @@
     {
       "sport": "Bobsleigh",
       "event": "Two-man",
-      "gold": "CanadaJustin KrippsAlexander Kopacz",
+      "gold": "CanadaJustin KrippsAlexander Kopacz · GermanyFrancesco FriedrichThorsten Margis",
       "silver": "Not awarded",
       "bronze": "LatviaOskars MelbārdisJānis Strenga"
     },
@@ -195,7 +195,7 @@
       "sport": "Bobsleigh",
       "event": "Four-man",
       "gold": "GermanyFrancesco FriedrichCandy BauerMartin GrothkoppThorsten Margis",
-      "silver": "South KoreaWon Yun-jongJun Jung-linSeo Young-wooKim Dong-hyun",
+      "silver": "South KoreaWon Yun-jongJun Jung-linSeo Young-wooKim Dong-hyun · GermanyNico WaltherKevin KuskeAlexander RödigerEric Franke",
       "bronze": "Not awarded"
     },
     {

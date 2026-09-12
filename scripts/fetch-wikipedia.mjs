@@ -46,6 +46,7 @@ const MEDALLIST_PAGES = [
   { id: 'winter-2014', label: 'Sochi 2014', page: 'List of 2014 Winter Olympics medal winners', expect: [90, 106] },
   { id: 'winter-2018', label: 'Pyeongchang 2018', page: 'List of 2018 Winter Olympics medal winners', expect: [94, 110] },
   { id: 'winter-2022', label: 'Beijing 2022', page: 'List of 2022 Winter Olympics medal winners', expect: [101, 117] },
+  { id: 'winter-2026', label: 'Milano-Cortina 2026', page: 'List of 2026 Winter Olympics medal winners', expect: [108, 124] },
   { id: 'summer-2008', label: 'Beijing 2008', page: 'List of 2008 Summer Olympics medal winners', expect: [294, 310] },
   { id: 'summer-2012', label: 'London 2012', page: 'List of 2012 Summer Olympics medal winners', expect: [294, 310] },
   { id: 'summer-2016', label: 'Rio 2016', page: 'List of 2016 Summer Olympics medal winners', expect: [298, 314] },

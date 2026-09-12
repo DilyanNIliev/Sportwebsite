@@ -232,3 +232,25 @@ assert.ok(!inTable.events.some((e) => e.event === 'Men' || e.event === 'Women'),
   'редът-заглавие не е станал дисциплина');
 
 console.log('минава и заглавието вътре в таблицата');
+
+// 6. Признакът е на самата таблица. Париж 2024 дава кану-спринта в две
+//    таблици под едно h3 „Sprint“ — мъжка и женска — и разликата е само в
+//    надписа на таблицата или в първия ѝ ред, разпънат по ширината.
+const captioned = parseMedallists(`
+<div class="mw-heading"><h2 id="Canoeing">Canoeing</h2></div>
+<div class="mw-heading"><h3 id="Sprint">Sprint</h3></div>
+<table class="wikitable"><caption>Men's events</caption><tbody>
+<tr><th>Event</th><th>Gold</th><th>Silver</th><th>Bronze</th></tr>
+<tr><td>C-2 500 metres</td><td>Liu Hao</td><td>Gabriele Casadei</td><td>Joan Antoni Moreno</td></tr>
+</tbody></table>
+<table class="wikitable"><tbody>
+<tr><th colspan="4">Women's events</th></tr>
+<tr><th>Event</th><th>Gold</th><th>Silver</th><th>Bronze</th></tr>
+<tr><td>C-2 500 metres</td><td>Xu Shixiao</td><td>Liudmyla Luzan</td><td>Sloan MacKenzie</td></tr>
+</tbody></table>`);
+assert.equal(captioned.events.length, 2, 'двете състезания са два записа');
+assert.equal(captioned.events[0].category, "Sprint · Men's events", 'надписът на таблицата се брои');
+assert.equal(captioned.events[1].category, "Sprint · Women's events", 'и първият ред по цялата ширина');
+assert.ok(!captioned.events.some((e) => /events$/.test(e.event)), 'надписът не е дисциплина');
+
+console.log('минава и надписът на таблицата')

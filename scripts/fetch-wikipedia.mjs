@@ -319,8 +319,20 @@ function parseMedallists(html) {
     const { sport, category } = context();
     if (!sport || skipLevel !== null) continue;
 
-    const rows = gridRows(mark.table);
+    let rows = gridRows(mark.table);
     if (rows.length < 2) continue;
+
+    // Признакът може да е на самата таблица, а не в заглавие над нея. Париж
+    // 2024 дава кану-спринта в две таблици под едно h3 „Sprint“ — петте мъжки
+    // и петте женски — и разликата е само в надписа на таблицата. Без него
+    // „C-2 500 metres“ излиза два пъти с различни медалисти.
+    const caption = strip(/<caption[^>]*>([\s\S]*?)<\/caption>/i.exec(mark.table)?.[1] ?? '');
+    let tableBanner = caption && !GENERIC_SUB.test(caption) ? caption : null;
+    // Същото, когато надписът е първи ред, разпънат по цялата ширина.
+    while (rows.length > 1 && rows[0].isBanner) {
+      if (rows[0][0] && !GENERIC_SUB.test(rows[0][0])) tableBanner = rows[0][0];
+      rows = rows.slice(1);
+    }
 
     const head = rows[0].map((h) => h.toLowerCase());
     const gi = head.findIndex((h) => h.startsWith('gold'));
@@ -338,7 +350,7 @@ function parseMedallists(html) {
     // слята надолу, тоест след разгъването съседните редове носят едно и също
     // име — и това е знакът, че са една дисциплина, а не две.
     let prev = null;
-    let banner = null;
+    let banner = tableBanner;
     for (const r of rows.slice(1)) {
       // Париж 2024 слага мъжете и жените в ЕДНА таблица, разделени с ред от
       // една клетка по цялата ширина. Без него „C-2 500 metres“ излиза два
@@ -407,6 +419,15 @@ function diagnose(page, html) {
     // Съседите показват структурата: списък мъже, после списък жени в същата
     // таблица изглежда съвсем различно от две наистина различни дисциплини.
     const sportOfDupe = dupe.split('|')[0];
+    out.push(`  таблиците в „${sportOfDupe}“ — надпис и заглавен ред:`);
+    for (const t of tablesIn(html)) {
+      const before = html.slice(Math.max(0, t.at - 4000), t.at);
+      const lastH2 = [...before.matchAll(/<h2\b[^>]*>([\s\S]*?)<\/h2>/g)].pop();
+      if (!lastH2 || strip(lastH2[1]).replace(/\[edit\]$/i, '').trim() !== sportOfDupe) continue;
+      const cap = strip(/<caption[^>]*>([\s\S]*?)<\/caption>/i.exec(t.html)?.[1] ?? '');
+      const first = gridRows(t.html)[0] ?? [];
+      out.push(`    надпис „${cap}“ · ред [${first.slice(0, 6).join(' | ')}]`);
+    }
     out.push(`  целият „${sportOfDupe}“ по ред (до 40):`);
     events.filter((e) => e.sport === sportOfDupe).slice(0, 40).forEach((e) => {
       out.push(`    ${e.category ?? '—'} · ${e.event}`);

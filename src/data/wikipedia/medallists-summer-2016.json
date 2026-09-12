@@ -4,7 +4,7 @@
   "sourceName": "Wikipedia",
   "licence": "CC BY-SA 4.0",
   "fetched": "2026-09-12",
-  "eventCount": 310,
+  "eventCount": 306,
   "sportCount": 31,
   "skippedRows": 22,
   "events": [
@@ -230,14 +230,6 @@
     },
     {
       "sport": "Athletics",
-      "category": "Men",
-      "event": "WR world record | AR area record | CR championship record | GR games record | NR national record | OR Olympic record | PB personal best | SB season best | WL world leading (in a given season)",
-      "gold": "WR world record | AR area record | CR championship record | GR games record | NR national record | OR Olympic record | PB personal best | SB season best | WL world leading (in a given season)",
-      "silver": "WR world record | AR area record | CR championship record | GR games record | NR national record | OR Olympic record | PB personal best | SB season best | WL world leading (in a given season)",
-      "bronze": "WR world record | AR area record | CR championship record | GR games record | NR national record | OR Olympic record | PB personal best | SB season best | WL world leading (in a given season)"
-    },
-    {
-      "sport": "Athletics",
       "category": "Women",
       "event": "100 metres",
       "gold": "Elaine Thompson Jamaica",
@@ -419,14 +411,6 @@
       "gold": "Nafissatou Thiam Belgium",
       "silver": "Jessica Ennis-Hill Great Britain",
       "bronze": "Brianne Theisen-Eaton Canada"
-    },
-    {
-      "sport": "Athletics",
-      "category": "Women",
-      "event": "WR world record | AR area record | CR championship record | GR games record | NR national record | OR Olympic record | PB personal best | SB season best | WL world leading (in a given season)",
-      "gold": "WR world record | AR area record | CR championship record | GR games record | NR national record | OR Olympic record | PB personal best | SB season best | WL world leading (in a given season)",
-      "silver": "WR world record | AR area record | CR championship record | GR games record | NR national record | OR Olympic record | PB personal best | SB season best | WL world leading (in a given season)",
-      "bronze": "WR world record | AR area record | CR championship record | GR games record | NR national record | OR Olympic record | PB personal best | SB season best | WL world leading (in a given season)"
     },
     {
       "sport": "Badminton",
@@ -1829,14 +1813,6 @@
     },
     {
       "sport": "Swimming",
-      "category": "Men's events",
-      "event": "AF African Record | AM Americas Record | SA South American Record | AS Asian Record | ER European Record | OC Oceanian Record | OR Olympic Record | WJR World Junior Record | WR World Record NR National Record (any World Record is necessarily also an Olympic, area, and national record. Area records (for continental regions) are also national records)",
-      "gold": "AF African Record | AM Americas Record | SA South American Record | AS Asian Record | ER European Record | OC Oceanian Record | OR Olympic Record | WJR World Junior Record | WR World Record NR National Record (any World Record is necessarily also an Olympic, area, and national record. Area records (for continental regions) are also national records)",
-      "silver": "AF African Record | AM Americas Record | SA South American Record | AS Asian Record | ER European Record | OC Oceanian Record | OR Olympic Record | WJR World Junior Record | WR World Record NR National Record (any World Record is necessarily also an Olympic, area, and national record. Area records (for continental regions) are also national records)",
-      "bronze": "AF African Record | AM Americas Record | SA South American Record | AS Asian Record | ER European Record | OC Oceanian Record | OR Olympic Record | WJR World Junior Record | WR World Record NR National Record (any World Record is necessarily also an Olympic, area, and national record. Area records (for continental regions) are also national records)"
-    },
-    {
-      "sport": "Swimming",
       "category": "Women's events",
       "event": "50 m freestyle",
       "gold": "Pernille Blume Denmark",
@@ -1970,14 +1946,6 @@
       "gold": "Sharon van Rouwendaal Netherlands",
       "silver": "Rachele Bruni Italy",
       "bronze": "Poliana Okimoto Brazil"
-    },
-    {
-      "sport": "Swimming",
-      "category": "Women's events",
-      "event": "AF African Record | AM Americas Record | SA South American Record | AS Asian Record | ER European Record | OC Oceanian Record | OR Olympic Record | WJR World Junior Record | WR World Record NR National Record (any World Record is necessarily also an Olympic, area, and national record. Area records (for continental regions) are also national records)",
-      "gold": "AF African Record | AM Americas Record | SA South American Record | AS Asian Record | ER European Record | OC Oceanian Record | OR Olympic Record | WJR World Junior Record | WR World Record NR National Record (any World Record is necessarily also an Olympic, area, and national record. Area records (for continental regions) are also national records)",
-      "silver": "AF African Record | AM Americas Record | SA South American Record | AS Asian Record | ER European Record | OC Oceanian Record | OR Olympic Record | WJR World Junior Record | WR World Record NR National Record (any World Record is necessarily also an Olympic, area, and national record. Area records (for continental regions) are also national records)",
-      "bronze": "AF African Record | AM Americas Record | SA South American Record | AS Asian Record | ER European Record | OC Oceanian Record | OR Olympic Record | WJR World Junior Record | WR World Record NR National Record (any World Record is necessarily also an Olympic, area, and national record. Area records (for continental regions) are also national records)"
     },
     {
       "sport": "Synchronized swimming",

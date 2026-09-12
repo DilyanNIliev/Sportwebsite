@@ -284,6 +284,8 @@ function parseMedallists(html) {
   const skipped = [];
   /** Таблици с редове, които не бяха прочетени — с какво заглавие стояха. */
   const rejectedTables = [];
+  /** Всяка разгледана таблица, за диагностика при провал. */
+  const tables = [];
 
   // Заглавията се четат до h4. Спортът е винаги h2; всичко по-долу е признак,
   // който отличава дисциплините една от друга. Лондон 2012 и Токио 2020 паднаха
@@ -334,6 +336,13 @@ function parseMedallists(html) {
       rows = rows.slice(1);
     }
 
+    tables.push({
+      sport,
+      category,
+      caption: tableBanner,
+      rows: rows.slice(0, 30).map((r) => (r.isBanner ? '[ЗАГЛАВЕН РЕД] ' : '') + r.slice(0, 3).join(' | ')),
+    });
+
     const head = rows[0].map((h) => h.toLowerCase());
     const gi = head.findIndex((h) => h.startsWith('gold'));
     const si = head.findIndex((h) => h.startsWith('silver'));
@@ -374,7 +383,7 @@ function parseMedallists(html) {
       events.push(prev);
     }
   }
-  return { events, skipped, rejectedTables };
+  return { events, skipped, rejectedTables, tables };
 }
 
 /**
@@ -392,7 +401,7 @@ function diagnose(page, html) {
     .slice(0, 60);
   out.push(heads.join('\n'));
 
-  const { events, skipped, rejectedTables } = parseMedallists(html);
+  const { events, skipped, rejectedTables, tables } = parseMedallists(html);
   const perSport = new Map();
   for (const e of events) perSport.set(e.sport, (perSport.get(e.sport) ?? 0) + 1);
   out.push('  дисциплини по спорт: ' +
@@ -419,14 +428,12 @@ function diagnose(page, html) {
     // Съседите показват структурата: списък мъже, после списък жени в същата
     // таблица изглежда съвсем различно от две наистина различни дисциплини.
     const sportOfDupe = dupe.split('|')[0];
-    out.push(`  таблиците в „${sportOfDupe}“ — надпис и заглавен ред:`);
-    for (const t of tablesIn(html)) {
-      const before = html.slice(Math.max(0, t.at - 4000), t.at);
-      const lastH2 = [...before.matchAll(/<h2\b[^>]*>([\s\S]*?)<\/h2>/g)].pop();
-      if (!lastH2 || strip(lastH2[1]).replace(/\[edit\]$/i, '').trim() !== sportOfDupe) continue;
-      const cap = strip(/<caption[^>]*>([\s\S]*?)<\/caption>/i.exec(t.html)?.[1] ?? '');
-      const first = gridRows(t.html)[0] ?? [];
-      out.push(`    надпис „${cap}“ · ред [${first.slice(0, 6).join(' | ')}]`);
+    // Редовете на таблиците в този спорт, както парсерът ги вижда. Гадаенето
+    // на структурата ми струва по един пробег всеки път; това я показва.
+    out.push(`  таблиците в „${sportOfDupe}“, ред по ред:`);
+    for (const t of tables.filter((x) => x.sport === sportOfDupe)) {
+      out.push(`    ── ${t.category ?? '—'}${t.caption ? ` · надпис „${t.caption}“` : ''}`);
+      for (const r of t.rows) out.push(`       ${r}`);
     }
     out.push(`  целият „${sportOfDupe}“ по ред (до 40):`);
     events.filter((e) => e.sport === sportOfDupe).slice(0, 40).forEach((e) => {

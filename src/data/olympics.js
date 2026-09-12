@@ -14,6 +14,9 @@ import w2022 from './wikipedia/winter-2022.json';
 import w2026 from './wikipedia/winter-2026.json';
 
 import ms2008 from './wikipedia/medallists-summer-2008.json';
+import ms2012 from './wikipedia/medallists-summer-2012.json';
+import ms2016 from './wikipedia/medallists-summer-2016.json';
+import ms2020 from './wikipedia/medallists-summer-2020.json';
 import mw2010 from './wikipedia/medallists-winter-2010.json';
 import mw2014 from './wikipedia/medallists-winter-2014.json';
 import mw2018 from './wikipedia/medallists-winter-2018.json';
@@ -21,6 +24,9 @@ import mw2022 from './wikipedia/medallists-winter-2022.json';
 
 const MEDALLISTS = {
   'summer-2008': ms2008,
+  'summer-2012': ms2012,
+  'summer-2016': ms2016,
+  'summer-2020': ms2020,
   'winter-2010': mw2010,
   'winter-2014': mw2014,
   'winter-2018': mw2018,

@@ -3,6 +3,7 @@ import sports from '../data/sports.json';
 import { archives, rowCount } from '../data/archives.js';
 import { standings } from '../data/standings.js';
 import { lineups } from '../data/lineups.js';
+import { games } from '../data/olympics.js';
 import { getCollection } from 'astro:content';
 
 // llms.txt — обобщение на сайта в машинночетим вид, за системите, които
@@ -37,6 +38,10 @@ ${standings.map((s) => {
   const unit = s.data.leadUnit ? ` ${s.data.leadUnit}` : '';
   return `- [${name}](${root}/standings/${s.slug}/) — ${lead.name} ${verb} ${lead.points}${unit}. ${s.data.asOf}`;
 }).join('\n')}
+
+## Olympic medal tables
+
+${games.map((g) => `- [${g.label}](${root}/olympics/${g.id}/) — ${g.host}, ${g.country}, ${g.dates}. ${g.table.rows[0].country} led on ${g.table.rows[0].gold} golds; ${g.table.rows.length} countries won a medal${g.events ? `; all ${g.eventCount} events listed with their three medallists` : ''}.`).join('\n')}
 
 ## Line-ups
 

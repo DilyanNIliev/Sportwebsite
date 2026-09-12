@@ -776,3 +776,26 @@ tbody td:nth-child(2) { font-weight: 650; }
   .cal-row { grid-template-columns: 1fr auto; }
   .cal-date { grid-column: 1 / -1; }
 }
+
+/* ---------- олимпийските страници ---------- */
+.olympic-tools { margin: 0 0 24px; }
+.olympic-tools label {
+  display: block; font-size: .72rem; font-weight: 700; letter-spacing: .08em;
+  text-transform: uppercase; color: var(--text-faint); margin-bottom: 7px;
+}
+.olympic-tools input {
+  width: 100%; max-width: 380px; font: inherit; font-size: .92rem;
+  padding: 10px 13px; border-radius: 10px; color: var(--text);
+  border: 1px solid var(--border); background: var(--bg-raised);
+}
+.olympic-tools input:focus-visible { outline: 2px solid var(--brand); outline-offset: 1px; }
+.oly-sport { margin-top: 30px; }
+.oly-sport h3 {
+  margin: 0 0 10px; font-size: .95rem; font-weight: 700;
+  color: var(--text); letter-spacing: .01em;
+}
+/* Категорията („Men's events“) стои под името, за да се различават еднакви
+   дисциплини на мъжете и на жените. */
+.oly-cat {
+  display: block; font-size: .72rem; color: var(--text-faint); margin-top: 2px;
+}

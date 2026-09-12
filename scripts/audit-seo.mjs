@@ -141,27 +141,42 @@ for (const file of files) {
   }
 }
 
-// --- сираци: страница без нито една входяща връзка не се обхожда ---
-const linkedTo = new Set();
+// --- достижимост: не „има ли входяща връзка“, а „стига ли се от началото“ ---
+//
+// Проверката за входящи връзки пропуска затворен остров: раздел, чиито
+// страници сочат само една към друга. Точно това се случи с олимпийските
+// страници — всяка имаше връзка, но нямаше път дотам от началната.
+const linksFrom = new Map();
 for (const file of files) {
   const html = fs.readFileSync(file, 'utf8');
+  const out = new Set();
   for (const m of html.matchAll(/<a[^>]+href="(\/Sportwebsite\/[^"#?]*)"/g)) {
-    const t = m[1].endsWith('/') ? m[1] : m[1] + '/';
-    if (t !== urlOf(file)) linkedTo.add(t);
+    out.add(m[1].endsWith('/') ? m[1] : m[1] + '/');
+  }
+  linksFrom.set(urlOf(file), out);
+}
+const reached = new Set([BASE + '/']);
+const queue = [BASE + '/'];
+while (queue.length) {
+  for (const next of linksFrom.get(queue.shift()) ?? []) {
+    if (!reached.has(next) && linksFrom.has(next)) {
+      reached.add(next);
+      queue.push(next);
+    }
   }
 }
 for (const file of files) {
   const u = urlOf(file);
-  if (u === BASE + '/' || linkedTo.has(u)) continue;
+  if (reached.has(u)) continue;
   const noindex = /name="robots" content="noindex/.test(fs.readFileSync(file, 'utf8'));
-  if (!noindex) err(u, 'сирак — никоя страница не сочи към нея');
+  if (!noindex) err(u, 'не се стига от началната страница по никакъв път от връзки');
 }
 
 // --- GEO: llms.txt трябва да покрива всеки вид страница ---
 const llmsFile = path.join(DIST, 'llms.txt');
 if (fs.existsSync(llmsFile)) {
   const l = fs.readFileSync(llmsFile, 'utf8');
-  const kinds = ['archives/', 'standings/', 'news/', 'lineups/'];
+  const kinds = ['archives/', 'standings/', 'news/', 'lineups/', 'olympics/'];
   for (const k of kinds) {
     if (!l.includes(k)) warn('llms.txt', `не изброява нито една страница от вид „${k}“`);
   }

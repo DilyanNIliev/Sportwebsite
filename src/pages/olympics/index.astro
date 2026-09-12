@@ -1,0 +1,67 @@
+---
+import Base from '../../layouts/Base.astro';
+import { games } from '../../data/olympics.js';
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const crumbs = [{ label: 'Home', href: `${base}/` }, { label: 'Olympics' }];
+const withEvents = games.filter((g) => g.events);
+const totalEvents = games.reduce((n, g) => n + g.eventCount, 0);
+const totalRows = games.reduce((n, g) => n + g.table.rows.length, 0);
+
+const seasons = [
+  { key: 'Summer', items: games.filter((g) => g.season === 'Summer') },
+  { key: 'Winter', items: games.filter((g) => g.season === 'Winter') },
+];
+---
+<Base
+  title="Olympic medal tables"
+  seoTitle="Olympic medal tables and medallists"
+  description={`Medal tables for ten Olympic Games, ${totalRows} country rows in all, and every event with its three medallists for ${withEvents.length} of them — ${totalEvents} events so far.`}
+  crumbs={crumbs}
+>
+  <section class="hero accented" style="--accent:#0369a1;--accent-dark:#3f8db8;--accent2:#a8cfe8;--accent2-dark:#cfe3f2">
+    <div class="wrap">
+      <p class="eyebrow">Reference</p>
+      <h1>Olympic medal tables</h1>
+      <p class="lede">
+        Ten Games, {totalRows} country rows, and {totalEvents} events with their gold,
+        silver and bronze. Every row was checked to add up before it was published.
+      </p>
+    </div>
+  </section>
+
+  {seasons.map((s) => (
+    <section class="block">
+      <div class="wrap">
+        <div class="block-head"><h2>{s.key} Games</h2></div>
+        <div class="cards">
+          {s.items.map((g) => (
+            <a class="card" href={`${base}/olympics/${g.id}/`}>
+              <div class="meta">
+                <span>{g.host}, {g.country}</span>
+                <span>{g.year}</span>
+              </div>
+              <h3>{g.table.rows[0].country} led on {g.table.rows[0].gold} golds</h3>
+              <p>
+                {g.table.rows.length} countries won a medal.
+                {g.events
+                  ? ` All ${g.eventCount} events listed, across ${g.sportCount} sports.`
+                  : ' Event-by-event medallists not published yet.'}
+              </p>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  ))}
+
+  <section class="block">
+    <div class="wrap">
+      <p class="note">
+        Medal data from Wikipedia under CC BY-SA 4.0, fetched and checked by a script that
+        runs separately from the site build — so the pages never wait on the network, and a
+        row whose medals do not add up to its total is dropped rather than corrected.
+      </p>
+    </div>
+  </section>
+</Base>

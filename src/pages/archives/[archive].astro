@@ -60,6 +60,12 @@ const jsonLd = {
           </div>
         </>
       ))}
+      {data.seeAlso && (
+        <p class="note" style="margin-top:26px">
+          <a href={`${base}/${data.seeAlso.href}`}>{data.seeAlso.label}</a>
+        </p>
+      )}
+
       <p class="note">{data.dataNote}</p>
     </div>
   </section>

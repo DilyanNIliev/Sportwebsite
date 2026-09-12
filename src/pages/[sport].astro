@@ -6,6 +6,7 @@ import sports from '../data/sports.json';
 import { archivesFor, archiveGroups, rowCount } from '../data/archives.js';
 import nextEditions from '../data/next-editions.json';
 import { standingsFor } from '../data/standings.js';
+import { gamesFor } from '../data/olympics.js';
 import SportMotif from '../components/SportMotif.astro';
 import { sportVars } from '../data/sport-style.js';
 
@@ -24,6 +25,7 @@ const archives = archivesFor(sport.slug);
 const groups = archiveGroups(sport.slug);
 const next = nextEditions[sport.slug];
 const tables = standingsFor(sport.slug);
+const olympics = gamesFor(sport.slug);
 const crumbs = [{ label: 'Home', href: `${base}/` }, { label: sport.name }];
 const hasArchives = archives.length > 0;
 const metaDesc =
@@ -42,6 +44,32 @@ const metaDesc =
   </section>
 
   <ArticleList articles={news} heading="Latest" />
+
+  {olympics.length > 0 && (
+    <section class="block">
+      <div class="wrap">
+        <div class="block-head">
+          <h2>Olympic Games</h2>
+          <p>Medal tables, and every event where we have the medallists.</p>
+        </div>
+        <div class="cards">
+          {olympics.map((g) => (
+            <a class="card" href={`${base}/olympics/${g.id}/`}>
+              <div class="meta">
+                <span class="accent" style={sportVars(sport)}>{g.host}</span>
+                <span>{g.year}</span>
+              </div>
+              <h3>{g.table.rows[0].country} led on {g.table.rows[0].gold} golds</h3>
+              <p>{g.table.rows.length} countries won a medal{g.events ? `, ${g.eventCount} events listed` : ''}.</p>
+            </a>
+          ))}
+        </div>
+        <p class="note" style="margin-top:16px">
+          <a href={`${base}/olympics/`}>All Olympic medal tables</a>
+        </p>
+      </div>
+    </section>
+  )}
 
   {tables.length > 0 && (
     <section class="block">

@@ -1,0 +1,164 @@
+---
+import Base from '../../layouts/Base.astro';
+import SportMotif from '../../components/SportMotif.astro';
+import { sportVars } from '../../data/sport-style.js';
+import { games, eventsBySport } from '../../data/olympics.js';
+import sports from '../../data/sports.json';
+
+export function getStaticPaths() {
+  return games.map((g) => ({ params: { games: g.id }, props: { g } }));
+}
+
+const { g } = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const sport = sports.find((s) => s.slug === g.sport);
+const crumbs = [
+  { label: 'Home', href: `${base}/` },
+  { label: 'Olympics', href: `${base}/olympics/` },
+  { label: g.label },
+];
+
+const rows = g.table.rows;
+const top = rows[0];
+const bySport = eventsBySport(g);
+
+const description = g.events
+  ? `The full ${g.label} medal table — ${rows.length} countries, led by ${top.country} on ${top.gold} golds — and every one of the ${g.eventCount} events with its gold, silver and bronze.`
+  : `The full ${g.label} medal table: ${rows.length} countries that won a medal, led by ${top.country} on ${top.gold} golds and ${top.total} medals in total.`;
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Dataset',
+  name: `${g.label} medal table`,
+  description,
+  temporalCoverage: String(g.year),
+  spatialCoverage: { '@type': 'Place', name: `${g.host}, ${g.country}` },
+  isBasedOn: g.table.source,
+  license: 'https://creativecommons.org/licenses/by-sa/4.0/',
+};
+---
+<Base title={`${g.label} medals`} seoTitle={`${g.label}: medal table`} description={description} crumbs={crumbs}>
+  <section class="hero accented" style={sportVars(sport)}>
+    <SportMotif motif={sport?.motif} />
+    <div class="wrap">
+      <p class="eyebrow">{g.season} Olympics · {g.year}</p>
+      <h1>{g.label}</h1>
+      <p class="lede">
+        {g.host}, {g.country} · {g.dates}. {top.country} finished top on {top.gold} golds
+        and {top.total} medals{g.events ? `, across ${g.eventCount} events in ${g.sportCount} sports` : ''}.
+      </p>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap">
+      <div class="olympic-tools">
+        <label for="oly-search">Search a country, sport, event or athlete</label>
+        <input id="oly-search" type="search" placeholder="e.g. Norway, biathlon, Bjørgen" autocomplete="off" />
+        <p class="search-count" data-oly-count hidden></p>
+      </div>
+
+      <div class="block-head"><h2>Medal table</h2></div>
+      <div class="table-scroll">
+        <table data-medal-table>
+          <thead><tr><th>#</th><th>Country</th><th>Gold</th><th>Silver</th><th>Bronze</th><th>Total</th></tr></thead>
+          <tbody>
+            {rows.map((r) => (
+              <tr data-oly-row data-text={`${r.country}`.toLowerCase()}>
+                <td>{r.pos ?? ''}</td>
+                <td>{r.country}</td>
+                <td>{r.gold}</td>
+                <td>{r.silver}</td>
+                <td>{r.bronze}</td>
+                <td><strong>{r.total}</strong></td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <p class="note">
+        {rows.length} countries won at least one medal. Golds, silvers and bronzes were
+        each checked to add up to the stated total before this table was published.
+      </p>
+
+      {bySport.length > 0 ? (
+        <>
+          <div class="block-head" style="margin-top:40px">
+            <h2>Every event</h2>
+            <p>{g.eventCount} events across {g.sportCount} sports, each with its three medallists.</p>
+          </div>
+
+          {bySport.map((s) => (
+            <div class="oly-sport" data-oly-sport>
+              <h3>{s.sport}</h3>
+              <div class="table-scroll">
+                <table>
+                  <thead><tr><th>Event</th><th>Gold</th><th>Silver</th><th>Bronze</th></tr></thead>
+                  <tbody>
+                    {s.events.map((e) => (
+                      <tr
+                        data-oly-row
+                        data-text={`${s.sport} ${e.category ?? ''} ${e.event} ${e.gold} ${e.silver} ${e.bronze}`.toLowerCase()}
+                      >
+                        <td>
+                          {e.event}
+                          {e.category && <span class="oly-cat">{e.category}</span>}
+                        </td>
+                        <td>{e.gold}</td>
+                        <td class="td-note">{e.silver}</td>
+                        <td class="td-note">{e.bronze}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          ))}
+        </>
+      ) : (
+        <p class="note" style="margin-top:30px">
+          The event-by-event medallists for this Games are not published here yet. The
+          medal table above is complete; the list of every event is fetched separately and
+          this one has not passed its checks.
+        </p>
+      )}
+
+      <p class="note" style="margin-top:26px">
+        Medal data from <a href={g.table.source} rel="nofollow">Wikipedia</a>{g.medallistSource && (
+          <> and <a href={g.medallistSource} rel="nofollow">its list of medal winners</a></>
+        )}, used under CC BY-SA 4.0. Fetched {g.table.fetched}.
+      </p>
+    </div>
+  </section>
+
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  <script is:inline>
+    (function () {
+      var input = document.getElementById('oly-search');
+      if (!input) return;
+      var rows = [].slice.call(document.querySelectorAll('[data-oly-row]'));
+      var blocks = [].slice.call(document.querySelectorAll('[data-oly-sport]'));
+      var count = document.querySelector('[data-oly-count]');
+
+      input.addEventListener('input', function () {
+        var q = input.value.trim().toLowerCase();
+        var hits = 0;
+        rows.forEach(function (r) {
+          var hit = !q || r.dataset.text.indexOf(q) !== -1;
+          r.hidden = !hit;
+          if (hit && q) hits++;
+        });
+        // Спорт без нито един видим ред само заема място.
+        blocks.forEach(function (b) {
+          b.hidden = !!q && !b.querySelector('[data-oly-row]:not([hidden])');
+        });
+        if (count) {
+          count.hidden = !q;
+          count.textContent = hits === 0
+            ? 'Nothing matches "' + input.value + '".'
+            : hits + (hits === 1 ? ' row' : ' rows');
+        }
+      });
+    })();
+  </script>
+</Base>

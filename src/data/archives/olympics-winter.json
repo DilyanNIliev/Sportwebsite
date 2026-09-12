@@ -52,5 +52,9 @@
         ]
       ]
     }
-  ]
+  ],
+  "seeAlso": {
+    "label": "Full medal tables, and every event where we have the medallists",
+    "href": "olympics/"
+  }
 }

@@ -175,20 +175,26 @@ function gridRows(tableHtml) {
     if (/class="[^"]*sortbottom/.test(tr[0])) continue;
     const row = [];
     let col = 0;
+    let real = 0;    // клетки, написани в ТОЗИ ред
+    let carried = 0; // клетки, дошли отгоре чрез rowspan
+    let widest = 0;  // най-широкият colspan в реда
     const fill = () => {
       while (pending.has(col)) {
         const p = pending.get(col);
         row[col] = p.text;
         if (--p.left <= 0) pending.delete(col);
+        carried += 1;
         col += 1;
       }
     };
     for (const c of tr[0].matchAll(/<t([hd])\b([^>]*)>([\s\S]*?)<\/t\1>/gi)) {
       fill();
+      real += 1;
       const text = strip(c[3]);
       const span = (name) => Number(new RegExp(name + '="?(\\d+)', 'i').exec(c[2])?.[1] ?? 1);
       const cols = Math.min(span('colspan'), 20);
       const rows = Math.min(span('rowspan'), 60);
+      widest = Math.max(widest, cols);
       for (let k = 0; k < cols; k += 1) {
         if (rows > 1) pending.set(col, { text, left: rows - 1 });
         row[col] = text;
@@ -196,7 +202,18 @@ function gridRows(tableHtml) {
       }
     }
     fill();
-    if (row.length) out.push([...row].map((c) => c ?? ''));
+    if (row.length) {
+      const cells = [...row].map((c) => c ?? '');
+      // Ред от една клетка, разпъната по цялата ширина, е заглавие ВЪТРЕ в
+      // таблицата („Men“, после редовете, после „Women“). След разгъването
+      // изглежда като най-обикновен ред и трябва нещо да го отличи.
+      //
+      // Едната клетка не стига: при споделен медал вторият ред също е с една
+      // написана клетка, но останалите му са пренесени отгоре. Затова тук
+      // важи само ред, в който нищо не е пренесено и клетката е разпъната.
+      cells.isBanner = real === 1 && carried === 0 && widest > 1;
+      out.push(cells);
+    }
   }
   return out;
 }
@@ -321,7 +338,12 @@ function parseMedallists(html) {
     // слята надолу, тоест след разгъването съседните редове носят едно и също
     // име — и това е знакът, че са една дисциплина, а не две.
     let prev = null;
+    let banner = null;
     for (const r of rows.slice(1)) {
+      // Париж 2024 слага мъжете и жените в ЕДНА таблица, разделени с ред от
+      // една клетка по цялата ширина. Без него „C-2 500 metres“ излиза два
+      // пъти без нищо, което да ги различи.
+      if (r.isBanner && r[0]) { banner = r[0]; prev = null; continue; }
       // Ред с друг брой клетки не е ред от тази таблица. Точно такъв ред
       // сложи борец на мястото на дисциплина в Лондон 2012.
       if (r.length !== rows[0].length) { skipped.push({ sport, why: 'друг брой клетки', row: r.slice(0, 2) }); continue; }
@@ -335,7 +357,8 @@ function parseMedallists(html) {
         addMedallist(prev, 'bronze', r[bi]);
         continue;
       }
-      prev = { sport, ...(category ? { category } : {}), event, gold, silver: r[si] ?? '', bronze: r[bi] ?? '' };
+      const full = [category, banner].filter(Boolean).join(' · ');
+      prev = { sport, ...(full ? { category: full } : {}), event, gold, silver: r[si] ?? '', bronze: r[bi] ?? '' };
       events.push(prev);
     }
   }
@@ -380,6 +403,13 @@ function diagnose(page, html) {
     out.push('  повтореният запис, и двата пъти:');
     events.filter((e, i) => keys[i] === dupe).forEach((e) => {
       out.push(`    ${e.sport} · ${e.category ?? '—'} · ${e.event} → ${e.gold} / ${e.silver} / ${e.bronze}`);
+    });
+    // Съседите показват структурата: списък мъже, после списък жени в същата
+    // таблица изглежда съвсем различно от две наистина различни дисциплини.
+    const sportOfDupe = dupe.split('|')[0];
+    out.push(`  целият „${sportOfDupe}“ по ред (до 40):`);
+    events.filter((e) => e.sport === sportOfDupe).slice(0, 40).forEach((e) => {
+      out.push(`    ${e.category ?? '—'} · ${e.event}`);
     });
   }
   return out.join('\n');

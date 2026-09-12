@@ -211,3 +211,24 @@ assert.equal(shared.events[1].gold, 'Gianmarco Tamberi · Mutaz Essa Barshim', '
 assert.equal(shared.events[1].silver, 'Not awarded', 'сребро няма при делено злато');
 
 console.log('минава и споделеният медал');
+
+// 5. Заглавие ВЪТРЕ в таблицата. Париж 2024 слага мъжете и жените в една
+//    таблица за кану-спринт, разделени с ред от една клетка по цялата ширина.
+//    „C-2 500 metres“ излизаше два пъти без нищо, което да ги различи.
+const inTable = parseMedallists(`
+<div class="mw-heading"><h2 id="Canoeing">Canoeing</h2></div>
+<div class="mw-heading"><h3 id="Sprint">Sprint</h3></div>
+<table class="wikitable"><tbody>
+<tr><th>Event</th><th>Gold</th><th>Silver</th><th>Bronze</th></tr>
+<tr><th colspan="4">Men</th></tr>
+<tr><td>C-2 500 metres</td><td>Liu Hao</td><td>Gabriele Casadei</td><td>Joan Antoni Moreno</td></tr>
+<tr><th colspan="4">Women</th></tr>
+<tr><td>C-2 500 metres</td><td>Xu Shixiao</td><td>Liudmyla Luzan</td><td>Sloan MacKenzie</td></tr>
+</tbody></table>`);
+assert.equal(inTable.events.length, 2, 'двете състезания са два записа');
+assert.equal(inTable.events[0].category, 'Sprint · Men', 'редът-заглавие се долепя към категорията');
+assert.equal(inTable.events[1].category, 'Sprint · Women');
+assert.ok(!inTable.events.some((e) => e.event === 'Men' || e.event === 'Women'),
+  'редът-заглавие не е станал дисциплина');
+
+console.log('минава и заглавието вътре в таблицата');
